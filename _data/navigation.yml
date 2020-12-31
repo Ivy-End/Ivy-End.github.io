@@ -1,0 +1,36 @@
+header:
+  - titles:
+      # @start locale config
+      zh-Hans : &ZH_HANS  归档
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      # @end locale config
+    url: /archive.html
+
+  - titles:
+      # @start locale config
+      zh-Hans : &ZH_HANS  摄影
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      # @end locale config
+    url: /gallery.html
+
+  - titles:
+      # @start locale config
+      zh-Hans : &ZH_HANS  友链
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      # @end locale config
+    url: /links.html
+
+  - titles:
+      # @start locale config
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      # @end locale config
+    url: /about.html

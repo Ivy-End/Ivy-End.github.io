@@ -1,0 +1,30 @@
+# @start locale config
+## => Simplified Chinese
+########################
+zh-Hans: &ZH_HANS
+  SUBSCRIBE               : "订阅"
+  READMORE                : "阅读更多"
+  SEARCH                  : "搜索"
+  CANCEL                  : "取消"
+  VIEWS                   : "阅读"
+  LAST_UPDATED            : "更新于"
+  PREVIOUS                : "上篇"
+  NEXT                    : "下篇"
+  ARTICLE_DATE_FORMAT     : "%Y年%m月%d日"
+  ARTICLE_LIST_DATE_FORMAT: "%m月%d日"
+  STATISTICS              : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
+  LICENSE_ANNOUNCE        : "本站遵守 [LICENSE] 许可协议。"
+  POST_ON_GITHUB          : "在 Github 上修改"
+  FOLLOW_ME               : "在 [NAME] 上关注我。"
+  FOLLOW_US               : "在 [NAME] 上关注我们。"
+  EMAIL_ME                : "给我发邮件。"
+  EMAIL_US                : "给我们发邮件。"
+  COPYRIGHT_DATES         : "2020"
+
+zh:
+  <<: *ZH_HANS
+zh-CN:
+  <<: *ZH_HANS
+zh-SG:
+  <<: *ZH_HANS
+# @end locale config
