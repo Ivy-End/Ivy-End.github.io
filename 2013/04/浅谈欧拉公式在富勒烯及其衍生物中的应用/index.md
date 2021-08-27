@@ -7,7 +7,8 @@
 
 这类题目可以应用欧拉公式，设 $\mathrm{C_{50}Cl_{10}}$ 中存在 $x$ 个五边形及 $y$ 个六边形。由欧拉公式可以得到结果：
 
-$$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2} \end{cases}\Rightarrow \begin{cases}x=12 \\ y=15\end{cases} $$
+$$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\\ 50\times \frac{3}{2}=\frac{5x+6y}{2} \end{cases}\Rightarrow \begin{cases}x=12 \\\ y=15\end{cases} $$
+
 
 ## 2、求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数
 

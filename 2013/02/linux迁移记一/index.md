@@ -14,7 +14,7 @@
 
 ## 换上 Gnome3
 
-由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 apt-get 就可以了。
+由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 `apt-get` 就可以了。
 
 ```shell
 sudo apt-get install gnome-shell
@@ -46,7 +46,7 @@ sudo apt-get install gnome-tweak-tool
 
 这个方面主要包括卸载一些不必要的软件以及安装一些必要的软件。卸载就不多说了，这是个智者见智，仁者见仁的事情。主要将一下软件安装。
 
-浏览器使用谷歌的 Chromium，输入法也使用了谷歌的 googlepinyin。个人很喜欢谷歌，简洁而且功能强大。
+浏览器使用谷歌的 Chromium，输入法也使用了谷歌的 `googlepinyin`。个人很喜欢谷歌，简洁而且功能强大。
 
 接下去主要讲解一下在 Ubuntu 上使用 QQ 的方法——不用整天网页挂 WebQQ，不用 Wine。
 
@@ -68,7 +68,7 @@ sudo apt-get install libpurple0 pidgin-lwqq
 
 ### Step 3：Enjoy it!
 
-不得不说，Pidgin 真是解决了一个大难题，因为很多同学都在用 QQ，所以不用 QQ 也很难取得联系。有了这款软件就方便多了。接下来是下载软件，我选择了 aria2。一来是终端模式的，看起来舒服；二来支持断点续传；这两样加起来也足够了。而且速度也很快。安装方法：
+不得不说，Pidgin 真是解决了一个大难题，因为很多同学都在用 QQ，所以不用 QQ 也很难取得联系。有了这款软件就方便多了。接下来是下载软件，我选择了 `aria2`。一来是终端模式的，看起来舒服；二来支持断点续传；这两样加起来也足够了。而且速度也很快。安装方法：
 
 ```shell
 sudo apt-get aria2

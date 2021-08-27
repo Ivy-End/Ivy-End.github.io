@@ -113,7 +113,7 @@
 <p>安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是 GUI 界面，相对容易些。</p>
 <p>装完系统就是折腾了，Linux 就是用来折腾的。下面慢慢介绍。</p>
 <h2 id=换上-gnome3>换上 Gnome3</h2>
-<p>由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 apt-get 就可以了。</p>
+<p>由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 <code>apt-get</code> 就可以了。</p>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -159,7 +159,7 @@ sudo apt-get --auto-remove purge unity-asset-pool
 </div>
 </div><h2 id=软件整理>软件整理</h2>
 <p>这个方面主要包括卸载一些不必要的软件以及安装一些必要的软件。卸载就不多说了，这是个智者见智，仁者见仁的事情。主要将一下软件安装。</p>
-<p>浏览器使用谷歌的 Chromium，输入法也使用了谷歌的 googlepinyin。个人很喜欢谷歌，简洁而且功能强大。</p>
+<p>浏览器使用谷歌的 Chromium，输入法也使用了谷歌的 <code>googlepinyin</code>。个人很喜欢谷歌，简洁而且功能强大。</p>
 <p>接下去主要讲解一下在 Ubuntu 上使用 QQ 的方法——不用整天网页挂 WebQQ，不用 Wine。</p>
 <p>众所周知，在 Linux 下有一款支持多种即时通讯账户的软件叫做——Pidgin，默认不支持 QQ，我们只需要安装一个插件就行了。</p>
 <h3 id=step-1安装-pidgin>Step 1：安装 Pidgin</h3>
@@ -185,7 +185,7 @@ sudo apt-get install libpurple0 pidgin-lwqq
 </code></pre></td></tr></table>
 </div>
 </div><h3 id=step-3enjoy-it>Step 3：Enjoy it!</h3>
-<p>不得不说，Pidgin 真是解决了一个大难题，因为很多同学都在用 QQ，所以不用 QQ 也很难取得联系。有了这款软件就方便多了。接下来是下载软件，我选择了 aria2。一来是终端模式的，看起来舒服；二来支持断点续传；这两样加起来也足够了。而且速度也很快。安装方法：</p>
+<p>不得不说，Pidgin 真是解决了一个大难题，因为很多同学都在用 QQ，所以不用 QQ 也很难取得联系。有了这款软件就方便多了。接下来是下载软件，我选择了 <code>aria2</code>。一来是终端模式的，看起来舒服；二来支持断点续传；这两样加起来也足够了。而且速度也很快。安装方法：</p>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt>1
