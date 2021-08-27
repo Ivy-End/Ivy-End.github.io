@@ -11,7 +11,7 @@
 
 附上一段代码：
 
-​```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -22,3 +22,4 @@ int main()
     return 0;
 }
 ```
+
