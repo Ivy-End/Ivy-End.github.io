@@ -1,117 +1,14 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
-<title>2048 游戏制作过程（Java 描述）：第二节、基本设置 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="2048 游戏制作过程（Java 描述）：第二节、基本设置">
-<meta property="og:description" content="首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示： App 图标&#34; App 图标 接下来，找到上一节中保存项目的位置，依次展开文件夹中的">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2015-05-14T17:10:00+08:00">
-<meta property="article:modified_time" content="2015-05-14T17:10:00+08:00">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://example.com/images/favicons/logo.png">
-<meta name=twitter:title content="2048 游戏制作过程（Java 描述）：第二节、基本设置">
-<meta name=twitter:description content="首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示： App 图标&#34; App 图标 接下来，找到上一节中保存项目的位置，依次展开文件夹中的">
-<meta name=application-name content="寸方斋">
-<meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/><link rel=prev href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/><link rel=next href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"2048 游戏制作过程（Java 描述）：第二节、基本设置","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2015\/05\/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"Java","wordcount":1231,"url":"https:\/\/example.com\/2015\/05\/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE\/","datePublished":"2015-05-14T17:10:00+08:00","dateModified":"2015-05-14T17:10:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head>
-<body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
-<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu>
-<div class=menu-inner><a class=menu-item href=/posts/> 所有文章 </a><a class=menu-item href=/tags/> 标签 </a><a class=menu-item href=/categories/> 分类 </a><a class=menu-item href=/friends/> 友链 </a><a class=menu-item href=/about/> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-desktop>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a>
-</div>
-</div>
-</div>
-</header><header class=mobile id=header-mobile>
-<div class=header-container>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu-toggle id=menu-toggle-mobile>
-<span></span><span></span><span></span>
-</div>
-</div>
-<div class=menu id=menu-mobile><div class=search-wrapper>
-<div class="search mobile" id=search-mobile>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-mobile>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</div>
-<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
-取消
-</a>
-</div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a></div>
-</div>
-</header>
-<div class="search-dropdown desktop">
-<div id=search-dropdown-desktop></div>
-</div>
-<div class="search-dropdown mobile">
-<div id=search-dropdown-mobile></div>
-</div>
-<main class=main>
-<div class=container><div class=toc id=toc-auto>
-<h2 class=toc-title>目录</h2>
-<div class=toc-content id=toc-content-auto></div>
-</div><article class="page single"><h1 class="single-title animated flipInX">2048 游戏制作过程（Java 描述）：第二节、基本设置</h1><div class=post-meta>
-<div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div>
-<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2015-05-14>2015-05-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1231 字&nbsp;
-<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
-</div><div class="details toc" id=toc-static kept>
-<div class="details-summary toc-title">
-<span>目录</span>
-<span><i class="details-icon fas fa-angle-right"></i></span>
-</div>
-<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div>
-</div><div class=content id=content><p>首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png" data-sub-html="<h2>App 图标</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png">
-</a><figcaption class=image-caption>App 图标</figcaption>
-</figure>
-<p>接下来，找到上一节中保存项目的位置，依次展开文件夹中的 2048/Game2048/app/src/main/res 目录，如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png" data-sub-html="<h2>App 图标</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png">
-</a><figcaption class=image-caption>App 图标</figcaption>
-</figure>
-<p>分别将刚才制作完成的图标文件更改名字为 ic_launcher.png，并且修改尺寸为 144×144、96×96、72×72、48×48，分别放入 drawable-xxhdip、drawable-xhdpi、drawable-hdpi、drawble-mdpi 文件夹覆盖其中的图标文件。需要用到这么多尺寸的图片，是由于 Android 应用程序需要兼容不同的客户端而引起的。接下来我们打开 Genymotion，并且运行我们的应用，可以发现图标已经被修改：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-sub-html="<h2>App 图标</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png">
-</a><figcaption class=image-caption>App 图标</figcaption>
-</figure>
-<p>接下来，我们修改游戏显示的名称，我们希望只显示数字“2048”，切换到 Android Studio 界面，在左侧找到 values/strings.xml，双击打开该文件，将其中的 app_name 属性修改为 2048 即可，如下图所示：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>2048 游戏制作过程（Java 描述）：第二节、基本设置 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="2048 游戏制作过程（Java 描述）：第二节、基本设置"><meta property="og:description" content="首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示： App 图标&#34; App 图标 接下来，找到上一节中保存项目的位置，依次展开文件夹中的"><meta property="og:type" content="article"><meta property="og:url" content="https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-05-14T17:10:00+08:00"><meta property="article:modified_time" content="2015-05-14T17:10:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://example.com/images/favicons/logo.png"><meta name=twitter:title content="2048 游戏制作过程（Java 描述）：第二节、基本设置"><meta name=twitter:description content="首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示： App 图标&#34; App 图标 接下来，找到上一节中保存项目的位置，依次展开文件夹中的"><meta name=application-name content="寸方斋"><meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/><link rel=prev href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/><link rel=next href=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"2048 游戏制作过程（Java 描述）：第二节、基本设置","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2015\/05\/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"Java","wordcount":1231,"url":"https:\/\/example.com\/2015\/05\/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE\/","datePublished":"2015-05-14T17:10:00+08:00","dateModified":"2015-05-14T17:10:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/friends/>友链 </a><a class=menu-item href=/about/>关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">2048 游戏制作过程（Java 描述）：第二节、基本设置</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2015-05-14>2015-05-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1231 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div></div><div class=content id=content><p>首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png" data-sub-html="<h2>App 图标</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_01.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_01.png"></a><figcaption class=image-caption>App 图标</figcaption></figure><p>接下来，找到上一节中保存项目的位置，依次展开文件夹中的 2048/Game2048/app/src/main/res 目录，如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png" data-sub-html="<h2>App 图标</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_02.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_02.png"></a><figcaption class=image-caption>App 图标</figcaption></figure><p>分别将刚才制作完成的图标文件更改名字为 ic_launcher.png，并且修改尺寸为 144×144、96×96、72×72、48×48，分别放入 drawable-xxhdip、drawable-xhdpi、drawable-hdpi、drawble-mdpi 文件夹覆盖其中的图标文件。需要用到这么多尺寸的图片，是由于 Android 应用程序需要兼容不同的客户端而引起的。接下来我们打开 Genymotion，并且运行我们的应用，可以发现图标已经被修改：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-sub-html="<h2>App 图标</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png"></a><figcaption class=image-caption>App 图标</figcaption></figure><p>接下来，我们修改游戏显示的名称，我们希望只显示数字“2048”，切换到 Android Studio 界面，在左侧找到 values/strings.xml，双击打开该文件，将其中的 app_name 属性修改为 2048 即可，如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -119,9 +16,7 @@
 </span><span class=lnt>6
 </span><span class=lnt>7
 </span><span class=lnt>8
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-xml data-lang=xml>    <span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt;</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml>    <span class=cp>&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt;</span>
     <span class=nt>&lt;resources&gt;</span>
 
         <span class=nt>&lt;string</span> <span class=na>name=</span><span class=s>&#34;app_name&#34;</span><span class=nt>&gt;</span>2048<span class=nt>&lt;/string&gt;</span>
@@ -129,18 +24,7 @@
         <span class=nt>&lt;string</span> <span class=na>name=</span><span class=s>&#34;action_settings&#34;</span><span class=nt>&gt;</span>Settings<span class=nt>&lt;/string&gt;</span>
     
     <span class=nt>&lt;/resources&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>我们再次运行程序，即可发现应用名称已经被修改为“2048”，如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-sub-html="<h2>App 名称</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png">
-</a><figcaption class=image-caption>App 名称</figcaption>
-</figure>
-<p>至此，我们已经完成了对该应用最基本的配置，接下来，我们需要创建最基本的游戏界面。</p>
-<p>首先，打开 res/layout/activity_main.xml 文件，将右下角的 Design/Text 选项卡切换到 Text 界面，并且输入以下代码：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>我们再次运行程序，即可发现应用名称已经被修改为“2048”，如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png" data-sub-html="<h2>App 名称</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_03.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_03.png"></a><figcaption class=image-caption>App 名称</figcaption></figure><p>至此，我们已经完成了对该应用最基本的配置，接下来，我们需要创建最基本的游戏界面。</p><p>首先，打开 res/layout/activity_main.xml 文件，将右下角的 Design/Text 选项卡切换到 Text 界面，并且输入以下代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -171,9 +55,7 @@
 </span><span class=lnt>29
 </span><span class=lnt>30
 </span><span class=lnt>31
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-xml data-lang=xml><span class=err>&lt;</span>?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;&gt;
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=err>&lt;</span>?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;&gt;
 <span class=nt>&lt;LinearLayout</span> <span class=na>xmlns:android=</span><span class=s>&#34;http://schemas.android.com/apk/res/android&#34;</span>
     <span class=na>android:orientation=</span><span class=s>&#34;vertical&#34;</span>
     <span class=na>android:layout_width=</span><span class=s>&#34;match_parent&#34;</span>
@@ -204,23 +86,7 @@
     <span class=nt>&lt;GridLayout&gt;</span>
 
 <span class=nt>&lt;/LinearLayout&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>我们看到在 andorid:text=&ldquo;Score&rdquo; 这段代码被深黄色包裹了起来，说明有一些修改建议，单击到上面，按下 Alt + Enter，在弹出的对话框中选择 Extract string resource，弹出下图的对话框，在 Resource Name 中输入 score，单击 OK，如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png" data-sub-html="<h2>新建字符串</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png">
-</a><figcaption class=image-caption>新建字符串</figcaption>
-</figure>
-<p>切换到 Design 界面，可以看到，刚才定义的 Score 标签已经显示了出来，如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png" data-sub-html="<h2>Score 标签</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png">
-</a><figcaption class=image-caption>Score 标签</figcaption>
-</figure>
-<p>接下来，我们需要新建一个 GameView 类来保存游戏的布局，并使得它继承自 GridLayout。</p>
-<p>首先，我们将 res 文件夹下的 layout 文件夹删除，因为我们需要自己绘制游戏界面，因此不需要用到 xml 布局文件。接下来我们需要创建一个新的类，用来显示当前的游戏界面。右击 com.ivy.end.game2048 文件夹，选择 New，单击 Java Class，输入类名 GameView，让 GameView 类继承自 GridLayout 类，并且定义它的构造函数，如下图所示：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>我们看到在 andorid:text=&ldquo;Score&rdquo; 这段代码被深黄色包裹了起来，说明有一些修改建议，单击到上面，按下 Alt + Enter，在弹出的对话框中选择 Extract string resource，弹出下图的对话框，在 Resource Name 中输入 score，单击 OK，如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png" data-sub-html="<h2>新建字符串</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_07.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_07.png"></a><figcaption class=image-caption>新建字符串</figcaption></figure><p>切换到 Design 界面，可以看到，刚才定义的 Score 标签已经显示了出来，如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png" data-sub-html="<h2>Score 标签</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_08.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_08.png"></a><figcaption class=image-caption>Score 标签</figcaption></figure><p>接下来，我们需要新建一个 GameView 类来保存游戏的布局，并使得它继承自 GridLayout。</p><p>首先，我们将 res 文件夹下的 layout 文件夹删除，因为我们需要自己绘制游戏界面，因此不需要用到 xml 布局文件。接下来我们需要创建一个新的类，用来显示当前的游戏界面。右击 com.ivy.end.game2048 文件夹，选择 New，单击 Java Class，输入类名 GameView，让 GameView 类继承自 GridLayout 类，并且定义它的构造函数，如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -238,9 +104,7 @@
 </span><span class=lnt>16
 </span><span class=lnt>17
 </span><span class=lnt>18
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nn>com.ivy.end.game2048</span><span class=o>;</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nn>com.ivy.end.game2048</span><span class=o>;</span>
 
 <span class=kn>import</span> <span class=nn>...</span>
 
@@ -258,12 +122,7 @@
         <span class=kd>super</span><span class=o>(</span><span class=n>context</span><span class=o>,</span> <span class=n>attrs</span><span class=o>,</span> <span class=n>defStyle</span><span class=o>);</span>
     <span class=o>}</span>
 <span class=o>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>接下来，我们需要定义一个初始化函数 initGameView，并且使得通过这三个构造函数进入类中都执行初始化函数，修改代码如下图所示：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>接下来，我们需要定义一个初始化函数 initGameView，并且使得通过这三个构造函数进入类中都执行初始化函数，修改代码如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -285,9 +144,7 @@
 </span><span class=lnt>20
 </span><span class=lnt>21
 </span><span class=lnt>22
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nn>com.ivy.end.game2048</span><span class=o>;</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nn>com.ivy.end.game2048</span><span class=o>;</span>
 
 <span class=kn>import</span> <span class=nn>...</span>
 
@@ -309,71 +166,18 @@
 
     <span class=o>}</span>
 <span class=o>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>接下来，我们需要将这个类绑定到刚才的 GridLayout 上，切换到 activity_main.xml 文件的 Text 窗口，将 GridLayout 部分代码修改如下：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+</code></pre></td></tr></table></div></div><p>接下来，我们需要将这个类绑定到刚才的 GridLayout 上，切换到 activity_main.xml 文件的 Text 窗口，将 GridLayout 部分代码修改如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-xml data-lang=xml>    <span class=nt>&lt;com.ivy.end.game2048.GameView</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml>    <span class=nt>&lt;com.ivy.end.game2048.GameView</span>
         <span class=na>android:id=</span><span class=s>&#34;@+id/gameView&#34;</span>
         <span class=na>android:layout_width=</span><span class=s>&#34;fill_parent&#34;</span>
         <span class=na>android:layout_height=</span><span class=s>&#34;0dp&#34;</span>
         <span class=na>android:layout_weight=</span><span class=s>&#34;1&#34;</span><span class=nt>&gt;</span>
     <span class=nt>&lt;/com.ivy.end.game2048.GameView&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>至此，我们的布局代码基本完成。运行以后的界面如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png" data-sub-html="<h2>运行效果</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png">
-</a><figcaption class=image-caption>运行效果</figcaption>
-</figure>
-<p>下一节我们将介绍GameView的具体实现。</p>
-</div><div class=post-footer id=post-footer>
-<div class=post-info>
-<div class=post-info-line>
-<div class=post-info-mod>
-<span>更新于 2015-05-14</span>
-</div>
-<div class=post-info-license></div>
-</div>
-<div class=post-info-line>
-<div class=post-info-md><span>
-<a class=link-to-markdown href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/index.md target=_blank>阅读原始文档</a>
-</span></div>
-<div class=post-info-share>
-<span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/ data-title="2048 游戏制作过程（Java 描述）：第二节、基本设置"><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/ data-title="2048 游戏制作过程（Java 描述）：第二节、基本设置"><i class="fab fa-evernote fa-fw"></i></a></span>
-</div>
-</div>
-</div>
-<div class=post-info-more>
-<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/java/>Java</a></section>
-<section>
-<span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span>
-</section>
-</div>
-<div class=post-nav><a href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/ class=prev rel=prev title="2048 游戏制作过程（Java 描述）：第一节、创建项目"><i class="fas fa-angle-left fa-fw"></i>2048 游戏制作过程（Java 描述）：第一节、创建项目</a>
-<a href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/ class=next rel=next title="2048 游戏制作过程（Java 描述）：第三节、创建界面">2048 游戏制作过程（Java 描述）：第三节、创建界面<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id=comments><div id=gitalk class=comment></div><noscript>
-Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.
-</noscript></div></article></div>
-</main><footer class=footer>
-<div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-</div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div>
-</div>
-</footer></div>
-<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
-<i class="fas fa-arrow-up fa-fw"></i>
-</a><a href=# id=view-comments class=fixed-button title=查看评论>
-<i class="fas fa-comment fa-fw"></i>
-</a>
-</div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2015-05-14T17:10:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"2048 游戏制作过程（Java 描述）：第二节、基本设置"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body>
-</html>
+</code></pre></td></tr></table></div></div><p>至此，我们的布局代码基本完成。运行以后的界面如下图所示：</p><figure><a class=lightgallery href=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png title="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png" data-thumbnail="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png" data-sub-html="<h2>运行效果</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png data-srcset="/images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png 1.5x, /images/2015/2048%20%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88Java%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e4%ba%8c%e8%8a%82%e3%80%81%e5%9f%ba%e6%9c%ac%e8%ae%be%e7%bd%ae/game2048_2_12.png 2x" data-sizes=auto alt="/images/2015/2048 游戏制作过程（Java 描述）：第二节、基本设置/game2048_2_12.png"></a><figcaption class=image-caption>运行效果</figcaption></figure><p>下一节我们将介绍GameView的具体实现。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2015-05-14</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/ data-title="2048 游戏制作过程（Java 描述）：第二节、基本设置"><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/ data-title="2048 游戏制作过程（Java 描述）：第二节、基本设置"><i class="fab fa-evernote fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/java/>Java</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/ class=prev rel=prev title="2048 游戏制作过程（Java 描述）：第一节、创建项目"><i class="fas fa-angle-left fa-fw"></i>2048 游戏制作过程（Java 描述）：第一节、创建项目</a>
+<a href=/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/ class=next rel=next title="2048 游戏制作过程（Java 描述）：第三节、创建界面">2048 游戏制作过程（Java 描述）：第三节、创建界面<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2015-05-14T17:10:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"2048 游戏制作过程（Java 描述）：第二节、基本设置"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body></html>

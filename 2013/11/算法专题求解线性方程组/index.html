@@ -1,111 +1,14 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
-<title>算法专题：求解线性方程组 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="算法专题：求解线性方程组">
-<meta property="og:description" content="求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2013-11-05T20:34:00+08:00">
-<meta property="article:modified_time" content="2013-11-05T20:34:00+08:00">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://example.com/images/favicons/logo.png">
-<meta name=twitter:title content="算法专题：求解线性方程组">
-<meta name=twitter:description content="求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换">
-<meta name=application-name content="寸方斋">
-<meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/><link rel=prev href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/><link rel=next href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"算法专题：求解线性方程组","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2013\/11\/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"线性方程组","wordcount":1143,"url":"https:\/\/example.com\/2013\/11\/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84\/","datePublished":"2013-11-05T20:34:00+08:00","dateModified":"2013-11-05T20:34:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head>
-<body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
-<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu>
-<div class=menu-inner><a class=menu-item href=/posts/> 所有文章 </a><a class=menu-item href=/tags/> 标签 </a><a class=menu-item href=/categories/> 分类 </a><a class=menu-item href=/friends/> 友链 </a><a class=menu-item href=/about/> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-desktop>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a>
-</div>
-</div>
-</div>
-</header><header class=mobile id=header-mobile>
-<div class=header-container>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu-toggle id=menu-toggle-mobile>
-<span></span><span></span><span></span>
-</div>
-</div>
-<div class=menu id=menu-mobile><div class=search-wrapper>
-<div class="search mobile" id=search-mobile>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-mobile>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</div>
-<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
-取消
-</a>
-</div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a></div>
-</div>
-</header>
-<div class="search-dropdown desktop">
-<div id=search-dropdown-desktop></div>
-</div>
-<div class="search-dropdown mobile">
-<div id=search-dropdown-mobile></div>
-</div>
-<main class=main>
-<div class=container><div class=toc id=toc-auto>
-<h2 class=toc-title>目录</h2>
-<div class=toc-content id=toc-content-auto></div>
-</div><article class="page single"><h1 class="single-title animated flipInX">算法专题：求解线性方程组</h1><div class=post-meta>
-<div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div>
-<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2013-11-05>2013-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1143 字&nbsp;
-<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
-</div><div class="details toc" id=toc-static kept>
-<div class="details-summary toc-title">
-<span>目录</span>
-<span><i class="details-icon fas fa-angle-right"></i></span>
-</div>
-<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div>
-</div><div class=content id=content><p>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。</p>
-<p>这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。</p>
-<p>我写的高斯消元是将所有系数看成一个矩阵来求解的。</p>
-<p>下面来简要讲一下高斯消元的过程：</p>
-<p>首先，我们根据方程组写出增广矩阵。每次都找 $ x_{i} $ 系数的绝对值最大的那个方程，将它移到上方，而将下面的方程组的 $ x_{i} $ 的系数全部化成 0。以此类推，到最后再逆序求解每个未知数的解。</p>
-<p>我们来看一个例子，求解方程组 $ \begin{cases}2x+y-z=8\\ -3x-y+2z=-11\\ -2x+y+2z=-3\end{cases} $</p>
-<p>首先我们写出它的增广矩阵 $$ \begin{bmatrix}\left.\begin{matrix}2 & 1 & -1\\ -3 & -1 & 2\\ -2 & 1 & 2\end{matrix}\right|\begin{matrix}8\\ -11\\ -3\end{matrix}\end{bmatrix} $$ 接下来我们按照算法步骤来求解这个方程组 $$ \begin{bmatrix} \left.\begin{matrix} 2 & 1 & -1\\ -3 & -1 & 2\\ -2 & 1 & 2 \end{matrix}\right| \begin{matrix} 8\\ -11\\ -3 \end{matrix} \end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 2 & 1 & -1\\ -2 & 1 & 2 \end{matrix}\right| \begin{matrix} -11\\ 8\\ -3 \end{matrix}\end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 0 & \frac{1}{3} & \frac{1}{3}\\ 0 & \frac{5}{3} & \frac{2}{3} \end{matrix}\right| \begin{matrix}-11\\ \frac{2}{3}\\ \frac{13}{3} \end{matrix} \end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 0 & \frac{1}{3} & \frac{1}{3}\\ 0 & 0 & -1 \end{matrix}\right| \begin{matrix} -11\\ \frac{2}{3}\\ 1 \end{matrix} \end{bmatrix}\\ \Rightarrow z=-1,y=3\times\left ( \frac{2}{3}-\frac{1}{3}\times\left ( -1 \right )\right )=3,x=-\frac{1}{3}\times\left ( -11+3-2*\left ( -1 \right ) \right )=2 $$</p>
-<p>表达能力有限，我也只能解释成这样了。</p>
-<p>当时我在网上找资料的时候还抱怨作者为什么不解释清楚点，现在发现，不是作者不愿意解释清楚，这个算法实在难以解释清楚。</p>
-<p>代码如下：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>算法专题：求解线性方程组 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="算法专题：求解线性方程组"><meta property="og:description" content="求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换"><meta property="og:type" content="article"><meta property="og:url" content="https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-11-05T20:34:00+08:00"><meta property="article:modified_time" content="2013-11-05T20:34:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://example.com/images/favicons/logo.png"><meta name=twitter:title content="算法专题：求解线性方程组"><meta name=twitter:description content="求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换"><meta name=application-name content="寸方斋"><meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/><link rel=prev href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/><link rel=next href=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"算法专题：求解线性方程组","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2013\/11\/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"线性方程组","wordcount":1143,"url":"https:\/\/example.com\/2013\/11\/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84\/","datePublished":"2013-11-05T20:34:00+08:00","dateModified":"2013-11-05T20:34:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/friends/>友链 </a><a class=menu-item href=/about/>关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">算法专题：求解线性方程组</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2013-11-05>2013-11-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1143 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div></div><div class=content id=content><p>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。</p><p>这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。</p><p>我写的高斯消元是将所有系数看成一个矩阵来求解的。</p><p>下面来简要讲一下高斯消元的过程：</p><p>首先，我们根据方程组写出增广矩阵。每次都找 $ x_{i} $ 系数的绝对值最大的那个方程，将它移到上方，而将下面的方程组的 $ x_{i} $ 的系数全部化成 0。以此类推，到最后再逆序求解每个未知数的解。</p><p>我们来看一个例子，求解方程组 $ \begin{cases}2x+y-z=8\\ -3x-y+2z=-11\\ -2x+y+2z=-3\end{cases} $</p><p>首先我们写出它的增广矩阵 $$ \begin{bmatrix}\left.\begin{matrix}2 & 1 & -1\\ -3 & -1 & 2\\ -2 & 1 & 2\end{matrix}\right|\begin{matrix}8\\ -11\\ -3\end{matrix}\end{bmatrix} $$ 接下来我们按照算法步骤来求解这个方程组 $$ \begin{bmatrix} \left.\begin{matrix} 2 & 1 & -1\\ -3 & -1 & 2\\ -2 & 1 & 2 \end{matrix}\right| \begin{matrix} 8\\ -11\\ -3 \end{matrix} \end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 2 & 1 & -1\\ -2 & 1 & 2 \end{matrix}\right| \begin{matrix} -11\\ 8\\ -3 \end{matrix}\end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 0 & \frac{1}{3} & \frac{1}{3}\\ 0 & \frac{5}{3} & \frac{2}{3} \end{matrix}\right| \begin{matrix}-11\\ \frac{2}{3}\\ \frac{13}{3} \end{matrix} \end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 & -1 & 2\\ 0 & \frac{1}{3} & \frac{1}{3}\\ 0 & 0 & -1 \end{matrix}\right| \begin{matrix} -11\\ \frac{2}{3}\\ 1 \end{matrix} \end{bmatrix}\\ \Rightarrow z=-1,y=3\times\left ( \frac{2}{3}-\frac{1}{3}\times\left ( -1 \right )\right )=3,x=-\frac{1}{3}\times\left ( -11+3-2*\left ( -1 \right ) \right )=2 $$</p><p>表达能力有限，我也只能解释成这样了。</p><p>当时我在网上找资料的时候还抱怨作者为什么不解释清楚点，现在发现，不是作者不愿意解释清楚，这个算法实在难以解释清楚。</p><p>代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -179,9 +82,7 @@
 </span><span class=lnt>72
 </span><span class=lnt>73
 </span><span class=lnt>74
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-cpp data-lang=cpp><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
 </span><span class=cp></span>
 <span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
 
@@ -255,47 +156,6 @@
     <span class=k>if</span><span class=p>(</span><span class=n>x</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span> <span class=n>x</span> <span class=o>=</span> <span class=o>-</span><span class=n>x</span><span class=p>;</span> <span class=p>}</span>
     <span class=k>return</span> <span class=n>x</span><span class=p>;</span>
 <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>关于高斯消元，这只是一个列主元的算法，还有全主元的，不过个人觉得列主元的就足够用了。</p>
-</div><div class=post-footer id=post-footer>
-<div class=post-info>
-<div class=post-info-line>
-<div class=post-info-mod>
-<span>更新于 2013-11-05</span>
-</div>
-<div class=post-info-license></div>
-</div>
-<div class=post-info-line>
-<div class=post-info-md><span>
-<a class=link-to-markdown href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/index.md target=_blank>阅读原始文档</a>
-</span></div>
-<div class=post-info-share>
-<span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/ data-title=算法专题：求解线性方程组><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/ data-title=算法专题：求解线性方程组><i class="fab fa-evernote fa-fw"></i></a></span>
-</div>
-</div>
-</div>
-<div class=post-info-more>
-<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/>线性方程组</a></section>
-<section>
-<span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span>
-</section>
-</div>
-<div class=post-nav><a href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/ class=prev rel=prev title=算法专题：不定方程><i class="fas fa-angle-left fa-fw"></i>算法专题：不定方程</a>
-<a href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/ class=next rel=next title=算法专题：欧拉函数>算法专题：欧拉函数<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id=comments><div id=gitalk class=comment></div><noscript>
-Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.
-</noscript></div></article></div>
-</main><footer class=footer>
-<div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-</div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div>
-</div>
-</footer></div>
-<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
-<i class="fas fa-arrow-up fa-fw"></i>
-</a><a href=# id=view-comments class=fixed-button title=查看评论>
-<i class="fas fa-comment fa-fw"></i>
-</a>
-</div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2013-11-05T20:34:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"算法专题：求解线性方程组"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body>
-</html>
+</code></pre></td></tr></table></div></div><p>关于高斯消元，这只是一个列主元的算法，还有全主元的，不过个人觉得列主元的就足够用了。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2013-11-05</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/ data-title=算法专题：求解线性方程组><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/ data-title=算法专题：求解线性方程组><i class="fab fa-evernote fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/>线性方程组</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/ class=prev rel=prev title=算法专题：不定方程><i class="fas fa-angle-left fa-fw"></i>算法专题：不定方程</a>
+<a href=/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/ class=next rel=next title=算法专题：欧拉函数>算法专题：欧拉函数<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2013-11-05T20:34:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"算法专题：求解线性方程组"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body></html>

@@ -1,103 +1,14 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=robots content="noodp">
-<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
-<title>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作">
-<meta property="og:description" content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2015-04-22T16:33:00+08:00">
-<meta property="article:modified_time" content="2015-04-22T16:33:00+08:00">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://example.com/images/favicons/logo.png">
-<meta name=twitter:title content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作">
-<meta name=twitter:description content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（">
-<meta name=application-name content="寸方斋">
-<meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/><link rel=prev href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/><link rel=next href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2015\/04\/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"CSharp","wordcount":2664,"url":"https:\/\/example.com\/2015\/04\/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C\/","datePublished":"2015-04-22T16:33:00+08:00","dateModified":"2015-04-22T16:33:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head>
-<body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
-<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu>
-<div class=menu-inner><a class=menu-item href=/posts/> 所有文章 </a><a class=menu-item href=/tags/> 标签 </a><a class=menu-item href=/categories/> 分类 </a><a class=menu-item href=/friends/> 友链 </a><a class=menu-item href=/about/> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-desktop>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a>
-</div>
-</div>
-</div>
-</header><header class=mobile id=header-mobile>
-<div class=header-container>
-<div class=header-wrapper>
-<div class=header-title>
-<a href=/ title=寸方斋>寸方斋</a>
-</div>
-<div class=menu-toggle id=menu-toggle-mobile>
-<span></span><span></span><span></span>
-</div>
-</div>
-<div class=menu id=menu-mobile><div class=search-wrapper>
-<div class="search mobile" id=search-mobile>
-<input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
-<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索>
-<i class="fas fa-search fa-fw"></i>
-</a>
-<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空>
-<i class="fas fa-times-circle fa-fw"></i>
-</a>
-<span class="search-button search-loading" id=search-loading-mobile>
-<i class="fas fa-spinner fa-fw fa-spin"></i>
-</span>
-</div>
-<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
-取消
-</a>
-</div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
-<i class="fas fa-adjust fa-fw"></i>
-</a></div>
-</div>
-</header>
-<div class="search-dropdown desktop">
-<div id=search-dropdown-desktop></div>
-</div>
-<div class="search-dropdown mobile">
-<div id=search-dropdown-mobile></div>
-</div>
-<main class=main>
-<div class=container><div class=toc id=toc-auto>
-<h2 class=toc-title>目录</h2>
-<div class=toc-content id=toc-content-auto></div>
-</div><article class="page single"><h1 class="single-title animated flipInX">扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</h1><div class=post-meta>
-<div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div>
-<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2015-04-22>2015-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2664 字&nbsp;
-<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
-</div><div class="details toc" id=toc-static kept>
-<div class="details-summary toc-title">
-<span>目录</span>
-<span><i class="details-icon fas fa-angle-right"></i></span>
-</div>
-<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div>
-</div><div class=content id=content><p>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。</p>
-<p>在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作 - 寸方斋</title><meta name=Description content="和光同尘，与时舒卷"><meta property="og:title" content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><meta property="og:description" content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（"><meta property="og:type" content="article"><meta property="og:url" content="https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/"><meta property="og:image" content="https://example.com/images/favicons/logo.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-04-22T16:33:00+08:00"><meta property="article:modified_time" content="2015-04-22T16:33:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://example.com/images/favicons/logo.png"><meta name=twitter:title content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><meta name=twitter:description content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（"><meta name=application-name content="寸方斋"><meta name=apple-mobile-web-app-title content="寸方斋"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/><link rel=prev href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/><link rel=next href=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/example.com\/2015\/04\/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C\/"},"image":["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre":"posts","keywords":"CSharp","wordcount":2664,"url":"https:\/\/example.com\/2015\/04\/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C\/","datePublished":"2015-04-22T16:33:00+08:00","dateModified":"2015-04-22T16:33:00+08:00","license":"本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可","publisher":{"@type":"Organization","name":"Kai Wang","logo":"https:\/\/example.com\/images\/favicons\/logo.png"},"author":{"@type":"Person","name":"Kai Wang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/friends/>友链 </a><a class=menu-item href=/about/>关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=寸方斋>寸方斋</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/ title>所有文章</a><a class=menu-item href=/tags/ title>标签</a><a class=menu-item href=/categories/ title>分类</a><a class=menu-item href=/friends/ title>友链</a><a class=menu-item href=/about/ title>关于</a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=" author" class=author><i class="fas fa-user-circle fa-fw"></i>Kai Wang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/%E7%A0%81%E5%BF%97/><i class="far fa-folder fa-fw"></i>码志</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2015-04-22>2015-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2664 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div></div><div class=content id=content><p>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。</p><p>在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -131,9 +42,7 @@
 </span><span class=lnt>32
 </span><span class=lnt>33
 </span><span class=lnt>34
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
 </span><span class=c1></span>        <span class=c1>/// 选择对应的游戏等级
 </span><span class=c1></span>        <span class=c1>/// &lt;/summary&gt;
 </span><span class=c1></span>        <span class=k>private</span> <span class=k>void</span> <span class=n>SelectLevel</span><span class=p>()</span>
@@ -167,12 +76,7 @@
                 <span class=n>settingSToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=k>true</span><span class=p>;</span>
             <span class=p>}</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>注意到 beginnerBToolStripMenuItem、intermediateIToolStripMenuItem、expertEToolStripMenuItem、settingSToolStripMenuItem 分别表示四个等级的菜单的名称，通过修改它们的 Checked 属性来达到修改对应项目前面勾的状态。我们还需要在初始化函数中调用这个函数：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>注意到 beginnerBToolStripMenuItem、intermediateIToolStripMenuItem、expertEToolStripMenuItem、settingSToolStripMenuItem 分别表示四个等级的菜单的名称，通过修改它们的 Checked 属性来达到修改对应项目前面勾的状态。我们还需要在初始化函数中调用这个函数：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -187,9 +91,7 @@
 </span><span class=lnt>13
 </span><span class=lnt>14
 </span><span class=lnt>15
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
 </span><span class=c1></span>        <span class=c1>/// 游戏参数设置
 </span><span class=c1></span>        <span class=c1>/// &lt;/summary&gt;
 </span><span class=c1></span>        <span class=c1>/// &lt;param name=&#34;Width&#34;&gt;雷区宽度&lt;/param&gt;
@@ -204,17 +106,7 @@
 
             <span class=n>SelectLevel</span><span class=p>();</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这时候，我们运行就会发现Beginner菜单前面的勾被选中了：</p>
-<figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png" data-sub-html="<h2>菜单示意图</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png">
-</a><figcaption class=image-caption>菜单示意图</figcaption>
-</figure>
-<p>下面我们来处理一下各个菜单按钮的事件，我们只需要双击菜单上的按钮，程序会自动创建对应的单击事件，我们只需要在其中书写代码即可。我们首先来创建 Beginner、Intermediate、Expert、Exit、About 菜单项目对应的事件。我们先介绍 Beginner、Intermediate、Expert 菜单项目对应的代码：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>这时候，我们运行就会发现Beginner菜单前面的勾被选中了：</p><figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png" data-sub-html="<h2>菜单示意图</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_03.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_03.png"></a><figcaption class=image-caption>菜单示意图</figcaption></figure><p>下面我们来处理一下各个菜单按钮的事件，我们只需要双击菜单上的按钮，程序会自动创建对应的单击事件，我们只需要在其中书写代码即可。我们首先来创建 Beginner、Intermediate、Expert、Exit、About 菜单项目对应的事件。我们先介绍 Beginner、Intermediate、Expert 菜单项目对应的代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -231,9 +123,7 @@
 </span><span class=lnt>15
 </span><span class=lnt>16
 </span><span class=lnt>17
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=n>nWidth</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span>
             <span class=n>SelectLevel</span><span class=p>();</span>
@@ -250,33 +140,21 @@
             <span class=n>nWidth</span> <span class=p>=</span> <span class=m>30</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>99</span><span class=p>;</span>
             <span class=n>SelectLevel</span><span class=p>();</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>接下来，我们处理 Exit 事件，我们希望在退出游戏之前询问游戏者是否确认退出，代码如下：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+</code></pre></td></tr></table></div></div><p>接下来，我们处理 Exit 事件，我们希望在退出游戏之前询问游戏者是否确认退出，代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span><span class=lnt>5
 </span><span class=lnt>6
 </span><span class=lnt>7
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>exitXToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>exitXToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=k>if</span><span class=p>(</span><span class=n>MessageBox</span><span class=p>.</span><span class=n>Show</span><span class=p>(</span><span class=s>&#34;Are you sure to exit the game?&#34;</span><span class=p>,</span> <span class=s>&#34;Exit&#34;</span><span class=p>,</span> <span class=n>MessageBoxButtons</span><span class=p>.</span><span class=n>YesNo</span><span class=p>,</span> <span class=n>MessageBoxIcon</span><span class=p>.</span><span class=n>Question</span><span class=p>)</span> <span class=p>==</span> <span class=n>DialogResult</span><span class=p>.</span><span class=n>Yes</span><span class=p>)</span>
             <span class=p>{</span>
                 <span class=n>Application</span><span class=p>.</span><span class=n>Exit</span><span class=p>();</span>
             <span class=p>}</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>然后，我们来处理 About 事件，我们希望得到类似 Windows 默认关于窗口的界面。为此，首先我们需要引用一个类，在代码的开头部分加上下图高亮部分的代码：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>然后，我们来处理 About 事件，我们希望得到类似 Windows 默认关于窗口的界面。为此，首先我们需要引用一个类，在代码的开头部分加上下图高亮部分的代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -286,9 +164,7 @@
 </span><span class=lnt> 8
 </span><span class=lnt> 9
 </span><span class=lnt>10
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp><span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
 <span class=k>using</span> <span class=nn>System.Collections.Generic</span><span class=p>;</span>
 <span class=k>using</span> <span class=nn>System.ComponentModal</span><span class=p>;</span>
 <span class=k>using</span> <span class=nn>System.Data</span><span class=p>;</span>
@@ -298,12 +174,7 @@
 <span class=k>using</span> <span class=nn>System.Text</span><span class=p>;</span>
 <span class=k>using</span> <span class=nn>System.Threading.Tasks</span><span class=p>;</span>
 <span class=k>using</span> <span class=nn>System.Windows.Forms</span><span class=p>;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>为了实现这样的功能，我们需要调用 Windows 系统内部的一个 API，添加这样一个函数：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>为了实现这样的功能，我们需要调用 Windows 系统内部的一个 API，添加这样一个函数：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -313,9 +184,7 @@
 </span><span class=lnt> 8
 </span><span class=lnt> 9
 </span><span class=lnt>10
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
 </span><span class=c1></span>        <span class=c1>/// 系统关于对话框（API）
 </span><span class=c1></span>        <span class=c1>/// &lt;/summary&gt;
 </span><span class=c1></span>        <span class=c1>/// &lt;param name=&#34;hWnd&#34;&gt;窗口句柄&lt;/param&gt;
@@ -325,32 +194,15 @@
 </span><span class=c1></span>        <span class=c1>/// &lt;returns&gt;&lt;/returns&gt;
 </span><span class=c1></span><span class=na>        [DllImport(&#34;shell32.dll&#34;)]</span>
         <span class=k>public</span> <span class=k>extern</span> <span class=k>static</span> <span class=kt>int</span> <span class=n>ShellAbout</span><span class=p>(</span><span class=n>IntPtr</span> <span class=n>hWnd</span><span class=p>,</span> <span class=kt>string</span> <span class=n>szApp</span><span class=p>,</span> <span class=kt>string</span> <span class=n>szOtherStuff</span><span class=p>,</span> <span class=n>IntPtr</span> <span class=n>hIcon</span><span class=p>);</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>在 About 事件中添加如下代码进行调用：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+</code></pre></td></tr></table></div></div><p>在 About 事件中添加如下代码进行调用：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>aboutAToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>aboutAToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=n>ShellAbout</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=n>Handle</span><span class=p>,</span> <span class=s>&#34;Minesweeper&#34;</span><span class=p>,</span> <span class=s>&#34;A minesweeper game using CSharp language.&#34;</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=n>Icon</span><span class=p>.</span><span class=n>Handle</span><span class=p>);</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>运行以后查看结果如下图所示：</p>
-<figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png" data-sub-html="<h2>关于</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png">
-</a><figcaption class=image-caption>关于</figcaption>
-</figure>
-<p>可能细心的读者会发现，虽然我们通过菜单修改了游戏等级，但是我们窗口中的雷区却没有发生变化，因为我们没有在菜单被按下的时候没有调用 UpdateSize 函数。在三个按钮的事件中添加对 UpdateSize 函数的调用即可。代码如下：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>运行以后查看结果如下图所示：</p><figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png" data-sub-html="<h2>关于</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_09.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_09.png"></a><figcaption class=image-caption>关于</figcaption></figure><p>可能细心的读者会发现，虽然我们通过菜单修改了游戏等级，但是我们窗口中的雷区却没有发生变化，因为我们没有在菜单被按下的时候没有调用 UpdateSize 函数。在三个按钮的事件中添加对 UpdateSize 函数的调用即可。代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -370,9 +222,7 @@
 </span><span class=lnt>18
 </span><span class=lnt>19
 </span><span class=lnt>20
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=n>nWidth</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span>
             <span class=n>SelectLevel</span><span class=p>();</span>
@@ -392,12 +242,7 @@
             <span class=n>SelectLevel</span><span class=p>();</span>
             <span class=n>UpdateSize</span><span class=p>();</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>在此运行的时候，我们发现修改游戏等级的时候，游戏界面也会发生相应的变化。但是还有一点瑕疵，就是在大规模变成小规模的时候，边上会有多余的雷区。为了修正这个 Bug，我们需要将原来 Paint 事件中代码放在一个新的函数 PaintGame 中，同时添加高亮区域的代码，并且在 Paint 事件中进行调用，代码如下：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>在此运行的时候，我们发现修改游戏等级的时候，游戏界面也会发生相应的变化。但是还有一点瑕疵，就是在大规模变成小规模的时候，边上会有多余的雷区。为了修正这个 Bug，我们需要将原来 Paint 事件中代码放在一个新的函数 PaintGame 中，同时添加高亮区域的代码，并且在 Paint 事件中进行调用，代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -424,9 +269,7 @@
 </span><span class=lnt>25
 </span><span class=lnt>26
 </span><span class=lnt>27
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>Form_Main_Paint</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>PaintEventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>Form_Main_Paint</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>PaintEventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=n>PaintGame</span><span class=p>();</span>
         <span class=p>}</span>
@@ -453,12 +296,7 @@
 </span><span class=c1></span>                <span class=p>}</span>
             <span class=p>}</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>除此之外，在UpdateSize最后也需要调用PaintGame函数，如下图所示：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>除此之外，在UpdateSize最后也需要调用PaintGame函数，如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -470,9 +308,7 @@
 </span><span class=lnt>10
 </span><span class=lnt>11
 </span><span class=lnt>12
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=c1>/// &lt;summary&gt;
 </span><span class=c1></span>        <span class=c1>/// 自动更新窗口大小
 </span><span class=c1></span>        <span class=c1>/// &lt;summary&gt;
 </span><span class=c1></span>        <span class=k>private</span> <span class=k>void</span> <span class=n>UpdateSize</span><span class=p>()</span>
@@ -484,13 +320,7 @@
 </span><span class=c1></span>            <span class=k>this</span><span class=p>.</span><span class=n>Height</span> <span class=p>=</span> <span class=m>12</span> <span class=p>+</span> <span class=m>34</span> <span class=p>*</span> <span class=n>nHeight</span> <span class=p>+</span> <span class=n>nAdditionY</span> <span class=p>+</span> <span class=n>nOffsetY</span><span class=p>;</span>    <span class=c1>// 设置窗口宽度，同理
 </span><span class=c1></span>            <span class=n>PaintGame</span><span class=p>()</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>再次运行的时候，就会发现边上多余的雷区已经消失了。</p>
-<p>接下来我们处理 Mark 以及 Audio 两个事件，我们需要定义两个变量来记录它们的数据，因为这对于我们以后的开发有很大的关系。如下图所示：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>再次运行的时候，就会发现边上多余的雷区已经消失了。</p><p>接下来我们处理 Mark 以及 Audio 两个事件，我们需要定义两个变量来记录它们的数据，因为这对于我们以后的开发有很大的关系。如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -502,9 +332,7 @@
 </span><span class=lnt>10
 </span><span class=lnt>11
 </span><span class=lnt>12
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=k>namespace</span> <span class=nn>Minesweeper</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp><span class=k>namespace</span> <span class=nn>Minesweeper</span>
 <span class=p>{</span>
     <span class=k>public</span> <span class=k>partial</span> <span class=k>class</span> <span class=nc>Form_Main</span> <span class=p>:</span> <span class=n>Form</span>
     <span class=p>{</span>
@@ -516,17 +344,7 @@
 </span><span class=c1></span>        <span class=kt>bool</span> <span class=n>bAudio</span><span class=p>;</span>    <span class=c1>// 表示是否使用音效
 </span><span class=c1></span>    <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>同样我们需要在游戏开始的时候读取上次的数据，如果没有则都设置为真。我们首先看 Setting 文件：</p>
-<figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png" data-sub-html="<h2>Setting 文件配置</h2>">
-<img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png">
-</a><figcaption class=image-caption>Setting 文件配置</figcaption>
-</figure>
-<p>同时加入以下代码：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</code></pre></td></tr></table></div></div><p>同样我们需要在游戏开始的时候读取上次的数据，如果没有则都设置为真。我们首先看 Setting 文件：</p><figure><a class=lightgallery href=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png title="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png" data-thumbnail="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png" data-sub-html="<h2>Setting 文件配置</h2>"><img class=lazyload src=/svg/loading.min.svg data-src=/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png data-srcset="/images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png 1.5x, /images/2015/%e6%89%ab%e9%9b%b7%e6%b8%b8%e6%88%8f%e5%88%b6%e4%bd%9c%e8%bf%87%e7%a8%8b%ef%bc%88CSharp%20%e6%8f%8f%e8%bf%b0%ef%bc%89%ef%bc%9a%e7%ac%ac%e5%9b%9b%e8%8a%82%e3%80%81%e8%8f%9c%e5%8d%95%e6%93%8d%e4%bd%9c/mineSweeper_4_14.png 2x" data-sizes=auto alt="/images/2015/扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作/mineSweeper_4_14.png"></a><figcaption class=image-caption>Setting 文件配置</figcaption></figure><p>同时加入以下代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -544,9 +362,7 @@
 </span><span class=lnt>16
 </span><span class=lnt>17
 </span><span class=lnt>18
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>public</span> <span class=n>Form_Main</span><span class=p>()</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>public</span> <span class=n>Form_Main</span><span class=p>()</span>
         <span class=p>{</span>
             <span class=n>InitializeComponent</span><span class=p>();</span>
 
@@ -564,12 +380,7 @@
             <span class=n>UpdateSize</span><span class=p>();</span>
             <span class=n>SelectLevel</span><span class=p>();</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>同时为 Mark 以及 Audio 菜单项目添加如下的事件：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
+</code></pre></td></tr></table></div></div><p>同时为 Mark 以及 Audio 菜单项目添加如下的事件：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -578,9 +389,7 @@
 </span><span class=lnt>7
 </span><span class=lnt>8
 </span><span class=lnt>9
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>markMToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-csharp data-lang=csharp>        <span class=k>private</span> <span class=k>void</span> <span class=n>markMToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
         <span class=p>{</span>
             <span class=n>markMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bMark</span> <span class=p>=</span> <span class=p>!</span><span class=n>bMark</span><span class=p>;</span>
         <span class=p>}</span>
@@ -589,47 +398,6 @@
         <span class=p>{</span>
             <span class=n>audioMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bAudio</span> <span class=p>=</span> <span class=p>!</span><span class=n>bAudio</span><span class=p>;</span>
         <span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>至此，我们还剩 New Game、Setting、Rank 三个菜单选项的事件没有涉及，因为它们需用用到更多的内容，我们将会在下一节中进行讲解。</p>
-</div><div class=post-footer id=post-footer>
-<div class=post-info>
-<div class=post-info-line>
-<div class=post-info-mod>
-<span>更新于 2015-04-22</span>
-</div>
-<div class=post-info-license></div>
-</div>
-<div class=post-info-line>
-<div class=post-info-md><span>
-<a class=link-to-markdown href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/index.md target=_blank>阅读原始文档</a>
-</span></div>
-<div class=post-info-share>
-<span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/ data-title="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/ data-title="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><i class="fab fa-evernote fa-fw"></i></a></span>
-</div>
-</div>
-</div>
-<div class=post-info-more>
-<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/csharp/>CSharp</a></section>
-<section>
-<span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span>
-</section>
-</div>
-<div class=post-nav><a href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/ class=prev rel=prev title="扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制"><i class="fas fa-angle-left fa-fw"></i>扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制</a>
-<a href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/ class=next rel=next title="扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）">扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id=comments><div id=gitalk class=comment></div><noscript>
-Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.
-</noscript></div></article></div>
-</main><footer class=footer>
-<div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-</div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div>
-</div>
-</footer></div>
-<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部>
-<i class="fas fa-arrow-up fa-fw"></i>
-</a><a href=# id=view-comments class=fixed-button title=查看评论>
-<i class="fas fa-comment fa-fw"></i>
-</a>
-</div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2015-04-22T16:33:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body>
-</html>
+</code></pre></td></tr></table></div></div><p>至此，我们还剩 New Game、Setting、Rank 三个菜单选项的事件没有涉及，因为它们需用用到更多的内容，我们将会在下一节中进行讲解。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2015-04-22</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/ data-title="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://example.com/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/ data-title="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><i class="fab fa-evernote fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/csharp/>CSharp</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/ class=prev rel=prev title="扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制"><i class="fas fa-angle-left fa-fw"></i>扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制</a>
+<a href=/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/ class=next rel=next title="扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）">扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2012 - 2021</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kai Wang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"复制到剪贴板",maxShownLines:10},comment:{gitalk:{admin:["Ivy-End"],clientID:"e30b1c0b5ac89934f6d9",clientSecret:"a65e21d78f20f1f0bb17fe134c657e900a38afb1",id:"2015-04-22T16:33:00+08:00",owner:"Ivy-End",repo:"Ivy-End.github.io",title:"扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"}},lightGallery:{actualSize:!1,exThumbImage:"data-thumbnail",hideBarsDelay:2e3,selector:".lightgallery",speed:400,thumbContHeight:80,thumbWidth:80,thumbnail:!0},math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"$$",right:"$$"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"},{display:!1,left:"$",right:"$"}],strict:!1},search:{algoliaAppID:"PASDMWALPK",algoliaIndex:"index.zh-cn",algoliaSearchKey:"b42948e51daaa93df92381c8e2ac0f93",highlightTag:"em",maxResultLength:10,noResultsFound:"没有找到结果",snippetLength:50,type:"algolia"}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','37961659',{anonymize_ip:!0})</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=37961659" async></script></body></html>
