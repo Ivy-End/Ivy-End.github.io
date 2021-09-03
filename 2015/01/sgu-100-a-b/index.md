@@ -1,6 +1,7 @@
 # SGU 100 - A + B
 
 
+[100. A+B]
 ## Description
 
 Read integers $A$ and $B$ from input file and write their sum in output file.

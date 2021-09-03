@@ -381,7 +381,7 @@ int main()
 
 映射法：每个四边形对应一条对角线——每条对角线对应一个交点。
 
-题目转化为求四边形的个数，即为 $$\mathrm{C}_N^2 \cdot \mathrm{C}_M^2$$
+题目转化为求四边形的个数，即为 $$\binom{N}{2} \cdot \binom{M}{2}$$
 
 ```cpp
 #include <iostream>
@@ -538,7 +538,7 @@ int main()
 ##  UVaOJ 10970
 记得在 Codeforces 上做过，当时被 hack 了。这里数据范围比较小，所以可以直接用 `int`。
 
-$$ ans = xy - 1$$
+$$ \mathrm{ans} = xy - 1$$
 
 ```cpp
 #include <iostream>

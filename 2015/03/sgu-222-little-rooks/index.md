@@ -32,7 +32,7 @@ Write index $I$ for given number as the first number in line. Write $I$ super-pr
 
 ## Analysis
 
-由于 $K$ 个车每行只能放一个，所以一共有 $K!$ 种情况，一共有 $N\times N$ 的棋盘，行列选择共 $C_N^K\cdot C_N^K$ 种情况。因此，通过排列组合，我们有 $$ans = C_N^K\cdot C_N^K \cdot K!$$ 化简可得 $$ans = \frac{N!}{K!\cdot (N - K)!}\cdot\frac{N!}{(N - K)!}$$
+由于 $K$ 个车每行只能放一个，所以一共有 $K!$ 种情况，一共有 $N\times N$ 的棋盘，行列选择共 $\binom{N}{k}\cdot \binom{N}{k}$ 种情况。因此，通过排列组合，我们有 $$\mathrm{ans} = \binom{N}{k}\cdot \binom{N}{k}\cdot K!$$ 化简可得 $$\mathrm{ans} = \frac{N!}{K!\cdot (N - K)!}\cdot\frac{N!}{(N - K)!}$$
 
 ## Solution
 

@@ -46,7 +46,7 @@ int main()
 
 ## UVa 10300
 
-根据题目描述推导公式，$$ ans = \sum{\left(\frac{x}{y}\cdot y\cdot z\right)} = \sum{xz}$$
+根据题目描述推导公式，$$ \mathrm{ans} = \sum{\left(\frac{x}{y}\cdot y\cdot z\right)} = \sum{xz}$$
 
 题中讲到了首先计算每只动物的占地面积，乘以环境友好常数，再乘以动物数目。这里可以直接将动物数目约去。
 
@@ -133,7 +133,7 @@ int main()
 
 英语不好，题目看了半天，找了翻译，才看懂题目。
 
-实际上，只有包裹在 $X$ 内部的空格才要统计在内，即得 $ans = Total - Minimum \times Row$。
+实际上，只有包裹在 $X$ 内部的空格才要统计在内，即得 $\mathrm{ans} = \mathrm{Total} - \mathrm{Minimum} \times \mathrm{Row}$。
 
 ```cpp
 #include <iostream>
@@ -423,4 +423,4 @@ int main()
 }
 ```
 
-总结一下，刷了12道水题，发现比sgu简单多了，就这样穿插着刷一刷小白书吧。
+总结一下，刷了 12 道水题，发现比 SGU 简单多了，就这样穿插着刷一刷小白书吧。

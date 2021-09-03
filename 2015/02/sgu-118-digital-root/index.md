@@ -34,9 +34,9 @@ Write one line for every test case. On each line write digital root for given ex
 
 证明如下：
 
-令 $$n = a_0 \cdot 10^{p_0} + a_1 \cdot 10_{p_1} + \cdots + a_{m-1} \cdot 10^1 + a_m \cdot 10^0$$ 其中 $n$ 为 $m$ 位数。则 $$n \mod 9 = a_0 + a_1 + \cdots + a_{m-1} + a_m = f(n)$$ 即 $$f(n) \equiv n\mod 9$$ 证毕。
+令 $$n = a_0 \cdot 10^{p_0} + a_1 \cdot 10_{p_1} + \cdots + a_{m-1} \cdot 10^1 + a_m \cdot 10^0$$ 其中 $n$ 为 $m$ 位数。则 $$n \mod 9 = a_0 + a_1 + \cdots + a_{m-1} + a_m = f(n)$$ 即 $$f(n) \equiv n \mod 9$$ 证毕。
 
-需要注意的是，当 `n mod 9 == 0` 的时候，`f(n) = 9`。
+需要注意的是，当 $n \mod 9 = 0$ 的时候，$f(n) = 9$。
 
 读入的时候要先把数据 mod 9，否则中间计算过程会超 `int`。
 

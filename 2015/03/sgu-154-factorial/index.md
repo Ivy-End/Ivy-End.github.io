@@ -31,7 +31,7 @@ Write "No solution", if there is no such number $N$, and $N$ otherwise.
 
 由于题目给出的空间限制只有 4096KB，所以不能打表，会 MLE。百度题解以后发现可以用二分。
 
-二分的时候统计 1 到 $N$ 这 $N$ 个数中因数 5 的个数，我们采用这样的方法：$$ans = \left\lfloor\frac{N}{5}\right\rfloor + \left\lfloor\frac{N}{5^2}\right\rfloor + \left\lfloor\frac{N}{5^3}\right\rfloor + \cdots $$
+二分的时候统计 1 到 $N$ 这 $N$ 个数中因数 5 的个数，我们采用这样的方法：$$\mathrm{ans} = \left\lfloor\frac{N}{5}\right\rfloor + \left\lfloor\frac{N}{5^2}\right\rfloor + \left\lfloor\frac{N}{5^3}\right\rfloor + \cdots $$
 
 处理这个过程有两种方法，一个是打表，把 5 的幂次打表出来，还有一种利用类似秦九邵算法的思想，每次 `ans += N / 5`，同时 `N /= 5`。
 

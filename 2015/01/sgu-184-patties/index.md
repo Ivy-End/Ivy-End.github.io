@@ -28,7 +28,7 @@ Output the maximum number of patties Petya can cook.
 
 ## Analysis
 
-简单的数学分析就知道，所求答案为 $P / K$，$M / R$，$C / V$ 的最小值。
+简单的数学分析就知道，所求答案为 $\left\lfloor\frac{P}{K}\right\rfloor$，$\left\lfloor\frac{M}{R}\right\rfloor$，$\left\lfloor\frac{C}{V}\right\rfloor$ 的最小值。
 
 ## Solution
 
