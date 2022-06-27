@@ -1,4 +1,156 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://example.com/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:22:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://example.com/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Verilog 转 Spice 网表</title><link>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description><![CDATA[<p><code>v2lvs</code> 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 <code>v2lvs</code> 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tcl" data-lang="tcl"><span class="nv">v21vs</span> <span class="o">-</span><span class="mi">64</span> <span class="o">-</span>sn <span class="err">\</span>
+    <span class="nv">-v</span> ..<span class="o">/</span>..<span class="o">/</span>..<span class="o">/</span>..<span class="o">/</span><span class="mi">0</span>UTPUT<span class="o">/</span>TOP_TSCam.pg.v<span class="err">\</span>
+    <span class="nv">-v</span> .<span class="o">/</span>Pixel.pg.v <span class="err">\</span>
+    <span class="nv">-s</span> <span class="o">/</span>TOOLS<span class="o">/</span>PDK<span class="o">/</span>SMIC<span class="o">/</span>SMIC55LL<span class="o">/</span>SPDK55LL_ULP_09121825_OA_CDS_V1.16_2<span class="o">/</span>smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2<span class="o">/</span>Calibre<span class="o">/</span>LVS<span class="o">/</span>empty_subckt.sp <span class="err">\</span>
+    <span class="nv">-s</span> <span class="o">/</span>TOOLS<span class="o">/</span>STD_CELL<span class="o">/</span>SMIC-55<span class="o">/</span>SCC55NLL_HD_LVT_V2.0b<span class="o">/</span>SCC55NLL_HD_LVT_V2p0b<span class="o">/</span>cdl<span class="o">/</span>SCC55NLL_HD_LVT_V2p0.cdl <span class="err">\</span>
+    <span class="nv">-s</span> <span class="o">/</span>TOOLS<span class="o">/</span>STD CELL<span class="o">/</span>SMIC-55<span class="o">/</span>I0<span class="o">/</span>SP55NLLD2RP OV3 VOp7<span class="o">/</span><span class="mi">1</span>vs<span class="o">/</span>SP55NLLD2RP_OV3_VOp7.sp <span class="err">\</span>
+    <span class="nv">-s.</span><span class="o">/</span>SPAD.cdl <span class="err">\</span>
+    <span class="nv">-o</span> TOP_TSCam.cdl
+</code></pre></td></tr></table>
+</div>
+</div><p>关于 <code>v2lvs</code> 更详细的指令介绍如下所示：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">-a &lt;c1&gt;<span class="o">[</span>&lt;c2&gt;<span class="o">]</span>    : Change array delimiters from the default <span class="s2">&#34;[]&#34;</span>. 
+                 :     c1 replaces left side <span class="s1">&#39;[&#39;</span>. 
+                 :     c2 optionally replaces right side <span class="s1">&#39;]&#39;</span>. 
+-addpin &lt;pin&gt;    : Add &lt;pin&gt; to the signature of any Verilog module that does not have it. 
+                     Connect &lt;pin&gt; to port &lt;pin&gt; in all instances that <span class="k">do</span> not already have a 
+                     connection specified. 
+                     Spice libraries parsed with -lsr and -lsp will not have pins added 
+                     -addpin is not compatitble with -i. 
+-b               : Preserve backslash character in escaped identifiers. 
+-cb              : Prefer CALDRCLVSEVE<span class="o">(</span>Calibre CB<span class="o">)</span> license during license search.      
+-c &lt;c1&gt;&lt;c2&gt;      : Change illegal spice characters c1 to c2. 
+-cfg &lt;filename&gt;  : Config file <span class="k">for</span> passing IP blocks related information. This will    
+                     bring a custom spice file in to the Verilog and call a top level  
+                     subckt from the Verilog.                                          
+-e               : Generate empty .SUBCKT statements <span class="o">(</span>no instances are translated<span class="o">)</span>     
+                     -e is useful <span class="k">for</span> generating <span class="s2">&#34;black box&#34;</span> subcircuits from library files 
+-h<span class="o">[</span>elp<span class="o">]</span>          : Help.  Prints this message.                                         
+-i               : Make calls using pins in order <span class="o">(</span>traditional spice<span class="o">)</span> not with <span class="nv">$PINS</span>.  
+                     For non-Calibre use only, avoid using -i option <span class="k">for</span> LVS.            
+-ictrace         : Prefer ICTRACE license during license search.                       
+-incvdir         : Add INCLUDE path <span class="k">for</span> files <span class="sb">`</span>include<span class="err">&#39;</span>ed from verilog files.          
+-l &lt;filename&gt;    : Defines the Verilog library file name <span class="o">(</span>the library is not translated<span class="o">)</span>.  
+                     The library file is parsed <span class="k">for</span> interface pin configurations<span class="o">(</span>see -s<span class="o">)</span>.  
+-lsp &lt;filename&gt;  : Spice library file name, pin mode. The Spice file is parsed <span class="k">for</span>     
+                     interface configurations. Pins with pin <span class="k">select</span> <span class="o">([])</span> annotation are  
+                     kept as individual pins using escaped identifiers. See also -lsr and -l. 
+-lsr &lt;filename&gt;  : Spice library file name, range mode. The Spice file is parsed <span class="k">for</span>   
+                     interface configurations. Pins with pin <span class="k">select</span> <span class="o">([])</span> annotation are  
+                     assembled into Verilog ranges. See also -lsp and -l.              
+-n               : Causes unconnected pins to get numbered connections starting at 1000.   
+-o &lt;filename&gt;    : Defines the file <span class="k">for</span> the resulting Spice-like netlist to be used in   
+                     the LVS <span class="o">(</span>layout versus schematic<span class="o">)</span> application. This result will   
+                     include a translation of the Verilog netlist.                     
+-s &lt;filename&gt;    : Causes the string .INCLUDE <span class="s2">&#34;filename&#34;</span> to be put at the beginning of   
+                     the generated spice file <span class="o">(</span>-o<span class="o">)</span>.                                    
+                     -s does not cause v2lvs to <span class="nb">read</span> the SPICE file <span class="o">(</span>see -lsr and -lsp<span class="o">)</span>.   
+-s0 &lt;string&gt;     : Default global ground is changed to &lt;string&gt;.                       
+-s1 &lt;string&gt;     : Default global power is changed to &lt;string&gt;.                        
+-sk              : <span class="s2">&#34;supply0&#34;</span> and <span class="s2">&#34;supply1&#34;</span> nets are not connected to default power/ground. 
+-sl              : <span class="s2">&#34;supply0&#34;</span> and <span class="s2">&#34;supply1&#34;</span> nets are not connected to globals.      
+-sn              : Default power and ground nets are not connected to globals.         
+-so &lt;filename&gt;   : Filename provides instance or module specific power/ground overrides.   
+-t &lt;svdb_dir&gt;    : Causes an Calibre/XRC <span class="nb">source</span> template file to be written to an svdb database. 
+-p &lt;string&gt;      : Defines a prefix to be used <span class="k">for</span> primitive gate instantiations.      
+-u &lt;string&gt;      : Defines a prefix <span class="k">for</span> the naming of unnamed pins in module instantiations. 
+-v &lt;filename&gt;    : Defines the Verilog design netlist file name.                       
+-werror          : Treat Warnings as Errors <span class="o">(</span>-w &lt;n&gt; applies<span class="o">)</span>.                          
+-w &lt;n&gt;           : Defines a warning messaged level 0-4. <span class="m">2</span> is the default.             
+                         <span class="m">0</span> - no warnings.                                              
+                         <span class="m">1</span> - level <span class="m">0</span> + warn skipped modules and multiple declarations of modules. 
+                         <span class="m">2</span> - level <span class="m">1</span> warnings + calls to undeclared modules.           
+                         <span class="m">3</span> - level <span class="m">2</span> warnings + called port array width mismatches.    
+                                             + unsupported compiler directives.        
+                         <span class="m">4</span> - level <span class="m">3</span> warnings + all ignored constructs.                
+                           <span class="o">(</span>i.e. delays, charges etc<span class="o">)</span> 
+-log &lt;filename&gt;  : Defines the log file which contains the error and warning messages.   
+-undef_mod       : This switch tells v2lvs not to <span class="k">do</span> special handling <span class="k">for</span> undefined modules. 
+-version         : Show v2lvs version.                                                 
+-- &lt;a0&gt; &lt;a1&gt; ... : Pass arguments to the TCL script as an <span class="nv">$argv</span> list, access by <span class="s2">&#34;[lindex </span><span class="nv">$argv</span><span class="s2"> </span><span class="nv">$n</span><span class="s2">]&#34;</span>. 
+                     Only one <span class="s2">&#34;--&#34;</span> switch is allowed. 
+                     Take care to properly escape special shell characters.
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
 <h2 id="加密">加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -15,7 +167,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
 <span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
 <span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
 <span class="c1">#      enc     表示使用加密进行编码</span>
@@ -41,7 +193,7 @@ Verifying -enter aes-256-cbc-encryption password:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
 <span class="c1">#      enc     表示使用加密进行编码</span>
 <span class="c1">#      -e      表示使用加密选项</span>
 <span class="c1">#      -aes256 表示使用 aes256 加密算法</span>

@@ -5,7 +5,7 @@
 
 ## 加密
 
-```bash
+```shell
 # 1. 切换到需要进行加密的文件目录下
 [user@Server ~]$ cd <Directory to be encrypted>
 # 2. 使用下列语句对文件目录进行加密
@@ -21,7 +21,7 @@ Verifying -enter aes-256-cbc-encryption password:
 
 ## 解密
 
-```bash
+```shell
 # 1. 使用下列语句对加密文件进行解密
 #      enc     表示使用加密进行编码
 #      -e      表示使用加密选项
