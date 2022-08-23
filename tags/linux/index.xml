@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://example.com/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://example.com/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://kwang.life/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
 <p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -131,7 +131,7 @@ To github.com:Ivy-End/Prometheus.git
 Already up-to-date.
 </code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
+</div>]]></description></item><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
 <h2 id="加密">加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -184,7 +184,7 @@ Verifying -enter aes-256-cbc-encryption password:
 enter aes-256-cbc encryption password:
 </code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://example.com/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><author>作者</author><guid>https://example.com/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description><![CDATA[<p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。</p>
+</div>]]></description></item><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description><![CDATA[<p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。</p>
 <p>本文所用到的软件资源，可<a href="https://pan.baidu.com/s/1r1MUKzXm5IWtbqpPRi1BBA" target="_blank" rel="noopener noreffer">单击此处</a>下载，提取码为：njup。</p>
 <h2 id="安装-vmware-workstation">安装 VMware Workstation</h2>
 <h3 id="安装-microsoft-vc-redistributable">安装 Microsoft VC Redistributable</h3>
@@ -1047,7 +1047,7 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
     </figure>
 <h3 id="共享文件夹无法挂载">共享文件夹无法挂载</h3>
 <h3 id="自动挂载共享文件夹">自动挂载共享文件夹</h3>
-]]></description></item><item><title>Linux 迁移记（一）</title><link>https://example.com/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link><pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate><author>作者</author><guid>https://example.com/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid><description><![CDATA[<p>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：</p>
+]]></description></item><item><title>Linux 迁移记（一）</title><link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link><pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid><description><![CDATA[<p>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：</p>
 <ul>
 <li>Windows 系列的系统臃肿而且不实用，很多东西华而不实。</li>
 <li>Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。</li>
