@@ -1,4 +1,137 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 退思轩</title><link>https://example.com/posts/</link><description>所有文章 | 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://example.com/posts/" rel="self" type="application/rss+xml"/><item><title>Verilog 转 Spice 网表</title><link>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description><![CDATA[<p><code>v2lvs</code> 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 <code>v2lvs</code> 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 退思轩</title><link>https://example.com/posts/</link><description>所有文章 | 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://example.com/posts/" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://example.com/2022/06/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
+<p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ ssh-keygen -t ecdsa -b <span class="m">521</span> -C <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+Generating public/private ecdsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/kwang/.ssh/id_ecdsa<span class="o">)</span>: /home/kwang/.ssh/id_ecdsa
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+Enter same passphrase again:
+Your identification has been saved in /home/kwang/.ssh/id_ecdsa.
+Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub.
+The key fingerprint is:
+14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com
+The key<span class="err">&#39;</span>s randomart image is:
++--<span class="o">[</span>ECDSA  521<span class="o">]</span>---+
+<span class="p">|</span>   ..*B *.       <span class="p">|</span>
+<span class="p">|</span>  .  o.@ <span class="o">=</span>       <span class="p">|</span>
+<span class="p">|</span>   .  + @ .      <span class="p">|</span>
+<span class="p">|</span>  E    + + o     <span class="p">|</span>
+<span class="p">|</span>   .    S o      <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
++-----------------+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-2-配置-ssh-公钥">Step 2 配置 SSH 公钥</h2>
+<p>登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。</p>
+<figure><a class="lightgallery" href="/images/2022/Linux%20%e9%85%8d%e7%bd%ae%20GitHub%20%e8%b4%a6%e5%8f%b7/GitHub%20%e9%85%8d%e7%bd%ae%20SSH%20%e5%85%ac%e9%92%a5.png" title="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-thumbnail="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-sub-html="<h2>GitHub 配置 SSH 公钥</h2>">
+        
+    </a><figcaption class="image-caption">GitHub 配置 SSH 公钥</figcaption>
+    </figure>
+<h2 id="step-3-克隆-repo">Step 3 克隆 Repo</h2>
+<p>在服务器终端运行 git 配置账号和对应的 repo：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ git clone <span class="s2">&#34;git@github.com:Ivy-End/Prometheus.git&#34;</span>
+Cloning into <span class="s1">&#39;Prometheus&#39;</span>...
+remote: Enumerating objects: 4, <span class="k">done</span>.
+remote: Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">4</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+Receiving objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, 12.50 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-4-配置-git-用户">Step 4 配置 Git 用户</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.name <span class="s2">&#34;Ivy-End&#34;</span>
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.email <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-5-上传文件">Step 5 上传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git add *
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git commit -m <span class="s1">&#39;Prometheus Project Initialization&#39;</span>
+<span class="o">[</span>main 544218b<span class="o">]</span> Prometheus Project Initialization
+<span class="m">1</span> file changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git push
+Counting objects: 3, <span class="k">done</span>.
+Delta compression using up to <span class="m">192</span> threads.
+Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">405</span> bytes <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+To github.com:Ivy-End/Prometheus.git
+  2ed25ef..544218b  main -&gt; main
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-6-下传文件">Step 6 下传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git pull
+Already up-to-date.
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>Verilog 转 Spice 网表</title><link>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description><![CDATA[<p><code>v2lvs</code> 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 <code>v2lvs</code> 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1142,21 +1275,4 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
 <p>很多人说，读完研后当然是继续读博，然后博士后，接着当大学老师，努力搞科研。不得不承认，这是一条不错的道路。但细细想来，却并不如外人所想的那么光鲜亮丽。首先，是难以有成就感，不论是高校、研究所，大部分研究都算不上先进，只能说是为了拿一些经费。其次，是压力过大，大部分的底层的高校教师、研究所研究人员，几乎全年无休，随叫随到；看似摆脱了读博时导师的压迫，且多年媳妇熬成婆，却没曾想被大老板压迫的无处藏生；此外，每天还需顶着来自各方面的压力，拿着微乎其微的报酬，艰苦的推进着科研。最后，学阀制度的存在，一定程度上使得所谓的学术净土变得不那么的纯碎，更像是魏晋时期的九品中正。与其如此，不如跳将出来，以更广大的视角去探索生命的意义。</p>
 <p>或许，那就是“养天地正气，法古今完人”吧。记得刚进校园时，这句话便给我留下了深刻的印象。再加之书院学科交叉、文理互补的理念，使我培养了些许文学的气息。正如孔老夫子所言：“文胜质则史，质胜文则野，文质彬彬，然后君子。”相较于现在较为单调的工科环境，以往饱含人文关怀的自由环境则更令我向往。我们不应被眼下枯燥乏味的工作束缚了手脚，更应看到美好的诗和远方。</p>
 <p>掩卷遐思，不知东方之既白。</p>
-]]></description></item><item><title>本科毕业论文致谢</title><link>https://example.com/2018/12/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</link><pubDate>Sun, 30 Dec 2018 22:13:00 +0800</pubDate><author>作者</author><guid>https://example.com/2018/12/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</guid><description><![CDATA[<p><em>此乃余首篇文言，因查重，今日乃详。</em></p>
-<p>时维四月，序属清夏，余负笈姑苏三载有余矣。感韶光之易逝兮，恐年岁之不吾与。懵懵间已逾弱冠之年，惶惶兮尚无功名傍身。值此掩卷遐思之际，忆往昔峥嵘岁月，不禁悲喜交集。凯，三尺微命，一介书生，得助四方，略有小成，感念之情，列叙如下。</p>
-<p>今天下学子皆得安其学而亲其师，乐其友而信其道，皆因无内外忧患之扰。寻其根，实乃中共领导之功。此吾拜谢者一也。</p>
-<p>吾本草芥寒门，今日所成，皆赖椿萱。家严襟怀洒落，博闻强识，昔日趋庭，叨陪鲤对；家慈温良恭俭，教余以严。虽结草衔环，无以报之万一。此吾拜谢者二也。</p>
-<p>三江既入，震泽底定，百年东吴，荟萃中西。养天地正气，巍巍然大学之道尽在其中；法古今完人，赫赫然为人之德皆存其里。书院敬文，明德至善，博学笃行，为国储才，自助助人，为砺成国器而上下求索。此吾拜谢者三也。</p>
-<p>余师从纪公讳小丽、马公讳强，其修业贞谨、微言大义、德才兼备、温恭和蔼，蒙先生之不弃，忝列师门。导吾以狭径，示吾以通途。坐聆教语，如金玉之良言，茅塞顿开；凝听诲言，似甘霖之灌顶，豁然开朗。倘无先生言传身教，鄙之愚钝，恐贻笑大方之家。此吾拜谢者四也。</p>
-<p>吾辈同侪皆四海菁英，陶君睿杰、蒋君毅等，同窗三秋，论人生之理想，评行业之得失，争学问于课堂，赏风光于山野。众人发余之蒙昧浅陋，助余之穷途落魄，广余之胸怀视界，消余之烦恼疑虑。此吾拜谢者五也。</p>
-<p>佳人缪君海泓，髣髴兮若轻云之蔽月，飘飖兮若流风之回雪。素手调羮，慰余求学艰辛；红袖添香，助余撰述此文。前路漫漫，与尔偕行，同游春花秋月，共赏夏风冬雪，甘苦与共，忧乐相随。此吾拜谢者六也。</p>
-<p>嗟乎！拳拳之恩，似穹隆之峰，明吾心而砺吾志也；绵绵之情，若太湖之水，照吾颜而昭吾天也。一言均赋，四韵具成，临辞涕零，不知所云：</p>
-<blockquote>
-<p>那岁清秋谈笑里，披星踏露向东堂。</p>
-<p>新枝全凭春泥护，凤阁门前翠竹昌。</p>
-<p>碌碌三秋藏颖处，茫茫万里夏虫乡。</p>
-<p>舍郎当有登堂志，青史留名后世扬。</p>
-</blockquote>
-<p>戊戌年清夏</p>
-<p>于天赐庄</p>
 ]]></description></item></channel></rss>

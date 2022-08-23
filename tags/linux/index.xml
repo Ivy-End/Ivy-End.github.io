@@ -1,4 +1,137 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://example.com/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:22:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Linux - 标签 - 退思轩</title><link>https://example.com/tags/linux/</link><description>Linux - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux/" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://example.com/2022/06/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
+<p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ ssh-keygen -t ecdsa -b <span class="m">521</span> -C <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+Generating public/private ecdsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/kwang/.ssh/id_ecdsa<span class="o">)</span>: /home/kwang/.ssh/id_ecdsa
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+Enter same passphrase again:
+Your identification has been saved in /home/kwang/.ssh/id_ecdsa.
+Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub.
+The key fingerprint is:
+14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com
+The key<span class="err">&#39;</span>s randomart image is:
++--<span class="o">[</span>ECDSA  521<span class="o">]</span>---+
+<span class="p">|</span>   ..*B *.       <span class="p">|</span>
+<span class="p">|</span>  .  o.@ <span class="o">=</span>       <span class="p">|</span>
+<span class="p">|</span>   .  + @ .      <span class="p">|</span>
+<span class="p">|</span>  E    + + o     <span class="p">|</span>
+<span class="p">|</span>   .    S o      <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
++-----------------+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-2-配置-ssh-公钥">Step 2 配置 SSH 公钥</h2>
+<p>登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。</p>
+<figure><a class="lightgallery" href="/images/2022/Linux%20%e9%85%8d%e7%bd%ae%20GitHub%20%e8%b4%a6%e5%8f%b7/GitHub%20%e9%85%8d%e7%bd%ae%20SSH%20%e5%85%ac%e9%92%a5.png" title="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-thumbnail="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-sub-html="<h2>GitHub 配置 SSH 公钥</h2>">
+        
+    </a><figcaption class="image-caption">GitHub 配置 SSH 公钥</figcaption>
+    </figure>
+<h2 id="step-3-克隆-repo">Step 3 克隆 Repo</h2>
+<p>在服务器终端运行 git 配置账号和对应的 repo：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ git clone <span class="s2">&#34;git@github.com:Ivy-End/Prometheus.git&#34;</span>
+Cloning into <span class="s1">&#39;Prometheus&#39;</span>...
+remote: Enumerating objects: 4, <span class="k">done</span>.
+remote: Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">4</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+Receiving objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, 12.50 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-4-配置-git-用户">Step 4 配置 Git 用户</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.name <span class="s2">&#34;Ivy-End&#34;</span>
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.email <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-5-上传文件">Step 5 上传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git add *
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git commit -m <span class="s1">&#39;Prometheus Project Initialization&#39;</span>
+<span class="o">[</span>main 544218b<span class="o">]</span> Prometheus Project Initialization
+<span class="m">1</span> file changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git push
+Counting objects: 3, <span class="k">done</span>.
+Delta compression using up to <span class="m">192</span> threads.
+Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">405</span> bytes <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+To github.com:Ivy-End/Prometheus.git
+  2ed25ef..544218b  main -&gt; main
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-6-下传文件">Step 6 下传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git pull
+Already up-to-date.
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://example.com/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
 <h2 id="加密">加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
