@@ -17,7 +17,7 @@
 | Operating Temperature   | $T$                  |                                            | -40 |  27 |  80 | $\mathrm{^\circ C}$     |
 | Quiescent Current       | $I_\mathrm{q}$       |                                            |     | 500 |     | $\mathrm{\mu A}$        |
 | Power Down Current      | $I_\mathrm{pd}$      |                                            |     |   1 |  10 | $\mathrm{nA}$           |
-|-------------------------|----------------------|--------------------------------------------|-----|-----|-----|-------------------------|
+|                         |                      |                                            |     |     |     |                         |
 | Temperature Coefficient | $TC$                 |                                            |     |  20 |     | $\mathrm{ppm/^\circ C}$ |
 | Output Voltage          | $V_\mathrm{out,400}$ |                                            |     | 400 |     | $\mathrm{mV}$           |
 |                         | $V_\mathrm{out,800}$ |                                            |     | 800 |     | $\mathrm{mV}$           |
@@ -25,10 +25,10 @@
 | Output Current          | $I_\mathrm{out,10}$  |                                            |     |  10 |     | $\mathrm{\mu A}$        |
 |                         | $I_\mathrm{out,20}$  |                                            |     |  20 |     | $\mathrm{\mu A}$        |
 | Output Current Accuracy | $\Delta_\mathrm{i}$  | typical PVT case                           |     |   5 |     | %                       |
-|-------------------------|----------------------|--------------------------------------------|-----|-----|-----|-------------------------|
+|                         |                      |                                            |     |     |     |                         |
 | Power Up Time           | $t_\mathrm{pu}$      | 5% $\Delta_i$ ($\Delta_v$), worst PVT case |     |   5 |  10 | $\mathrm{\mu s}$        |
 | Power Down Time         | $t_\mathrm{pd}$      | 5% $\Delta_i$ ($\Delta_v$), worst PVT case |     |   5 |  10 | $\mathrm{\mu s}$        |
-|-------------------------|----------------------|--------------------------------------------|-----|-----|-----|-------------------------|
+|                         |                      |                                            |     |     |     |                         |
 | Power Supply Rejection  | $PSR_\mathrm{DC}$    | DC                                         |     |  80 |     | $\mathrm{dB}$           |
 |                         | $PSR_\mathrm{1kHz}$  | 1 kHz                                      |     |  60 |     | $\mathrm{dB}$           |
 |                         | $PSR_\mathrm{1MHz}$  | 1 MHz                                      |     |  40 |     | $\mathrm{dB}$           |
