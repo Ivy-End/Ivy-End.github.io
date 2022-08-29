@@ -1,4 +1,249 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>退思轩</title><link>https://kwang.life/</link><description>和光同尘，与时舒卷</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>退思轩</title><link>https://kwang.life/</link><description>和光同尘，与时舒卷</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 29 Aug 2022 11:16:00 +0800</lastBuildDate><atom:link href="https://kwang.life/index.xml" rel="self" type="application/rss+xml"/><item><title>带隙基准源设计实例：（1）指标设定及分析</title><link>https://kwang.life/2022/08/%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%BE%8B1%E6%8C%87%E6%A0%87%E8%AE%BE%E5%AE%9A%E5%8F%8A%E5%88%86%E6%9E%90/</link><pubDate>Mon, 29 Aug 2022 11:16:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/08/%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%BE%8B1%E6%8C%87%E6%A0%87%E8%AE%BE%E5%AE%9A%E5%8F%8A%E5%88%86%E6%9E%90/</guid><description><![CDATA[<p>从今年 4 月份开始，我在 bilibili 平台陆续发布了<a href="https://space.bilibili.com/39142721/channel/collectiondetail?sid=358546&amp;" target="_blank" rel="noopener noreffer">《带隙基准源设计》</a>系列视频，直到近日才更新完毕。在视频结尾，我计划出一系列带隙基准源的设计实例，以方便大家对带隙基准源的设计流程有一个更直观的认识。</p>
+<p>最开始的计划是采用视频的方式进行带隙基准源的设计实况，但考虑到指标设定、电路结构分析、晶体管参数计算、电路仿真和版图绘制等步骤都需要较为详细的讲解，因此决定采用博客的形式进行设计实例的分享。</p>
+<p>本文是带隙基准源设计实例的第一讲，主要给出了带隙基准源的设计指标及对应的模块架构框图。需要注意的是，此处给出的仅仅是预期指标和初步的架构框图，在后续设计过程中，我们也会根据实时的设计进展进行微调。</p>
+<h2 id="带隙基准源的设计指标">带隙基准源的设计指标</h2>
+<p>此次设计的带隙基准源指标如下表所示，包括</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Symbol</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Min</th>
+<th style="text-align:left">Typ</th>
+<th style="text-align:left">Max</th>
+<th style="text-align:left">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Input Voltage</td>
+<td style="text-align:left">$V_\mathrm{in}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">2.5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{V}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Operating Temperature</td>
+<td style="text-align:left">$T$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-40</td>
+<td style="text-align:left">27</td>
+<td style="text-align:left">80</td>
+<td style="text-align:left">$\mathrm{^\circ C}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Quiescent Current</td>
+<td style="text-align:left">$I_\mathrm{q}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">500</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{\mu A}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Power Down Current</td>
+<td style="text-align:left">$I_\mathrm{pd}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">$\mathrm{nA}$</td>
+</tr>
+<tr>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+</tr>
+<tr>
+<td style="text-align:left">Temperature Coefficient</td>
+<td style="text-align:left">$TC$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">20</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{ppm/^\circ C}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Output Voltage</td>
+<td style="text-align:left">$V_\mathrm{out,400}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">400</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{mV}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$V_\mathrm{out,800}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">800</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{mV}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Output Voltage Accuracy</td>
+<td style="text-align:left">$\Delta_\mathrm{v}$</td>
+<td style="text-align:left">typical PVT case</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">%</td>
+</tr>
+<tr>
+<td style="text-align:left">Output Current</td>
+<td style="text-align:left">$I_\mathrm{out,10}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">10</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{\mu A}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$I_\mathrm{out,20}$</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">20</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{\mu A}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Output Current Accuracy</td>
+<td style="text-align:left">$\Delta_\mathrm{i}$</td>
+<td style="text-align:left">typical PVT case</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">%</td>
+</tr>
+<tr>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+</tr>
+<tr>
+<td style="text-align:left">Power Up Time</td>
+<td style="text-align:left">$t_\mathrm{pu}$</td>
+<td style="text-align:left">5% $\Delta_i$ ($\Delta_v$), worst PVT case</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">$\mathrm{\mu s}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Power Down Time</td>
+<td style="text-align:left">$t_\mathrm{pd}$</td>
+<td style="text-align:left">5% $\Delta_i$ ($\Delta_v$), worst PVT case</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">$\mathrm{\mu s}$</td>
+</tr>
+<tr>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&ndash;</td>
+<td style="text-align:left">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+</tr>
+<tr>
+<td style="text-align:left">Power Supply Rejection</td>
+<td style="text-align:left">$PSR_\mathrm{DC}$</td>
+<td style="text-align:left">DC</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">80</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{dB}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$PSR_\mathrm{1kHz}$</td>
+<td style="text-align:left">1 kHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">60</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{dB}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$PSR_\mathrm{1MHz}$</td>
+<td style="text-align:left">1 MHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">40</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{dB}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Ouptut Noise (Voltage)</td>
+<td style="text-align:left">$n_\mathrm{DC}$</td>
+<td style="text-align:left">DC</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">1</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{nV/\sqrt{Hz}}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$n_\mathrm{100kHz}$</td>
+<td style="text-align:left">100 kHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0.5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{nV/\sqrt{Hz}}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$n_\mathrm{10MHz}$</td>
+<td style="text-align:left">10 MHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0.1</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{nV/\sqrt{Hz}}$</td>
+</tr>
+<tr>
+<td style="text-align:left">Ouptut Noise (Current)</td>
+<td style="text-align:left">$n_\mathrm{DC}$</td>
+<td style="text-align:left">DC</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">20</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{pA/\sqrt{Hz}}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$n_\mathrm{100kHz}$</td>
+<td style="text-align:left">100 kHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">10</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{pA/\sqrt{Hz}}$</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">$n_\mathrm{10MHz}$</td>
+<td style="text-align:left">10 MHz</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">2</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">$\mathrm{pA/\sqrt{Hz}}$</td>
+</tr>
+</tbody>
+</table>
+]]></description></item><item><title>Linux 配置 GitHub 账号</title><link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
 <p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1264,15 +1509,4 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
 <p>己亥八月，乘休假隙，偕海泓往适胶澳以避暑。初至，凉风送爽，宛若金秋。旅居民宿，自为烹饪，仿佛兮若久居之侣，淡然闲适。小青岛上风习习，金沙滩头浪汹汹；驿外栈桥日栖栖，古堡钟鸣声重重；啤酒博物工序奇，晚市宵夜意兴融；海底世界鲸豚戏，情人坝上晚风浓。寥寥五日，所游甚欢。</p>
 <p>未几海泓赴加国深造，至此分离两地，情愈笃，思愈切。尝有视讯之便朝夕与闻，聊慰吾心；又有古人驿寄梅花、鱼传尺素，以藉吾情。</p>
 <p>旧岁将去，新元复始，愿国泰民安，风调雨顺。</p>
-]]></description></item><item><title>戊戌志（2018 年度总结）</title><link>https://kwang.life/2018/12/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link><pubDate>Mon, 31 Dec 2018 11:25:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2018/12/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid><description><![CDATA[<p>树枝在风儿的吹奏下，飘出了一串美妙的音符；雪花在大地的构思下，描绘了一幅绝佳的画作。临窗眺望的我不觉看得出神，恍惚间，一年来的点点滴滴仿佛就在眼前。</p>
-<p>这一年，我找寻到了那个相识、相知、相爱、相守的人。不论是静谧的校园漫步、沉浸的电影欣赏、醉人的美味品鉴；还是热闹的厨房烹饪、愉快的景点探索、完美的手工配合……处处都留下了我们的欢声笑语。你的出现，让我领略了爱与被爱的美好，也让我的生命变得完整。</p>
-<p>这一年，我经历了从本科到研究生的转变。这可以说是一个较大的转折，也让我产生了很多思考。</p>
-<p>春，我开始了本科毕业论文的撰写。跟随着现在的研究生导师，做的校外毕设。虽说着实学到了不少，也接触到了实验室的相关内容，但感觉较之原本轻松的毕业论文，平添了几分繁琐。临近毕业，大家都对所谓的头衔、获奖失去了兴趣，为了避免评为优秀毕设后冗长的优秀毕设论文，纷纷将分数控制在了 89，既保住了学分，又落得了清闲。细想来，这才是看透荣誉后该有的状态吧。</p>
-<p>夏，我结束了本科阶段最有价值的经历之一——助理导师。在此过程中，我逐渐学会了更多与人相处的方式与技巧，更不断地磨练自己的口头表达和书面表达能力。在此过程中，也对“背锅”有了更深刻的理解与认识。或许，那些只知埋头苦干，熬夜背锅的人，并不会得到他们所想要的；取而代之，是更多的埋头苦干，与更多的熬夜背锅。这，也许只是在象牙塔中管中规豹。但却让我明白应当早日抛弃学生身份，开始更多的以社会人的角度思考问题。毕竟，我们终将成为社会的一份子，或者说，我们早已是社会的一份子。认识到这一点，这一切似乎也就更容易令人接受了。如若拒不接受，继续以读书的理由来逃避它，最终必将无路可退，或守着读书人的身份自欺欺人式的了此残生，或被社会予以打击后被迫的融入其中。</p>
-<p>秋，我开始了研究生的生活。总的来说，研究方向应该是数模混合集成电路设计。刚入学时，跟随着河海大学的老师进行真随机数生成器的电路仿真。从一开始的一窍不通，到后来的融会贯通，前前后后忙了一两个月，终于熟悉了 Cadence，摸清了电路的原理，也得到了仿真的结果。与此同时，还完成了第一篇全英文的学术论文，正焦急地等待着录用的结果。紧接着，便开始了下一阶段的研究工作，主要是关于 THz 雷达方向的内容。目前仅仅是开展了一个单元模块的仿真设计工作，预计元月底进行流片验证。</p>
-<p>冬，我开始了对研究生的思考。这主要包含两个问题，首先什么是研究生，其次读完研究生后干什么。</p>
-<p>研究生，表面上看和本科生没有太大的区别，无非是接触到了所谓的科研，领到了部分的工资。乍一看，既能学到知识，又能收获金钱，简直是求之不得的美事。实际上，研究生是不受劳动法保护的廉价劳动力。试想，在公司工作月薪 5k~10k 的优秀本科生，不仅能够得到专业的工程训练，得到高薪的报酬，还能维护自己的合法权益。而同等学力的研究生，却只能拿着 1k 不到的补助，没日没夜的干着苦力，还不能有任何抱怨，加班说加就加，工资说减就减，戏说之下，又与“奴隶”何异。唯一能让人欣慰的，或许是那张毕业证书和学位证书吧。想到这层，或许方能明白，为何研究生将自己的导师称作“老板”，而非“老师”。失之毫厘，谬以千里。却偏有人每天 8:30 来到实验室，奋战到 22:30 才回宿舍洗洗睡觉，日复一日，老师非常高兴，将其作为模范人物进行宣传，号召大家向其学习，争取早日毕业。埋头苦干，只会让老师觉得你是个很好地劳动力，却不能保证你学到更多的知识；而好吃懒做，也会让老师觉得你不过是个不求上进之徒，因而虚度了光阴。或许，应该找寻一个平衡点，在学到知识的同时，也不能沦为为学阀卖命的廉价劳动力。</p>
-<p>很多人说，读完研后当然是继续读博，然后博士后，接着当大学老师，努力搞科研。不得不承认，这是一条不错的道路。但细细想来，却并不如外人所想的那么光鲜亮丽。首先，是难以有成就感，不论是高校、研究所，大部分研究都算不上先进，只能说是为了拿一些经费。其次，是压力过大，大部分的底层的高校教师、研究所研究人员，几乎全年无休，随叫随到；看似摆脱了读博时导师的压迫，且多年媳妇熬成婆，却没曾想被大老板压迫的无处藏生；此外，每天还需顶着来自各方面的压力，拿着微乎其微的报酬，艰苦的推进着科研。最后，学阀制度的存在，一定程度上使得所谓的学术净土变得不那么的纯碎，更像是魏晋时期的九品中正。与其如此，不如跳将出来，以更广大的视角去探索生命的意义。</p>
-<p>或许，那就是“养天地正气，法古今完人”吧。记得刚进校园时，这句话便给我留下了深刻的印象。再加之书院学科交叉、文理互补的理念，使我培养了些许文学的气息。正如孔老夫子所言：“文胜质则史，质胜文则野，文质彬彬，然后君子。”相较于现在较为单调的工科环境，以往饱含人文关怀的自由环境则更令我向往。我们不应被眼下枯燥乏味的工作束缚了手脚，更应看到美好的诗和远方。</p>
-<p>掩卷遐思，不知东方之既白。</p>
 ]]></description></item></channel></rss>
