@@ -13,5 +13,5 @@
     </a><figcaption class="image-caption">Ceva 定理例题图</figcaption>
     </figure>
 <p>证明如下：</p>
-<p>作 $\triangle ABC$ 的关于 $AC$ 的对称图形，记 $E^{'}H^{'} \cap BB=M$ 设 $\angle GOB=\angle BOH^{'}=\alpha,\angle E^{'}OG=\angle FOH^{'}=\beta$ 则有：$$\frac{E^{'}G}{GB} \cdot \frac{BH^{'}}{H^{'}F} \cdot \frac{FM}{ME^{'}}=\frac{OE^{'}\sin \beta}{OB \sin \alpha} \cdot \frac{OB \sin \alpha}{OF \sin \beta} \cdot \frac{OF \sin \left ( \alpha + \beta \right )}{OE^{'} \sin \left ( \alpha + \beta \right )}=1$$ 由塞瓦定理得：$MB$、$E^{'}H^{'}$、$GF$ 共点，因此 $IO=OJ$。证毕。</p>
+<p>作 $\triangle ABC$ 的关于 $AC$ 的对称图形，记 $E^{&rsquo;}H^{&rsquo;} \cap BB=M$ 设 $\angle GOB=\angle BOH^{&rsquo;}=\alpha,\angle E^{&rsquo;}OG=\angle FOH^{&rsquo;}=\beta$ 则有：$$\frac{E^{&rsquo;}G}{GB} \cdot \frac{BH^{&rsquo;}}{H^{&rsquo;}F} \cdot \frac{FM}{ME^{&rsquo;}}=\frac{OE^{&rsquo;}\sin \beta}{OB \sin \alpha} \cdot \frac{OB \sin \alpha}{OF \sin \beta} \cdot \frac{OF \sin \left ( \alpha + \beta \right )}{OE^{&rsquo;} \sin \left ( \alpha + \beta \right )}=1$$ 由塞瓦定理得：$MB$、$E^{&rsquo;}H^{&rsquo;}$、$GF$ 共点，因此 $IO=OJ$。证毕。</p>
 ]]></description></item></channel></rss>

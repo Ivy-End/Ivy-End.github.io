@@ -13,7 +13,7 @@
 <p>代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -123,115 +123,115 @@
 </span><span class="lnt">108
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-
-<span class="k">struct</span> <span class="nc">Edge</span>
-<span class="p">{</span>
-    <span class="n">Edge</span><span class="p">(</span><span class="kt">int</span> <span class="n">_u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_w</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">u</span> <span class="o">=</span> <span class="n">_u</span><span class="p">;</span> <span class="n">v</span> <span class="o">=</span> <span class="n">_v</span><span class="p">;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">_w</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="k">struct</span> <span class="nc">Set</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">nParent</span><span class="p">,</span> <span class="n">nCount</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">Edge</span> <span class="n">x</span><span class="p">,</span> <span class="n">Edge</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">pEdge</span><span class="p">;</span>
-<span class="n">Set</span> <span class="n">pSet</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
-
-<span class="kt">void</span> <span class="nf">Kruskal</span><span class="p">();</span>
-<span class="kt">void</span> <span class="nf">Init</span><span class="p">();</span>
-<span class="kt">int</span> <span class="nf">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">Union</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
-        <span class="n">pEdge</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
-    <span class="p">}</span>
-    <span class="n">Kruskal</span><span class="p">();</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">Kruskal</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">nCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nPos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">pMST</span><span class="p">;</span>
-    <span class="n">sort</span><span class="p">(</span><span class="n">pEdge</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">pEdge</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">cmp</span><span class="p">);</span>
-    <span class="n">Init</span><span class="p">();</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">pMST</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>    <span class="c1">// 直到MST中有N-1条边
-</span><span class="c1"></span>    <span class="p">{</span>
-        <span class="n">Edge</span> <span class="n">minEdge</span> <span class="o">=</span> <span class="n">pEdge</span><span class="p">[</span><span class="n">nPos</span><span class="o">++</span><span class="p">];</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">Find</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">u</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Find</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">v</span><span class="p">))</span>    <span class="c1">// 如果加入后不构成环
-</span><span class="c1"></span>        <span class="p">{</span>
-            <span class="n">nCost</span> <span class="o">+=</span> <span class="n">minEdge</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
-            <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">minEdge</span><span class="p">);</span>
-            <span class="n">Union</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">u</span><span class="p">,</span> <span class="n">minEdge</span><span class="p">.</span><span class="n">v</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;The MST Cost is &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">nCost</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span> 
-
-<span class="kt">void</span> <span class="nf">Init</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">pSet</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-        <span class="n">pSet</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">nCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>        <span class="c1">// 路径压缩
-</span><span class="c1"></span>    <span class="p">}</span>
-    <span class="k">else</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">Union</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">fx</span> <span class="o">!=</span> <span class="n">fy</span><span class="p">)</span>    <span class="c1">// 启发式合并，减小树的高度
-</span><span class="c1"></span>    <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nCount</span> <span class="o">&gt;</span> <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nCount</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">fx</span><span class="p">;</span>
-            <span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nCount</span> <span class="o">+=</span> <span class="n">pSet</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">nCount</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">else</span>
-        <span class="p">{</span>
-            <span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">fy</span><span class="p">;</span>
-            <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nCount</span> <span class="o">+=</span> <span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nCount</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Edge</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Edge</span><span class="p">(</span><span class="kt">int</span> <span class="n">_u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">_w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">u</span> <span class="o">=</span> <span class="n">_u</span><span class="p">;</span> <span class="n">v</span> <span class="o">=</span> <span class="n">_v</span><span class="p">;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">_w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Set</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">nParent</span><span class="p">,</span> <span class="n">nCount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">Edge</span> <span class="n">x</span><span class="p">,</span> <span class="n">Edge</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">pEdge</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Set</span> <span class="n">pSet</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Kruskal</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Union</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pEdge</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Kruskal</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Kruskal</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">nCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nPos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span> <span class="n">pMST</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sort</span><span class="p">(</span><span class="n">pEdge</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">pEdge</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">cmp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">pMST</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>    <span class="c1">// 直到MST中有N-1条边
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Edge</span> <span class="n">minEdge</span> <span class="o">=</span> <span class="n">pEdge</span><span class="p">[</span><span class="n">nPos</span><span class="o">++</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">Find</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">u</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Find</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">v</span><span class="p">))</span>    <span class="c1">// 如果加入后不构成环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">nCost</span> <span class="o">+=</span> <span class="n">minEdge</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">minEdge</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Union</span><span class="p">(</span><span class="n">minEdge</span><span class="p">.</span><span class="n">u</span><span class="p">,</span> <span class="n">minEdge</span><span class="p">.</span><span class="n">v</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;The MST Cost is &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">nCost</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pSet</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pSet</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">nCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>        <span class="c1">// 路径压缩
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Union</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">nParent</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">fx</span> <span class="o">!=</span> <span class="n">fy</span><span class="p">)</span>    <span class="c1">// 启发式合并，减小树的高度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nCount</span> <span class="o">&gt;</span> <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nCount</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">fx</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nCount</span> <span class="o">+=</span> <span class="n">pSet</span><span class="p">[</span><span class="n">y</span><span class="p">].</span><span class="n">nCount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pSet</span><span class="p">[</span><span class="n">fx</span><span class="p">].</span><span class="n">nParent</span> <span class="o">=</span> <span class="n">fy</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pSet</span><span class="p">[</span><span class="n">fy</span><span class="p">].</span><span class="n">nCount</span> <span class="o">+=</span> <span class="n">pSet</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">nCount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>至此，最小生成树的算法基本复习完毕。</p>
 <p>分析两种算法，Prim Algorithm的复杂度是 $ O\left(V^{2}\right) $ ，适用于稠密图；而Kruskal Algorithm的复杂度是 $ O\left(E\log{E}\right) $ ，适用于疏密图。各有所长，需要根据不同的情况选择不同的算法。</p>
@@ -260,7 +260,7 @@
 <p>代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -333,77 +333,77 @@
 </span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;memory.h&gt; </span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="n">INF</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>        <span class="c1">// 设置最大权值 
-</span><span class="c1"></span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>    <span class="c1">// 邻接表 
-</span><span class="c1"></span>
-<span class="kt">void</span> <span class="nf">Prim</span><span class="p">();</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
-        <span class="n">pMap</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
-        <span class="n">pMap</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
-    <span class="p">}</span>
-    <span class="n">Prim</span><span class="p">();</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">Prim</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">nCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pMST</span><span class="p">;</span>    <span class="c1">// 储存MST的结点 
-</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">pCost</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>        <span class="c1">// 储存与集合A相邻的顶点的最小权值，0表示该结点已经在MST中
-</span><span class="c1"></span>    <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>    <span class="c1">// 将结点1加入MST
-</span><span class="c1"></span>    <span class="n">pCost</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>    <span class="c1">// 初始化，切记要将除1以外的都置为INF
-</span><span class="c1"></span>    <span class="p">{</span> <span class="n">pCost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span> <span class="p">}</span>    
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>        <span class="c1">// 处理与结点1相连的顶点
-</span><span class="c1"></span>    <span class="p">{</span> <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">=</span> <span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>        <span class="c1">// 剩余N-1个顶点，循环N-1次
-</span><span class="c1"></span>    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">nVertex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nWeight</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>        <span class="c1">// 用于寻找最短的边
-</span><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">nWeight</span> <span class="o">&gt;</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">nVertex</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
-                <span class="n">nWeight</span> <span class="o">=</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="n">pCost</span><span class="p">[</span><span class="n">nVertex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nVertex</span><span class="p">);</span>    <span class="c1">// 将节点nVertex加入MST
-</span><span class="c1"></span>
-        <span class="n">nCost</span> <span class="o">+=</span> <span class="n">nWeight</span><span class="p">;</span>    <span class="c1">// 计算MST的费用
-</span><span class="c1"></span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>    <span class="c1">// 更新pCost数组
-</span><span class="c1"></span>        <span class="p">{</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> 
-                <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">second</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">=</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;MST Cost is &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">nCost</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;The vertexs in MST are &#34;</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pMST</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">pMST</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span> <span class="p">}</span> 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;memory.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">INF</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>        <span class="c1">// 设置最大权值 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>    <span class="c1">// 邻接表 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Prim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pMap</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pMap</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">w</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Prim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Prim</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">nCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pMST</span><span class="p">;</span>    <span class="c1">// 储存MST的结点 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">pCost</span><span class="p">[</span><span class="n">MAX</span><span class="p">];</span>        <span class="c1">// 储存与集合A相邻的顶点的最小权值，0表示该结点已经在MST中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>    <span class="c1">// 将结点1加入MST
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">pCost</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>    <span class="c1">// 初始化，切记要将除1以外的都置为INF
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="n">pCost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span> <span class="p">}</span>    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>        <span class="c1">// 处理与结点1相连的顶点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span> <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">=</span> <span class="n">pMap</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>        <span class="c1">// 剩余N-1个顶点，循环N-1次
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">nVertex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nWeight</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>        <span class="c1">// 用于寻找最短的边
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">nWeight</span> <span class="o">&gt;</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">nVertex</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">nWeight</span> <span class="o">=</span> <span class="n">pCost</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">pCost</span><span class="p">[</span><span class="n">nVertex</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pMST</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nVertex</span><span class="p">);</span>    <span class="c1">// 将节点nVertex加入MST
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">nCost</span> <span class="o">+=</span> <span class="n">nWeight</span><span class="p">;</span>    <span class="c1">// 计算MST的费用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>    <span class="c1">// 更新pCost数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">pCost</span><span class="p">[</span><span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">=</span> <span class="n">pMap</span><span class="p">[</span><span class="n">nVertex</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;MST Cost is &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">nCost</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;The vertexs in MST are &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pMST</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">pMST</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span> <span class="p">}</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description></item></channel></rss>

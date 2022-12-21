@@ -2,7 +2,7 @@
 <h2 id="加密">加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -15,23 +15,23 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
-<span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
-<span class="c1">#      enc     表示使用加密进行编码</span>
-<span class="c1">#      -e      表示使用加密选项</span>
-<span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
-<span class="c1">#      -out    表示加密输出的文件</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ tar -czf - * <span class="p">|</span> openssl enc -e -aes256 -out File.tar.gz
-<span class="c1"># 3. 输入秘钥</span>
-enter aes-256-cbc encryption password:
-Verifying -enter aes-256-cbc-encryption password:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ tar -czf - * <span class="p">|</span> openssl enc -e -aes256 -out File.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span><span class="line"><span class="cl">Verifying -enter aes-256-cbc-encryption password:
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="解密">解密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -41,14 +41,14 @@ Verifying -enter aes-256-cbc-encryption password:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
-<span class="c1">#      enc     表示使用加密进行编码</span>
-<span class="c1">#      -e      表示使用加密选项</span>
-<span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
-<span class="c1">#      -out    表示加密输出的文件</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ openssl enc -d -aes256 -in &lt;Filename&gt; <span class="p">|</span> tar -xzv
-<span class="c1"># 3. 输入秘钥</span>
-enter aes-256-cbc encryption password:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ openssl enc -d -aes256 -in &lt;Filename&gt; <span class="p">|</span> tar -xzv
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description></item></channel></rss>

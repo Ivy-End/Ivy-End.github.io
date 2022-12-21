@@ -158,7 +158,7 @@ $ \left | \theta_{2} \right | $
 <p><strong>解</strong>： $ \sqrt{2}\left ( \cos{\frac{\pi}{12}}+i\sin{\frac{\pi}{12}} \right )\cdot\sqrt{3}\left ( \cos{\frac{\pi}{6}}+i\sin{\frac{\pi}{6}} \right )\ =\sqrt{6}\left [ \cos\left ( \frac{\pi}{12}+\frac{\pi}{6} \right )+i\sin\left ( \frac{\pi}{12}+\frac{\pi}{6} \right ) \right ]\ =\sqrt{6}\left ( \cos{\frac{\pi}{4}}+i\sin{\frac{\pi}{4}} \right )\ =\sqrt{6}\left ( \frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}i \right )\ =\sqrt{3}+\sqrt{3}i $ 。</p>
 <p><strong>例2</strong>：计算 $ \left ( \sqrt{3}-i \right )^{6} $ 。</p>
 <p><strong>解</strong>：因为 $ \sqrt{3}-i=2\left ( \cos{\frac{11\pi}{6}}+i\sin{\frac{11\pi}{6}} \right ) $ ，所以 $ \left (\sqrt{3}-i  \right )^{6}\ =\left [2\left ( \cos{\frac{11\pi}{6}}+i\sin{\frac{11\pi}{6}} \right )  \right ]^{6}\ =2^{6}\left ( \cos{11\pi}+i\sin{11\pi} \right )\ =64\left ( \cos{\pi}+i\sin{\pi} \right )\ =64\cdot\left ( -1 \right )=-64 $ 。</p>
-<p><strong>例3</strong>：如图11，向量 $ \overrightarrow{OZ} $ 与复数 $ -1+i $ 对应，把 $ \overrightarrow{OZ} $ 按逆时针方向旋转 $ 120^\circ $ ，得到 $ \overrightarrow{OZ‘} $ 。求与向量 $ \overrightarrow{OZ'} $ 对应的复数（用代数形式表示）。</p>
+<p><strong>例3</strong>：如图11，向量 $ \overrightarrow{OZ} $ 与复数 $ -1+i $ 对应，把 $ \overrightarrow{OZ} $ 按逆时针方向旋转 $ 120^\circ $ ，得到 $ \overrightarrow{OZ‘} $ 。求与向量 $ \overrightarrow{OZ&rsquo;} $ 对应的复数（用代数形式表示）。</p>
 <figure><a class="lightgallery" href="/images/2013/%e5%85%b3%e4%ba%8e%e5%a4%8d%e6%95%b0%e7%9a%84%e4%b8%80%e4%ba%9b%e8%a1%a5%e5%85%85/ComplexNumber-10.png" title="/images/2013/关于复数的一些补充/ComplexNumber-10.png" data-thumbnail="/images/2013/关于复数的一些补充/ComplexNumber-10.png" data-sub-html="<h2>复数的旋转</h2>">
         
     </a><figcaption class="image-caption">复数的旋转</figcaption>
@@ -215,21 +215,21 @@ $ \sqrt[n]{\left | b \right |} $
 <p><strong>解</strong>： $$ \sqrt{2}e^{-i\frac{\pi}{4}}=\sqrt{2}\left [ \cos\left ( -\frac{\pi}{4} \right )+i\sin{\frac{\pi}{4}} \right ]=1-i $$ $$ \sqrt{5}e^{i\frac{2\pi}{3}}=\sqrt{5}\left [ \cos\left ( -\frac{2\pi}{3} \right )+i\sin{\frac{2\pi}{3}} \right ]=-\frac{\sqrt{5}}{2}+\frac{\sqrt{15}}{2}i $$</p>
 <p><strong>例3</strong>：用 $ e^{i\theta} $ 与 $ e^{-i\theta} $ 表示 $ \cos{\theta} $ 与 $ \sin{\theta} $ 。</p>
 <p><strong>解</strong>：因为 $$ e^{i\theta}=\cos{\theta}+i\sin{\theta} $$ $$ e^{-i\theta}=\cos{\left ( -\theta \right )}+i\sin\left ( -\theta \right )=\cos{\theta}-i\sin{\theta} $$ 因此 $$ \cos{\theta}=\frac{e^{i\theta}+e^{-i\theta}}{2},\quad \sin{\theta}=\frac{e^{i\theta}-e^{-i\theta}}{2i} $$</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>$ \mathbf{C} $ 是英文词组Complex numbers（复数）的第一个字母。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>棣莫佛（Abrabam de Moivre, 1667-1754年），法国数学家。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>采用这个符号时，一定要记住 $ \sqrt[n]{z} $ 表示 $ n $ 个复数。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
+<li id="fn:4">
 <p>这里的 $ e=2.71828\cdots $ ，就是自然对数的底数。这个公式叫做欧拉（Leonhard Euler，1707-1783年，瑞士数学家）公式。在“复变函数论”中可以证明这个公式。&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 ]]></description></item></channel></rss>

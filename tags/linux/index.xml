@@ -2,7 +2,7 @@
 <p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -25,28 +25,28 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ ssh-keygen -t ecdsa -b <span class="m">521</span> -C <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
-Generating public/private ecdsa key pair.
-Enter file in which to save the key <span class="o">(</span>/home/kwang/.ssh/id_ecdsa<span class="o">)</span>: /home/kwang/.ssh/id_ecdsa
-Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
-Enter same passphrase again:
-Your identification has been saved in /home/kwang/.ssh/id_ecdsa.
-Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub.
-The key fingerprint is:
-14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com
-The key<span class="err">&#39;</span>s randomart image is:
-+--<span class="o">[</span>ECDSA  521<span class="o">]</span>---+
-<span class="p">|</span>   ..*B *.       <span class="p">|</span>
-<span class="p">|</span>  .  o.@ <span class="o">=</span>       <span class="p">|</span>
-<span class="p">|</span>   .  + @ .      <span class="p">|</span>
-<span class="p">|</span>  E    + + o     <span class="p">|</span>
-<span class="p">|</span>   .    S o      <span class="p">|</span>
-<span class="p">|</span>                 <span class="p">|</span>
-<span class="p">|</span>                 <span class="p">|</span>
-<span class="p">|</span>                 <span class="p">|</span>
-<span class="p">|</span>                 <span class="p">|</span>
-+-----------------+
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ ssh-keygen -t ecdsa -b <span class="m">521</span> -C <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl">Generating public/private ecdsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/home/kwang/.ssh/id_ecdsa<span class="o">)</span>: /home/kwang/.ssh/id_ecdsa
+</span></span><span class="line"><span class="cl">Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">Enter same passphrase again:
+</span></span><span class="line"><span class="cl">Your identification has been saved in /home/kwang/.ssh/id_ecdsa.
+</span></span><span class="line"><span class="cl">Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub.
+</span></span><span class="line"><span class="cl">The key fingerprint is:
+</span></span><span class="line"><span class="cl">14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com
+</span></span><span class="line"><span class="cl">The key<span class="err">&#39;</span>s randomart image is:
+</span></span><span class="line"><span class="cl">+--<span class="o">[</span>ECDSA  521<span class="o">]</span>---+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   ..*B *.       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  .  o.@ <span class="o">=</span>       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   .  + @ .      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  E    + + o     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   .    S o      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----------------+
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="step-2-配置-ssh-公钥">Step 2 配置 SSH 公钥</h2>
 <p>登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。</p>
@@ -58,7 +58,7 @@ The key<span class="err">&#39;</span>s randomart image is:
 <p>在服务器终端运行 git 配置账号和对应的 repo：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -68,31 +68,31 @@ The key<span class="err">&#39;</span>s randomart image is:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ git clone <span class="s2">&#34;git@github.com:Ivy-End/Prometheus.git&#34;</span>
-Cloning into <span class="s1">&#39;Prometheus&#39;</span>...
-remote: Enumerating objects: 4, <span class="k">done</span>.
-remote: Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
-remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
-remote: Total <span class="m">4</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
-Receiving objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, 12.50 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ git clone <span class="s2">&#34;git@github.com:Ivy-End/Prometheus.git&#34;</span>
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;Prometheus&#39;</span>...
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 4, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">4</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Receiving objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, 12.50 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Checking connectivity... <span class="k">done</span>.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="step-4-配置-git-用户">Step 4 配置 Git 用户</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.name <span class="s2">&#34;Ivy-End&#34;</span>
-<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.email <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.name <span class="s2">&#34;Ivy-End&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.email <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="step-5-上传文件">Step 5 上传文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -106,36 +106,36 @@ Checking connectivity... <span class="k">done</span>.
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git add *
-<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git commit -m <span class="s1">&#39;Prometheus Project Initialization&#39;</span>
-<span class="o">[</span>main 544218b<span class="o">]</span> Prometheus Project Initialization
-<span class="m">1</span> file changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
-<span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git push
-Counting objects: 3, <span class="k">done</span>.
-Delta compression using up to <span class="m">192</span> threads.
-Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
-Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">405</span> bytes <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
-Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-To github.com:Ivy-End/Prometheus.git
-  2ed25ef..544218b  main -&gt; main
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git add *
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git commit -m <span class="s1">&#39;Prometheus Project Initialization&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>main 544218b<span class="o">]</span> Prometheus Project Initialization
+</span></span><span class="line"><span class="cl"><span class="m">1</span> file changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git push
+</span></span><span class="line"><span class="cl">Counting objects: 3, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Delta compression using up to <span class="m">192</span> threads.
+</span></span><span class="line"><span class="cl">Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">405</span> bytes <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">To github.com:Ivy-End/Prometheus.git
+</span></span><span class="line"><span class="cl">  2ed25ef..544218b  main -&gt; main
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="step-6-下传文件">Step 6 下传文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git pull
-Already up-to-date.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git pull
+</span></span><span class="line"><span class="cl">Already up-to-date.
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description></item><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
 <h2 id="加密">加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -148,23 +148,23 @@ Already up-to-date.
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
-<span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
-<span class="c1">#      enc     表示使用加密进行编码</span>
-<span class="c1">#      -e      表示使用加密选项</span>
-<span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
-<span class="c1">#      -out    表示加密输出的文件</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ tar -czf - * <span class="p">|</span> openssl enc -e -aes256 -out File.tar.gz
-<span class="c1"># 3. 输入秘钥</span>
-enter aes-256-cbc encryption password:
-Verifying -enter aes-256-cbc-encryption password:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ tar -czf - * <span class="p">|</span> openssl enc -e -aes256 -out File.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span><span class="line"><span class="cl">Verifying -enter aes-256-cbc-encryption password:
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="解密">解密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -174,15 +174,15 @@ Verifying -enter aes-256-cbc-encryption password:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
-<span class="c1">#      enc     表示使用加密进行编码</span>
-<span class="c1">#      -e      表示使用加密选项</span>
-<span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
-<span class="c1">#      -out    表示加密输出的文件</span>
-<span class="o">[</span>user@Server ~<span class="o">]</span>$ openssl enc -d -aes256 -in &lt;Filename&gt; <span class="p">|</span> tar -xzv
-<span class="c1"># 3. 输入秘钥</span>
-enter aes-256-cbc encryption password:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ openssl enc -d -aes256 -in &lt;Filename&gt; <span class="p">|</span> tar -xzv
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description></item><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description><![CDATA[<p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。</p>
 <p>本文所用到的软件资源，可<a href="https://pan.baidu.com/s/1r1MUKzXm5IWtbqpPRi1BBA" target="_blank" rel="noopener noreffer">单击此处</a>下载，提取码为：njup。</p>
@@ -479,7 +479,7 @@ enter aes-256-cbc encryption password:
 <p>在终端输入 <code>yum makecache</code>，重建 yum 缓存。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -520,52 +520,52 @@ enter aes-256-cbc encryption password:
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>icdesign@localhost ~<span class="o">]</span>$ su
-Password: 
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span>
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span>
---2021-04-04 09:10:17--  http://mirrors.aliyun.com/repo/Centos-7.repo
-Resolving mirrors.aliyun.com <span class="o">(</span>mirrors.aliyun.com<span class="o">)</span>... 61.160.204.243, 61.160.228.242, 58.222.29.238, ...
-Connecting to mirrors.aliyun.com <span class="o">(</span>mirrors.aliyun.com<span class="o">)</span><span class="p">|</span>61.160.204.243<span class="p">|</span>:80... connected.
-HTTP request sent, awaiting response... <span class="m">200</span> OK
-Length: <span class="m">2523</span> <span class="o">(</span>2.5K<span class="o">)</span> <span class="o">[</span>application/octet-stream<span class="o">]</span>
-Saving to: ‘/etc/yum.repos.d/CentOS-Base.repo’
-
-100%<span class="o">[======================================</span>&gt;<span class="o">]</span> 2,523       --.-K/s   in 0s      
-
-2021-04-04 09:10:17 <span class="o">(</span><span class="m">394</span> MB/s<span class="o">)</span> - ‘/etc/yum.repos.d/CentOS-Base.repo’ saved <span class="o">[</span>2523/2523<span class="o">]</span>
-
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum clean all</span>
-Loaded plugins: fastestmirror, langpacks
-Cleaning repos: base extras updates
-Cleaning up list of fastest mirrors
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum makecache</span>
-Loaded plugins: fastestmirror, langpacks
-Determining fastest mirrors
- * base: mirrors.aliyun.com
- * extras: mirrors.aliyun.com
- * updates: mirrors.aliyun.com
-base                                                     <span class="p">|</span> 3.6 kB     00:00     
-extras                                                   <span class="p">|</span> 2.9 kB     00:00     
-updates                                                  <span class="p">|</span> 2.9 kB     00:00     
-<span class="o">(</span>1/10<span class="o">)</span>: base/7/x86_64/group_gz                             <span class="p">|</span> <span class="m">153</span> kB   00:00     
-<span class="o">(</span>2/10<span class="o">)</span>: base/7/x86_64/filelists_db                         <span class="p">|</span> 7.2 MB   00:02     
-<span class="o">(</span>3/10<span class="o">)</span>: base/7/x86_64/primary_db                           <span class="p">|</span> 6.1 MB   00:02     
-<span class="o">(</span>4/10<span class="o">)</span>: extras/7/x86_64/filelists_db                       <span class="p">|</span> <span class="m">228</span> kB   00:00     
-<span class="o">(</span>5/10<span class="o">)</span>: base/7/x86_64/other_db                             <span class="p">|</span> 2.6 MB   00:00     
-<span class="o">(</span>6/10<span class="o">)</span>: extras/7/x86_64/primary_db                         <span class="p">|</span> <span class="m">230</span> kB   00:00     
-<span class="o">(</span>7/10<span class="o">)</span>: extras/7/x86_64/other_db                           <span class="p">|</span> <span class="m">137</span> kB   00:00     
-<span class="o">(</span>8/10<span class="o">)</span>: updates/7/x86_64/filelists_db                      <span class="p">|</span> 3.9 MB   00:01     
-<span class="o">(</span>9/10<span class="o">)</span>: updates/7/x86_64/primary_db                        <span class="p">|</span> 6.5 MB   00:01     
-<span class="o">(</span>10/10<span class="o">)</span>: updates/7/x86_64/other_db                         <span class="p">|</span> <span class="m">517</span> kB   00:00     
-Metadata Cache Created
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>icdesign@localhost ~<span class="o">]</span>$ su
+</span></span><span class="line"><span class="cl">Password: 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span>
+</span></span><span class="line"><span class="cl">--2021-04-04 09:10:17--  http://mirrors.aliyun.com/repo/Centos-7.repo
+</span></span><span class="line"><span class="cl">Resolving mirrors.aliyun.com <span class="o">(</span>mirrors.aliyun.com<span class="o">)</span>... 61.160.204.243, 61.160.228.242, 58.222.29.238, ...
+</span></span><span class="line"><span class="cl">Connecting to mirrors.aliyun.com <span class="o">(</span>mirrors.aliyun.com<span class="o">)</span><span class="p">|</span>61.160.204.243<span class="p">|</span>:80... connected.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... <span class="m">200</span> OK
+</span></span><span class="line"><span class="cl">Length: <span class="m">2523</span> <span class="o">(</span>2.5K<span class="o">)</span> <span class="o">[</span>application/octet-stream<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Saving to: ‘/etc/yum.repos.d/CentOS-Base.repo’
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">100%<span class="o">[======================================</span>&gt;<span class="o">]</span> 2,523       --.-K/s   in 0s      
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2021-04-04 09:10:17 <span class="o">(</span><span class="m">394</span> MB/s<span class="o">)</span> - ‘/etc/yum.repos.d/CentOS-Base.repo’ saved <span class="o">[</span>2523/2523<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum clean all</span>
+</span></span><span class="line"><span class="cl">Loaded plugins: fastestmirror, langpacks
+</span></span><span class="line"><span class="cl">Cleaning repos: base extras updates
+</span></span><span class="line"><span class="cl">Cleaning up list of fastest mirrors
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum makecache</span>
+</span></span><span class="line"><span class="cl">Loaded plugins: fastestmirror, langpacks
+</span></span><span class="line"><span class="cl">Determining fastest mirrors
+</span></span><span class="line"><span class="cl"> * base: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl"> * extras: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl"> * updates: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl">base                                                     <span class="p">|</span> 3.6 kB     00:00     
+</span></span><span class="line"><span class="cl">extras                                                   <span class="p">|</span> 2.9 kB     00:00     
+</span></span><span class="line"><span class="cl">updates                                                  <span class="p">|</span> 2.9 kB     00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>1/10<span class="o">)</span>: base/7/x86_64/group_gz                             <span class="p">|</span> <span class="m">153</span> kB   00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>2/10<span class="o">)</span>: base/7/x86_64/filelists_db                         <span class="p">|</span> 7.2 MB   00:02     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>3/10<span class="o">)</span>: base/7/x86_64/primary_db                           <span class="p">|</span> 6.1 MB   00:02     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>4/10<span class="o">)</span>: extras/7/x86_64/filelists_db                       <span class="p">|</span> <span class="m">228</span> kB   00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>5/10<span class="o">)</span>: base/7/x86_64/other_db                             <span class="p">|</span> 2.6 MB   00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>6/10<span class="o">)</span>: extras/7/x86_64/primary_db                         <span class="p">|</span> <span class="m">230</span> kB   00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>7/10<span class="o">)</span>: extras/7/x86_64/other_db                           <span class="p">|</span> <span class="m">137</span> kB   00:00     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>8/10<span class="o">)</span>: updates/7/x86_64/filelists_db                      <span class="p">|</span> 3.9 MB   00:01     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>9/10<span class="o">)</span>: updates/7/x86_64/primary_db                        <span class="p">|</span> 6.5 MB   00:01     
+</span></span><span class="line"><span class="cl"><span class="o">(</span>10/10<span class="o">)</span>: updates/7/x86_64/other_db                         <span class="p">|</span> <span class="m">517</span> kB   00:00     
+</span></span><span class="line"><span class="cl">Metadata Cache Created
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装支持库">安装支持库</h3>
 <p>在终端输入，<code>yum install -y ksh</code>，当看到“Complete!”时表示安装完成，如果看到“Nothing to do”则表示已安装了该支持库，无需再次安装。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -612,52 +612,52 @@ Metadata Cache Created
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum install -y ksh</span>
-Loaded plugins: fastestmirror, langpacks
-Loading mirror speeds from cached hostfile
- * base: mirrors.aliyun.com
- * extras: mirrors.aliyun.com
- * updates: mirrors.aliyun.com
-Resolving Dependencies
---&gt; Running transaction check
----&gt; Package ksh.x86_64 0:20120801-142.el7 will be installed
---&gt; Finished Dependency Resolution
-
-Dependencies <span class="nv">Resolved</span>
-
-<span class="o">================================================================================</span>
- Package       Arch             Version                    Repository      <span class="nv">Size</span>
-<span class="o">================================================================================</span>
-Installing:
- ksh           x86_64           20120801-142.el7           base           <span class="m">884</span> k
-
-Transaction <span class="nv">Summary</span>
-<span class="o">================================================================================</span>
-Install  <span class="m">1</span> Package
-
-Total download size: <span class="m">884</span> k
-Installed size: 3.1 M
-Downloading packages:
-warning: /var/cache/yum/x86_64/7/base/packages/ksh-20120801-142.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
-Public key <span class="k">for</span> ksh-20120801-142.el7.x86_64.rpm is not installed
-ksh-20120801-142.el7.x86_64.rpm                            <span class="p">|</span> <span class="m">884</span> kB   00:00     
-Retrieving key from http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
-Importing GPG key 0xF4A80EB5:
- Userid     : <span class="s2">&#34;CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;&#34;</span>
- Fingerprint: <span class="m">6341</span> ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
- From       : http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
-Running transaction check
-Running transaction <span class="nb">test</span>
-Transaction <span class="nb">test</span> succeeded
-Running transaction
-  Installing : ksh-20120801-142.el7.x86_64                                  1/1 
-  Verifying  : ksh-20120801-142.el7.x86_64                                  1/1 
-
-Installed:
-  ksh.x86_64 0:20120801-142.el7                                                 
-
-Complete!
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># yum install -y ksh</span>
+</span></span><span class="line"><span class="cl">Loaded plugins: fastestmirror, langpacks
+</span></span><span class="line"><span class="cl">Loading mirror speeds from cached hostfile
+</span></span><span class="line"><span class="cl"> * base: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl"> * extras: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl"> * updates: mirrors.aliyun.com
+</span></span><span class="line"><span class="cl">Resolving Dependencies
+</span></span><span class="line"><span class="cl">--&gt; Running transaction check
+</span></span><span class="line"><span class="cl">---&gt; Package ksh.x86_64 0:20120801-142.el7 will be installed
+</span></span><span class="line"><span class="cl">--&gt; Finished Dependency Resolution
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dependencies <span class="nv">Resolved</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">================================================================================</span>
+</span></span><span class="line"><span class="cl"> Package       Arch             Version                    Repository      <span class="nv">Size</span>
+</span></span><span class="line"><span class="cl"><span class="o">================================================================================</span>
+</span></span><span class="line"><span class="cl">Installing:
+</span></span><span class="line"><span class="cl"> ksh           x86_64           20120801-142.el7           base           <span class="m">884</span> k
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Transaction <span class="nv">Summary</span>
+</span></span><span class="line"><span class="cl"><span class="o">================================================================================</span>
+</span></span><span class="line"><span class="cl">Install  <span class="m">1</span> Package
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Total download size: <span class="m">884</span> k
+</span></span><span class="line"><span class="cl">Installed size: 3.1 M
+</span></span><span class="line"><span class="cl">Downloading packages:
+</span></span><span class="line"><span class="cl">warning: /var/cache/yum/x86_64/7/base/packages/ksh-20120801-142.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+</span></span><span class="line"><span class="cl">Public key <span class="k">for</span> ksh-20120801-142.el7.x86_64.rpm is not installed
+</span></span><span class="line"><span class="cl">ksh-20120801-142.el7.x86_64.rpm                            <span class="p">|</span> <span class="m">884</span> kB   00:00     
+</span></span><span class="line"><span class="cl">Retrieving key from http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+</span></span><span class="line"><span class="cl">Importing GPG key 0xF4A80EB5:
+</span></span><span class="line"><span class="cl"> Userid     : <span class="s2">&#34;CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"> Fingerprint: <span class="m">6341</span> ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+</span></span><span class="line"><span class="cl"> From       : http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+</span></span><span class="line"><span class="cl">Running transaction check
+</span></span><span class="line"><span class="cl">Running transaction <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">Transaction <span class="nb">test</span> succeeded
+</span></span><span class="line"><span class="cl">Running transaction
+</span></span><span class="line"><span class="cl">  Installing : ksh-20120801-142.el7.x86_64                                  1/1 
+</span></span><span class="line"><span class="cl">  Verifying  : ksh-20120801-142.el7.x86_64                                  1/1 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Installed:
+</span></span><span class="line"><span class="cl">  ksh.x86_64 0:20120801-142.el7                                                 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Complete!
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在终端输入，<code>yum install -y libXext.so.6</code>。</p>
 <p>在终端输入，<code>yum install -y libXtst.so.6</code>。</p>
@@ -689,7 +689,7 @@ Complete!
 <p>在终端输入，<code>chmod 755 /usr/tmp</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -701,32 +701,32 @@ Complete!
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /usr/bin/awk /bin/awk</span>
-ln: failed to create symbolic link ‘/bin/awk’: File exists
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /usr/lib/libstdc++-3-libc6.2-2-2.10.0.so /usr/lib/libstdc++-libc6.1-1.so.2</span>
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /bin/gunzip /bin/uncompress</span>
-ln: failed to create symbolic link ‘/bin/uncompress’: File exists
-<span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># cd /lib64/</span>
-<span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># ln -s libreadline.so.6 libreadline.so.5</span>
-<span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># cd /usr/lib64</span>
-<span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># ln -s libhistory.so.6 libhistory.so.5</span>
-<span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># chmod 755 /usr/tmp</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /usr/bin/awk /bin/awk</span>
+</span></span><span class="line"><span class="cl">ln: failed to create symbolic link ‘/bin/awk’: File exists
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /usr/lib/libstdc++-3-libc6.2-2-2.10.0.so /usr/lib/libstdc++-libc6.1-1.so.2</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># ln -s /bin/gunzip /bin/uncompress</span>
+</span></span><span class="line"><span class="cl">ln: failed to create symbolic link ‘/bin/uncompress’: File exists
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost icdesign<span class="o">]</span><span class="c1"># cd /lib64/</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># ln -s libreadline.so.6 libreadline.so.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># cd /usr/lib64</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># ln -s libhistory.so.6 libhistory.so.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost lib64<span class="o">]</span><span class="c1"># chmod 755 /usr/tmp</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="配置回环地址">配置回环地址</h3>
 <p>在终端输入，<code>hostnamectl set-hostname ICDesign</code>。</p>
 <p>在终端输入，<code>vim /etc/hosts</code>，在打开的文件中按下 <code>i</code>，并在最后一行添加 <code>127.0.0.1 ICDesign</code>，按下 <code>ESC</code> 后，输入 <code>:x</code> 保存。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-127.0.0.1   ICDesign
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+</span></span><span class="line"><span class="cl">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+</span></span><span class="line"><span class="cl">127.0.0.1   ICDesign
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在终端输入，<code>yum update</code>，中途会提示 <code>Is this ok [y/d/N]:</code>，输入 <code>y</code> 后，按下回车。</p>
 <p>在终端输入，<code>reboot</code>，重启虚拟机。</p>
@@ -762,19 +762,19 @@ ln: failed to create symbolic link ‘/bin/uncompress’: File exists
 <p>在终端输入 <code>vmhgfs-fuse .host:/Shared /mnt/hgfs</code>，手动挂载共享文件夹。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>icdesign@icdesign ~<span class="o">]</span>$ su
-Password: 
-<span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># vmware-hgfsclient</span>
-Shared
-<span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># vmhgfs-fuse .host:/Shared /mnt/hgfs</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>icdesign@icdesign ~<span class="o">]</span>$ su
+</span></span><span class="line"><span class="cl">Password: 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># vmware-hgfsclient</span>
+</span></span><span class="line"><span class="cl">Shared
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># vmhgfs-fuse .host:/Shared /mnt/hgfs</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在终端输入 <code>mkdir -p /TOOLS/Cadence/InstallScape</code> 和 <code>mkdir -p /TOOLS/Mentor/Calibre2015</code> 建立安装目录。</p>
 <p>在终端输入 <code>cp /mnt/hgfs/IScape04.23-s010lnx86.t.Z /TOOLS/Cadence/InstallScape</code> 将 InstallScape 安装包拷贝至 <code>/TOOLS/Cadence/InstallScape</code> 文件夹内。</p>
@@ -880,13 +880,13 @@ Shared
 <p>在终端输入 <code>rm IScape04.23-s010lnx86.t.Z</code>，删除 InstallScap 压缩包，在弹出的提示后输入 <code>y</code> 并按下回车键。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@icdesign InstallScape<span class="o">]</span><span class="c1"># rm IScape04.23-s010lnx86.t.Z </span>
-rm: remove regular file ‘IScape04.23-s010lnx86.t.Z’? y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@icdesign InstallScape<span class="o">]</span><span class="c1"># rm IScape04.23-s010lnx86.t.Z </span>
+</span></span><span class="line"><span class="cl">rm: remove regular file ‘IScape04.23-s010lnx86.t.Z’? y
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装-calibre">安装 Calibre</h3>
 <p>将 <code>Cadence/aoi_cal_2015.2_36.27_mib.7z</code> 解压到共享文件夹。</p>
@@ -927,7 +927,7 @@ rm: remove regular file ‘IScape04.23-s010lnx86.t.Z’? y
 <p>在虚拟机终端中输入 <code>ifconfig</code>，找到连接网络的 MAC 地址，此处为 <code>ether 00:0c:29:06:6e:62</code>，由此得到 HOSTID 为 <code>000c29066e62</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -955,33 +955,33 @@ rm: remove regular file ‘IScape04.23-s010lnx86.t.Z’? y
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># ifconfig</span>
-ens33: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
-        inet 192.168.222.128  netmask 255.255.255.0  broadcast 192.168.222.255
-        inet6 fe80::5bdf:abf2:2e32:18c0  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
-        ether 00:0c:29:06:6e:62  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
-        RX packets <span class="m">48</span>  bytes <span class="m">7413</span> <span class="o">(</span>7.2 KiB<span class="o">)</span>
-        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
-        TX packets <span class="m">50</span>  bytes <span class="m">7010</span> <span class="o">(</span>6.8 KiB<span class="o">)</span>
-        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
-
-lo: <span class="nv">flags</span><span class="o">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span class="m">65536</span>
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen <span class="m">128</span>  scopeid 0x10&lt;host&gt;
-        loop  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Local Loopback<span class="o">)</span>
-        RX packets <span class="m">48</span>  bytes <span class="m">4080</span> <span class="o">(</span>3.9 KiB<span class="o">)</span>
-        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
-        TX packets <span class="m">48</span>  bytes <span class="m">4080</span> <span class="o">(</span>3.9 KiB<span class="o">)</span>
-        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
-
-virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span class="m">1500</span>
-        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
-        ether 52:54:00:53:dc:60  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
-        RX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
-        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
-        TX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
-        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@icdesign icdesign<span class="o">]</span><span class="c1"># ifconfig</span>
+</span></span><span class="line"><span class="cl">ens33: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        inet 192.168.222.128  netmask 255.255.255.0  broadcast 192.168.222.255
+</span></span><span class="line"><span class="cl">        inet6 fe80::5bdf:abf2:2e32:18c0  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
+</span></span><span class="line"><span class="cl">        ether 00:0c:29:06:6e:62  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">48</span>  bytes <span class="m">7413</span> <span class="o">(</span>7.2 KiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">50</span>  bytes <span class="m">7010</span> <span class="o">(</span>6.8 KiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">lo: <span class="nv">flags</span><span class="o">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span class="m">65536</span>
+</span></span><span class="line"><span class="cl">        inet 127.0.0.1  netmask 255.0.0.0
+</span></span><span class="line"><span class="cl">        inet6 ::1  prefixlen <span class="m">128</span>  scopeid 0x10&lt;host&gt;
+</span></span><span class="line"><span class="cl">        loop  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Local Loopback<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">48</span>  bytes <span class="m">4080</span> <span class="o">(</span>3.9 KiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">48</span>  bytes <span class="m">4080</span> <span class="o">(</span>3.9 KiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+</span></span><span class="line"><span class="cl">        ether 52:54:00:53:dc:60  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">0</span>  bytes <span class="m">0</span> <span class="o">(</span>0.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在本地计算机上用记事本打开 <code>Cadence/License/Calibre/licgen.bat</code>，将 <code>HOSTID</code> 改为 <code>000c29066e62</code>，保存并关闭。</p>
 <p>双击运行 <code>Cadence/License/Calibre/licgen.bat</code>，生成 <code>license.dat</code>。</p>
@@ -995,7 +995,7 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
 <p>在终端中输入 <code>vim .bashrc</code>，按下 <code>i</code> 进入修改模式，找到下列内容并修改，并在最后一行添加 <code>csh</code>，修改完毕后按下 <code>ESC</code>，输入 <code>:x</code> 后保存并退出。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1007,17 +1007,17 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">CADHOME</span><span class="o">=</span>/TOOLS/Cadence
-
-<span class="nb">export</span> <span class="nv">CDS_LIC_FILE</span><span class="o">=</span><span class="nv">$CADHOME</span>/share/license/license.dat
-
-<span class="c1"># . $SOCV_KIT_HOME/env.sh</span>
-
-<span class="nb">export</span> <span class="nv">MGC_HOME</span><span class="o">=</span>/TOOLS/Mentor
-
-<span class="nb">export</span> <span class="nv">MGC_CALIBRE_SCHEMATIC_SERVER</span><span class="o">=</span>ICDesign
-<span class="nb">export</span> <span class="nv">MGC_CALIBRE_LAYOUT_SERVER</span><span class="o">=</span>ICDesign
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CADHOME</span><span class="o">=</span>/TOOLS/Cadence
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CDS_LIC_FILE</span><span class="o">=</span><span class="nv">$CADHOME</span>/share/license/license.dat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># . $SOCV_KIT_HOME/env.sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MGC_HOME</span><span class="o">=</span>/TOOLS/Mentor
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MGC_CALIBRE_SCHEMATIC_SERVER</span><span class="o">=</span>ICDesign
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MGC_CALIBRE_LAYOUT_SERVER</span><span class="o">=</span>ICDesign
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在终端中输入 <code>reboot</code>，重启虚拟机。</p>
 <h2 id="配置-pdk">配置 PDK</h2>
@@ -1059,46 +1059,46 @@ virbr0: <span class="nv">flags</span><span class="o">=</span>4099&lt;UP,BROADCAS
 <p>由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 <code>apt-get</code> 就可以了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install gnome-shell
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install gnome-shell
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>安装结束以后就可以使用了。可能是个人癖好吧，我还是把 Unity 删了，命令如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get --auto-remove purge unity
-sudo apt-get --auto-remove purge unity-commonp
-sudo apt-get --auto-remove purge unity-lens*
-sudo apt-get --auto-remove purge unity-services
-sudo apt-get --auto-remove purge unity-asset-pool
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity
+</span></span><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity-commonp
+</span></span><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity-lens*
+</span></span><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity-services
+</span></span><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity-asset-pool
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>切记不可使用这条命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get --auto-remove purge unity*
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get --auto-remove purge unity*
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>因为把所有关于 Unity 的东西都删除以后会无法进入系统。这样就基本完成了桌面的更换，为了操作方便，我们还需安装一个软件来配置 Gnome3 桌面：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install gnome-tweak-tool
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install gnome-tweak-tool
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="软件整理">软件整理</h2>
 <p>这个方面主要包括卸载一些不必要的软件以及安装一些必要的软件。卸载就不多说了，这是个智者见智，仁者见仁的事情。主要将一下软件安装。</p>
@@ -1108,51 +1108,51 @@ sudo apt-get --auto-remove purge unity-asset-pool
 <h3 id="step-1安装-pidgin">Step 1：安装 Pidgin</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install pidgin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install pidgin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="step-2安装插件-pidgin-lwqq">Step 2：安装插件 pidgin-lwqq</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo add-apt-repository ppa:lainme/pidgin-lwqq
-sudo apt-get update
-sudo apt-get install libpurple0 pidgin-lwqq
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo add-apt-repository ppa:lainme/pidgin-lwqq
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install libpurple0 pidgin-lwqq
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="step-3enjoy-it">Step 3：Enjoy it!</h3>
 <p>不得不说，Pidgin 真是解决了一个大难题，因为很多同学都在用 QQ，所以不用 QQ 也很难取得联系。有了这款软件就方便多了。接下来是下载软件，我选择了 <code>aria2</code>。一来是终端模式的，看起来舒服；二来支持断点续传；这两样加起来也足够了。而且速度也很快。安装方法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get aria2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get aria2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用方法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#一般使用</span>
-aria2c
-<span class="c1">#分段下载 为分段数目，取值介于1~5之间 aria2c -s</span>
-<span class="c1">#断点续传 aria2c -c</span>
-<span class="c1">#下载BitTorrent文件 aria2c -o</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#一般使用</span>
+</span></span><span class="line"><span class="cl">aria2c
+</span></span><span class="line"><span class="cl"><span class="c1">#分段下载 为分段数目，取值介于1~5之间 aria2c -s</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#断点续传 aria2c -c</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#下载BitTorrent文件 aria2c -o</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>至于编程，已经做好放弃 VS 之类的准备了，转战 QT。主要方面应该是跨平台应用和网页开发吧。</p>
 ]]></description></item></channel></rss>
