@@ -1,1 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenSSL on 退思轩</title><link>https://kwang.life/tags/openssl/</link><description>Recent content in OpenSSL on 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:22:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/openssl/index.xml" rel="self" type="application/rss+xml"/><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>OpenSSL - 标签 - 退思轩</title><link>https://kwang.life/tags/openssl/</link><description>OpenSSL - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:22:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/openssl/" rel="self" type="application/rss+xml"/><item><title>结合 TAR 和 OpenSSL 加密文件及目录</title><link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link><pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid><description><![CDATA[<p>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。</p>
+<h2 id="加密">加密</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 切换到需要进行加密的文件目录下</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ <span class="nb">cd</span> &lt;Directory to be encrypted&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 使用下列语句对文件目录进行加密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ tar -czf - * <span class="p">|</span> openssl enc -e -aes256 -out File.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span><span class="line"><span class="cl">Verifying -enter aes-256-cbc-encryption password:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="解密">解密</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 1. 使用下列语句对加密文件进行解密</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      enc     表示使用加密进行编码</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -e      表示使用加密选项</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -aes256 表示使用 aes256 加密算法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      -out    表示加密输出的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>user@Server ~<span class="o">]</span>$ openssl enc -d -aes256 -in &lt;Filename&gt; <span class="p">|</span> tar -xzv
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 输入秘钥</span>
+</span></span><span class="line"><span class="cl">enter aes-256-cbc encryption password:
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item></channel></rss>

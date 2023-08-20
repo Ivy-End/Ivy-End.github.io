@@ -1,1 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on 退思轩</title><link>https://kwang.life/tags/git/</link><description>Recent content in Git on 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Git - 标签 - 退思轩</title><link>https://kwang.life/tags/git/</link><description>Git - 标签 - 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/git/" rel="self" type="application/rss+xml"/><item><title>Linux 配置 GitHub 账号</title><link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link><pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate><author>作者</author><guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid><description><![CDATA[<h2 id="step-1-生成-ssh-私钥公钥">Step 1 生成 SSH 私钥/公钥</h2>
+<p>打开终端，使用 ssh-keygen 工具生成 SSH 私钥（<a href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreffer">GitHub 推荐方法</a>）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ ssh-keygen -t ecdsa -b <span class="m">521</span> -C <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl">Generating public/private ecdsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key <span class="o">(</span>/home/kwang/.ssh/id_ecdsa<span class="o">)</span>: /home/kwang/.ssh/id_ecdsa
+</span></span><span class="line"><span class="cl">Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">Enter same passphrase again:
+</span></span><span class="line"><span class="cl">Your identification has been saved in /home/kwang/.ssh/id_ecdsa.
+</span></span><span class="line"><span class="cl">Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub.
+</span></span><span class="line"><span class="cl">The key fingerprint is:
+</span></span><span class="line"><span class="cl">14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com
+</span></span><span class="line"><span class="cl">The key<span class="err">&#39;</span>s randomart image is:
+</span></span><span class="line"><span class="cl">+--<span class="o">[</span>ECDSA  521<span class="o">]</span>---+
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   ..*B *.       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  .  o.@ <span class="o">=</span>       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   .  + @ .      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>  E    + + o     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   .    S o      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+-----------------+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-2-配置-ssh-公钥">Step 2 配置 SSH 公钥</h2>
+<p>登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。</p>
+<figure><a class="lightgallery" href="/images/2022/Linux%20%e9%85%8d%e7%bd%ae%20GitHub%20%e8%b4%a6%e5%8f%b7/GitHub%20%e9%85%8d%e7%bd%ae%20SSH%20%e5%85%ac%e9%92%a5.png" title="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-thumbnail="/images/2022/Linux 配置 GitHub 账号/GitHub 配置 SSH 公钥.png" data-sub-html="<h2>GitHub 配置 SSH 公钥</h2>">
+        
+    </a><figcaption class="image-caption">GitHub 配置 SSH 公钥</figcaption>
+    </figure>
+<h2 id="step-3-克隆-repo">Step 3 克隆 Repo</h2>
+<p>在服务器终端运行 git 配置账号和对应的 repo：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~<span class="o">]</span>$ git clone <span class="s2">&#34;git@github.com:Ivy-End/Prometheus.git&#34;</span>
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;Prometheus&#39;</span>...
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 4, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">4</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Receiving objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, 12.50 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Checking connectivity... <span class="k">done</span>.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-4-配置-git-用户">Step 4 配置 Git 用户</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.name <span class="s2">&#34;Ivy-End&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git config --global user.email <span class="s2">&#34;prc.wkai@gmail.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-5-上传文件">Step 5 上传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git add *
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git commit -m <span class="s1">&#39;Prometheus Project Initialization&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>main 544218b<span class="o">]</span> Prometheus Project Initialization
+</span></span><span class="line"><span class="cl"><span class="m">1</span> file changed, <span class="m">2</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git push
+</span></span><span class="line"><span class="cl">Counting objects: 3, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Delta compression using up to <span class="m">192</span> threads.
+</span></span><span class="line"><span class="cl">Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">405</span> bytes <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">To github.com:Ivy-End/Prometheus.git
+</span></span><span class="line"><span class="cl">  2ed25ef..544218b  main -&gt; main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step-6-下传文件">Step 6 下传文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>kwang@Slave02 ~/Prometheus<span class="o">]</span>$ git pull
+</span></span><span class="line"><span class="cl">Already up-to-date.
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description></item></channel></rss>
