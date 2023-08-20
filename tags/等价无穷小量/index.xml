@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>等价无穷小量 on 退思轩</title><link>https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/</link><description>Recent content in 等价无穷小量 on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Sat, 01 Nov 2014 00:33:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>浅谈等价无穷小量代换原理</title><link>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link><pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid><description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>等价无穷小量 on ExampleSite</title>
+    <link>https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/</link>
+    <description>Recent content in 等价无穷小量 on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Nov 2014 00:33:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浅谈等价无穷小量代换原理</title>
+      <link>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
+      <description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的研究了这个问题，整理如下：
+等价无穷小的定义及常用的等价无穷小 无穷小量是指某变化过程中极限为 $ 0 $ 的变量。而等价无穷小量是指在某变化过程中比值极限为 $ 1 $ 的两个无穷小量。
+常用的等价无穷小有： $$ \sin{x}\sim \tan{x}\sim\arctan{x}\sim\arcsin{x}\sim \ln{\left(1+x \right )}\sim x\left(x\rightarrow 0\right ) $$ $$ 1-\cos{x}\sim \frac{x^{2}}{2},\sqrt[n]{1+x}-1\sim \frac{x}{n} \left(x\rightarrow 0\right ) $$ 等价无穷小量在求极限问题中非常重要。恰当的使用等价无穷小量代换常常使极限问题大大简化。但是有时却不能使用等价无穷小量代换。
+等价无穷小替换原理 定理1：设 $ \displaystyle\alpha,\alpha_{1},\beta,\beta_{1} $ 是某一变化过程中的无穷小量，且 $ \alpha \sim \alpha_{1},\beta \sim \beta_{1} $ ，若 $ \lim{\frac{\alpha}{\beta}} $ 存在，则 $$ \lim{\frac{\alpha}{\beta}}=\lim{\frac{\alpha_{1}}{\beta_{1}}} $$
+例1：$$ \lim_{x\rightarrow 0}{\frac{\ln{\left(1+3x\right)}}{\sin{2x}}} $$
+解：$$ \lim_{x\rightarrow 0}{\frac{\ln{\left(1+3x\right)}}{\sin{2x}}}=\lim_{x\rightarrow 0}{\frac{3x}{2x}}=\frac{3}{2} $$
+例2：$$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}} $$
+错误解法： $$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}}=\lim_{x\rightarrow 0}{\frac{x-x}{x^3}}=0 $$</description>
+    </item>
+    
+  </channel>
+</rss>

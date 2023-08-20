@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>运算放大器 on 退思轩</title><link>https://kwang.life/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</link><description>Recent content in 运算放大器 on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Wed, 21 Dec 2022 11:09:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>集成电路版图设计实验（以运算放大器和带隙基准源为例）</title><link>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</link><pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid><description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>运算放大器 on ExampleSite</title>
+    <link>https://kwang.life/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/</link>
+    <description>Recent content in 运算放大器 on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 Dec 2022 11:09:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>集成电路版图设计实验（以运算放大器和带隙基准源为例）</title>
+      <link>https://kwang.life/posts/2022/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</link>
+      <pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2022/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid>
+      <description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下。）
+一、运算放大器 1.1 实验目的 熟悉 CentOS 下的 Cadence 集成开发环境； 掌握元件库的调用方法，并由此进行原理图绘制及版图设计； 掌握版图设计中对称性和紧凑性的要求，并能熟练运用； 掌握版图设计中的中心对称技术和屏蔽技术，并能熟练运用； 掌握 DRC（Design Rule Check，设计规则检验）和 LVS（Layout Versus Schematic，版图与电路一致性检验）操作，并能运用其对设计的版图进行检查； 掌握版图设计中相关错误的解决方法。 1.2 实验仪器 正确安装了 VMware Workstation 的计算机一台； CentOS 下的 Cadence 集成开发环境一套。 1.3 实验内容 首先根据给出的电路图及相关参数（如图 1 所示）在 Cadence 中绘制出原理图，并在此基础上设计与之相对应的版图。在设计版图的过程中，需要注意对称性以及紧凑型；此外，还需要运用屏蔽技术和叉指技术。对设计完的版图进行 DRC 以及 LVS 检查，通过上述检查后，方可确认版图设计完成且准确无误。
+图 1：运算放大器电路图
+1.4 操作说明 在 CentOS 下的 Cadence 集成开发环境中，快捷键的使用显得尤为重要。正确合理地使用快捷键能够极大的加快原理图及版图的绘制过程。现将常用的快捷键列出如下：
+快捷键 描述 F 将当前视图设置为满屏显示 Shift+Z 将当前视图缩小两倍 Ctrl+Z 将当前视图放大两倍 ↑ ↓ ← → 对当前视图进行上下左右移动 I 调用器件实例 P 原理图中添加 Pin，版图中添加 Path W 原理图中添加 Wire L 版图中添加 Label O 版图中添加通孔 R 版图中添加矩形 S 版图中拉伸图形 K 版图中添加标尺 Shift+K 清除版图中所有标尺 Q 查看当前选中器件的属性 M 移动操作 U 撤销操作 Ctrl+D 取消当前器件的选择 F3 调出位置排版工具栏，可进行器件上下、左右的反转 ESC 取消操作 DELETE 删除操作 1.</description>
+    </item>
+    
+  </channel>
+</rss>

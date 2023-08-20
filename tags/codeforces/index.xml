@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Codeforces on 退思轩</title><link>https://kwang.life/tags/codeforces/</link><description>Recent content in Codeforces on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Sun, 20 Jul 2014 10:08:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/codeforces/index.xml" rel="self" type="application/rss+xml"/><item><title>Codeforces 1B - Spreadsheet</title><link>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</link><pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</guid><description>1B Spreadsheet Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;). Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed. if(C % 26 == 0) { strTmp = 'Z' + strTmp; C /= 26; C--; continue;</description></item><item><title>Codeforces 1A - Theatre Square</title><link>https://kwang.life/2014/07/codeforces-1a-theatre-square/</link><pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2014/07/codeforces-1a-theatre-square/</guid><description>1A Theatre Square Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer. Notice: Pay attention to the data range. Use unsigned long long. Solution 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { unsigned long long n, m, a, ans = 0; cin &amp;gt;&amp;gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Codeforces on ExampleSite</title>
+    <link>https://kwang.life/tags/codeforces/</link>
+    <description>Recent content in Codeforces on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Jul 2014 10:08:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces 1B - Spreadsheet</title>
+      <link>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</link>
+      <pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</guid>
+      <description>1B Spreadsheet
+Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;).
+Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed.
+if(C % 26 == 0) { strTmp = &#39;Z&#39; + strTmp; C /= 26; C--; continue; }</description>
+    </item>
+    
+    <item>
+      <title>Codeforces 1A - Theatre Square</title>
+      <link>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</link>
+      <pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</guid>
+      <description>1A Theatre Square
+Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer.
+Notice: Pay attention to the data range. Use unsigned long long.
+Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { unsigned long long n, m, a, ans = 0; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; a; if(n % a == 0) { n /= a; } else { n = n / a + 1; } if(m % a == 0) { m /= a; } else { m = m / a + 1; } cout &amp;lt;&amp;lt; n * m &amp;lt;&amp;lt; endl; return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>

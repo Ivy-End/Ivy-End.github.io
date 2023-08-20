@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>欧拉函数 on 退思轩</title><link>https://kwang.life/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link><description>Recent content in 欧拉函数 on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Wed, 06 Nov 2013 07:44:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>算法专题：欧拉函数</title><link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link><pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid><description>昨天终于把欧拉函数想通了，现在总结一下。 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>欧拉函数 on ExampleSite</title>
+    <link>https://kwang.life/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+    <description>Recent content in 欧拉函数 on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Nov 2013 07:44:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>算法专题：欧拉函数</title>
+      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
+      <description>昨天终于把欧拉函数想通了，现在总结一下。
+欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。
+下面介绍欧拉函数的几个性质：
+$ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\right )=N\cdot\prod_{p\mid N}\left ( \frac{p-1}{p} \right ) $； $ \displaystyle\varphi \left ( p^{k} \right ) = p^{k}-p^{k-1}=\left(p-1 \right )\cdot p^{k-1} $ ，其中 $ p $ 为质数； $ \displaystyle\varphi \left(mn \right )=\varphi \left(m \right )\cdot \varphi \left(n \right ) $ ，其中 $ \gcd \left ( m,n \right )=1 $ 。 我们根据这几个性质就可以求出欧拉函数。</description>
+    </item>
+    
+  </channel>
+</rss>

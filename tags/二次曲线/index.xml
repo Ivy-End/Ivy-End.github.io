@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二次曲线 on 退思轩</title><link>https://kwang.life/tags/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF/</link><description>Recent content in 二次曲线 on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Tue, 31 Dec 2013 20:46:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>关于二次曲线切线问题的研究</title><link>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link><pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid><description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>二次曲线 on ExampleSite</title>
+    <link>https://kwang.life/tags/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF/</link>
+    <description>Recent content in 二次曲线 on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Dec 2013 20:46:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于二次曲线切线问题的研究</title>
+      <link>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid>
+      <description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线上某点的切线方程，另一个是关于曲线的切点弦方程。
+一、关于曲线上某点的切线方程 1、圆 我们都知道，过圆 $ x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right ) $ 上一点 $ P\left(x_{0},y_{0}\right) $ 的切线方程是 $ x_{0}x+y_{0}y=r^{2} $ 。下面我们就更为一般的情形进行探究：
+定理1.1：给定圆 $ C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left ( r &amp;gt; 0 \right ) $ ，以及圆上一点 $ P\left(x_{0},y_{0}\right) $ ，则过该点的切线方程为 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$
+证明：对于圆 $ C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2} $ ，两边同时对 $ x $ 求导，得 $$ 2\left ( x-a \right )+2\left ( y-b \right )\cdot\frac{dy}{dx}=0 $$ 其中 $ \frac{dy}{dx})即为(y&amp;rsquo; $ ，只是导数两种不同的记号，化简整理得 $$ \frac{dy}{dx}=-\frac{x-a}{y-b} $$ 那么我们可以写出切线方程为 $$ y-y_{0}=-\frac{x_{0}-a}{y_{0}-b}\left ( x-x_{0} \right ) $$ 进一步化简得 $$ \left ( x_{0}-a \right )x+\left ( y_{0}-b \right )y-\left ( x_{0}^{2}+y_{0}^{2} \right )+ax_{0}+by_{0}=0 $$ 又 $ P\left(x_{0},y_{0}\right) $ 在圆 $ C $ 上，则 $ \left ( x_{0}-a \right )^{2}+\left ( y_{0}-b \right )^{2}=r^{2} $ ，代入上式化简得 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$ 证毕。</description>
+    </item>
+    
+  </channel>
+</rss>

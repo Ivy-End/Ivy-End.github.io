@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>数模混合集成电路 on 退思轩</title><link>https://kwang.life/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/</link><description>Recent content in 数模混合集成电路 on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Verilog 转 Spice 网表</title><link>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。 1 2 3 4 5</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数模混合集成电路 on ExampleSite</title>
+    <link>https://kwang.life/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/</link>
+    <description>Recent content in 数模混合集成电路 on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Verilog 转 Spice 网表</title>
+      <link>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link>
+      <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
+      <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。
+v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示：
+-a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;.</description>
+    </item>
+    
+  </channel>
+</rss>

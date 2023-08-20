@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>POJ on 退思轩</title><link>https://kwang.life/tags/poj/</link><description>Recent content in POJ on 退思轩</description><image><title>退思轩</title><url>https://kwang.life/images/favicons/logo.png</url><link>https://kwang.life/images/favicons/logo.png</link></image><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>suda.ivywk@gmail.com (Kai Wang)</managingEditor><webMaster>suda.ivywk@gmail.com (Kai Wang)</webMaster><copyright>本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可</copyright><lastBuildDate>Mon, 08 Jun 2015 21:57:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/poj/index.xml" rel="self" type="application/rss+xml"/><item><title>专题一、简单搜索 - Virtual Judge</title><link>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link><pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate><author>suda.ivywk@gmail.com (Kai Wang)</author><guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid><description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>POJ on ExampleSite</title>
+    <link>https://kwang.life/tags/poj/</link>
+    <description>Recent content in POJ on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Jun 2015 21:57:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/poj/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>专题一、简单搜索 - Virtual Judge</title>
+      <link>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
+      <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
+      <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下：
+POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.</description>
+    </item>
+    
+  </channel>
+</rss>
