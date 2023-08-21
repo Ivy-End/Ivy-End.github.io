@@ -10,6 +10,7 @@
       <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
     <lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 配置 GitHub 账号</title>

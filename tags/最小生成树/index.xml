@@ -10,6 +10,7 @@
       <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 20 Oct 2013 21:33:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>算法专题：最小生成树 – Kruskal Algoritm</title>

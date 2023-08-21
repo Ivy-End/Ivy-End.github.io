@@ -10,6 +10,7 @@
       <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 03 Apr 2021 11:00:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/cadence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title>
