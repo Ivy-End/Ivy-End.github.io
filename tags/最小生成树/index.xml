@@ -17,13 +17,7 @@
       <pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
-      <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下：
-取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。 重复上述操作，直至加入了 $ N-1 $ 条边。 我们还是先来看一张图片来理解一下这个算法：
-Kruskal 算法
-下面我们来考虑这个算法，最棘手的问题是判断是否构成环，这里我们采用并查集来处理这个问题，它的复杂度是 $ O\left(V*\alpha\left(V\right)\right) $ 。对于每次寻找权值最小的边，复杂度是 $ O\left(E\right) $ 。这样一来，复杂度将高达 $ O\left(V*\alpha\left(V\right)+VE\right) $ ，即 $ O\left(VE\right) $ 。
-我们考虑优化，每次寻找权值最小的边，可以考虑先将权值从小到大排序。这样复杂度就下降到 $ O\left(V*\alpha\left(V\right)+E\log{E}\right) $ ，即 $ O\left(E\log{E}\right) $ 。
-代码如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; const int MAX = 1024; struct Edge { Edge(int _u, int _v, int _w) { u = _u; v = _v; w = _w; } int u, v, w; }; struct Set { int nParent, nCount; }; int cmp(Edge x, Edge y) { return x.</description>
+      <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下： 取权值最小的边，如果</description>
     </item>
     
     <item>
@@ -32,13 +26,7 @@ Kruskal 算法
       <pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
-      <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。
-最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。
-首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的边的长度的和最小。
-最小生成树
-如上图，加粗的路径就是在最小生成树上的路径。
-现在，我们开始讨论Prim Algorithm。这个算法可以分为下面几个步骤：
-将顶点集 $ V $ 分成两个集合 $ A $ 和 $ B $ ，其中集合 $ A $ 表示目前已经在MST中的顶点，而集合 $ B $ 则表示目前不在 MST 中的顶点。 寻找与集合 $ A $ 连通的最短的边 $ \left(u,v\right) $ ，将这条边加入最小生成树中。（此时，与 $ \left(u,v\right) $ 相连的顶点，不妨设为 $ B_{i} $ ，也应加入集合 $ A $ 中） 重复第二步，直至集合 $ B $ 为空集。 算法的大体思想就是这样了。为了方便理解，我们先来看一下下面一张图片：</description>
+      <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。 最小生成树（Minimum Spanning Trees），简称 MST</description>
     </item>
     
   </channel>

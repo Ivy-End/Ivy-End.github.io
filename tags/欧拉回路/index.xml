@@ -17,11 +17,7 @@
       <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
-      <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。
-下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路：
-一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路：
-计算各个顶点的度，如果存在 1 个奇数度，或者奇数度个数大于 2，则不存在欧拉回路。 选择奇数度的一个顶点作为欧拉回路的起点，如果不存在奇数度的顶点，则任意选取一个，在这里我们选取第一个顶点。 每次遍历与该点相连的边，删去该条边，则原图就转化成了一个更小的图，求它的欧拉通路，这样递归即可求解。 代码如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; const int MAX = 10240; int N, M, pCnt[MAX]; int pMap[MAX][MAX]; vector&amp;lt;int&amp;gt; pVec; void Search(int x); void Euler_Circuit(); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; memset(pMap, 0, sizeof(pMap)); for(int i = 1; i &amp;lt;= M; i++) { int s, e; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e; pMap[s][e] = pMap[e][s] = 1; // 无向图 } Euler_Circuit(); return 0; } void Euler_Circuit() { int nStart = 1, nOddNum = 0; // nStart保存起点，nOddNum保存有几个顶点有奇数度 memset(pCnt, 0, sizeof(pCnt)); for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { pCnt[i] += pMap[i][j]; // 计算各个顶点的度 } } for(int i = 1; i &amp;lt;= N; i++) // 统计奇数度顶点的个数 { if(pCnt[i] &amp;amp; 1) { nStart = i; nOddNum++; } } if(nOddNum &amp;gt; 2 || nOddNum == 1) // 不存在欧拉回路 { cout &amp;lt;&amp;lt; &amp;#34;Not Exsit Euler Circuit&amp;#34; &amp;lt;&amp;lt; endl; } else { Search(nStart); for(int i = 0; i &amp;lt; pVec.</description>
+      <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。 下面</description>
     </item>
     
   </channel>

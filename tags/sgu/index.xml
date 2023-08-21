@@ -17,7 +17,7 @@
       <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/07/sgu-144-meeting/</guid>
-      <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they will meet.</description>
+      <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 20 Jul 2015 13:39:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</guid>
-      <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists, index is equal to minimal number of items in such presentation.</description>
+      <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists,</description>
     </item>
     
     <item>
@@ -35,8 +35,7 @@
       <pubDate>Sat, 07 Mar 2015 19:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/sgu-114-telecasting-station/</guid>
-      <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal.
-Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;lt;15000$) – amount of cities in Berland.</description>
+      <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal. Input</description>
     </item>
     
     <item>
@@ -45,9 +44,7 @@ Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;l
       <pubDate>Sat, 07 Mar 2015 14:26:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/sgu-222-little-rooks/</guid>
-      <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks.
-A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other.
-Given two numbers $n$ and $k$, your job is to determine the number of ways one can put $k$ rooks on an $n\times n$ chessboard so that no two of them are in attacking positions.</description>
+      <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks. A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other. Given two numbers $n$ and $k$, your job</description>
     </item>
     
     <item>
@@ -56,10 +53,7 @@ Given two numbers $n$ and $k$, your job is to determine the number of ways one c
       <pubDate>Sat, 07 Mar 2015 13:18:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/sgu-154-factorial/</guid>
-      <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail.
-Input One number $Q$ written in the input ($0\leq Q\leq 10^8$).
-Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise.
-Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
+      <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail. Input One number $Q$ written in the input ($0\leq Q\leq 10^8$). Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise. Sample Input 2</description>
     </item>
     
     <item>
@@ -68,7 +62,7 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
       <pubDate>Sat, 07 Mar 2015 11:04:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/sgu-130-circle/</guid>
-      <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of parts $P$.</description>
+      <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of</description>
     </item>
     
     <item>
@@ -77,7 +71,7 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
       <pubDate>Sat, 07 Mar 2015 09:48:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/sgu-276-andrews-troubles/</guid>
-      <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he owes a cup of tea to other team members.</description>
+      <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he</description>
     </item>
     
     <item>
@@ -104,9 +98,7 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
       <pubDate>Tue, 24 Feb 2015 14:14:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-117-counting/</guid>
-      <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$.
-Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line.
-Output Write answer for given task.</description>
+      <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$. Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line. Output Write</description>
     </item>
     
     <item>
@@ -115,7 +107,7 @@ Output Write answer for given task.</description>
       <pubDate>Tue, 24 Feb 2015 13:13:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</guid>
-      <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase $V$ is the rightmost vase.</description>
+      <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the</description>
     </item>
     
     <item>
@@ -124,9 +116,7 @@ Output Write answer for given task.</description>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-101-domino/</guid>
-      <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.
-The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip;
-The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</description>
+      <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards. The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip; The</description>
     </item>
     
     <item>
@@ -135,7 +125,7 @@ The principle in nearly all modern dominoes games is to match one end of a piece
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
-      <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own.</description>
+      <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So</description>
     </item>
     
     <item>
@@ -144,9 +134,7 @@ The principle in nearly all modern dominoes games is to match one end of a piece
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</guid>
-      <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle.
-Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits.
-Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates of $B$ to second line and coordinates of $C$ to third line.</description>
+      <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle. Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits. Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates</description>
     </item>
     
     <item>
@@ -155,10 +143,7 @@ Output If solution exists, write three lines. Write coordinates of point $A$ to 
       <pubDate>Tue, 17 Feb 2015 11:58:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-180-inversions/</guid>
-      <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$.
-Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$.
-Output Write amount of such pairs.
-Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可。每次更新 $A[i]$ 为 1，然后所有的逆序数就是 $$A[i] - \sum{\left(A[i] - 1\right)} + 1$$ 更新的同时获取答案。</description>
+      <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$. Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$. Output Write amount of such pairs. Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序</description>
     </item>
     
     <item>
@@ -167,7 +152,7 @@ Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可
       <pubDate>Thu, 05 Feb 2015 21:30:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-127-telephone-directory/</guid>
-      <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with digits 0 and 8.</description>
+      <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with</description>
     </item>
     
     <item>
@@ -176,11 +161,7 @@ Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可
       <pubDate>Thu, 05 Feb 2015 14:52:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-112-ab-ba/</guid>
-      <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$.
-Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$).
-Output Write answer to output.
-Sample Input 2 3 Sample Output -1 Analysis 非常明显的高精度，再观察一下样例，要处理减法，而且有负数，注意一下好了。
-Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 1024; const int HEX = 10000; const int BIT = 4; class Huge { public: Huge(); Huge(int x); ~Huge(); public: Huge&amp;amp; operator *= (int x); Huge&amp;amp; operator - (Huge &amp;amp;x); bool operator &amp;gt; (Huge x); public: friend ostream&amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;out, Huge &amp;amp;x); public: int m_pData[MAX]; int m_nLen; }; Huge::Huge() { memset(m_pData, 0, sizeof(m_pData)); m_nLen = 1; } Huge::Huge(int x) { memset(m_pData, 0, sizeof(m_pData)); m_pData[1] = x; m_nLen = 1; } Huge::~Huge() { } bool Huge::operator &amp;gt; (Huge x) { if(this-&amp;gt;m_nLen !</description>
+      <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$. Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$). Output Write answer to output. Sample Input 2 3 Sample Output -1 Analysis 非常明显的高精度，再观察一下样例，要处理减法，而且有负数，注意一下好</description>
     </item>
     
     <item>
@@ -189,8 +170,7 @@ Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; usi
       <pubDate>Thu, 05 Feb 2015 14:46:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</guid>
-      <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise.
-Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\leq N\leq 10$).</description>
+      <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise. Input Input file consists of $N + 1$ numbers. First is positive integer</description>
     </item>
     
     <item>
@@ -199,12 +179,7 @@ Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\
       <pubDate>Thu, 05 Feb 2015 14:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/sgu-107-987654321-problem/</guid>
-      <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321.
-Input Input contains integer number $N$ ($1\leq N\leq 10^6$).
-Output Write answer in output file.
-Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数学题。
-由于一个数平方的后X位，只与这个数字的后X位有关系，所以我们不妨使用下面的程序打一个表来看一下。
-#include &amp;lt;iostream&amp;gt; using namespace std; int main() { // sqrt(987654321) &amp;gt; 30000 for(long long i = 30000; i &amp;lt;= 999999999; i++) { long long x = i * i; if(x % 1000000000 == 987654321) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } } return 0; } 打完表以后，我们发现只有 8 个数字满足条件，而且分布在 100,000,000 到 999,999,999 之间。</description>
+      <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321. Input Input contains integer number $N$ ($1\leq N\leq 10^6$). Output Write answer in output file. Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数学题。 由于一个数平方的后</description>
     </item>
     
     <item>
@@ -213,7 +188,7 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
       <pubDate>Fri, 30 Jan 2015 17:57:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-184-patties/</guid>
-      <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage. He has plenty of other ingredients.</description>
+      <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage.</description>
     </item>
     
     <item>
@@ -222,7 +197,7 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
       <pubDate>Thu, 29 Jan 2015 21:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-135-drawing-lines/</guid>
-      <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if the lines are identical) zones.</description>
+      <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if</description>
     </item>
     
     <item>
@@ -231,9 +206,7 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
       <pubDate>Thu, 29 Jan 2015 21:18:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-115-calendar/</guid>
-      <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001.
-Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100.
-Output Write current number of the day of the week for given date (Monday – number 1, … , Sunday – number 7) or phrase &amp;ldquo;Impossible&amp;rdquo; if such date does not exist.</description>
+      <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001. Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100. Output Write current number of the day of the</description>
     </item>
     
     <item>
@@ -242,12 +215,7 @@ Output Write current number of the day of the week for given date (Monday – nu
       <pubDate>Thu, 29 Jan 2015 21:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-123-the-sum/</guid>
-      <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers.
-Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$).
-Output First line should contain number $S$.
-Sample Input 5 Sample Output 12 Analysis 考虑到数据范围，这道题目只要模拟一下就行了。但是我还是比较喜欢使用数学方法来求解。
-令 $S_n$ 表示斐波那契数列的前 $N$ 项和，那么我们很容易求得 $S_n = F_{n+2} - 1$。
-Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 64; int f[MAX]; int main() { int N; cin &amp;gt;&amp;gt; N; f[1] = f[2] = 1; for(int i = 3; i &amp;lt;= N + 2; i++) { f[i] = f[i - 1] + f[i - 2]; } cout &amp;lt;&amp;lt; f[N + 2] - 1 &amp;lt;&amp;lt; endl; return 0; } 这道题目应该是非常简单的。当然，如果你不知道斐波那契数列可以在$O(n)$时间内求得，那么这道题目对于你来说还是有一定难度的。</description>
+      <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers. Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$). Output First line should contain number $S$. Sample Input 5 Sample Output 12 Analysis 考虑到数据范围，这道题目只</description>
     </item>
     
     <item>
@@ -256,11 +224,7 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 
       <pubDate>Thu, 29 Jan 2015 20:48:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-105-div-3/</guid>
-      <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3.
-Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$).
-Output Write answer in output file.
-Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于这个数各个位上数字之和对 $3$ 取模。因此，非常容易想到的方法是找规律：
-项数 $N$ 数列 除以 $3$ 的余数 答案 $ans$ 1 1 1 0 2 12 0 1 3 123 0 2 4 1234 1 2 5 12345 0 3 6 123456 0 4 7 1234567 1 4 8 12345678 0 5 9 123456789 0 6 由上述表格，我们可以大致的看出规律，即：$$\mathrm{ans} = \begin{cases} \mathrm{ans}, &amp;amp; N \mod 3 = 1\\ \mathrm{ans} + 1, &amp;amp; N \mod 3 = 0, 2\end{cases}$$</description>
+      <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3. Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$). Output Write answer in output file. Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于这个数各</description>
     </item>
     
     <item>
@@ -269,10 +233,7 @@ Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于�
       <pubDate>Thu, 29 Jan 2015 20:17:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-102-coprimes/</guid>
-      <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$).
-Input Input file contains integer $N$.
-Output Write answer in output file.
-Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varphi\left(N\right)$，后来发现数据量并不是特别的大，所以又用暴力做了一遍，也 AC 了。</description>
+      <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$). Input Input file contains integer $N$. Output Write answer in output file. Sample Input 9 Sample</description>
     </item>
     
     <item>
@@ -281,12 +242,7 @@ Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varp
       <pubDate>Thu, 29 Jan 2015 20:08:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
-      <description>[100. A+B]
-Description Read integers $A$ and $B$ from input file and write their sum in output file.
-Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$).
-Output Write answer in output file.
-Sample Input 5 3 Sample Output 8 Analysis 水题。
-Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int a, b; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl; return 0; } 到了大学，开始接触 ACM。高中里参加了 3 年 NOIP，拿了两年的二等奖，现在终于接触到了 ACM，找到了 SGU 这个 OJ 开始刷题。</description>
+      <description>[100. A+B] Description Read integers $A$ and $B$ from input file and write their sum in output file. Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$). Output Write answer in output file. Sample Input 5 3 Sample Output 8 Analysis 水题。 Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int a, b; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl; return 0; }</description>
     </item>
     
   </channel>

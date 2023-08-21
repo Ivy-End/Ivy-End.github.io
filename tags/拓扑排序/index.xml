@@ -17,14 +17,7 @@
       <pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
-      <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题：
-给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。
-当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。
-关于拓扑排序，我们来看一下下面这张图片：
-Toplogical Sorting
-我们可以用队列来实现这个算法，具体改进的过程如下：
-记录每个点的入度； 将入度为 0 的顶点加入队列； 依次对入度为 0 的点进行删边操作，同时将新得到的入度为零的点加入队列； 重复上述操作，直至队列为空。 代码如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;queue&amp;gt; using namespace std; const int MAX = 10240; int N, M, pDegree[MAX]; queue&amp;lt;int&amp;gt; Q; vector&amp;lt;int&amp;gt; pMap[MAX], pVec; void TopSort(); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; memset(pDegree, 0, sizeof(pDegree)); for(int i = 1; i &amp;lt;= M; i++) { int s, e; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e; pMap[s].</description>
+      <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题： 给定一个 AOV 网（Activity On Vertex N</description>
     </item>
     
   </channel>

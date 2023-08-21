@@ -17,13 +17,7 @@
       <pubDate>Tue, 05 Nov 2013 20:34:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
-      <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。
-这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。
-我写的高斯消元是将所有系数看成一个矩阵来求解的。
-下面来简要讲一下高斯消元的过程：
-首先，我们根据方程组写出增广矩阵。每次都找 $ x_{i} $ 系数的绝对值最大的那个方程，将它移到上方，而将下面的方程组的 $ x_{i} $ 的系数全部化成 0。以此类推，到最后再逆序求解每个未知数的解。
-我们来看一个例子，求解方程组 $ \begin{cases}2x+y-z=8\\ -3x-y+2z=-11\\ -2x+y+2z=-3\end{cases} $
-首先我们写出它的增广矩阵 $$ \begin{bmatrix}\left.\begin{matrix}2 &amp;amp; 1 &amp;amp; -1\\ -3 &amp;amp; -1 &amp;amp; 2\\ -2 &amp;amp; 1 &amp;amp; 2\end{matrix}\right|\begin{matrix}8\\ -11\\ -3\end{matrix}\end{bmatrix} $$ 接下来我们按照算法步骤来求解这个方程组 $$ \begin{bmatrix} \left.\begin{matrix} 2 &amp;amp; 1 &amp;amp; -1\\ -3 &amp;amp; -1 &amp;amp; 2\\ -2 &amp;amp; 1 &amp;amp; 2 \end{matrix}\right| \begin{matrix} 8\\ -11\\ -3 \end{matrix} \end{bmatrix}\Rightarrow \begin{bmatrix} \left.\begin{matrix} -3 &amp;amp; -1 &amp;amp; 2\\ 2 &amp;amp; 1 &amp;amp; -1\\ -2 &amp;amp; 1 &amp;amp; 2 \end{matrix}\right| \begin{matrix} -11\\ 8\\ -3 \end{matrix}\end{bmatrix}\Rightarrow \begin{bmatrix} \left.</description>
+      <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换</description>
     </item>
     
   </channel>

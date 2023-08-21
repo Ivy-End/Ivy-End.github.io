@@ -17,9 +17,7 @@
       <pubDate>Sat, 02 May 2015 11:12:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</guid>
-      <description>这一节我们将介绍结束游戏的方法，以及一些整体方面的完善。首先考虑失败的情况，它会将所有的地雷都显示出来。我们新建一个 GameLost 函数：
-private void GameLost() { for(int i = 1; i&amp;lt;= nWidth; i++) { for(int j = 1; j&amp;lt;= nHeight; j++) { if(pMine[i, j] == -1 &amp;amp;&amp;amp; (pState[i, j] == 0 || pState[i, j] == 3)) // 未点开或者标记为问号的雷 { pState[i, j] = 1; // 点开该地雷 } } } } 在游戏结束的地方调用 GameLost 函数，因为我们上一节中讲述的游戏结束都是失败的情况：
-if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { bool bFlag = OpenMine(MouseFocus.X, MouseFocus.Y); if(!</description>
+      <description>这一节我们将介绍结束游戏的方法，以及一些整体方面的完善。首先考虑失败的情况，它会将所有的地雷都显示出来。我们新建一个 GameLost 函数： private void GameLost() { for(int i = 1;</description>
     </item>
     
     <item>
@@ -28,11 +26,7 @@ if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { 
       <pubDate>Fri, 01 May 2015 22:23:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</guid>
-      <description>这一节我们主要讲解扫雷时鼠标单击的事件。我们首先介绍左键单击的事件，分为两种情况——遇到地雷，游戏结束；不是地雷，自动点开相邻的非地雷区域，并且显示对应地雷区域周围地雷的数目。
-我们首先需要为 Form_Main 添加 MouseDown 以及 MouseUp 事件，分别用来监测鼠标按下以及弹起的事件信息。再定义两个全局变量，用来标识鼠标左键以及右键是否被按下，代码如下：
-bool bMouseLeft; // 鼠标左键是否被按下 bool bMouseRight; // 鼠标右键是否被按下 在 MouseDown 事件中输入下面的代码：
-private void Form_Main_MouseDown(object sender, MouseEventArgs e) { if(e.Button == MouseButtons.Left) // 鼠标左键被按下 { bMouseLeft = true; } if(e.Button == MouseButtons.Right) // 鼠标右键被按下 { bMouseRight = true; } } 在 MouseUp 事件中，我们需要获取鼠标弹起前按下的鼠标按键的状态信息，代码如下：
-private void Form_Main_MouseUp(object sender, MouseEventArgs e) { if(bMouseLeft &amp;amp;&amp;amp; BMouseRight) // 左右键同时按下 { } else if(bMouseLeft) // 左键被按下 { } else if(bMouseRight) // 右键被按下 { } } 我们首先处理鼠标左键按下的情况，这里分为两种情况，在前文中已经介绍过。但是在处理之前，我们需要获取游戏者单击的是哪个雷区，因此我们需要加入一些用以判断当前鼠标所属区域的代码。但是回顾一下，我们上一节中在 MouseMove 事件中已经获得了当前鼠标所属的区域，并且保存在了全局变量中，因此，我们直接调用即可：</description>
+      <description>这一节我们主要讲解扫雷时鼠标单击的事件。我们首先介绍左键单击的事件，分为两种情况——遇到地雷，游戏结束；不是地雷，自动点开相邻的非地雷区域，</description>
     </item>
     
     <item>
@@ -41,10 +35,7 @@ private void Form_Main_MouseUp(object sender, MouseEventArgs e) { if(bMouseLeft 
       <pubDate>Thu, 30 Apr 2015 21:26:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</guid>
-      <description>在进行内部实现之前，我们先来考虑一下扫雷的内部逻辑。首先，我们需要保存每个点上是否有地雷，如果没有地雷，那么要显示与它紧邻的八个格子中一共有多少的地雷。还需保存每个雷区的状态（点开，未点开，红旗，问号）。我们考虑定义两个常量，表示地雷的最大范围：
-const int MAX_WIDTH = 64; // 最大宽度 const int MAX_HEIGHT = 32; // 最大高度 接下来定义两个数组，用来保存上述两种数据。对于第一类数据，我们使用 -1 表示该区域有地雷，使用数字表示与它紧邻的八个格子中一共有多少地雷；对于第二类数据，我们使用 0 表示未点开，1 表示点开，2 表示红旗，3 表示问号。如下图所示：
-int[,] pMine = new int[MAX_WIDTH, MAX_HEIGHT]; // 第一类数据 int[,] pState = new int[MAX_WIDTH, MAX_HEIGHT]; // 第二类数据 接下来我们需要初始化游戏数据，双击 New Game 菜单，输入游戏的初始化代码：
-private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // 以下两行清空数组 Array.Clear(pMine, 0, pMine.Length); Array.Clear(pState, 0, pState.Length); // 初始化地雷数据 Random Rand = new Random(); for(int i = 1; i &amp;lt;= nMineCnt; ) // 地雷总数 { // 随机地雷坐标 (x, y) int x = Rand.</description>
+      <description>在进行内部实现之前，我们先来考虑一下扫雷的内部逻辑。首先，我们需要保存每个点上是否有地雷，如果没有地雷，那么要显示与它紧邻的八个格子中一共有</description>
     </item>
     
     <item>
@@ -53,19 +44,7 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
       <pubDate>Fri, 24 Apr 2015 16:09:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</guid>
-      <description>上一节中，我们还剩下 Setting 和 Rank 两个菜单项目没有设置事件，是因为它们都涉及到了弹出一个新的窗口。这一节，我们将主要介绍创建窗口的方法，以及窗口之间的数据通信。
-首先，我们新建一个窗口，在右侧找到解决方案资源管理器，右击 Minesweeper 项目名，选择添加，如图所示：
-菜单示意图
-选择新建项，如图所示：
-菜单示意图
-在弹出的窗口中选择 Windows 窗体，并将名称修改为 Form_Setting.cs，单击确定，如图所示：
-新建窗口示意图
-将新建的窗口 Icon 属性修改为扫雷的图标，将 MaximizeBox 属性修改为 False，将 Name 属性修改为 Form_Setting，将 BackColor 属性修改为 White，将 Text 属性修改为 Minesweeper，将 FormBorderStyle 属性改为 FixedSingle。
-在左边工具箱面板下公共控件中找到 Label 控件，双击添加到窗口中，将它的 Name 属性修改为 Label_Width，Text 属性修改为“Width:”，并移动到合适的位置，再在工具箱面板中找到 NumericUpDown 控件，双击添加到窗口中，将它的 Name 属性修改为 NumericUpDown_Width，Minimum 属性修改为 1，Maximun 属性修改为 30，（其中 Minimum 以及 Maximum 的属性表示为数字的变化范围。）TextAlign 属性修改为 Center。其中 Minimum以 及 Maximum 的属性表示为数字的变化范围。如下图所示：
-窗口示意图
-重复上述操作，添加雷区高度（Height），地雷数目（Mine）的控件，其中高度的变化范围为 1 至 16，数目的变化范围为 1 至 99。如下图所示：
-窗口示意图
-接下来我们需要添加两个按钮，用来确定修改以及取消修改。在左侧工具箱面板的公共控件中找到 Button 控件，双击添加到窗体中，将它的 Name 属性修改为 Button_OK，Text 属性修改为 OK。同时添加一个取消按钮（Cancel），如下图所示：</description>
+      <description>上一节中，我们还剩下 Setting 和 Rank 两个菜单项目没有设置事件，是因为它们都涉及到了弹出一个新的窗口。这一节，我们将主要介绍创建窗口的方法，以及窗口之间</description>
     </item>
     
     <item>
@@ -74,9 +53,7 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
       <pubDate>Wed, 22 Apr 2015 16:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
-      <description>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。
-在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：
-/// &amp;lt;summary&amp;gt; /// 选择对应的游戏等级 /// &amp;lt;/summary&amp;gt; private void SelectLevel() { if (nWidth == 10 &amp;amp;&amp;amp; nHeight == 10 &amp;amp;&amp;amp; nMineCnt == 10) { beginnerBToolStripMenuItem.Checked = true; intermediateIToolStripMenuItem.Checked = false; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 16 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 40) { beginnerBToolStripMenuItem.Checked = false; intermediateIToolStripMenuItem.Checked = true; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 30 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 99) { beginnerBToolStripMenuItem.</description>
+      <description>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（</description>
     </item>
     
     <item>
@@ -85,15 +62,7 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
       <pubDate>Tue, 21 Apr 2015 15:42:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</guid>
-      <description>这一节我们主要涉及界面中雷区的绘制方法。
-首先来考虑几个问题。为了保存整个雷区的信息，我们需要哪些数据。显然，除了要保存雷区的宽度和高度（分别定义为宽和高方向上方块的个数）外，还需要保存地雷的数目。这样我们需要用到三个变量 nWidth, nHeight, nMineCnt 分别保存雷区的宽度、雷区的高度以及地雷的数目。
-右击窗口，选择查看代码，也可以使用快捷键 F7，如下图所示：
-菜单示意图
-可以看到这样的代码界面：
-代码界面
-添加如下所示的代码，用来定义扫雷区域的基本变量，它们的含义在上文或者注释中都有提及：
-namespace Minesweeper { public partial class Form_Main : Form { int nWidth; // 表示雷区的宽度 int nHeight; // 表示雷区的高度 int nMineCnt; // 表示地雷的数目 public Form_Main() { InitializeComponent(); } } } 为了方便设置这三个参数，我们可以定义一个新的函数 SetGame，如下所示：
-namespace Minesweeper { public partial class Form_Main : Form { int nWidth; // 表示雷区的宽度 int nHeight; // 表示雷区的高度 int nMineCnt; // 表示地雷的数目 public Form_Main() { InitializeComponent(); } private void SetGame(int Width, int Height, int MineCnt) { nWidth = Width; nHeight = Height; nMineCnt = MineCnt; } } } 这样，我们就可以通过调用 SetGame 函数来设置游戏的参数了。为了方便阅读，我们可以为这个函数加上一个注释，在函数名上方输入&amp;quot;///&amp;quot;，程序会自动生成一个注释块，如下所示：</description>
+      <description>这一节我们主要涉及界面中雷区的绘制方法。 首先来考虑几个问题。为了保存整个雷区的信息，我们需要哪些数据。显然，除了要保存雷区的宽度和高度（分别</description>
     </item>
     
     <item>
@@ -102,24 +71,7 @@ namespace Minesweeper { public partial class Form_Main : Form { int nWidth; // �
       <pubDate>Mon, 20 Apr 2015 19:31:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</guid>
-      <description>这一节我们主要介绍关于扫雷游戏界面的设计，此处我们借鉴经典扫雷界面的设计方法，首先需要创建一个菜单栏。具体方法在左边找到工具箱窗口，展开其中的菜单和工具栏，找到 MenuStrip 选项，如图所示：
-添加 MenuStrip
-只需要双击该条目就可以在窗口中新建一个菜单栏，如图所示：
-MenuStrip 添加效果
-对于这个控件（我们习惯上将窗口中的东西称作为控件），我们还是需要修改它的一些属性，对于个人习惯而言，我习惯于修改它的 Name 属性，这样编程的时候不至于将很多控件混淆。我们将它的 Name 属性修改为“MenuStrip_Main”。单击“请在此键入”，输入“Game(&amp;amp;G)”，其中 &amp;amp;G 整体会显示成 G 这个字母下面加一个下划线，这样在用户使用的时候就可以通过按下字母 G 来访问这个按键了。（当然，顶层菜单还需要按下 Alt 键，例如 Alt + G 键。）输入以后的界面如图所示：
-添加菜单项
-使用同样的方法，创建如下图所示的一个菜单栏：
-菜单示意图
-注意到，图中的分割线，只需要输入一个减号，即“-”，再按下回车键即可得到。
-我们一次介绍一下各个选项的功能，以便读者对它们有一个基本的了解。菜单一共有两组，一个为游戏（Game），一个为帮助（Help）：其中游戏菜单下分别包含了新游戏（New Game）、初级（Beginner）、中级（Intermediate）、高级（Expert）、设置（Setting）、标记（Mark）、音效（Audio）、排行榜（Rank）、退出（Exit）；而帮助菜单下仅包含关于（About）。
-其中新游戏用来开始一场新的游戏；初级、中级、高级，用于选择不同的游戏难度；设置用于自定义扫雷区域的大小以及地雷的数目；标记用于设置是否启用红旗、问号这一类的标记；音效用于设置是否启用音效；排行榜用于对游戏时间进行排名（仅记录初级、中级、高级的结果，对于自定义游戏的结果不进行记录）；退出用于退出游戏。最后，关于用来显示游戏的一些关于信息。
-对于初级、中级、高级、标记、音效这几个菜单，我们需要在它的前面显示它的状态，即是否被选中，如果选中了就会在它的前面出现一个勾，如果没有选中，则没有，这是我们以后需要实现的功能，在此先进行说明。
-至此，我们的菜单栏就制作完成了。接下来我们需要制作一个用来记录地雷数目以及用时的功能。我们选择工具箱中容器的 TableLayoutPanel，双击该项目，会在窗口中创建一个 TableLayoutPanel 控件。同样我们先将它的 Name 属性修改为“TableLayoutPanel_Main”。展开它的 Size 属性，将 Height 属性修改为 48。同时修改它的 Dock 属性，选择 Bottom，如图所示：
-TableLayoutPanel 属性设置
-我们会发现它会自动吸附在底部，如果改成别的参数则会吸附在别的位置，这里我们设置为 Bottom。同时将 RowCount 属性设置为 1，ColumnCount 属性设置为 9。打开 Columns 属性对话框，按照下图进行修改：
-TableLayoutPanel 行列样式
-这里进行一些解释，其中 Column1、Column3、Column5、Column7、Column9 为中心对称的，用来设置边距，不放置任何控件，纯粹为了排版需要。接下来我们需要在 Column2、Column8 中分别放置地雷（Mine_Show.png）以及秒表（Timer.png）的图标，表示剩余的地雷数目以及已用时长。而 Columns4、Columns6 中分别放置用于显示地雷数目以及已用时长的文本。下载地址：地雷、秒表。
-在工具箱中展开公共控件，找到 PictureBox，将它拖动到 TableLayoutPanel 的第二个列中，同时将它的 Name 属性设置为“PictureBox_Mine”，Dock 属性设置为 Fill（表示充满整个页面，此处的页面即 TableLayoutPanel 中 Column2 全部），BackgroundImage 属性定位到Mine_Show.</description>
+      <description>这一节我们主要介绍关于扫雷游戏界面的设计，此处我们借鉴经典扫雷界面的设计方法，首先需要创建一个菜单栏。具体方法在左边找到工具箱窗口，展开其中</description>
     </item>
     
     <item>
@@ -128,28 +80,7 @@ TableLayoutPanel 行列样式
       <pubDate>Mon, 20 Apr 2015 17:58:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
-      <description>这一系列的文章主要受许宏旭的启发而来。他目前在连载更新一篇使用 C# 制作五子棋的教程。选择这一项目的主要原因是 Windows 8.1 系统上的扫雷需要前往应用商店下载，显得有些麻烦。因此想自己制作一个。主要采用 C# 语言进行实现。主要功能与原来的扫雷游戏基本相同，进行修改的地方主要是扫雷区的界面。如有不恰当的地方，还望指正。
-该项目现已根据文章进度托管在GitHub上，读者可以自行查看。
-玩过扫雷的读者应该知道，扫雷需要用到三种图片素材——地雷、红旗、问号。当右击一个方块的时候，会插上红旗，表示游戏者认为该方块内有地雷；再次右击该方块，会变成问号，表示不确定该方块内是否有地雷；第三次右击该方块，问号消失，恢复到初始的状态。我们前往Iconfinder寻找合适的图标，并且通过 Photoshop 或者 Illustrator 的处理得到我们所需要的图标。文章中含有下载地址的图标资源可以使用右键—目标另存为进行下载。
-通过一定的搜索以及图片的处理，我们得到了下面一组素材图标。
-Mine Sweeper 素材
-除了这些素材以外，我们还需要找一个图标，使得整个程序看上去更加正式一点，这里使用图标如下，注意程序图标的后缀为ico。
-Mine Sweeper 图标
-接下来，我们打开Visual Studio 2013开始创建工程，界面如下：
-Visual Studio 2013
-依次展开文件—新建—项目，选择“Visual C#”中的“Windows 窗体应用程序”，项目名称填写为“Minesweeper”，单击确定创建项目。如下图所示：
-创建项目
-创建好的项目如下图所示。
-项目创建完毕
-我们需要对这个窗口的几项属性进行修改，首先通过 Text 属性将它的标题修改为“Minesweeper”；通过FormBorderStyle属性将它的大小设置为“FixedSingle”，即为不可调节窗口大小；通过 MaximizeBox 属性将它的最大化按钮设置为“False”，即最大化按钮失效；通过 Name 属性将它的名称修改为“Form_Main”，修改这个属性主要用于后面书写代码的方便；通过 BackColor 属性将它的背景修改为“White”。如下图所示：
-属性修改
-我们可以顺便修改一下这个窗口的代码文件的名称。在右上方找到解决方案资源管理器，右击Form_1.cs—重命名—Form_Main.cs，程序会自动将下面包含的文件名也都改成一致的名称。如图所示：
-文件名修改
-接下来我们需要修改一下程序的图标，将刚才下载的 favicon 文件放到 Minesweeper/Minesweeper 文件夹下，同时将三个图标资源放到 Minesweeper/Minesweeper/Resources 文件夹下（Resources 文件夹需要自己新建），如下图所示：
-创建 Resources 文件夹
-在属性栏中找到 Icon 属性，并且定位到 favicon.ico 文件，如下图所示：
-设置 Icon
-此时，我们按下快捷键 Ctrl + S 对整个工程进行保存，并且按下快捷键 Ctrl + F5 运行查看我们的程序，效果如下：</description>
+      <description>这一系列的文章主要受许宏旭的启发而来。他目前在连载更新一篇使用 C# 制作五子棋的教程。选择这一项目的主要原因是 Windows 8.1 系统上的扫雷需要前往应用商店下</description>
     </item>
     
   </channel>

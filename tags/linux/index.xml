@@ -17,8 +17,7 @@
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
-      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）：
-[kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | .</description>
+      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）： [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
-      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。
-加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ openssl enc -d -aes256 -in &amp;lt;Filename&amp;gt; | tar -xzv # 3.</description>
+      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包</description>
     </item>
     
     <item>
@@ -37,18 +35,7 @@
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
       <guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
-      <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。
-本文所用到的软件资源，可单击此处下载，提取码为：njup。
-安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。
-安装 Microsoft VC Redistributable
-勾选“我同意许可条款和条件”后，单击“安装”。稍等片刻后，即可完成 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 的安装。
-安装 Microsoft VC Redistributable
-正式安装 VMware Workstation 双击运行 VMware-workstation-full-16.1.1-17801498.exe 文件，开始安装 Vmware Workstation。
-正式安装 VMware Workstation
-单击“下一步”。
-正式安装 VMware Workstation
-勾选“我接受许可协议中的条款”，单击“下一步”。
-正式安装 VMware Workstation</description>
+      <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。 本文所用到的软件资源，可单击此处下载，提取码为：njup。 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe</description>
     </item>
     
   </channel>

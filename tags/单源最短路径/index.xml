@@ -17,12 +17,7 @@
       <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
-      <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。
-算法的基本步骤如下：
-初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。
-对于SPFA还是比较容易理解的，它的复杂度为 $O\left(kE\right)$。
-代码如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;queue&amp;gt; using namespace std; const int MAX = 10240; bool pQueue[MAX]; int N, M, pDist[MAX], pCnt[MAX];	// pCnt[]记录顶点i松弛的次数 vector&amp;lt;pair&amp;lt;int, int&amp;gt; &amp;gt; pMap[MAX]; queue&amp;lt;int&amp;gt; Q; void SPFA(int s); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; for(int i = 1; i &amp;lt;= M; i++) { int s, e, v; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e &amp;gt;&amp;gt; v; pMap[s].</description>
+      <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。 算法的基本步骤如下： 初始化队列和标记数组，将源点入队。 每次取队</description>
     </item>
     
     <item>
@@ -31,14 +26,7 @@
       <pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
-      <description>上一篇文章介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。
-Ballman-Ford 是一个非常实用的算法，它是由美国数学家 Richard Ballman 和 Lester Ford 发明的。Ballman-Ford 算法的基本流程如下：
-初始化 $ pDist\left [ \right ] $ 数组。 检查每一条边，如果源点到该条边的起点有通路，则更新原点到该条边的终点的最短路径。循环 $ V $ 次即可得到结果。 如若要检测是否存在负环，则再检查每一条边，若可以松弛，则有负环。
-我们来看一张图片具体体会一下 Bellman-Ford Algorithm：
-Bellman-Ford 算法
-这个算法相对而言比较容易实现，复杂度为 $ O\left ( VE \right ) $ 。
-代码如下：
-#include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;queue&amp;gt; using namespace std; const int MAX = 10240; const int INF = 2147483647; struct Edge { Edge(int _s, int _e, int _v) { s = _s; e = _e; v = _v; } int s, e, v; }; int N, M; int pDist[MAX]; vector&amp;lt;Edge&amp;gt; pEdge;	// 边集数组 void Ford(int s); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; for(int i = 1; i &amp;lt;= M; i++) { int s, e, v; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e &amp;gt;&amp;gt; v; pEdge.</description>
+      <description>上一篇文章介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其</description>
     </item>
     
     <item>
@@ -47,13 +35,7 @@ Bellman-Ford 算法
       <pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
-      <description>这个星期开始复习最短路的一些算法。
-单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。
-首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。
-单源最短路径
-上面这幅图标出了从源点 $ s $ 到各个顶点的最短路径，大家可以根据图片自己体会一下最短路径的含义。其中 $ -\infty $ 表示到该点的最短路径是负无穷，因为我们发现存在负环，所以我们利用负环，使得最短路径达到负无穷，但是这个一般不在我们一般的算法的讨论范围内。
-下面来介绍一下 Dijkstra Algorithm。
-首先将所有的顶点分成两个集合 $ A $ 、 $ B $ ，其中集合 $ A $ 表示已经求得最短路径的顶点集合，集合 $ B $ 为待求解的顶点集合。初始时有 $ A=\left { V_{0} \right } $ 。 将集合 $ A $ 与集合 $ B $ 相连的边按照递增次序排序，取最短的边，将该条边在集合 $ B $ 中所对应的顶点加入到集合 $ A $ 中。 重复第二步，直至集合 $ B $ 为空集。</description>
+      <description>这个星期开始复习最短路的一些算法。 单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种</description>
     </item>
     
   </channel>

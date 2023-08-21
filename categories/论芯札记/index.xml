@@ -17,11 +17,7 @@
       <pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid>
-      <description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下。）
-一、运算放大器 1.1 实验目的 熟悉 CentOS 下的 Cadence 集成开发环境； 掌握元件库的调用方法，并由此进行原理图绘制及版图设计； 掌握版图设计中对称性和紧凑性的要求，并能熟练运用； 掌握版图设计中的中心对称技术和屏蔽技术，并能熟练运用； 掌握 DRC（Design Rule Check，设计规则检验）和 LVS（Layout Versus Schematic，版图与电路一致性检验）操作，并能运用其对设计的版图进行检查； 掌握版图设计中相关错误的解决方法。 1.2 实验仪器 正确安装了 VMware Workstation 的计算机一台； CentOS 下的 Cadence 集成开发环境一套。 1.3 实验内容 首先根据给出的电路图及相关参数（如图 1 所示）在 Cadence 中绘制出原理图，并在此基础上设计与之相对应的版图。在设计版图的过程中，需要注意对称性以及紧凑型；此外，还需要运用屏蔽技术和叉指技术。对设计完的版图进行 DRC 以及 LVS 检查，通过上述检查后，方可确认版图设计完成且准确无误。
-图 1：运算放大器电路图
-1.4 操作说明 在 CentOS 下的 Cadence 集成开发环境中，快捷键的使用显得尤为重要。正确合理地使用快捷键能够极大的加快原理图及版图的绘制过程。现将常用的快捷键列出如下：
-快捷键 描述 F 将当前视图设置为满屏显示 Shift+Z 将当前视图缩小两倍 Ctrl+Z 将当前视图放大两倍 ↑ ↓ ← → 对当前视图进行上下左右移动 I 调用器件实例 P 原理图中添加 Pin，版图中添加 Path W 原理图中添加 Wire L 版图中添加 Label O 版图中添加通孔 R 版图中添加矩形 S 版图中拉伸图形 K 版图中添加标尺 Shift+K 清除版图中所有标尺 Q 查看当前选中器件的属性 M 移动操作 U 撤销操作 Ctrl+D 取消当前器件的选择 F3 调出位置排版工具栏，可进行器件上下、左右的反转 ESC 取消操作 DELETE 删除操作 1.</description>
+      <description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下</description>
     </item>
     
     <item>
@@ -30,8 +26,7 @@
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
-      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）：
-[kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | .</description>
+      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）： [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same</description>
     </item>
     
     <item>
@@ -40,9 +35,7 @@
       <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
-      <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。
-v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示：
--a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;.</description>
+      <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。 v21vs -64 -sn \ -v</description>
     </item>
     
     <item>
@@ -51,8 +44,7 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
-      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。
-加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ openssl enc -d -aes256 -in &amp;lt;Filename&amp;gt; | tar -xzv # 3.</description>
+      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包</description>
     </item>
     
     <item>
@@ -61,18 +53,7 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
       <guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
-      <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。
-本文所用到的软件资源，可单击此处下载，提取码为：njup。
-安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。
-安装 Microsoft VC Redistributable
-勾选“我同意许可条款和条件”后，单击“安装”。稍等片刻后，即可完成 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 的安装。
-安装 Microsoft VC Redistributable
-正式安装 VMware Workstation 双击运行 VMware-workstation-full-16.1.1-17801498.exe 文件，开始安装 Vmware Workstation。
-正式安装 VMware Workstation
-单击“下一步”。
-正式安装 VMware Workstation
-勾选“我接受许可协议中的条款”，单击“下一步”。
-正式安装 VMware Workstation</description>
+      <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。 本文所用到的软件资源，可单击此处下载，提取码为：njup。 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe</description>
     </item>
     
   </channel>
