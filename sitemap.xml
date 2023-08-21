@@ -3,13 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kwang.life/categories/</loc>
-    <lastmod>2023-08-18T11:27:00+08:00</lastmod>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/posts/</loc>
-    <lastmod>2023-08-18T11:27:00+08:00</lastmod>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/tags/</loc>
-    <lastmod>2023-08-18T11:27:00+08:00</lastmod>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/tags/%E4%BC%AF%E7%BD%97%E5%A5%94%E5%B0%BC%E6%92%92%E6%88%98%E4%BA%89/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/tags/%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/2023/08/%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7%E9%99%B7%E9%98%B1thucydides-trap/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/tags/%E5%B8%8C%E8%85%8A%E5%8F%B2/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</loc>
+    <lastmod>2023-08-18T20:04:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/tags/%E5%88%86%E5%B8%83%E8%B7%9D%E7%A6%BB/</loc>
     <lastmod>2023-08-18T11:27:00+08:00</lastmod>
@@ -30,9 +48,6 @@
     <lastmod>2023-08-18T11:27:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</loc>
-    <lastmod>2023-08-18T11:27:00+08:00</lastmod>
-  </url><url>
-    <loc>https://kwang.life/</loc>
     <lastmod>2023-08-18T11:27:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/tags/%E9%9B%86%E5%90%88%E8%B7%9D%E7%A6%BB/</loc>
@@ -647,13 +662,13 @@
     <loc>https://kwang.life/2013/01/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</loc>
     <lastmod>2013-01-26T16:32:00+08:00</lastmod>
   </url><url>
+    <loc>https://kwang.life/tags/%E4%B8%89%E5%9B%BD%E5%8F%B2/</loc>
+    <lastmod>2013-01-26T16:32:00+08:00</lastmod>
+  </url><url>
     <loc>https://kwang.life/tags/%E5%AD%99%E5%88%98%E8%81%94%E7%9B%9F/</loc>
     <lastmod>2013-01-26T16:32:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/tags/%E8%9C%80%E9%94%A6/</loc>
-    <lastmod>2013-01-26T16:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</loc>
     <lastmod>2013-01-26T16:32:00+08:00</lastmod>
   </url><url>
     <loc>https://kwang.life/2012/12/%E5%A3%AC%E8%BE%B0%E5%BF%972012-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</loc>

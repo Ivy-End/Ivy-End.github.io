@@ -10,7 +10,16 @@
       <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 18 Aug 2023 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 20:04:00 +0800</lastBuildDate><atom:link href="https://kwang.life/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>鉴古知今</title>
+      <link>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</link>
+      <pubDate>Fri, 18 Aug 2023 20:04:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>编程珠玑</title>
       <link>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</link>
@@ -44,15 +53,6 @@
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/categories/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>鉴古知今</title>
-      <link>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</link>
-      <pubDate>Sat, 26 Jan 2013 16:32:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/categories/%E9%89%B4%E5%8F%A4%E7%9F%A5%E4%BB%8A/</guid>
       <description></description>
     </item>
     
