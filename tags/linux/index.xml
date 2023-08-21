@@ -51,20 +51,5 @@
 正式安装 VMware Workstation</description>
     </item>
     
-    <item>
-      <title>Linux 迁移记（一）</title>
-      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
-      <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
-      <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：
-Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。
-安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是 GUI 界面，相对容易些。
-装完系统就是折腾了，Linux 就是用来折腾的。下面慢慢介绍。
-换上 Gnome3 由于 Ubuntu 自带的 Unity 界面非常不稳定，主要是个人不喜欢那种风格。所以毅然决然的换了 Gnome3。由于 Ubuntu 早已将其加入到了软件源中，所以直接 apt-get 就可以了。
-sudo apt-get install gnome-shell 安装结束以后就可以使用了。可能是个人癖好吧，我还是把 Unity 删了，命令如下：
-sudo apt-get --auto-remove purge unity sudo apt-get --auto-remove purge unity-commonp sudo apt-get --auto-remove purge unity-lens* sudo apt-get --auto-remove purge unity-services sudo apt-get --auto-remove purge unity-asset-pool 切记不可使用这条命令：</description>
-    </item>
-    
   </channel>
 </rss>
