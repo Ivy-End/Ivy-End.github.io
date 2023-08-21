@@ -18,7 +18,7 @@
       <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
-      <description>昨天终于把欧拉函数想通了，现在总结一下。 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商</description>
+      <description>昨天终于把欧拉函数想通了，现在总结一下。 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。 下面介绍欧拉函数的几个性质： $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\right )=N\cdot\prod_{p\mid N}\left ( \frac{p-1}{p} \right ) $； $ \displaystyle\varphi \left ( p^{k} \right ) = p^{k}-p^{k-1}=\left(p-1 \right )\cdot p^{k-1} $ ，其中 $ p $ 为质数； $ \displaystyle\varphi \left(mn \right )=\varphi \left(m \right )\cdot \varphi \left(n \right ) $ ，其中 $ \gcd \left ( m,n \right )=1 $ 。 我们根据这几个性质就可以求出欧拉函数。 基本思路是首先置 $ \varphi \left ( N \right )=N $ ，然后再枚举素数 $ p $ ，将 $ p $ 的整数倍的欧拉函数 $ \varphi \left ( kp \right ) $ 进行操作 $ \varphi \left ( kp \right )=\varphi \left ( kp \right )\cdot \frac{p-1}{p} $ 即可。 代码如下： #include &amp;lt;iostream&amp;gt;</description>
     </item>
     
   </channel>

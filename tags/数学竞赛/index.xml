@@ -18,7 +18,7 @@
       <pubDate>Thu, 01 Aug 2013 18:57:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</guid>
-      <description>注：这篇文章在草稿箱里沉睡了许久，现在勉强将其写完，可能有所遗漏。 7月15日至7月24日去扬州参加了数学夏令营。现在将沿途一些所见所闻所感记</description>
+      <description>注：这篇文章在草稿箱里沉睡了许久，现在勉强将其写完，可能有所遗漏。 7月15日至7月24日去扬州参加了数学夏令营。现在将沿途一些所见所闻所感记录于此。这几天的经历可以用一句话来概括「生活单调的像巴甫洛夫的狗，日子凄惨的如薛定谔的猫。」 7月15日中午我们乘坐大巴从学校赶往扬州。当大巴驶在宽阔的长江大桥上，我被长江的宽阔与雄壮所折服。从杨舍到扬州有将近2小时45分钟的车程。去的路上大家都很激动，不断的拍照直播。 我们入住的宾馆叫做辰源宾馆，双人间，自由组合，我便和陈力江住在了一起。刚进入房间，一股恶臭扑</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
-      <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。 解：作图像得，正根个数为 $ 1 $ 。 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。 解： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $</description>
+      <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。 解：作图像得，正根个数为 $ 1 $ 。 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。 解： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $ 即表示点 $ P\left(x,x^{2}\right) $ 到点 $ A\left(3,2\right),B\left(0,1\right) $ 的距离之差，点 $ P $ 在抛物线 $ y=x^{2} $ 上。 易得点 $ P $ 在直线 $ l_{AB}:x-3y+3=0 $ 上，因此得到 $ P\left(\frac{1-\sqrt{37}}{6},\frac{19-\sqrt{37}}{18}\right) $ ，故 $$ \begin{align*} f\left(x\right)_{max} &amp;amp;=\sqrt{\left[\left(\frac{1-\sqrt{37}}{6}-3\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-2\right)^{2}\right]-\left[\left(\frac{1-\sqrt{37}}{6}\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-1\right)^{2}\right]} \\ &amp;amp;=\frac{2\sqrt{245+34\sqrt{37}}}{9} \end{align*}$$ 2. 函数性质的应用 例3：设 $ x,y\in\mathbf{R} $ ，且满足 $ \begin{cases} \left ( x-1 \right )^{3}+1997\left ( x-1 \right )=-1\\ \left ( y-1 \right )^{3}+1997\left ( y-1 \right )=1 \end{cases} $ ，求 $ x+y $ 。 解：考虑函数 $ f\left(s\right)=s^{3}+1997s $ ，该函数既是奇函数又是增函数。又 $ f\left(x-1\right)=-f\left(y-1\right) $ ，得 $ \left(x-1\right)+\left(y-1\right)=0 $ ，因此 $ x+y=2 $ 。 例4：奇函数 $ f\left(x\right) $ 在定义域 $ \left(-1,1\right) $ 内是减函数，又 $ f\left(1-a\right)+f\left(1-a^{2}\right)&amp;lt;0 $ ，求 $ a $ 的</description>
     </item>
     
   </channel>

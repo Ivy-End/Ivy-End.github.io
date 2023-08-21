@@ -18,7 +18,7 @@
       <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
-      <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中</description>
+      <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.ignore(); } memset(pRow, 0, sizeof(pRow)); memset(pCol, 0, sizeof(pCol)); memset(pUsed, false, sizeof(pUsed)); dfs(1, 0); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } void dfs(int x, int y) { if(y == K) { ans++; } else { for(int i = x; i &amp;lt;= nCnt; i++) { if(!(pUsed[i] || pRow[pX[i]] || pCol[pY[i]])) { pRow[pX[i]]++; pCol[pY[i]]++; pUsed[i] = true;</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sat, 14 Mar 2015 13:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/03/dynamic-programming-hdu/</guid>
-      <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。 原因：概率应该是相乘，而不是相加</description>
+      <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。 原因：概率应该是相乘，而不是相加。 后来看了题解想到了另外一种方法，使用逃脱概率来计算，用 $f[j]$ 表示偷走 $j$ 价值后逃脱的概率。易知，多次逃脱概率为每次逃脱概率相乘。这里不使用被逮捕的概率是因为被逮捕的情况比较复杂（例如偷第一件物品不被逮捕，偷第二件物品被逮捕，被逮捕的概率应该为头第一件物品不被逮捕的概率乘以偷第二件物品不被逮捕的概率。），而当我们转而考虑它的对立事件——逃脱时，问题就会变得容易了，</description>
     </item>
     
   </channel>

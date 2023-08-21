@@ -18,7 +18,7 @@
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
-      <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$</description>
+      <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$，价值是$v\left [ i \right ]$。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。 二维数组表示 定义状态：$f\left [ i \right ]\left [ c \right ]$表示前$i$件物品恰放入一个容量为$c$的背包可以获得的最大价值。 状态转移方程：$f\left [ i \right ]\left [ c \right ]=\max\left \{ f\left [ i-1 \right ]\left [ c \right ],f\left [i-1 \right ]\left [ c-w\left [ i \right ] \right ] +v\left [ i \right ]\right \}$ 代码模版： for(int i = 1; i &amp;lt;= N; i++) { for(int c = 0; c &amp;lt;= C; c++) { f[i][c] = f[i</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
-      <description>题目描述是经典的蛇形填数问题。 以前解决这类问题，通常是通过控制$i,j$的值来定位数组元素的位置，然后进行赋值。但是这种方法非常的繁琐，且难</description>
+      <description>题目描述是经典的蛇形填数问题。 以前解决这类问题，通常是通过控制$i,j$的值来定位数组元素的位置，然后进行赋值。但是这种方法非常的繁琐，且难于理解。容易出错。 今天在做这道题目的时候，通过搜索资料，思索出了一种新解法，相较于原来的解法更以理解，且时间复杂度更低。解法的基本思想是 BFS。下面我们仔细来探讨一下。 首先我们定义一组偏移量数组： const int dx[] = { 1, 0, -1, 0 }; const int dy[] = { 0, -1, 0, 1 }; 这个数组的顺序必须和填数的顺序一致。在这里，它被定义为逆时针填数。 然后我们需要设置 BFS 的起点： x = 1; y = N; i = 0; f[x][y] = nNum++; 其中，$</description>
     </item>
     
   </channel>

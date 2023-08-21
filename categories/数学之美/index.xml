@@ -18,7 +18,7 @@
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
-      <description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的</description>
+      <description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的研究了这个问题，整理如下： 等价无穷小的定义及常用的等价无穷小 无穷小量是指某变化过程中极限为 $ 0 $ 的变量。而等价无穷小量是指在某变化过程中比值极限为 $ 1 $ 的两个无穷小量。 常用的等价无穷小有： $$ \sin{x}\sim \tan{x}\sim\arctan{x}\sim\arcsin{x}\sim \ln{\left(1+x \right )}\sim x\left(x\rightarrow 0\right ) $$ $$ 1-\cos{x}\sim \frac{x^{2}}{2},\sqrt[n]{1+x}-1\sim \frac{x}{n} \left(x\rightarrow 0\right ) $$ 等价无穷小量在求极限问题中非常重要。恰当的使用等价无穷小量代换常常使极限问题大大简化。但是有时却不能使用等价无穷小量代换。 等价无穷小替换</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid>
-      <description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线</description>
+      <description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线上某点的切线方程，另一个是关于曲线的切点弦方程。 一、关于曲线上某点的切线方程 1、圆 我们都知道，过圆$x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right )$上一点$P\left(x_{0},y_{0}\right)$的切线方程是$x_{0}x+y_{0}y=r^{2}$。下面我们就更为一般的情形进行探究： 定理1.1：给定圆$C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left (</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       <pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid>
-      <description>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以</description>
+      <description>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。 一、复数的概念 1.1 数的概念的发展 数的概念是从实践中产生和发展起来的。早在原始社会末期，由于记数的需要，人们就建立起自然熟的概念。自然数的全体构成自然数集$\mathbf{N}$。 随着生产和科学的发展，熟的概念也得到了发展。 为了表示各种具有相反意义的量以及满足记数法的要求，人们引进了零和负数，把自然数看作</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
-      <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。 解：作图像得，正根个数为 $ 1 $ 。 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。 解： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $</description>
+      <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。 解：作图像得，正根个数为 $ 1 $ 。 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。 解： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $ 即表示点 $ P\left(x,x^{2}\right) $ 到点 $ A\left(3,2\right),B\left(0,1\right) $ 的距离之差，点 $ P $ 在抛物线 $ y=x^{2} $ 上。 易得点 $ P $ 在直线 $ l_{AB}:x-3y+3=0 $ 上，因此得到 $ P\left(\frac{1-\sqrt{37}}{6},\frac{19-\sqrt{37}}{18}\right) $ ，故 $$ \begin{align*} f\left(x\right)_{max} &amp;amp;=\sqrt{\left[\left(\frac{1-\sqrt{37}}{6}-3\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-2\right)^{2}\right]-\left[\left(\frac{1-\sqrt{37}}{6}\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-1\right)^{2}\right]} \\ &amp;amp;=\frac{2\sqrt{245+34\sqrt{37}}}{9} \end{align*}$$ 2. 函数性质的应用 例3：设 $ x,y\in\mathbf{R} $ ，且满足 $ \begin{cases} \left ( x-1 \right )^{3}+1997\left ( x-1 \right )=-1\\ \left ( y-1 \right )^{3}+1997\left ( y-1 \right )=1 \end{cases} $ ，求 $ x+y $ 。 解：考虑函数 $ f\left(s\right)=s^{3}+1997s $ ，该函数既是奇函数又是增函数。又 $ f\left(x-1\right)=-f\left(y-1\right) $ ，得 $ \left(x-1\right)+\left(y-1\right)=0 $ ，因此 $ x+y=2 $ 。 例4：奇函数 $ f\left(x\right) $ 在定义域 $ \left(-1,1\right) $ 内是减函数，又 $ f\left(1-a\right)+f\left(1-a^{2}\right)&amp;lt;0 $ ，求 $ a $ 的</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       <pubDate>Sat, 13 Jul 2013 20:27:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
-      <description>鸽巢原理：如果 $k+1$ 个或更多的物体放入 $k$ 个盒子，那么至少有一个盒子包含了 $2$ 个或更多的物体。 有时候鸽巢原理也被称为抽屉原理，更准确地说应该叫做“狄</description>
+      <description>鸽巢原理：如果 $k+1$ 个或更多的物体放入 $k$ 个盒子，那么至少有一个盒子包含了 $2$ 个或更多的物体。 有时候鸽巢原理也被称为抽屉原理，更准确地说应该叫做“狄利克雷抽屉原理”。至于狄利克雷这个名字，还有有趣的函数也是用他的名字命名的。它就是大名鼎鼎的狄利克雷函数 $$f\left(x\right)=\begin{cases}1,&amp;amp;x\in\mathbf{Q}\\ 0,&amp;amp;x\not\in\mathbf{Q}\end{cases}$$ 这个函数的有趣之处就在于它没有对应的图像。扯远了。 下面给出鸽巢原理的证明：假定 $k$ 个盒子中没有一个盒子包含的物体多余 $1$ 个，那么物体总数至多是 $k$，这与至少有 $k+1$ 物体矛盾。证毕。 例1：在一组 $367$ 个人中一定至少有 $2$ 个人有相同的生日，这是由于只有 $366$ 个可能的生日。</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       <pubDate>Fri, 12 Jul 2013 16:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</guid>
-      <description>翻书复习之时，看到斐波那契数列，于是将一些关于数列递推关系方面的内容整理了一下。 定义1：一个常系数的 $k$ 阶线性齐次递推关系是形如 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的递推关系，</description>
+      <description>翻书复习之时，看到斐波那契数列，于是将一些关于数列递推关系方面的内容整理了一下。 定义1：一个常系数的 $k$ 阶线性齐次递推关系是形如 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的递推关系，其中 $c_{1},c_{2},\cdots,c_{k}$ 是实数，$c_{k}\neq 0$。 这个定义中递推关系是线性的，因为它的右边是数列前项的倍数之和。这个递推关系是齐次的，因为所出现的各项都是 $a_{j}$ 的倍数。数列各项的系数都是常数而不是依赖于 $n$ 的函数。阶为 $k$ 是因为 $a_{n}$ 由序列前面的 $k$ 项来表示。 例1：递推关系 $p_{n}=2p_{n-1}$ 是 $1$ 阶的线性齐次递推关系。递推关系 $f_{n}=f_{n-1}+f_{n-2}$ 是 $2$ 阶的线性齐次递推关系。 例2：递推关系 $a_{n}=a_{n-1}+a_{n-2}^{2}$ 不是线性的。递推关系 $h_{n}=2h_{n-1}+1$ 不是齐次</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@
       <pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
-      <description>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。 塞瓦定理：在 $\triangle ABC$ 中，若线段 $AD$、</description>
+      <description>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。 塞瓦定理：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。 塞瓦定理逆定理：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形） Ceva 定理示意图 证明如下： 首先 $$\frac {BD} {DC}=\frac {S_{\triangle ABD}}{S_{\triangle ADC}}=\frac {S_{\triangle OBD}}{S_{\triangle ODC}} \Rightarrow \frac {BD} {DC}=\frac {S_{\triangle ABD}-S_{\triangle OBD}}{S_{\triangle ADC}-S_{\triangle ODC}}=\frac {S_{\triangle ABO}}{S_{\triangle CAO}}$$ 同理 $$\frac {CE} {EA}=\frac {S_{\triangle BCO}}{S_{\triangle ABO}},\frac {AF}</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@
       <pubDate>Sat, 04 May 2013 21:31:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/05/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</guid>
-      <description>我记得在计算机复赛前一天晚上本想看看同余方程的解法，结果第二天就考到了。明天是数学竞赛初赛，简略的复习一下线性同余及中国剩余定理，顺便记下一</description>
+      <description>我记得在计算机复赛前一天晚上本想看看同余方程的解法，结果第二天就考到了。明天是数学竞赛初赛，简略的复习一下线性同余及中国剩余定理，顺便记下一些笔记。 定理1：令 $m$ 为正整数。若 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m \end{cases}$，那么 $\begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m\end{cases}$。 证明：因为 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m\end{cases}$，所以有整数 $s$ 和 $t$ 使 $\begin{cases} b=a+sm \\ d=c+tm\end{cases}$。于是 $$ \begin{cases} b+d=(a+sm)+(c+tm)=(a+c)+m(s+t)\\ bd=(a+sm)(c+tm)=ac+m(at+cs+stm) \end{cases} \Rightarrow \begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m \end{cases}$$ 例：由于 $\begin{cases} 7 \equiv 2 \pmod 5 \\ 11 \equiv 1 \pmod 5\end{cases}$，从</description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@
       <pubDate>Mon, 29 Apr 2013 15:30:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
-      <description>最近数学课上讲了矩阵，很久以前便对矩阵很有兴趣，但由于一些原因没有深入学习。正好趁这个机会，有思考了一下关于矩阵的内容。目前应用较广的应该是</description>
+      <description>最近数学课上讲了矩阵，很久以前便对矩阵很有兴趣，但由于一些原因没有深入学习。正好趁这个机会，有思考了一下关于矩阵的内容。目前应用较广的应该是运用逆矩阵求解线性方程组，尤其对于三元一次方程组，运用逆矩阵求解会非常方便。 一个方形矩阵的伴随矩阵是一个类似于逆矩阵的概念。如果矩阵可逆，那么它的逆矩阵和它的伴随矩阵之间只差一个系数。然而，伴随矩阵对不可逆的矩阵也有定义，并且不需要用到除法。我们对这种情况不做深入讨论。 引理1：对于一个 $n$ 阶矩阵 $\mathbf{A}$，以及两个整数 $i,j$，其中 $1\leq i,j\leq n$。去</description>
     </item>
     
     <item>
@@ -99,7 +99,7 @@
       <pubDate>Sun, 21 Apr 2013 14:12:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
-      <description>前几天在做化学竞赛初赛试题时遇到一道关于富勒烯衍生物的习题。大意是求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数。但是去问浦建芳，她把施锦元叫了上来，大师兄便给我讲了欧拉</description>
+      <description>前几天在做化学竞赛初赛试题时遇到一道关于富勒烯衍生物的习题。大意是求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数。但是去问浦建芳，她把施锦元叫了上来，大师兄便给我讲了欧拉公式。当天晚上没有完全弄清楚，回家谷歌以后，现在将内容整理如下。（以 $\mathrm{C_{50}Cl_{10}}$ 为例） 1、求 $\mathrm{C_{50}Cl_{10}}$ 中五边形以及六边形的个数 这类题目可以应用欧拉公式，设 $\mathrm{C_{50}Cl_{10}}$ 中存在 $x$ 个五边形及 $y$ 个六边形。由欧拉公式可以得到结果： $$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2} \end{cases}\Rightarrow \begin{cases}x=12 \\ y=15\end{cases} $$ 2、求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数 对于这类题目，可以考虑这样的一个加成反应：$\mathrm{C_{50}+5Cl_{2}} \rightarrow \mathrm{C_{50}Cl_</description>
     </item>
     
   </channel>

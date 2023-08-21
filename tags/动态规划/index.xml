@@ -18,7 +18,7 @@
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
-      <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$</description>
+      <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$，价值是$v\left [ i \right ]$。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。 二维数组表示 定义状态：$f\left [ i \right ]\left [ c \right ]$表示前$i$件物品恰放入一个容量为$c$的背包可以获得的最大价值。 状态转移方程：$f\left [ i \right ]\left [ c \right ]=\max\left \{ f\left [ i-1 \right ]\left [ c \right ],f\left [i-1 \right ]\left [ c-w\left [ i \right ] \right ] +v\left [ i \right ]\right \}$ 代码模版： for(int i = 1; i &amp;lt;= N; i++) { for(int c = 0; c &amp;lt;= C; c++) { f[i][c] = f[i</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
-      <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明</description>
+      <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下： 这是一个关于偏序集的定理。偏序集即偏序集合。 偏序的概念：设$\textbf{A}$是一个非空集合。$P$是$\textbf{A}$上的一个关系，若关系$P$是自反的、反对称的、传递的，则称$P$是集合$\textbf{A}$上的偏序关系。 即$P$满足下列条件： $\forall a\in\textbf{A},\left ( a,a \right )\in P$； 若$\left ( a,b \right )\in P,\left ( b,a \right )\in P$，则$a=b$； 若$\left ( a,b \right</description>
     </item>
     
   </channel>

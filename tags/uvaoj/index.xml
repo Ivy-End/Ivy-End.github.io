@@ -18,7 +18,7 @@
       <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
-      <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中</description>
+      <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.ignore(); } memset(pRow, 0, sizeof(pRow)); memset(pCol, 0, sizeof(pCol)); memset(pUsed, false, sizeof(pUsed)); dfs(1, 0); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } void dfs(int x, int y) { if(y == K) { ans++; } else { for(int i = x; i &amp;lt;= nCnt; i++) { if(!(pUsed[i] || pRow[pX[i]] || pCol[pY[i]])) { pRow[pX[i]]++; pCol[pY[i]]++; pUsed[i] = true;</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Tue, 17 Feb 2015 11:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
-      <description>断断续续终于刷完了计算几何专题，感觉太麻烦，小错误不断，尤其是精度问题。还有输出问题，有时候 printf 比 cout 要方便。 UVaOJ 10250 给出正方形的一组对角坐标，求另</description>
+      <description>断断续续终于刷完了计算几何专题，感觉太麻烦，小错误不断，尤其是精度问题。还有输出问题，有时候 printf 比 cout 要方便。 UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用三角函数推到公式。 不妨设两点为 $A(x_1, y_1)$ 和 $C(x_2, y_2)$，则中点为 $G\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$，对角线长度为 $L = \sqrt{(x_1 - x_2)^2 - (y_1 - y_2)^2}$。 设直线 $AC$ 与 $x$ 轴的夹角为 $\alpha$，则 $$\sin\alpha = \frac{y_2 - y_1}{L},\quad \cos\alpha = \frac{x_2 - x_1}{L}$$ 则另外两个坐标分别为 $$B\left(G_x - \frac{1}{2}\cdot L \cdot \sin, G_y + \frac{1}{2}\cdot L \cdot \cos\alpha\right),\quad D\left(G_x + \frac{1}{2}\cdot L \cdot \sin\alpha, G_y - \frac{1}{2}\cdot L \cdot \cos\alpha\right)$$ #include &amp;lt;iostream&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;math.h&amp;gt; using namespace std; struct Point { double x, y; }; int main() { Point a, b; while(cin &amp;gt;&amp;gt; a.x &amp;gt;&amp;gt; a.y &amp;gt;&amp;gt; b.x &amp;gt;&amp;gt; b.y) { Point c, d;</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
-      <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种</description>
+      <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制转换的公式，然后根据公式计算即可。 #include &amp;lt;iostream&amp;gt; using namespace std; int Pow(int x, int y); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(x == &amp;#34;0&amp;#34;) { break; } int ans = 0; for(int i = 0; i &amp;lt; x.length(); i++) { ans += (x[i] - &amp;#39;0&amp;#39;) * (Pow(2, x.length() - i) - 1); } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } int Pow(int x, int y) { int ret = 1; for(int i = 1; i &amp;lt;= y; i++) { ret *= x; } return ret; } UVaOJ 10110 这是一道典型的数论题，最后亮着的灯，它的开关一定被拨动了奇数次。所以，我们只要看它的因数个数的奇偶性。 记得高中数学竞赛的时候遇到过类似的题目，有一</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Thu, 12 Feb 2015 14:24:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
-      <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。 UVaOJ 113 这道题目是集</description>
+      <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。 UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 double 解决，当时没有 AC。 现在重新做了一遍，需要注意的是最后输出的结果一定要转换成int，否则会 WA。 同时，double 转换为 int 的时候可以采取这样的方式：(int)floor(x + 0.5)。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;math.h&amp;gt; using namespace std; int main() { double x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { cout &amp;lt;&amp;lt; (int)floor(pow(y, 1 / x) + 0.5) &amp;lt;&amp;lt; endl; } return 0; } UVaOJ 10161 这道题目是通常的找规律题目，和一道《Cantor 的数表》是差不多的，需</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       <pubDate>Wed, 11 Feb 2015 17:18:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
-      <description>断断续续的把排序和检索专题刷完了，感觉英语还是不够，题目太长以后看起来就会很吃力。 还有一点感触就是 STL 的广泛应用。学到了很多新东西。 当然，不能</description>
+      <description>断断续续的把排序和检索专题刷完了，感觉英语还是不够，题目太长以后看起来就会很吃力。 还有一点感触就是 STL 的广泛应用。学到了很多新东西。 当然，不能忍受的就是答案最后多输出一行空行，UVaOJ 会判 WA。 UVaOJ 340 简单模拟题，一开始没有看懂题目。百度以后才明白的题意。朴素模拟以后即可得到答案。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 1024; int pCode[MAX], pGuess[MAX], pVisited[MAX]; int main() { int N, nCase = 0; while(cin &amp;gt;&amp;gt; N) { if(N == 0) { break; } memset(pCode, 0, sizeof(pCode)); for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; pCode[i]; } cout &amp;lt;&amp;lt; &amp;#34;Game &amp;#34; &amp;lt;&amp;lt; ++nCase &amp;lt;&amp;lt; &amp;#34;:&amp;#34; &amp;lt;&amp;lt; endl; while(1) { int x = 0, y = 0, nCnt = 0; memset(pGuess, 0, sizeof(pGuess)); memset(pVisited, 0, sizeof(pVisited)); for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; pGuess[i]; if(pGuess[i] == 0) { nCnt++; } } if(nCnt == N) { break; } for(int i = 1; i &amp;lt;= N; i++)</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@
       <pubDate>Sun, 08 Feb 2015 14:02:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
-      <description>今天刷了高精度专题，本来准备写一个高精度类，然后直接套模版，后来发现根据每题的要求分开写高精度反而效率高。 主要涉及了高精度加法、乘法、除法、</description>
+      <description>今天刷了高精度专题，本来准备写一个高精度类，然后直接套模版，后来发现根据每题的要求分开写高精度反而效率高。 主要涉及了高精度加法、乘法、除法、取余（其中后两项为高精度和低精度进行运算）。 终于打过一遍高精度除以低精度了，高精度专题也算圆满了。 UVaOJ 424 高精度加法，水题。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 10240; int nLen; int pData[MAX]; int main() { nLen = 1; memset(pData, 0, sizeof(pData)); string x; while(cin &amp;gt;&amp;gt; x) { if(x != &amp;#34;0&amp;#34;) { while(x[0] == &amp;#39;0&amp;#39;) { x = x.substr(1, x.length() - 1); } nLen = max(nLen, (int)x.length()); for(int i = 1; i &amp;lt;= x.length(); i++) { pData[i] += x[x.length() - i] - &amp;#39;0&amp;#39;; pData[i + 1] += pData[i] / 10; pData[i] %= 10; } while(pData[nLen + 1]) { nLen++; } } else { for(int i = nLen; i &amp;gt;= 1; i--) { cout &amp;lt;&amp;lt; pData[i]; } cout &amp;lt;&amp;lt; endl; nLen = 1; memset(pData, 0, sizeof(pData)); } } return 0; } UVaOJ 10106 高精度</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@
       <pubDate>Sat, 07 Feb 2015 19:29:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
-      <description>今天刷了小白书的字符串专题，各种 WA 以及 PE。UVaOJ 中有时候会把 PE 判成 WA，这样会导致很难查错。 UVa 401 这道题目有个坑，只有表格中列出的才是镜</description>
+      <description>今天刷了小白书的字符串专题，各种 WA 以及 PE。UVaOJ 中有时候会把 PE 判成 WA，这样会导致很难查错。 UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没有列出了的表示没有镜像字母，在这上 WA 了一次。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; using namespace std; const char pAlphabet[] = { &amp;#39;A&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;I&amp;#39;, &amp;#39;L&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;J&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;O&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;T&amp;#39;, &amp;#39;U&amp;#39;, &amp;#39;V&amp;#39;, &amp;#39;W&amp;#39;, &amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;S&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;Z&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;*&amp;#39; }; bool Palindrome(string x); bool Mirrored(string x); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(!Palindrome(x)) { if(Mirrored(x)) { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a mirrored string.&amp;#34; &amp;lt;&amp;lt; endl; } else { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is not a palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } } else { if(Mirrored(x)) { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a mirrored palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } else { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a regular palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } } cout &amp;lt;&amp;lt; endl; } return 0; } bool Palindrome(string x) { for(int i = 0; i &amp;lt; x.length() / 2; i++) { if(x[i] !=</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@
       <pubDate>Fri, 06 Feb 2015 17:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
-      <description>这一系列的练习主要在 Virtual Judge 上进行，题目为小白书上的题目推荐。 UVa 10055 求两方军队人数的差值，直接相减即可。 不过要注意两个数的大小关系。 #include &amp;lt;iostream&amp;gt; using namespace std; int main()</description>
+      <description>这一系列的练习主要在 Virtual Judge 上进行，题目为小白书上的题目推荐。 UVa 10055 求两方军队人数的差值，直接相减即可。 不过要注意两个数的大小关系。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { long long x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { if(x &amp;gt; y) { swap(x, y); } cout &amp;lt;&amp;lt; y - x &amp;lt;&amp;lt; endl; } return 0; } UVa 10071 简单物理题，求两倍时间内匀速运动的路程。即 $s = 2vt$。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { cout &amp;lt;&amp;lt; x * y * 2 &amp;lt;&amp;lt; endl; } return 0; } UVa 10300 根据题目描述推导公式，$$ \mathrm{ans} = \sum{\left(\frac{x}{y}\cdot y\cdot z\right)} = \sum{xz}$$ 题中讲到了首先计算每只动物的占地面积，乘以环境友好常数，再乘以动物数目。这里可以直接将动物数目约去。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int T, N, x, y, z; cin &amp;gt;&amp;gt; T; for(int i</description>
     </item>
     
   </channel>
