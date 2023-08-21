@@ -10,7 +10,16 @@
       <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 21 Dec 2022 11:09:00 +0800</lastBuildDate><atom:link href="https://kwang.life/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编程珠玑</title>
+      <link>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</link>
+      <pubDate>Fri, 18 Aug 2023 11:27:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>论芯札记</title>
       <link>https://kwang.life/categories/%E8%AE%BA%E8%8A%AF%E6%9C%AD%E8%AE%B0/</link>
@@ -26,15 +35,6 @@
       <pubDate>Tue, 21 Sep 2021 22:10:00 +0800</pubDate>
       
       <guid>https://kwang.life/categories/%E6%B5%AE%E7%94%9F%E6%9D%82%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>编程珠玑</title>
-      <link>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</link>
-      <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/</guid>
       <description></description>
     </item>
     
