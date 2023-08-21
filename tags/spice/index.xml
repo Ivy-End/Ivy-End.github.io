@@ -4,11 +4,6 @@
     <title>Spice on 退思轩</title>
     <link>https://kwang.life/tags/spice/</link>
     <description>Recent content in Spice on 退思轩</description>
-    <image>
-      <title>退思轩</title>
-      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/spice/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
-      <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。 v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示： -a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;. -addpin &amp;lt;pin&amp;gt; : Add &amp;lt;pin&amp;gt; to the signature of any Verilog module that does not have it. Connect &amp;lt;pin&amp;gt; to port &amp;lt;pin&amp;gt; in all instances that do not already have a connection specified. Spice libraries parsed with -lsr and -lsp will not have pins added -addpin is not compatitble with -i. -b : Preserve backslash character in escaped identifiers. -cb : Prefer CALDRCLVSEVE(Calibre CB) license during license search. -c &amp;lt;c1&amp;gt;&amp;lt;c2&amp;gt; : Change illegal spice characters c1 to c2. -cfg &amp;lt;filename&amp;gt; : Config file for passing IP blocks related information. This will bring a custom spice file in to the Verilog and call a top level subckt from the Verilog. -e : Generate empty .SUBCKT statements (no instances are translated) -e is</description>
+      <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。 1 2 3 4 5 6 7 8 v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 -a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;. -addpin &amp;lt;pin&amp;gt; : Add &amp;lt;pin&amp;gt; to the signature of any Verilog module that does not have it. Connect &amp;lt;pin&amp;gt; to port &amp;lt;pin&amp;gt; in all instances that do not already have a connection specified. Spice libraries parsed with -lsr and -lsp will not have pins added -addpin is not compatitble with -i. -b</description>
     </item>
     
   </channel>

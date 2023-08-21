@@ -4,11 +4,6 @@
     <title>单源最短路径 on 退思轩</title>
     <link>https://kwang.life/tags/%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</link>
     <description>Recent content in 单源最短路径 on 退思轩</description>
-    <image>
-      <title>退思轩</title>
-      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 03 Nov 2013 15:50:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
-      <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。 算法的基本步骤如下： 初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。 对于SPFA还是比较容易理解的，它的复杂度为 $O\left(kE\right)$。 代码如下： #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;queue&amp;gt; using namespace std; const int MAX = 10240; bool pQueue[MAX]; int N, M, pDist[MAX], pCnt[MAX]; // pCnt[]记录顶点i松弛的次数 vector&amp;lt;pair&amp;lt;int, int&amp;gt; &amp;gt; pMap[MAX]; queue&amp;lt;int&amp;gt; Q; void SPFA(int s); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;</description>
+      <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。 算法的基本步骤如下： 初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。 对于SPFA还是比较容易理解的，它的复杂度为 $O\left(kE\right)$。 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57</description>
     </item>
     
     <item>

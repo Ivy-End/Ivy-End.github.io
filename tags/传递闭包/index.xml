@@ -4,11 +4,6 @@
     <title>传递闭包 on 退思轩</title>
     <link>https://kwang.life/tags/%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
     <description>Recent content in 传递闭包 on 退思轩</description>
-    <image>
-      <title>退思轩</title>
-      <url>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://kwang.life/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 03 Nov 2013 19:48:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
-      <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。 我们这里主要研究的是有向图的传递闭包问题。 代码如下： #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 10240; const int INF = 65536; int N, M; bool f[MAX][MAX], pMap[MAX][MAX]; void Floyd(); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { pMap[i][j] = f[i][j] = (i == j) ? 1 : 0; // 初始化 } } for(int i = 1; i &amp;lt;= M; i++) { int s, e; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e; pMap[s][e] = pMap[e][s] = true; // 无向图 f[s][e] = f[e][s] = true; } Floyd(); return 0; } void Floyd() { for(int k = 1; k &amp;lt;= N; k++) // 最外层必须是k { for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { f[i][j] = f[i][j] || (f[i][k] &amp;amp;&amp;amp; f[k][j]); // 判断连通性 }</description>
+      <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。 我们这里主要研究的是有向图的传递闭包问题。 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 10240; const int INF = 65536; int N, M; bool f[MAX][MAX], pMap[MAX][MAX]; void Floyd(); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { pMap[i][j] = f[i][j] = (i == j) ? 1 : 0; // 初始化 } } for(int i = 1; i &amp;lt;= M; i++) { int s, e; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e; pMap[s][e] = pMap[e][s] = true; // 无向图 f[s][e] = f[e][s] = true; } Floyd(); return 0;</description>
     </item>
     
   </channel>
