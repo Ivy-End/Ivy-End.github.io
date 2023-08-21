@@ -13,28 +13,28 @@
     <lastBuildDate>Wed, 22 Jul 2015 20:46:00 +0800</lastBuildDate><atom:link href="https://kwang.life/categories/%E4%BB%A3%E7%A0%81%E4%B9%8B%E7%BE%8E/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SGU 144 - Meeting</title>
-      <link>https://kwang.life/posts/2015/sgu-144-meeting/</link>
+      <link>https://kwang.life/2015/07/sgu-144-meeting/</link>
       <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-144-meeting/</guid>
+      <guid>https://kwang.life/2015/07/sgu-144-meeting/</guid>
       <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they will meet.</description>
     </item>
     
     <item>
       <title>SGU 116 - Index of super-prime</title>
-      <link>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</link>
+      <link>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</link>
       <pubDate>Mon, 20 Jul 2015 13:39:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</guid>
+      <guid>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</guid>
       <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists, index is equal to minimal number of items in such presentation.</description>
     </item>
     
     <item>
       <title>专题一、简单搜索 - Virtual Judge</title>
-      <link>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
+      <link>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
       <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
+      <guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
       <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下：
 POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。
 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.</description>
@@ -42,10 +42,10 @@ POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第五节、界面美化</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
       <pubDate>Sun, 17 May 2015 11:07:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
       <description>这一节，我们将介绍游戏界面的美化以及游戏数据的存储。
 首先创建一个 color.xml 资源文件，用来保存每个数字对应的背景色和前景色。右击 res 文件夹，选择 New，单击 Android resource file，输入 color，单击 Next 即可。
 新建资源
@@ -55,10 +55,10 @@ POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第四节、游戏逻辑</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
       <pubDate>Fri, 15 May 2015 19:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
       <description>上一节中，我们已经成功的将卡牌添加到了游戏中，但只是显示在了界面上，并没有保存下来。我们在 GameView 中定义一个二维数组用来保存游戏界面的卡牌。
 private Card[][] cardMap = new Card[4][4]; // 记录游戏 接下来，我们需要将初始化时候添加的卡片添加到 cardMap 数组中，如下图所示：
 private void addCards(int cardSize) { Card card; for(int i = 0; i &amp;lt; 4; i++) { for(int j = 0; j &amp;lt; 4; j++) { card = new Card(getContext()); card.setNumber(2); addView(card, cardSzie, cardSize); cardMap[i][j] = card; // 添加卡片 } } } 这样一来，我们就将游戏界面记录下来了。
@@ -68,10 +68,10 @@ private void addRandomNumber() { emptyPoints.</description>
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第三节、创建界面</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
       <pubDate>Thu, 14 May 2015 20:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
       <description>首先，我们要使得我们的程序能够判断用户的手势，一共为上、下、左、右四种。在 GameView 类中添加如下代码：
 private void initGameView() { setOnTouchListener(new View.OnTouchListener() { @Override public boolean onTouch(View v, MotionEvent event) { return false; } }); } 接下来，我们来分析一下如何进行手势判断。首先，用户的手势输入应该有两个数据，一个是按下的屏幕位置，一个是放开的屏幕位置。那么我们只需要计算横向和竖向坐标差的绝对值，绝对值较大的一个方向则是用户需求的方向。至于横向中的左右和竖向中的上下，我们可以通过按下和放开的位置的大小进行比较得出。
 有了上面的分析，我们开始写代码：
@@ -80,10 +80,10 @@ private void initGameView() { setOnTouchListener(new View.OnTouchListener() { pr
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第二节、基本设置</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Thu, 14 May 2015 17:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
       <description>首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示：
 App 图标
 接下来，找到上一节中保存项目的位置，依次展开文件夹中的 2048/Game2048/app/src/main/res 目录，如下图所示：
@@ -100,10 +100,10 @@ App 名称
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第一节、创建项目</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Fri, 08 May 2015 21:42:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
       <description>自从关于扫雷游戏制作过程的文章发布后，有同学让我写一些关于移动开发的文章，并且建议以雷电这款游戏为例。然而考虑到该项目对于初学者来说代码量较大，所以暂且不涉及这部分，转而使用较为简单的 2048 游戏作为例子，可能对于初学者来说更容易上手，并且也更容易自己动手实现出来。
 本项目已根据文章进度托管在 GitHub 上：2048，读者可以自行查看。
 由于没有 Mac，因此只能介绍关于 Android 平台相关的开发知识。然而进行 Android 开发之前，需要搭建 Android 开发环境，这一步比较有难度的，主要是各个软件的配置较为麻烦，使得很多初学者望而却步。目前主流的 IDE 有 Eclipse 以及 Android Studio，本文将以 Android Studio 作为集成开发环境，对 2048 游戏的开发过程进行详细的介绍。
@@ -115,10 +115,10 @@ Android Studio
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第八节、整体完善</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</link>
+      <link>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</link>
       <pubDate>Sat, 02 May 2015 11:12:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</guid>
+      <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</guid>
       <description>这一节我们将介绍结束游戏的方法，以及一些整体方面的完善。首先考虑失败的情况，它会将所有的地雷都显示出来。我们新建一个 GameLost 函数：
 private void GameLost() { for(int i = 1; i&amp;lt;= nWidth; i++) { for(int j = 1; j&amp;lt;= nHeight; j++) { if(pMine[i, j] == -1 &amp;amp;&amp;amp; (pState[i, j] == 0 || pState[i, j] == 3)) // 未点开或者标记为问号的雷 { pState[i, j] = 1; // 点开该地雷 } } } } 在游戏结束的地方调用 GameLost 函数，因为我们上一节中讲述的游戏结束都是失败的情况：
 if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { bool bFlag = OpenMine(MouseFocus.X, MouseFocus.Y); if(!</description>
@@ -126,10 +126,10 @@ if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { 
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第七节、内部实现（续）</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</link>
+      <link>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</link>
       <pubDate>Fri, 01 May 2015 22:23:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</guid>
+      <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</guid>
       <description>这一节我们主要讲解扫雷时鼠标单击的事件。我们首先介绍左键单击的事件，分为两种情况——遇到地雷，游戏结束；不是地雷，自动点开相邻的非地雷区域，并且显示对应地雷区域周围地雷的数目。
 我们首先需要为 Form_Main 添加 MouseDown 以及 MouseUp 事件，分别用来监测鼠标按下以及弹起的事件信息。再定义两个全局变量，用来标识鼠标左键以及右键是否被按下，代码如下：
 bool bMouseLeft; // 鼠标左键是否被按下 bool bMouseRight; // 鼠标右键是否被按下 在 MouseDown 事件中输入下面的代码：
@@ -139,10 +139,10 @@ private void Form_Main_MouseUp(object sender, MouseEventArgs e) { if(bMouseLeft 
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第六节、内部实现</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Thu, 30 Apr 2015 21:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</guid>
       <description>在进行内部实现之前，我们先来考虑一下扫雷的内部逻辑。首先，我们需要保存每个点上是否有地雷，如果没有地雷，那么要显示与它紧邻的八个格子中一共有多少的地雷。还需保存每个雷区的状态（点开，未点开，红旗，问号）。我们考虑定义两个常量，表示地雷的最大范围：
 const int MAX_WIDTH = 64; // 最大宽度 const int MAX_HEIGHT = 32; // 最大高度 接下来定义两个数组，用来保存上述两种数据。对于第一类数据，我们使用 -1 表示该区域有地雷，使用数字表示与它紧邻的八个格子中一共有多少地雷；对于第二类数据，我们使用 0 表示未点开，1 表示点开，2 表示红旗，3 表示问号。如下图所示：
 int[,] pMine = new int[MAX_WIDTH, MAX_HEIGHT]; // 第一类数据 int[,] pState = new int[MAX_WIDTH, MAX_HEIGHT]; // 第二类数据 接下来我们需要初始化游戏数据，双击 New Game 菜单，输入游戏的初始化代码：
@@ -151,10 +151,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</link>
       <pubDate>Fri, 24 Apr 2015 16:09:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</guid>
       <description>上一节中，我们还剩下 Setting 和 Rank 两个菜单项目没有设置事件，是因为它们都涉及到了弹出一个新的窗口。这一节，我们将主要介绍创建窗口的方法，以及窗口之间的数据通信。
 首先，我们新建一个窗口，在右侧找到解决方案资源管理器，右击 Minesweeper 项目名，选择添加，如图所示：
 菜单示意图
@@ -172,10 +172,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Wed, 22 Apr 2015 16:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
       <description>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。
 在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：
 /// &amp;lt;summary&amp;gt; /// 选择对应的游戏等级 /// &amp;lt;/summary&amp;gt; private void SelectLevel() { if (nWidth == 10 &amp;amp;&amp;amp; nHeight == 10 &amp;amp;&amp;amp; nMineCnt == 10) { beginnerBToolStripMenuItem.Checked = true; intermediateIToolStripMenuItem.Checked = false; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 16 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 40) { beginnerBToolStripMenuItem.Checked = false; intermediateIToolStripMenuItem.Checked = true; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 30 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 99) { beginnerBToolStripMenuItem.</description>
@@ -183,10 +183,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</link>
       <pubDate>Tue, 21 Apr 2015 15:42:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</guid>
       <description>这一节我们主要涉及界面中雷区的绘制方法。
 首先来考虑几个问题。为了保存整个雷区的信息，我们需要哪些数据。显然，除了要保存雷区的宽度和高度（分别定义为宽和高方向上方块的个数）外，还需要保存地雷的数目。这样我们需要用到三个变量 nWidth, nHeight, nMineCnt 分别保存雷区的宽度、雷区的高度以及地雷的数目。
 右击窗口，选择查看代码，也可以使用快捷键 F7，如下图所示：
@@ -200,10 +200,10 @@ namespace Minesweeper { public partial class Form_Main : Form { int nWidth; // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第二节、界面设计</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Mon, 20 Apr 2015 19:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</guid>
       <description>这一节我们主要介绍关于扫雷游戏界面的设计，此处我们借鉴经典扫雷界面的设计方法，首先需要创建一个菜单栏。具体方法在左边找到工具箱窗口，展开其中的菜单和工具栏，找到 MenuStrip 选项，如图所示：
 添加 MenuStrip
 只需要双击该条目就可以在窗口中新建一个菜单栏，如图所示：
@@ -226,10 +226,10 @@ TableLayoutPanel 行列样式
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第一节、创建项目</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 20 Apr 2015 17:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
       <description>这一系列的文章主要受许宏旭的启发而来。他目前在连载更新一篇使用 C# 制作五子棋的教程。选择这一项目的主要原因是 Windows 8.1 系统上的扫雷需要前往应用商店下载，显得有些麻烦。因此想自己制作一个。主要采用 C# 语言进行实现。主要功能与原来的扫雷游戏基本相同，进行修改的地方主要是扫雷区的界面。如有不恰当的地方，还望指正。
 该项目现已根据文章进度托管在GitHub上，读者可以自行查看。
 玩过扫雷的读者应该知道，扫雷需要用到三种图片素材——地雷、红旗、问号。当右击一个方块的时候，会插上红旗，表示游戏者认为该方块内有地雷；再次右击该方块，会变成问号，表示不确定该方块内是否有地雷；第三次右击该方块，问号消失，恢复到初始的状态。我们前往Iconfinder寻找合适的图标，并且通过 Photoshop 或者 Illustrator 的处理得到我们所需要的图标。文章中含有下载地址的图标资源可以使用右键—目标另存为进行下载。
@@ -256,10 +256,10 @@ Visual Studio 2013
     
     <item>
       <title>Dynamic Programming - HDU</title>
-      <link>https://kwang.life/posts/2015/dynamic-programming-hdu/</link>
+      <link>https://kwang.life/2015/03/dynamic-programming-hdu/</link>
       <pubDate>Sat, 14 Mar 2015 13:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/dynamic-programming-hdu/</guid>
+      <guid>https://kwang.life/2015/03/dynamic-programming-hdu/</guid>
       <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。
 原因：概率应该是相乘，而不是相加。
 后来看了题解想到了另外一种方法，使用逃脱概率来计算，用 $f[j]$ 表示偷走 $j$ 价值后逃脱的概率。易知，多次逃脱概率为每次逃脱概率相乘。这里不使用被逮捕的概率是因为被逮捕的情况比较复杂（例如偷第一件物品不被逮捕，偷第二件物品被逮捕，被逮捕的概率应该为头第一件物品不被逮捕的概率乘以偷第二件物品不被逮捕的概率。），而当我们转而考虑它的对立事件——逃脱时，问题就会变得容易了，因为逃脱的概率永远是相乘的。
@@ -272,20 +272,20 @@ Visual Studio 2013
     
     <item>
       <title>SGU 114 - Telecasting station</title>
-      <link>https://kwang.life/posts/2015/sgu-114-telecasting-station/</link>
+      <link>https://kwang.life/2015/03/sgu-114-telecasting-station/</link>
       <pubDate>Sat, 07 Mar 2015 19:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-114-telecasting-station/</guid>
+      <guid>https://kwang.life/2015/03/sgu-114-telecasting-station/</guid>
       <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal.
 Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;lt;15000$) – amount of cities in Berland.</description>
     </item>
     
     <item>
       <title>SGU 222 - Little Rooks</title>
-      <link>https://kwang.life/posts/2015/sgu-222-little-rooks/</link>
+      <link>https://kwang.life/2015/03/sgu-222-little-rooks/</link>
       <pubDate>Sat, 07 Mar 2015 14:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-222-little-rooks/</guid>
+      <guid>https://kwang.life/2015/03/sgu-222-little-rooks/</guid>
       <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks.
 A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other.
 Given two numbers $n$ and $k$, your job is to determine the number of ways one can put $k$ rooks on an $n\times n$ chessboard so that no two of them are in attacking positions.</description>
@@ -293,10 +293,10 @@ Given two numbers $n$ and $k$, your job is to determine the number of ways one c
     
     <item>
       <title>SGU 154 - Factorial</title>
-      <link>https://kwang.life/posts/2015/sgu-154-factorial/</link>
+      <link>https://kwang.life/2015/03/sgu-154-factorial/</link>
       <pubDate>Sat, 07 Mar 2015 13:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-154-factorial/</guid>
+      <guid>https://kwang.life/2015/03/sgu-154-factorial/</guid>
       <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail.
 Input One number $Q$ written in the input ($0\leq Q\leq 10^8$).
 Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise.
@@ -305,46 +305,46 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
     
     <item>
       <title>SGU 130 - Circle</title>
-      <link>https://kwang.life/posts/2015/sgu-130-circle/</link>
+      <link>https://kwang.life/2015/03/sgu-130-circle/</link>
       <pubDate>Sat, 07 Mar 2015 11:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-130-circle/</guid>
+      <guid>https://kwang.life/2015/03/sgu-130-circle/</guid>
       <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of parts $P$.</description>
     </item>
     
     <item>
       <title>SGU 276 - Andrew&#39;s Troubles</title>
-      <link>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</link>
+      <link>https://kwang.life/2015/03/sgu-276-andrews-troubles/</link>
       <pubDate>Sat, 07 Mar 2015 09:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</guid>
+      <guid>https://kwang.life/2015/03/sgu-276-andrews-troubles/</guid>
       <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he owes a cup of tea to other team members.</description>
     </item>
     
     <item>
       <title>SGU 126 - Boxes</title>
-      <link>https://kwang.life/posts/2015/sgu-126-boxes/</link>
+      <link>https://kwang.life/2015/03/sgu-126-boxes/</link>
       <pubDate>Sat, 07 Mar 2015 09:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-126-boxes/</guid>
+      <guid>https://kwang.life/2015/03/sgu-126-boxes/</guid>
       <description>Description There are two boxes. There are $A$ balls in the first box, and $B$ balls in the second box ($0 &amp;lt; A + B &amp;lt; 2147483648$). It is possible to move balls from one box to another. From one box into another one should move as many balls as the other box already contains. You have to determine, whether it is possible to move all balls into one box.</description>
     </item>
     
     <item>
       <title>SGU 118 - Digital Root</title>
-      <link>https://kwang.life/posts/2015/sgu-118-digital-root/</link>
+      <link>https://kwang.life/2015/02/sgu-118-digital-root/</link>
       <pubDate>Tue, 24 Feb 2015 15:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-118-digital-root/</guid>
+      <guid>https://kwang.life/2015/02/sgu-118-digital-root/</guid>
       <description>Description Let $f(n)$ be a sum of digits for positive integer $n$. If $f(n)$ is one-digit number then it is a digital root for $n$ and otherwise digital root of $n$ is equal to digital root of $f(n)$. For example, digital root of 987 is 6. Your task is to find digital root for expression $$ A_1\cdot A_2\cdots A_N + A_1\cdot A_2\cdots A_{N-1} + \cdots + A_1\cdot A_2 + A_1$$</description>
     </item>
     
     <item>
       <title>SGU 117 - Counting</title>
-      <link>https://kwang.life/posts/2015/sgu-117-counting/</link>
+      <link>https://kwang.life/2015/02/sgu-117-counting/</link>
       <pubDate>Tue, 24 Feb 2015 14:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-117-counting/</guid>
+      <guid>https://kwang.life/2015/02/sgu-117-counting/</guid>
       <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$.
 Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line.
 Output Write answer for given task.</description>
@@ -352,19 +352,19 @@ Output Write answer for given task.</description>
     
     <item>
       <title>SGU 104 - Little shop of flowers</title>
-      <link>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</link>
+      <link>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</link>
       <pubDate>Tue, 24 Feb 2015 13:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</guid>
       <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase $V$ is the rightmost vase.</description>
     </item>
     
     <item>
       <title>SGU 101 - Domino</title>
-      <link>https://kwang.life/posts/2015/sgu-101-domino/</link>
+      <link>https://kwang.life/2015/02/sgu-101-domino/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-101-domino/</guid>
+      <guid>https://kwang.life/2015/02/sgu-101-domino/</guid>
       <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.
 The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip;
 The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</description>
@@ -372,19 +372,19 @@ The principle in nearly all modern dominoes games is to match one end of a piece
     
     <item>
       <title>SGU 347 - Join the Strings</title>
-      <link>https://kwang.life/posts/2015/sgu-347-join-the-strings/</link>
+      <link>https://kwang.life/2015/02/sgu-347-join-the-strings/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-347-join-the-strings/</guid>
+      <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
       <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own.</description>
     </item>
     
     <item>
       <title>SGU 151 - Construct a triangle</title>
-      <link>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</link>
+      <link>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</link>
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</guid>
+      <guid>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</guid>
       <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle.
 Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits.
 Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates of $B$ to second line and coordinates of $C$ to third line.</description>
@@ -392,10 +392,10 @@ Output If solution exists, write three lines. Write coordinates of point $A$ to 
     
     <item>
       <title>SGU 180 - Inversions</title>
-      <link>https://kwang.life/posts/2015/sgu-180-inversions/</link>
+      <link>https://kwang.life/2015/02/sgu-180-inversions/</link>
       <pubDate>Tue, 17 Feb 2015 11:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-180-inversions/</guid>
+      <guid>https://kwang.life/2015/02/sgu-180-inversions/</guid>
       <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$.
 Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$.
 Output Write amount of such pairs.
@@ -404,10 +404,10 @@ Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可
     
     <item>
       <title>ACM-ICPC 寒假练习 07</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
       <pubDate>Tue, 17 Feb 2015 11:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
       <description>断断续续终于刷完了计算几何专题，感觉太麻烦，小错误不断，尤其是精度问题。还有输出问题，有时候 printf 比 cout 要方便。
 UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用三角函数推到公式。
 不妨设两点为 $A(x_1, y_1)$ 和 $C(x_2, y_2)$，则中点为 $G\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$，对角线长度为 $L = \sqrt{(x_1 - x_2)^2 - (y_1 - y_2)^2}$。
@@ -417,10 +417,10 @@ UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用�
     
     <item>
       <title>ACM-ICPC 寒假练习 06</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
       <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
       <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。
 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制转换的公式，然后根据公式计算即可。
 #include &amp;lt;iostream&amp;gt; using namespace std; int Pow(int x, int y); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(x == &amp;#34;0&amp;#34;) { break; } int ans = 0; for(int i = 0; i &amp;lt; x.length(); i++) { ans += (x[i] - &amp;#39;0&amp;#39;) * (Pow(2, x.length() - i) - 1); } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } int Pow(int x, int y) { int ret = 1; for(int i = 1; i &amp;lt;= y; i++) { ret *= x; } return ret; } UVaOJ 10110 这是一道典型的数论题，最后亮着的灯，它的开关一定被拨动了奇数次。所以，我们只要看它的因数个数的奇偶性。</description>
@@ -428,10 +428,10 @@ UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制�
     
     <item>
       <title>ACM-ICPC 寒假练习 05</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
       <pubDate>Thu, 12 Feb 2015 14:24:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
       <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。
 UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 double 解决，当时没有 AC。
 现在重新做了一遍，需要注意的是最后输出的结果一定要转换成int，否则会 WA。
@@ -442,10 +442,10 @@ UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 
     
     <item>
       <title>ACM-ICPC 寒假练习 04</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
       <pubDate>Wed, 11 Feb 2015 17:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
       <description>断断续续的把排序和检索专题刷完了，感觉英语还是不够，题目太长以后看起来就会很吃力。
 还有一点感触就是 STL 的广泛应用。学到了很多新东西。
 当然，不能忍受的就是答案最后多输出一行空行，UVaOJ 会判 WA。
@@ -455,10 +455,10 @@ UVaOJ 340 简单模拟题，一开始没有看懂题目。百度以后才明白�
     
     <item>
       <title>ACM-ICPC 寒假练习 03</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
       <pubDate>Sun, 08 Feb 2015 14:02:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
       <description>今天刷了高精度专题，本来准备写一个高精度类，然后直接套模版，后来发现根据每题的要求分开写高精度反而效率高。
 主要涉及了高精度加法、乘法、除法、取余（其中后两项为高精度和低精度进行运算）。
 终于打过一遍高精度除以低精度了，高精度专题也算圆满了。
@@ -468,10 +468,10 @@ UVaOJ 424 高精度加法，水题。
     
     <item>
       <title>ACM-ICPC 寒假练习 02</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
       <pubDate>Sat, 07 Feb 2015 19:29:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
       <description>今天刷了小白书的字符串专题，各种 WA 以及 PE。UVaOJ 中有时候会把 PE 判成 WA，这样会导致很难查错。
 UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没有列出了的表示没有镜像字母，在这上 WA 了一次。
 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; using namespace std; const char pAlphabet[] = { &amp;#39;A&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;I&amp;#39;, &amp;#39;L&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;J&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;O&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;T&amp;#39;, &amp;#39;U&amp;#39;, &amp;#39;V&amp;#39;, &amp;#39;W&amp;#39;, &amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;S&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;Z&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;*&amp;#39; }; bool Palindrome(string x); bool Mirrored(string x); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(!</description>
@@ -479,10 +479,10 @@ UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没
     
     <item>
       <title>ACM-ICPC 寒假练习 01</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
       <pubDate>Fri, 06 Feb 2015 17:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
       <description>这一系列的练习主要在 Virtual Judge 上进行，题目为小白书上的题目推荐。
 UVa 10055 求两方军队人数的差值，直接相减即可。
 不过要注意两个数的大小关系。
@@ -492,19 +492,19 @@ UVa 10055 求两方军队人数的差值，直接相减即可。
     
     <item>
       <title>SGU 127 - Telephone directory</title>
-      <link>https://kwang.life/posts/2015/sgu-127-telephone-directory/</link>
+      <link>https://kwang.life/2015/02/sgu-127-telephone-directory/</link>
       <pubDate>Thu, 05 Feb 2015 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-127-telephone-directory/</guid>
+      <guid>https://kwang.life/2015/02/sgu-127-telephone-directory/</guid>
       <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with digits 0 and 8.</description>
     </item>
     
     <item>
       <title>SGU 112 - a^b - b^a</title>
-      <link>https://kwang.life/posts/2015/sgu-112-ab-ba/</link>
+      <link>https://kwang.life/2015/02/sgu-112-ab-ba/</link>
       <pubDate>Thu, 05 Feb 2015 14:52:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-112-ab-ba/</guid>
+      <guid>https://kwang.life/2015/02/sgu-112-ab-ba/</guid>
       <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$.
 Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$).
 Output Write answer to output.
@@ -514,20 +514,20 @@ Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; usi
     
     <item>
       <title>SGU 113 - Nearly prime numbers</title>
-      <link>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</link>
+      <link>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</link>
       <pubDate>Thu, 05 Feb 2015 14:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</guid>
       <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise.
 Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\leq N\leq 10$).</description>
     </item>
     
     <item>
       <title>SGU 107 - 987654321 problem</title>
-      <link>https://kwang.life/posts/2015/sgu-107-987654321-problem/</link>
+      <link>https://kwang.life/2015/02/sgu-107-987654321-problem/</link>
       <pubDate>Thu, 05 Feb 2015 14:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-107-987654321-problem/</guid>
+      <guid>https://kwang.life/2015/02/sgu-107-987654321-problem/</guid>
       <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321.
 Input Input contains integer number $N$ ($1\leq N\leq 10^6$).
 Output Write answer in output file.
@@ -538,28 +538,28 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
     
     <item>
       <title>SGU 184 - Patties</title>
-      <link>https://kwang.life/posts/2015/sgu-184-patties/</link>
+      <link>https://kwang.life/2015/01/sgu-184-patties/</link>
       <pubDate>Fri, 30 Jan 2015 17:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-184-patties/</guid>
+      <guid>https://kwang.life/2015/01/sgu-184-patties/</guid>
       <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage. He has plenty of other ingredients.</description>
     </item>
     
     <item>
       <title>SGU 135 - Drawing Lines</title>
-      <link>https://kwang.life/posts/2015/sgu-135-drawing-lines/</link>
+      <link>https://kwang.life/2015/01/sgu-135-drawing-lines/</link>
       <pubDate>Thu, 29 Jan 2015 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-135-drawing-lines/</guid>
+      <guid>https://kwang.life/2015/01/sgu-135-drawing-lines/</guid>
       <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if the lines are identical) zones.</description>
     </item>
     
     <item>
       <title>SGU 115 - Calendar</title>
-      <link>https://kwang.life/posts/2015/sgu-115-calendar/</link>
+      <link>https://kwang.life/2015/01/sgu-115-calendar/</link>
       <pubDate>Thu, 29 Jan 2015 21:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-115-calendar/</guid>
+      <guid>https://kwang.life/2015/01/sgu-115-calendar/</guid>
       <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001.
 Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100.
 Output Write current number of the day of the week for given date (Monday – number 1, … , Sunday – number 7) or phrase &amp;ldquo;Impossible&amp;rdquo; if such date does not exist.</description>
@@ -567,10 +567,10 @@ Output Write current number of the day of the week for given date (Monday – nu
     
     <item>
       <title>SGU 123 - The Sum</title>
-      <link>https://kwang.life/posts/2015/sgu-123-the-sum/</link>
+      <link>https://kwang.life/2015/01/sgu-123-the-sum/</link>
       <pubDate>Thu, 29 Jan 2015 21:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-123-the-sum/</guid>
+      <guid>https://kwang.life/2015/01/sgu-123-the-sum/</guid>
       <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers.
 Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$).
 Output First line should contain number $S$.
@@ -581,10 +581,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 
     
     <item>
       <title>SGU 105 - Div 3</title>
-      <link>https://kwang.life/posts/2015/sgu-105-div-3/</link>
+      <link>https://kwang.life/2015/01/sgu-105-div-3/</link>
       <pubDate>Thu, 29 Jan 2015 20:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-105-div-3/</guid>
+      <guid>https://kwang.life/2015/01/sgu-105-div-3/</guid>
       <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3.
 Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$).
 Output Write answer in output file.
@@ -594,10 +594,10 @@ Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于�
     
     <item>
       <title>SGU 102 - Coprimes</title>
-      <link>https://kwang.life/posts/2015/sgu-102-coprimes/</link>
+      <link>https://kwang.life/2015/01/sgu-102-coprimes/</link>
       <pubDate>Thu, 29 Jan 2015 20:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-102-coprimes/</guid>
+      <guid>https://kwang.life/2015/01/sgu-102-coprimes/</guid>
       <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$).
 Input Input file contains integer $N$.
 Output Write answer in output file.
@@ -606,10 +606,10 @@ Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varp
     
     <item>
       <title>SGU 100 - A &#43; B</title>
-      <link>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</link>
+      <link>https://kwang.life/2015/01/sgu-100-a--b/</link>
       <pubDate>Thu, 29 Jan 2015 20:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</guid>
+      <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
       <description>[100. A+B]
 Description Read integers $A$ and $B$ from input file and write their sum in output file.
 Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$).
@@ -620,10 +620,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>Codeforces 1B - Spreadsheet</title>
-      <link>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</link>
+      <link>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</link>
       <pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</guid>
       <description>1B Spreadsheet
 Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;).
 Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed.
@@ -632,10 +632,10 @@ if(C % 26 == 0) { strTmp = &#39;Z&#39; + strTmp; C /= 26; C--; continue; }</desc
     
     <item>
       <title>Codeforces 1A - Theatre Square</title>
-      <link>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</link>
+      <link>https://kwang.life/2014/07/codeforces-1a-theatre-square/</link>
       <pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1a-theatre-square/</guid>
       <description>1A Theatre Square
 Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer.
 Notice: Pay attention to the data range. Use unsigned long long.
@@ -644,10 +644,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>算法专题：欧拉函数</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
       <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
       <description>昨天终于把欧拉函数想通了，现在总结一下。
 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。
 下面介绍欧拉函数的几个性质：
@@ -656,10 +656,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：求解线性方程组</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
       <pubDate>Tue, 05 Nov 2013 20:34:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
       <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。
 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。
 我写的高斯消元是将所有系数看成一个矩阵来求解的。
@@ -671,10 +671,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：不定方程</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
       <pubDate>Mon, 04 Nov 2013 19:41:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
       <description>关于这个算法，主要是参考 NOIP2012 Day2 T1。即这里所讲的是求解这样一个线性模方程： $$ ax\equiv 1\mod{p} $$ 的最小正整数解。
 去年我是暴搜做的，当时什么都不会。今天在这里介绍两种算法，一种是我国古代数学家秦九韶发明的「大衍求一术」，还一种是著名的「扩展欧几里德算法」。
 首先来看一下大衍求一术。这里只介绍它的计算方法，至于证明可以参考扩展欧几里德算法。
@@ -686,10 +686,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：强连通分量 - Kosaraju Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
       <pubDate>Mon, 04 Nov 2013 10:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
       <description>强连通分量（Strongly Connected Components），简称 SCC。是指在给定的一张图 $ G=\left(V,E\right) $ 的一个子图 $ G{}&amp;rsquo;=\left(V,E\right) $ 这个子图满足对于其中的任意一对点 $ \left \langle V_{i},V_{j} \right \rangle $ 均存在这样两条路径 $ \left \langle V_{i},\cdots,V_{j} \right \rangle,\left \langle V_{j},\cdots,V_{i} \right \rangle $ 。
 如果我们把强连通分量缩成一个点，这时候，原图 $ G $ 则会变成有向无环图。
 图 $ G=\left(V,E\right) $ 是有向无环图当且仅当该图中没有点集合元素个数大于1的强连通分量。且任意一个强连通分量都至少包含一个有向环。下面我们通过一张图片来理解一下强连通分量以及缩点：
@@ -701,10 +701,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：传递闭包</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
       <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
       <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。
 我们这里主要研究的是有向图的传递闭包问题。
 代码如下：
@@ -713,10 +713,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：欧拉回路</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
       <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
       <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。
 下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路：
 一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路：
@@ -726,10 +726,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：拓扑排序</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
       <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题：
 给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。
 当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。
@@ -742,10 +742,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
       <description>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念：
 多源最短路径
 对于这一问题，比较有效的算法是 Floyd-Warshall Algorithm，简称 Floyd。它是基于动态规划的一种最短路径的算法。
@@ -755,10 +755,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：单源最短路径 - SPFA</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link>
       <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
       <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。
 算法的基本步骤如下：
 初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。
@@ -769,10 +769,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：单源最短路径 – Bellman-Ford Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
       <description>上一篇文章介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。
 Ballman-Ford 是一个非常实用的算法，它是由美国数学家 Richard Ballman 和 Lester Ford 发明的。Ballman-Ford 算法的基本流程如下：
 初始化 $ pDist\left [ \right ] $ 数组。 检查每一条边，如果源点到该条边的起点有通路，则更新原点到该条边的终点的最短路径。循环 $ V $ 次即可得到结果。 如若要检测是否存在负环，则再检查每一条边，若可以松弛，则有负环。
@@ -785,10 +785,10 @@ Bellman-Ford 算法
     
     <item>
       <title>算法专题：单源最短路径 – Dijkstra Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
       <description>这个星期开始复习最短路的一些算法。
 单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。
 首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。
@@ -800,10 +800,10 @@ Bellman-Ford 算法
     
     <item>
       <title>算法专题：最小生成树 – Kruskal Algoritm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
       <pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
       <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下：
 取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。 重复上述操作，直至加入了 $ N-1 $ 条边。 我们还是先来看一张图片来理解一下这个算法：
 Kruskal 算法
@@ -815,10 +815,10 @@ Kruskal 算法
     
     <item>
       <title>算法专题：最小生成树 – Prim Algoritm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
       <pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
       <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。
 最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。
 首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的边的长度的和最小。
@@ -830,10 +830,10 @@ Kruskal 算法
     
     <item>
       <title>线段树 – 有改动求解区间最值 – 忠诚 2</title>
-      <link>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
       <pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
       <description>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章线段树 – 无改动求解区间最值 – 忠诚简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。
 首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了：
 int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNode-&amp;gt;nMoney != 2147483647) { return pNode-&amp;gt;nMoney; } else { return pNode-&amp;gt;nMoney = min(Update(pNode-&amp;gt;pLeft), Update(pNode-&amp;gt;pRight)); } } void Change(Node *pNode, int x, int nValue) { pNode-&amp;gt;nMoney = 2147483647; if(pNode-&amp;gt;nLeft == x &amp;amp;&amp;amp; x == pNode-&amp;gt;nRight) { pNode-&amp;gt;nMoney = nValue; } else { if(x &amp;lt;= (pNode-&amp;gt;nLeft + pNode-&amp;gt;nRight) / 2) { Change(pNode-&amp;gt;pLeft, x, nValue); } else { Change(pNode-&amp;gt;pRight, x, nValue); } } } 这样，除了第一次维护外，每次我们只需要维护一条路径，复杂度也大大降低低了。</description>
@@ -841,10 +841,10 @@ int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNod
     
     <item>
       <title>线段树 – 无改动求解区间最值 – 忠诚</title>
-      <link>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
       <pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
       <description>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。
 线段树可以直观的表示为下面这张图：
 线段树示意图
@@ -855,10 +855,10 @@ Node* Build(int l, int r) { Node *pNode = new Node(); // Init data if(l == r) { 
     
     <item>
       <title>0/1 背包 - NOIP2005P3</title>
-      <link>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</link>
+      <link>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link>
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
+      <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
       <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。
 我们约定有 $ N $ 件物品和一个容量为 $ C $ 的背包。第 $ i $ 件物品的重量是 $ w\left [ i \right ] $ ，价值是 $ v\left [ i \right ] $ 。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。
 二维数组表示 定义状态： $ f\left [ i \right ]\left [ c \right ] $ 表示前 $ i $ 件物品恰放入一个容量为 $ c $ 的背包可以获得的最大价值。
@@ -867,10 +867,10 @@ Node* Build(int l, int r) { Node *pNode = new Node(); // Init data if(l == r) { 
     
     <item>
       <title>Dilworth 定理 - NOIP1999T1</title>
-      <link>https://kwang.life/posts/2013/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
+      <link>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
       <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
+      <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
       <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下：
 这是一个关于偏序集的定理。偏序集即偏序集合。
 偏序的概念：设 $ \textbf{A} $ 是一个非空集合。 $ P $ 是 $ \textbf{A} $ 上的一个关系，若关系 $ P $ 是自反的、反对称的、传递的，则称 $ P $ 是集合 $ \textbf{A} $ 上的偏序关系。
@@ -880,10 +880,10 @@ $ \forall a\in\textbf{A},\left ( a,a \right )\in P $ ； 若 $ \left ( a,b \righ
     
     <item>
       <title>BFS 解决蛇形填数 - NOIP1995P2</title>
-      <link>https://kwang.life/posts/2013/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</link>
+      <link>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</link>
       <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
+      <guid>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
       <description>题目描述是经典的蛇形填数问题。
 以前解决这类问题，通常是通过控制 $ i,j $ 的值来定位数组元素的位置，然后进行赋值。但是这种方法非常的繁琐，且难于理解。容易出错。
 今天在做这道题目的时候，通过搜索资料，思索出了一种新解法，相较于原来的解法更以理解，且时间复杂度更低。解法的基本思想是 BFS。下面我们仔细来探讨一下。
@@ -895,10 +895,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>Linux 迁移记（一）</title>
-      <link>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
+      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
       <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
+      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
       <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：
 Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。
 安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是 GUI 界面，相对容易些。

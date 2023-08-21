@@ -13,10 +13,10 @@
     <lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/verilog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Verilog 转 Spice 网表</title>
-      <link>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link>
+      <link>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link>
       <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
+      <guid>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
       <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。
 v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示：
 -a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;.</description>

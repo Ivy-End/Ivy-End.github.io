@@ -13,10 +13,10 @@
     <lastBuildDate>Sun, 17 May 2015 11:07:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2048 游戏制作过程（Java 描述）：第五节、界面美化</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
       <pubDate>Sun, 17 May 2015 11:07:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
       <description>这一节，我们将介绍游戏界面的美化以及游戏数据的存储。
 首先创建一个 color.xml 资源文件，用来保存每个数字对应的背景色和前景色。右击 res 文件夹，选择 New，单击 Android resource file，输入 color，单击 Next 即可。
 新建资源
@@ -26,10 +26,10 @@
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第四节、游戏逻辑</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
       <pubDate>Fri, 15 May 2015 19:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
       <description>上一节中，我们已经成功的将卡牌添加到了游戏中，但只是显示在了界面上，并没有保存下来。我们在 GameView 中定义一个二维数组用来保存游戏界面的卡牌。
 private Card[][] cardMap = new Card[4][4]; // 记录游戏 接下来，我们需要将初始化时候添加的卡片添加到 cardMap 数组中，如下图所示：
 private void addCards(int cardSize) { Card card; for(int i = 0; i &amp;lt; 4; i++) { for(int j = 0; j &amp;lt; 4; j++) { card = new Card(getContext()); card.setNumber(2); addView(card, cardSzie, cardSize); cardMap[i][j] = card; // 添加卡片 } } } 这样一来，我们就将游戏界面记录下来了。
@@ -39,10 +39,10 @@ private void addRandomNumber() { emptyPoints.</description>
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第三节、创建界面</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
       <pubDate>Thu, 14 May 2015 20:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
       <description>首先，我们要使得我们的程序能够判断用户的手势，一共为上、下、左、右四种。在 GameView 类中添加如下代码：
 private void initGameView() { setOnTouchListener(new View.OnTouchListener() { @Override public boolean onTouch(View v, MotionEvent event) { return false; } }); } 接下来，我们来分析一下如何进行手势判断。首先，用户的手势输入应该有两个数据，一个是按下的屏幕位置，一个是放开的屏幕位置。那么我们只需要计算横向和竖向坐标差的绝对值，绝对值较大的一个方向则是用户需求的方向。至于横向中的左右和竖向中的上下，我们可以通过按下和放开的位置的大小进行比较得出。
 有了上面的分析，我们开始写代码：
@@ -51,10 +51,10 @@ private void initGameView() { setOnTouchListener(new View.OnTouchListener() { pr
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第二节、基本设置</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Thu, 14 May 2015 17:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
       <description>首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示：
 App 图标
 接下来，找到上一节中保存项目的位置，依次展开文件夹中的 2048/Game2048/app/src/main/res 目录，如下图所示：
@@ -71,10 +71,10 @@ App 名称
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第一节、创建项目</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Fri, 08 May 2015 21:42:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
       <description>自从关于扫雷游戏制作过程的文章发布后，有同学让我写一些关于移动开发的文章，并且建议以雷电这款游戏为例。然而考虑到该项目对于初学者来说代码量较大，所以暂且不涉及这部分，转而使用较为简单的 2048 游戏作为例子，可能对于初学者来说更容易上手，并且也更容易自己动手实现出来。
 本项目已根据文章进度托管在 GitHub 上：2048，读者可以自行查看。
 由于没有 Mac，因此只能介绍关于 Android 平台相关的开发知识。然而进行 Android 开发之前，需要搭建 Android 开发环境，这一步比较有难度的，主要是各个软件的配置较为麻烦，使得很多初学者望而却步。目前主流的 IDE 有 Eclipse 以及 Android Studio，本文将以 Android Studio 作为集成开发环境，对 2048 游戏的开发过程进行详细的介绍。

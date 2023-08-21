@@ -13,10 +13,10 @@
     <lastBuildDate>Wed, 21 Dec 2022 11:09:00 +0800</lastBuildDate><atom:link href="https://kwang.life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>集成电路版图设计实验（以运算放大器和带隙基准源为例）</title>
-      <link>https://kwang.life/posts/2022/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</link>
+      <link>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</link>
       <pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid>
+      <guid>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid>
       <description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下。）
 一、运算放大器 1.1 实验目的 熟悉 CentOS 下的 Cadence 集成开发环境； 掌握元件库的调用方法，并由此进行原理图绘制及版图设计； 掌握版图设计中对称性和紧凑性的要求，并能熟练运用； 掌握版图设计中的中心对称技术和屏蔽技术，并能熟练运用； 掌握 DRC（Design Rule Check，设计规则检验）和 LVS（Layout Versus Schematic，版图与电路一致性检验）操作，并能运用其对设计的版图进行检查； 掌握版图设计中相关错误的解决方法。 1.2 实验仪器 正确安装了 VMware Workstation 的计算机一台； CentOS 下的 Cadence 集成开发环境一套。 1.3 实验内容 首先根据给出的电路图及相关参数（如图 1 所示）在 Cadence 中绘制出原理图，并在此基础上设计与之相对应的版图。在设计版图的过程中，需要注意对称性以及紧凑型；此外，还需要运用屏蔽技术和叉指技术。对设计完的版图进行 DRC 以及 LVS 检查，通过上述检查后，方可确认版图设计完成且准确无误。
 图 1：运算放大器电路图
@@ -26,20 +26,20 @@
     
     <item>
       <title>Linux 配置 GitHub 账号</title>
-      <link>https://kwang.life/posts/2022/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link>
+      <link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link>
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
+      <guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
       <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）：
 [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | .</description>
     </item>
     
     <item>
       <title>Verilog 转 Spice 网表</title>
-      <link>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link>
+      <link>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link>
       <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
+      <guid>https://kwang.life/2022/06/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid>
       <description>v2lvs 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 v2lvs 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。
 v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOLS/PDK/SMIC/SMIC55LL/SPDK55LL_ULP_09121825_OA_CDS_V1.16_2/smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2/Calibre/LVS/empty_subckt.sp \ -s /TOOLS/STD_CELL/SMIC-55/SCC55NLL_HD_LVT_V2.0b/SCC55NLL_HD_LVT_V2p0b/cdl/SCC55NLL_HD_LVT_V2p0.cdl \ -s /TOOLS/STD CELL/SMIC-55/I0/SP55NLLD2RP OV3 VOp7/1vs/SP55NLLD2RP_OV3_VOp7.sp \ -s./SPAD.cdl \ -o TOP_TSCam.cdl 关于 v2lvs 更详细的指令介绍如下所示：
 -a &amp;lt;c1&amp;gt;[&amp;lt;c2&amp;gt;] : Change array delimiters from the default &amp;#34;[]&amp;#34;. : c1 replaces left side &amp;#39;[&amp;#39;. : c2 optionally replaces right side &amp;#39;]&amp;#39;.</description>
@@ -47,20 +47,20 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>结合 TAR 和 OpenSSL 加密文件及目录</title>
-      <link>https://kwang.life/posts/2022/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link>
+      <link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link>
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
+      <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
       <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。
 加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ openssl enc -d -aes256 -in &amp;lt;Filename&amp;gt; | tar -xzv # 3.</description>
     </item>
     
     <item>
       <title>中秋望月感怀（2021）</title>
-      <link>https://kwang.life/posts/2021/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802021/</link>
+      <link>https://kwang.life/2021/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802021/</link>
       <pubDate>Tue, 21 Sep 2021 22:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802021/</guid>
+      <guid>https://kwang.life/2021/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802021/</guid>
       <description>一年一度中秋佳节，看着天上的月亮，思乡之情涌上心头，写下了这篇《西江月·望月怀远》
 西江月·望月怀远
 邈邈蟾宫玉兔，溶溶亭畔平湖。披衣行尽夜阑徐，松竹秋声齐舞。
@@ -70,10 +70,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>忆凤凰街</title>
-      <link>https://kwang.life/posts/2021/%E5%BF%86%E5%87%A4%E5%87%B0%E8%A1%97/</link>
+      <link>https://kwang.life/2021/09/%E5%BF%86%E5%87%A4%E5%87%B0%E8%A1%97/</link>
       <pubDate>Thu, 16 Sep 2021 00:38:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/%E5%BF%86%E5%87%A4%E5%87%B0%E8%A1%97/</guid>
+      <guid>https://kwang.life/2021/09/%E5%BF%86%E5%87%A4%E5%87%B0%E8%A1%97/</guid>
       <description>已不知是何时起，开始作诗。或许是受大学老友的影响，或许只是为了附庸风雅。断断续续，已写了多首，但总觉得还缺些朗朗上口的节奏感和的身临其境的意境美。乘此闲暇，将一年前所做诗句放到博客，与诸君共赏。
 在朋友圈看到一位大学同学作了一首《又过凤凰街》，回忆起大学时期的青葱岁月，遂和诗一首，作于2020年12月5日。
 又过凤凰街
@@ -88,10 +88,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>博客，再出发</title>
-      <link>https://kwang.life/posts/2021/%E5%8D%9A%E5%AE%A2%E5%86%8D%E5%87%BA%E5%8F%91/</link>
+      <link>https://kwang.life/2021/09/%E5%8D%9A%E5%AE%A2%E5%86%8D%E5%87%BA%E5%8F%91/</link>
       <pubDate>Wed, 01 Sep 2021 22:52:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/%E5%8D%9A%E5%AE%A2%E5%86%8D%E5%87%BA%E5%8F%91/</guid>
+      <guid>https://kwang.life/2021/09/%E5%8D%9A%E5%AE%A2%E5%86%8D%E5%87%BA%E5%8F%91/</guid>
       <description>个人博客，这个若干年前曾风靡一时的词，到如今却逐渐淡出大众视野。我还记得多年前注册了新浪博客、CSDN 和博客园等各大博客门户网站的账号，现如今却早已将它们抛诸脑后了，只有搜索引擎还记得我那稚嫩的文字与满腔的热情。再往后，我自学了 WordPress 建站，开始在本地搭建博客。当时仅仅是为了记录自己 NOIP 的刷题经历。随着我 2016 年退出竞赛圈后，博客的更新频率也便降低了，甚至到了一年一更的地步。
 细想之下，我也能为之找寻到合理的解释：开通博客的目的是为了分享算法竞赛的点点滴滴，现如今我已投入到集成电路产业之中，自然也就无法分享算法竞赛的内容。然而，当我如此为自己找寻借口之时，当年 ACM-ICPC 教练徐汀荣教授在我退役之际的赠言在我耳边回响：
 希望你一直热爱算法！
@@ -119,10 +119,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title>
-      <link>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
+      <link>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
+      <guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
       <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。
 本文所用到的软件资源，可单击此处下载，提取码为：njup。
 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。
@@ -139,10 +139,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>庚子志（2020 年度总结）</title>
-      <link>https://kwang.life/posts/2019/%E5%BA%9A%E5%AD%90%E5%BF%972020-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2019/12/%E5%BA%9A%E5%AD%90%E5%BF%972020-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 31 Dec 2019 21:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2019/%E5%BA%9A%E5%AD%90%E5%BF%972020-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2019/12/%E5%BA%9A%E5%AD%90%E5%BF%972020-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>东风入夜散琼芳，拂晓金柯玉满妆。吹面寒风方识冷，回望庚子忆华章。
 阳春流片苦烦思，点点清辉伴露滋。纸上得来不觉浅，可叹践履又稽迟。
 尽收专利几何多，满载新知且放歌。今日还乡同把酒，明朝加国赴秋波。
@@ -168,10 +168,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>己亥志（2019 年度总结）</title>
-      <link>https://kwang.life/posts/2019/%E5%B7%B1%E4%BA%A5%E5%BF%972019-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2019/12/%E5%B7%B1%E4%BA%A5%E5%BF%972019-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 31 Dec 2019 16:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2019/%E5%B7%B1%E4%BA%A5%E5%BF%972019-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2019/12/%E5%B7%B1%E4%BA%A5%E5%BF%972019-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>前岁戊戌作志姑苏，今岁负笈求学金陵。时日之易逝兮，若川上流水，须臾已逾一载矣。回首己亥，所历之事皆历历在目，故作志以记之——曰游，曰学，曰情。
 戊戌霜月，余赴南京大学攻硕。其时河海大学曹公往谒吾师纪公共研太赫兹芯片一事，席间谓其欲得一优生以作数字集成电路。吾因伶俐聪颖，见拜于曹公，方知其欲为真随机数芯片，作文以刊，与会东瀛 ISCAS2019。余涉学尚浅，好作文，喜言说，曹公之言深中吾意，遂以诚事之。其间曹公尝发文余，要余详其制以假。历数月，竟成。至流片，已近除夕；然流片期已定，余不得已作图于年关之际，奔忙于交通之间，及近元宵，初成。然陡逢难事，遂赴梁溪研究院求教。此间受益匪浅，乃诸多典籍未有录之。
 事毕，余作讲演文稿以备 ISCAS2019，几番删改，终成。至己亥五月，经禄口，赴东瀛，奔札幌。至海关，始觉言语不通之弊病，幸纪公工于日语，方致客栈。群贤毕至，少长咸集，论于札幌会议中心，凡五日。会四海洋人，以洋文与其争高下、论短长，所获颇丰。及予登台讲演，但有万全之备，亦变色怅然矣。言毕，诸君问难，幸得南洋理工大学曾公从旁助余，不致见笑。
@@ -186,10 +186,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>戊戌志（2018 年度总结）</title>
-      <link>https://kwang.life/posts/2018/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2018/12/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 31 Dec 2018 11:25:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2018/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2018/12/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>树枝在风儿的吹奏下，飘出了一串美妙的音符；雪花在大地的构思下，描绘了一幅绝佳的画作。临窗眺望的我不觉看得出神，恍惚间，一年来的点点滴滴仿佛就在眼前。
 这一年，我找寻到了那个相识、相知、相爱、相守的人。不论是静谧的校园漫步、沉浸的电影欣赏、醉人的美味品鉴；还是热闹的厨房烹饪、愉快的景点探索、完美的手工配合……处处都留下了我们的欢声笑语。你的出现，让我领略了爱与被爱的美好，也让我的生命变得完整。
 这一年，我经历了从本科到研究生的转变。这可以说是一个较大的转折，也让我产生了很多思考。
@@ -205,10 +205,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>本科毕业论文致谢</title>
-      <link>https://kwang.life/posts/2018/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</link>
+      <link>https://kwang.life/2018/12/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</link>
       <pubDate>Sun, 30 Dec 2018 22:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2018/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</guid>
+      <guid>https://kwang.life/2018/12/%E6%9C%AC%E7%A7%91%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E8%87%B4%E8%B0%A2/</guid>
       <description>此乃余首篇文言，因查重，今日乃详。
 时维四月，序属清夏，余负笈姑苏三载有余矣。感韶光之易逝兮，恐年岁之不吾与。懵懵间已逾弱冠之年，惶惶兮尚无功名傍身。值此掩卷遐思之际，忆往昔峥嵘岁月，不禁悲喜交集。凯，三尺微命，一介书生，得助四方，略有小成，感念之情，列叙如下。
 今天下学子皆得安其学而亲其师，乐其友而信其道，皆因无内外忧患之扰。寻其根，实乃中共领导之功。此吾拜谢者一也。
@@ -228,10 +228,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>恰同学少年</title>
-      <link>https://kwang.life/posts/2018/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</link>
+      <link>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</link>
       <pubDate>Fri, 02 Feb 2018 20:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2018/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</guid>
+      <guid>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</guid>
       <description>今阅前文，偶见于丁酉六月应《院刊》约稿所著之文。读毕愈觉其实为吾大学向之三秋一概述，现列叙如下。
 依稀记得三年前刚刚步入大学时的懵懂无知，如今却已成大四，凝眸回望来时的道路，曾经留下的足迹亦如沙滩上的脚印，在潮涨潮落中渐渐模糊不清。
 那是在姑苏的第一个秋天，人行道上金黄的落叶在夕阳下显得别有一番景致。当时的我第一次与当年苏州大学 ACM-ICPC 集训队队长在咖啡厅内相遇，却不曾料到此后一年多的时间内，我会全身心的投入到 ACM-ICPC 集训队的训练之中。
@@ -250,10 +250,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>丁酉志（2017 年度总结）</title>
-      <link>https://kwang.life/posts/2017/%E4%B8%81%E9%85%89%E5%BF%972017-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2017/12/%E4%B8%81%E9%85%89%E5%BF%972017-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 31 Dec 2017 23:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2017/%E4%B8%81%E9%85%89%E5%BF%972017-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2017/12/%E4%B8%81%E9%85%89%E5%BF%972017-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>呼吸着芬芳的空气，欣赏着眼前静谧的冬景，午后的我漫无目的行走在姑苏城的小巷之中，猛然发现丁酉年已匆匆走过，慌乱之中，赶忙打开尘封已久的博客，准备好好总结一下这一年的经历，就叫它《丁酉志》吧。
 翻阅着一年的照片，过去的一幕幕仿佛又浮现在了眼前，这一年做了很多事情，也做了许多决定，到目前为止，也很难说孰是孰非，且听我慢慢道来。
 隆冬时节，在曲老师的指导下，应苏州市第三中学的要求，帮对方制作了“基于重锤地倾的地震信号检测系统”，前后多次前往苏州市第三中学进行现场调试以及项目需求的沟通协商，面对甲方时不时冒出来的新想法、新需求，也算是体验了一下乙方的苦楚与无奈。在此过程中不仅增加了一定的项目经验，更多的是窥见了一些与甲方进行有效沟通的方法。
@@ -269,10 +269,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>何为江湖？</title>
-      <link>https://kwang.life/posts/2017/%E4%BD%95%E4%B8%BA%E6%B1%9F%E6%B9%96/</link>
+      <link>https://kwang.life/2017/11/%E4%BD%95%E4%B8%BA%E6%B1%9F%E6%B9%96/</link>
       <pubDate>Fri, 10 Nov 2017 13:44:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2017/%E4%BD%95%E4%B8%BA%E6%B1%9F%E6%B9%96/</guid>
+      <guid>https://kwang.life/2017/11/%E4%BD%95%E4%B8%BA%E6%B1%9F%E6%B9%96/</guid>
       <description>最近整理旧时的读书笔记，偶然间看到 2016 年 3 月写的一篇文章，读完之后感觉非常契合此时心境，遂将其发布出来。
 适逢金庸 92 岁大寿，写下这篇文章，聊表敬畏之心。
 我记得接触的第一本武侠小说，便是射雕三部曲之一的《射雕英雄传》，当时的我少不更事，无法理解东邪身上的邪气，也理解不了南帝为何遁入空门，更不明白西毒如此作恶多端，只是敬佩七公的行侠仗义，同时也笑郭靖的傻里傻气。以为所谓江湖，就是刀光剑影，向往着自己武功盖世，全下无敌。
@@ -285,10 +285,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>福尔摩沙游学有感</title>
-      <link>https://kwang.life/posts/2017/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%B2%99%E6%B8%B8%E5%AD%A6%E6%9C%89%E6%84%9F/</link>
+      <link>https://kwang.life/2017/08/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%B2%99%E6%B8%B8%E5%AD%A6%E6%9C%89%E6%84%9F/</link>
       <pubDate>Thu, 24 Aug 2017 23:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2017/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%B2%99%E6%B8%B8%E5%AD%A6%E6%9C%89%E6%84%9F/</guid>
+      <guid>https://kwang.life/2017/08/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%B2%99%E6%B8%B8%E5%AD%A6%E6%9C%89%E6%84%9F/</guid>
       <description>五百多年前，葡萄牙人在大航海的过程中发现了台湾这个美丽的岛屿，将其命名为“Formosa”（福尔摩沙）。此次有幸在台湾停留多日，领略了与姑苏不一样的风情。而今游学之旅已近尾声，便将此行所见所感记录下来。
 搭乘了延误的航班、坐了接机的大巴，风尘仆仆地赶到国立清华大学，迎接我们的是连绵的细雨和位居山顶的宿舍。在校外奔波了一个晚上，终于采购完了各类生活用品，做好了迎接不一样的暑期生活的准备。
 在来之前，对于研究生的方向做了很多规划，最后锁定在了集成电路设计、机器学习这两个方向，但一直犹豫不决。由于在大陆接触了很多电路设计方面的内容，因此对于集成电路设计有着一个较为清晰的了解；而机器学习作为新兴产业，对于我来说仍然较为陌生的，借此机会正好接触一下，于是便进入了一个机器学习方向的实验室进行暑期学术交流。
@@ -305,10 +305,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>丙申志（2016 年度总结）</title>
-      <link>https://kwang.life/posts/2016/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sat, 31 Dec 2016 19:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2016/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>一直想写年终总结，却总是忙于应付各种事务，导致一拖再拖。适逢今天立春之际，写下这篇文章，权当是对过去一年的反思与总结。
 时间真是个猝不及防的东西，不知不觉中高中时创建的这个博客已经在巨大的互联网世界中立足四年了，而我也已经从当时特别无知的高中生变成了如今比较无知的大学生了，年龄总是一年一年的增加，但是真正的智慧却不会随着时间线性的增长，总是需要及时的去反思总结并且在实践中进行运用才能真正的内化成智慧。
 如果说 2015 年的关键词是“比赛”，那么 2016 年的关键词一定是“项目”。虽然许多人习惯在“项目”前面加上“科研”二字，但是当真正的深入进去才会发现，你一个普普通通的本科生，又怎么可能做的了什么科研呢？无非是导师看你骨骼惊奇，想锻炼锻炼你，顺便让你搬搬砖罢了。再说那么多本科发顶会的同学，又有多少人是凭借着自己的研究成果呢，大多数都是导师研究出来挂个名而已。
@@ -323,10 +323,10 @@ v21vs -64 -sn \ -v ../../../../0UTPUT/TOP_TSCam.pg.v\ -v ./Pixel.pg.v \ -s /TOOL
     
     <item>
       <title>再见了，ACM-ICPC</title>
-      <link>https://kwang.life/posts/2016/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</link>
+      <link>https://kwang.life/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</link>
       <pubDate>Tue, 05 Apr 2016 22:40:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2016/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</guid>
+      <guid>https://kwang.life/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</guid>
       <description>终于还是来到了这一天，当双手在键盘上敲下这些文字的时候，竟有些颤抖。尽管曾经不止一次的思考过退役后的场景，也做足了充分的思想准备，但当这一刻真的到来，却有些不知所措。看着 ACM 交流群里热烈的讨论，关上窗口，退出该群；将 ACM 资料小心翼翼的放置在移动硬盘的角落，不小心瞥见 NOIP 退役时存放的资料，记忆一下子席卷而来。在算法竞赛的道路上跌跌撞撞的行走了将近五年，从 NOIP 到 ICPC，是时候说再见了。
 此时的我，依然记得多年前第一次提交 A+B 时的激动，记得思索半天推导出 Segment Tree 时的满足，记得苦思冥想理解 Dancing Links 时的欣喜，记得写完几本草稿本后证明 Binary Indexed Tree 时的顿悟，记得那无数个奉献给《数据结构》和《算法导论》的日日夜夜，记得一遍遍的 WA 和随之而来的 AC。记得那一个个打训练赛的下午，匆匆忙忙地胡乱吃完从后庄带来了晚饭，便投入下一场比赛。记得水平日渐提高时的欣喜以及发挥失常后的焦急。
 那无数在实验室刷题的时光，除了让我体会到了较之高三更为枯燥的生活，却也给我带来了些许快乐。一群人讨论时事热点时的激烈，徐老师突击检查时的尴尬，准备题目汇报时的担心，为新生赛出题的忙碌，准备新生授课的紧张以及北疆饭店里的谈笑风生都将成为珍贵的记忆，小小的实验室，承载着一群人的梦想，不断的奋斗，只为接近更广阔的天空。
@@ -346,10 +346,10 @@ wuli 凯凯，伟大的哲♂学家，算法家，数学家，无产阶级手速
     
     <item>
       <title>记 2015 ACM-ICPC亚洲区域赛（长春站、北京站）</title>
-      <link>https://kwang.life/posts/2015/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</link>
+      <link>https://kwang.life/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</link>
       <pubDate>Fri, 20 Nov 2015 21:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</guid>
+      <guid>https://kwang.life/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</guid>
       <description>细细想来，已经有近四个月没有更新过博客，上一次还是在 7 月份。既然这样，那就从那时候讲起吧。
 整个暑假，绝大部分时间在参加 ACM 训练，除此之外，还参加了全国大学生电子设计竞赛，拿了个一般的奖项；去英国走了一遭，体会了不同的风土人情。一直想好好记录这两件事情，但总是由于各种各样的原因搁置了。
 这学期自从开学以来就一直非常的忙，刚开始备战 ACM，上个月在长春拿了一块铜牌，上星期在北京拿了一块银牌，周三刚刚把 FPGA 设计邀请赛的作品完成，明天一大早赶往上海交通大学参加微软 Hackthon 大赛，下周需要提交全国移动互联网开发大赛的作品，再加上最近期中考试周，几乎忙的没日没夜。
@@ -370,19 +370,19 @@ wuli 凯凯，伟大的哲♂学家，算法家，数学家，无产阶级手速
     
     <item>
       <title>SGU 144 - Meeting</title>
-      <link>https://kwang.life/posts/2015/sgu-144-meeting/</link>
+      <link>https://kwang.life/2015/07/sgu-144-meeting/</link>
       <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-144-meeting/</guid>
+      <guid>https://kwang.life/2015/07/sgu-144-meeting/</guid>
       <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they will meet.</description>
     </item>
     
     <item>
       <title>The Freshman Grind</title>
-      <link>https://kwang.life/posts/2015/the-freshman-grind/</link>
+      <link>https://kwang.life/2015/07/the-freshman-grind/</link>
       <pubDate>Tue, 21 Jul 2015 09:49:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/the-freshman-grind/</guid>
+      <guid>https://kwang.life/2015/07/the-freshman-grind/</guid>
       <description>想来放假已经好几天了，总算抽出了一些时间来总结一下这学期的经历，虽然在期末考试期间应导师要求写过一篇《学期总结》，然而由于复习紧迫，只是草草收笔，并没有点中要处。
 Grind of Courses 这学期刚开始，或许是由于上学期不错的成绩造成的盲目自信，导致了上课时间并没有特别认真的听讲，大多数时间在自己看课外书，比如《暗时间》、《浪潮之巅》等（不得不承认，这些都是不可多得的好书，前者介绍了如何高效的利用时间；后者介绍了近几十年信息技术产业作为信息产业的发展史，其中涉及了各大知名公司，例如 Apple、Microsoft、AT&amp;amp;T 等的衰亡）。当然，造成这种结果除了主观因素外，不可否认还有一部分客观因素：由于教师们不急不慢的授课速度，使得我不需要太快的思路就可以跟上甚至超前他所讲的内容，几番下来也就不想再听讲了，然而事实证明这并不是一个非常好的选择。
 期中考试的时候，就吃了不怎么听课的亏，导致节节败退；到了期末考试，通过一阵子的学习，将所有的内容全部赶上，并且在期末考试中取得了较为不错的成绩，但是由于期中考试并不是非常理想，导致最后的总评不是很好看，虽然两个学期的总评还过得去。
@@ -402,19 +402,19 @@ Grind of Future 在学期快结束的时候，我突然意识到，我的大学�
     
     <item>
       <title>SGU 116 - Index of super-prime</title>
-      <link>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</link>
+      <link>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</link>
       <pubDate>Mon, 20 Jul 2015 13:39:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</guid>
+      <guid>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</guid>
       <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists, index is equal to minimal number of items in such presentation.</description>
     </item>
     
     <item>
       <title>专题一、简单搜索 - Virtual Judge</title>
-      <link>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
+      <link>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
       <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
+      <guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
       <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下：
 POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。
 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.</description>
@@ -422,10 +422,10 @@ POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入
     
     <item>
       <title>记 2015 ACM-ICPC 上海大都会赛</title>
-      <link>https://kwang.life/posts/2015/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</link>
+      <link>https://kwang.life/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</link>
       <pubDate>Sat, 30 May 2015 09:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</guid>
+      <guid>https://kwang.life/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</guid>
       <description>到今天为止，距离 2015 ACM 国际大学生程序设计竞赛上海大都会赛结束已经快有一个星期了，趁着记忆中暂存的些许余温，将其记录下来。
 我们从上周四开始，放下手中正在做的题目，转而准备比赛所需要的材料。由于比赛是可以携带纸质材料进场，因此我们准备了一些较为常用的算法模板，并且幻想着可能会遇到类似的题目。然而事实证明，携带的这些模板并没有什么作用，当然，这是后话。
 周五晚上，我们开始整理行装。由于第二天早上需要六点半之前集合，所以便早早的入睡了。早上起来稍微打点一下，已是六点。草草地吃了一块面包，关上宿舍门便出发了。走到外面才发现宿舍大门紧闭着，原来此时舍管阿姨依然沉睡在梦乡。走近时才发现，宿舍大门是虚掩的。来到实验室已有两三个人在等候，陆陆续续地都到齐了。
@@ -443,10 +443,10 @@ POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第五节、界面美化</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</link>
       <pubDate>Sun, 17 May 2015 11:07:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/</guid>
       <description>这一节，我们将介绍游戏界面的美化以及游戏数据的存储。
 首先创建一个 color.xml 资源文件，用来保存每个数字对应的背景色和前景色。右击 res 文件夹，选择 New，单击 Android resource file，输入 color，单击 Next 即可。
 新建资源
@@ -456,10 +456,10 @@ POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第四节、游戏逻辑</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</link>
       <pubDate>Fri, 15 May 2015 19:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E6%B8%B8%E6%88%8F%E9%80%BB%E8%BE%91/</guid>
       <description>上一节中，我们已经成功的将卡牌添加到了游戏中，但只是显示在了界面上，并没有保存下来。我们在 GameView 中定义一个二维数组用来保存游戏界面的卡牌。
 private Card[][] cardMap = new Card[4][4]; // 记录游戏 接下来，我们需要将初始化时候添加的卡片添加到 cardMap 数组中，如下图所示：
 private void addCards(int cardSize) { Card card; for(int i = 0; i &amp;lt; 4; i++) { for(int j = 0; j &amp;lt; 4; j++) { card = new Card(getContext()); card.setNumber(2); addView(card, cardSzie, cardSize); cardMap[i][j] = card; // 添加卡片 } } } 这样一来，我们就将游戏界面记录下来了。
@@ -469,10 +469,10 @@ private void addRandomNumber() { emptyPoints.</description>
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第三节、创建界面</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</link>
       <pubDate>Thu, 14 May 2015 20:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E5%88%9B%E5%BB%BA%E7%95%8C%E9%9D%A2/</guid>
       <description>首先，我们要使得我们的程序能够判断用户的手势，一共为上、下、左、右四种。在 GameView 类中添加如下代码：
 private void initGameView() { setOnTouchListener(new View.OnTouchListener() { @Override public boolean onTouch(View v, MotionEvent event) { return false; } }); } 接下来，我们来分析一下如何进行手势判断。首先，用户的手势输入应该有两个数据，一个是按下的屏幕位置，一个是放开的屏幕位置。那么我们只需要计算横向和竖向坐标差的绝对值，绝对值较大的一个方向则是用户需求的方向。至于横向中的左右和竖向中的上下，我们可以通过按下和放开的位置的大小进行比较得出。
 有了上面的分析，我们开始写代码：
@@ -481,10 +481,10 @@ private void initGameView() { setOnTouchListener(new View.OnTouchListener() { pr
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第二节、基本设置</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Thu, 14 May 2015 17:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
       <description>首先，我们需要修改一下应用的图标。准备一个 png 格式的图标文件。如下图所示：
 App 图标
 接下来，找到上一节中保存项目的位置，依次展开文件夹中的 2048/Game2048/app/src/main/res 目录，如下图所示：
@@ -501,10 +501,10 @@ App 名称
     
     <item>
       <title>2048 游戏制作过程（Java 描述）：第一节、创建项目</title>
-      <link>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Fri, 08 May 2015 21:42:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kwang.life/2015/05/2048-%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bjava-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
       <description>自从关于扫雷游戏制作过程的文章发布后，有同学让我写一些关于移动开发的文章，并且建议以雷电这款游戏为例。然而考虑到该项目对于初学者来说代码量较大，所以暂且不涉及这部分，转而使用较为简单的 2048 游戏作为例子，可能对于初学者来说更容易上手，并且也更容易自己动手实现出来。
 本项目已根据文章进度托管在 GitHub 上：2048，读者可以自行查看。
 由于没有 Mac，因此只能介绍关于 Android 平台相关的开发知识。然而进行 Android 开发之前，需要搭建 Android 开发环境，这一步比较有难度的，主要是各个软件的配置较为麻烦，使得很多初学者望而却步。目前主流的 IDE 有 Eclipse 以及 Android Studio，本文将以 Android Studio 作为集成开发环境，对 2048 游戏的开发过程进行详细的介绍。
@@ -516,10 +516,10 @@ Android Studio
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第八节、整体完善</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</link>
+      <link>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</link>
       <pubDate>Sat, 02 May 2015 11:12:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</guid>
+      <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/</guid>
       <description>这一节我们将介绍结束游戏的方法，以及一些整体方面的完善。首先考虑失败的情况，它会将所有的地雷都显示出来。我们新建一个 GameLost 函数：
 private void GameLost() { for(int i = 1; i&amp;lt;= nWidth; i++) { for(int j = 1; j&amp;lt;= nHeight; j++) { if(pMine[i, j] == -1 &amp;amp;&amp;amp; (pState[i, j] == 0 || pState[i, j] == 3)) // 未点开或者标记为问号的雷 { pState[i, j] = 1; // 点开该地雷 } } } } 在游戏结束的地方调用 GameLost 函数，因为我们上一节中讲述的游戏结束都是失败的情况：
 if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { bool bFlag = OpenMine(MouseFocus.X, MouseFocus.Y); if(!</description>
@@ -527,10 +527,10 @@ if(nFlagCnt == nSysCnt || nFlagCnt + nDoubtCnt == nSysCnt) // 打开九宫格 { 
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第七节、内部实现（续）</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</link>
+      <link>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</link>
       <pubDate>Fri, 01 May 2015 22:23:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</guid>
+      <guid>https://kwang.life/2015/05/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/</guid>
       <description>这一节我们主要讲解扫雷时鼠标单击的事件。我们首先介绍左键单击的事件，分为两种情况——遇到地雷，游戏结束；不是地雷，自动点开相邻的非地雷区域，并且显示对应地雷区域周围地雷的数目。
 我们首先需要为 Form_Main 添加 MouseDown 以及 MouseUp 事件，分别用来监测鼠标按下以及弹起的事件信息。再定义两个全局变量，用来标识鼠标左键以及右键是否被按下，代码如下：
 bool bMouseLeft; // 鼠标左键是否被按下 bool bMouseRight; // 鼠标右键是否被按下 在 MouseDown 事件中输入下面的代码：
@@ -540,10 +540,10 @@ private void Form_Main_MouseUp(object sender, MouseEventArgs e) { if(bMouseLeft 
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第六节、内部实现</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Thu, 30 Apr 2015 21:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/</guid>
       <description>在进行内部实现之前，我们先来考虑一下扫雷的内部逻辑。首先，我们需要保存每个点上是否有地雷，如果没有地雷，那么要显示与它紧邻的八个格子中一共有多少的地雷。还需保存每个雷区的状态（点开，未点开，红旗，问号）。我们考虑定义两个常量，表示地雷的最大范围：
 const int MAX_WIDTH = 64; // 最大宽度 const int MAX_HEIGHT = 32; // 最大高度 接下来定义两个数组，用来保存上述两种数据。对于第一类数据，我们使用 -1 表示该区域有地雷，使用数字表示与它紧邻的八个格子中一共有多少地雷；对于第二类数据，我们使用 0 表示未点开，1 表示点开，2 表示红旗，3 表示问号。如下图所示：
 int[,] pMine = new int[MAX_WIDTH, MAX_HEIGHT]; // 第一类数据 int[,] pState = new int[MAX_WIDTH, MAX_HEIGHT]; // 第二类数据 接下来我们需要初始化游戏数据，双击 New Game 菜单，输入游戏的初始化代码：
@@ -552,10 +552,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</link>
       <pubDate>Fri, 24 Apr 2015 16:09:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/</guid>
       <description>上一节中，我们还剩下 Setting 和 Rank 两个菜单项目没有设置事件，是因为它们都涉及到了弹出一个新的窗口。这一节，我们将主要介绍创建窗口的方法，以及窗口之间的数据通信。
 首先，我们新建一个窗口，在右侧找到解决方案资源管理器，右击 Minesweeper 项目名，选择添加，如图所示：
 菜单示意图
@@ -573,10 +573,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Wed, 22 Apr 2015 16:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
       <description>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。
 在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：
 /// &amp;lt;summary&amp;gt; /// 选择对应的游戏等级 /// &amp;lt;/summary&amp;gt; private void SelectLevel() { if (nWidth == 10 &amp;amp;&amp;amp; nHeight == 10 &amp;amp;&amp;amp; nMineCnt == 10) { beginnerBToolStripMenuItem.Checked = true; intermediateIToolStripMenuItem.Checked = false; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 16 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 40) { beginnerBToolStripMenuItem.Checked = false; intermediateIToolStripMenuItem.Checked = true; expertEToolStripMenuItem.Checked = false; settingSToolStripMenuItem.Checked = false; } else if (nWidth == 30 &amp;amp;&amp;amp; nHeight == 16 &amp;amp;&amp;amp; nMineCnt == 99) { beginnerBToolStripMenuItem.</description>
@@ -584,10 +584,10 @@ private void newGameNToolStripMenuItem_Click(object sender, EventArgs e) { // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</link>
       <pubDate>Tue, 21 Apr 2015 15:42:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/</guid>
       <description>这一节我们主要涉及界面中雷区的绘制方法。
 首先来考虑几个问题。为了保存整个雷区的信息，我们需要哪些数据。显然，除了要保存雷区的宽度和高度（分别定义为宽和高方向上方块的个数）外，还需要保存地雷的数目。这样我们需要用到三个变量 nWidth, nHeight, nMineCnt 分别保存雷区的宽度、雷区的高度以及地雷的数目。
 右击窗口，选择查看代码，也可以使用快捷键 F7，如下图所示：
@@ -601,10 +601,10 @@ namespace Minesweeper { public partial class Form_Main : Form { int nWidth; // �
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第二节、界面设计</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Mon, 20 Apr 2015 19:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%8C%E8%8A%82%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</guid>
       <description>这一节我们主要介绍关于扫雷游戏界面的设计，此处我们借鉴经典扫雷界面的设计方法，首先需要创建一个菜单栏。具体方法在左边找到工具箱窗口，展开其中的菜单和工具栏，找到 MenuStrip 选项，如图所示：
 添加 MenuStrip
 只需要双击该条目就可以在窗口中新建一个菜单栏，如图所示：
@@ -627,10 +627,10 @@ TableLayoutPanel 行列样式
     
     <item>
       <title>扫雷游戏制作过程（CSharp 描述）：第一节、创建项目</title>
-      <link>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 20 Apr 2015 17:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kwang.life/2015/04/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%80%E8%8A%82%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE/</guid>
       <description>这一系列的文章主要受许宏旭的启发而来。他目前在连载更新一篇使用 C# 制作五子棋的教程。选择这一项目的主要原因是 Windows 8.1 系统上的扫雷需要前往应用商店下载，显得有些麻烦。因此想自己制作一个。主要采用 C# 语言进行实现。主要功能与原来的扫雷游戏基本相同，进行修改的地方主要是扫雷区的界面。如有不恰当的地方，还望指正。
 该项目现已根据文章进度托管在GitHub上，读者可以自行查看。
 玩过扫雷的读者应该知道，扫雷需要用到三种图片素材——地雷、红旗、问号。当右击一个方块的时候，会插上红旗，表示游戏者认为该方块内有地雷；再次右击该方块，会变成问号，表示不确定该方块内是否有地雷；第三次右击该方块，问号消失，恢复到初始的状态。我们前往Iconfinder寻找合适的图标，并且通过 Photoshop 或者 Illustrator 的处理得到我们所需要的图标。文章中含有下载地址的图标资源可以使用右键—目标另存为进行下载。
@@ -657,10 +657,10 @@ Visual Studio 2013
     
     <item>
       <title>Dynamic Programming - HDU</title>
-      <link>https://kwang.life/posts/2015/dynamic-programming-hdu/</link>
+      <link>https://kwang.life/2015/03/dynamic-programming-hdu/</link>
       <pubDate>Sat, 14 Mar 2015 13:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/dynamic-programming-hdu/</guid>
+      <guid>https://kwang.life/2015/03/dynamic-programming-hdu/</guid>
       <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。
 原因：概率应该是相乘，而不是相加。
 后来看了题解想到了另外一种方法，使用逃脱概率来计算，用 $f[j]$ 表示偷走 $j$ 价值后逃脱的概率。易知，多次逃脱概率为每次逃脱概率相乘。这里不使用被逮捕的概率是因为被逮捕的情况比较复杂（例如偷第一件物品不被逮捕，偷第二件物品被逮捕，被逮捕的概率应该为头第一件物品不被逮捕的概率乘以偷第二件物品不被逮捕的概率。），而当我们转而考虑它的对立事件——逃脱时，问题就会变得容易了，因为逃脱的概率永远是相乘的。
@@ -673,20 +673,20 @@ Visual Studio 2013
     
     <item>
       <title>SGU 114 - Telecasting station</title>
-      <link>https://kwang.life/posts/2015/sgu-114-telecasting-station/</link>
+      <link>https://kwang.life/2015/03/sgu-114-telecasting-station/</link>
       <pubDate>Sat, 07 Mar 2015 19:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-114-telecasting-station/</guid>
+      <guid>https://kwang.life/2015/03/sgu-114-telecasting-station/</guid>
       <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal.
 Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;lt;15000$) – amount of cities in Berland.</description>
     </item>
     
     <item>
       <title>SGU 222 - Little Rooks</title>
-      <link>https://kwang.life/posts/2015/sgu-222-little-rooks/</link>
+      <link>https://kwang.life/2015/03/sgu-222-little-rooks/</link>
       <pubDate>Sat, 07 Mar 2015 14:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-222-little-rooks/</guid>
+      <guid>https://kwang.life/2015/03/sgu-222-little-rooks/</guid>
       <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks.
 A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other.
 Given two numbers $n$ and $k$, your job is to determine the number of ways one can put $k$ rooks on an $n\times n$ chessboard so that no two of them are in attacking positions.</description>
@@ -694,10 +694,10 @@ Given two numbers $n$ and $k$, your job is to determine the number of ways one c
     
     <item>
       <title>SGU 154 - Factorial</title>
-      <link>https://kwang.life/posts/2015/sgu-154-factorial/</link>
+      <link>https://kwang.life/2015/03/sgu-154-factorial/</link>
       <pubDate>Sat, 07 Mar 2015 13:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-154-factorial/</guid>
+      <guid>https://kwang.life/2015/03/sgu-154-factorial/</guid>
       <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail.
 Input One number $Q$ written in the input ($0\leq Q\leq 10^8$).
 Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise.
@@ -706,46 +706,46 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
     
     <item>
       <title>SGU 130 - Circle</title>
-      <link>https://kwang.life/posts/2015/sgu-130-circle/</link>
+      <link>https://kwang.life/2015/03/sgu-130-circle/</link>
       <pubDate>Sat, 07 Mar 2015 11:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-130-circle/</guid>
+      <guid>https://kwang.life/2015/03/sgu-130-circle/</guid>
       <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of parts $P$.</description>
     </item>
     
     <item>
       <title>SGU 276 - Andrew&#39;s Troubles</title>
-      <link>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</link>
+      <link>https://kwang.life/2015/03/sgu-276-andrews-troubles/</link>
       <pubDate>Sat, 07 Mar 2015 09:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</guid>
+      <guid>https://kwang.life/2015/03/sgu-276-andrews-troubles/</guid>
       <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he owes a cup of tea to other team members.</description>
     </item>
     
     <item>
       <title>SGU 126 - Boxes</title>
-      <link>https://kwang.life/posts/2015/sgu-126-boxes/</link>
+      <link>https://kwang.life/2015/03/sgu-126-boxes/</link>
       <pubDate>Sat, 07 Mar 2015 09:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-126-boxes/</guid>
+      <guid>https://kwang.life/2015/03/sgu-126-boxes/</guid>
       <description>Description There are two boxes. There are $A$ balls in the first box, and $B$ balls in the second box ($0 &amp;lt; A + B &amp;lt; 2147483648$). It is possible to move balls from one box to another. From one box into another one should move as many balls as the other box already contains. You have to determine, whether it is possible to move all balls into one box.</description>
     </item>
     
     <item>
       <title>SGU 118 - Digital Root</title>
-      <link>https://kwang.life/posts/2015/sgu-118-digital-root/</link>
+      <link>https://kwang.life/2015/02/sgu-118-digital-root/</link>
       <pubDate>Tue, 24 Feb 2015 15:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-118-digital-root/</guid>
+      <guid>https://kwang.life/2015/02/sgu-118-digital-root/</guid>
       <description>Description Let $f(n)$ be a sum of digits for positive integer $n$. If $f(n)$ is one-digit number then it is a digital root for $n$ and otherwise digital root of $n$ is equal to digital root of $f(n)$. For example, digital root of 987 is 6. Your task is to find digital root for expression $$ A_1\cdot A_2\cdots A_N + A_1\cdot A_2\cdots A_{N-1} + \cdots + A_1\cdot A_2 + A_1$$</description>
     </item>
     
     <item>
       <title>SGU 117 - Counting</title>
-      <link>https://kwang.life/posts/2015/sgu-117-counting/</link>
+      <link>https://kwang.life/2015/02/sgu-117-counting/</link>
       <pubDate>Tue, 24 Feb 2015 14:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-117-counting/</guid>
+      <guid>https://kwang.life/2015/02/sgu-117-counting/</guid>
       <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$.
 Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line.
 Output Write answer for given task.</description>
@@ -753,19 +753,19 @@ Output Write answer for given task.</description>
     
     <item>
       <title>SGU 104 - Little shop of flowers</title>
-      <link>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</link>
+      <link>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</link>
       <pubDate>Tue, 24 Feb 2015 13:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</guid>
       <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase $V$ is the rightmost vase.</description>
     </item>
     
     <item>
       <title>SGU 101 - Domino</title>
-      <link>https://kwang.life/posts/2015/sgu-101-domino/</link>
+      <link>https://kwang.life/2015/02/sgu-101-domino/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-101-domino/</guid>
+      <guid>https://kwang.life/2015/02/sgu-101-domino/</guid>
       <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.
 The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip;
 The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</description>
@@ -773,19 +773,19 @@ The principle in nearly all modern dominoes games is to match one end of a piece
     
     <item>
       <title>SGU 347 - Join the Strings</title>
-      <link>https://kwang.life/posts/2015/sgu-347-join-the-strings/</link>
+      <link>https://kwang.life/2015/02/sgu-347-join-the-strings/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-347-join-the-strings/</guid>
+      <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
       <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own.</description>
     </item>
     
     <item>
       <title>SGU 151 - Construct a triangle</title>
-      <link>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</link>
+      <link>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</link>
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</guid>
+      <guid>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</guid>
       <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle.
 Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits.
 Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates of $B$ to second line and coordinates of $C$ to third line.</description>
@@ -793,10 +793,10 @@ Output If solution exists, write three lines. Write coordinates of point $A$ to 
     
     <item>
       <title>SGU 180 - Inversions</title>
-      <link>https://kwang.life/posts/2015/sgu-180-inversions/</link>
+      <link>https://kwang.life/2015/02/sgu-180-inversions/</link>
       <pubDate>Tue, 17 Feb 2015 11:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-180-inversions/</guid>
+      <guid>https://kwang.life/2015/02/sgu-180-inversions/</guid>
       <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$.
 Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$.
 Output Write amount of such pairs.
@@ -805,10 +805,10 @@ Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可
     
     <item>
       <title>ACM-ICPC 寒假练习 07</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
       <pubDate>Tue, 17 Feb 2015 11:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
       <description>断断续续终于刷完了计算几何专题，感觉太麻烦，小错误不断，尤其是精度问题。还有输出问题，有时候 printf 比 cout 要方便。
 UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用三角函数推到公式。
 不妨设两点为 $A(x_1, y_1)$ 和 $C(x_2, y_2)$，则中点为 $G\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$，对角线长度为 $L = \sqrt{(x_1 - x_2)^2 - (y_1 - y_2)^2}$。
@@ -818,10 +818,10 @@ UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用�
     
     <item>
       <title>ACM-ICPC 寒假练习 06</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
       <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
       <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。
 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制转换的公式，然后根据公式计算即可。
 #include &amp;lt;iostream&amp;gt; using namespace std; int Pow(int x, int y); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(x == &amp;#34;0&amp;#34;) { break; } int ans = 0; for(int i = 0; i &amp;lt; x.length(); i++) { ans += (x[i] - &amp;#39;0&amp;#39;) * (Pow(2, x.length() - i) - 1); } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } int Pow(int x, int y) { int ret = 1; for(int i = 1; i &amp;lt;= y; i++) { ret *= x; } return ret; } UVaOJ 10110 这是一道典型的数论题，最后亮着的灯，它的开关一定被拨动了奇数次。所以，我们只要看它的因数个数的奇偶性。</description>
@@ -829,10 +829,10 @@ UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制�
     
     <item>
       <title>ACM-ICPC 寒假练习 05</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
       <pubDate>Thu, 12 Feb 2015 14:24:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
       <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。
 UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 double 解决，当时没有 AC。
 现在重新做了一遍，需要注意的是最后输出的结果一定要转换成int，否则会 WA。
@@ -843,10 +843,10 @@ UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 
     
     <item>
       <title>ACM-ICPC 寒假练习 04</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
       <pubDate>Wed, 11 Feb 2015 17:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
       <description>断断续续的把排序和检索专题刷完了，感觉英语还是不够，题目太长以后看起来就会很吃力。
 还有一点感触就是 STL 的广泛应用。学到了很多新东西。
 当然，不能忍受的就是答案最后多输出一行空行，UVaOJ 会判 WA。
@@ -856,10 +856,10 @@ UVaOJ 340 简单模拟题，一开始没有看懂题目。百度以后才明白�
     
     <item>
       <title>ACM-ICPC 寒假练习 03</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
       <pubDate>Sun, 08 Feb 2015 14:02:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
       <description>今天刷了高精度专题，本来准备写一个高精度类，然后直接套模版，后来发现根据每题的要求分开写高精度反而效率高。
 主要涉及了高精度加法、乘法、除法、取余（其中后两项为高精度和低精度进行运算）。
 终于打过一遍高精度除以低精度了，高精度专题也算圆满了。
@@ -869,10 +869,10 @@ UVaOJ 424 高精度加法，水题。
     
     <item>
       <title>ACM-ICPC 寒假练习 02</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
       <pubDate>Sat, 07 Feb 2015 19:29:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
       <description>今天刷了小白书的字符串专题，各种 WA 以及 PE。UVaOJ 中有时候会把 PE 判成 WA，这样会导致很难查错。
 UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没有列出了的表示没有镜像字母，在这上 WA 了一次。
 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; using namespace std; const char pAlphabet[] = { &amp;#39;A&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;I&amp;#39;, &amp;#39;L&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;J&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;O&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;T&amp;#39;, &amp;#39;U&amp;#39;, &amp;#39;V&amp;#39;, &amp;#39;W&amp;#39;, &amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;S&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;Z&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;*&amp;#39; }; bool Palindrome(string x); bool Mirrored(string x); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(!</description>
@@ -880,10 +880,10 @@ UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没
     
     <item>
       <title>REFLECTIONS</title>
-      <link>https://kwang.life/posts/2015/reflections/</link>
+      <link>https://kwang.life/2015/02/reflections/</link>
       <pubDate>Fri, 06 Feb 2015 20:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/reflections/</guid>
+      <guid>https://kwang.life/2015/02/reflections/</guid>
       <description>刚刚结束了 ACM 的集训，仔细反思了第一学期的大学学习生活。
 首先要说的是上课，在一开始的时候，我每次都会提前很久去占座。但是这样的情况并没有持续很久，有一段时间由于感觉老师讲得太慢，经常上课开小差。但是事后自习想了想，还是决定回到开学时的状态。但是这时候我却惊讶的发现，并不需要占座了，就算是踩着上课铃去上课，也依旧可以坐到第一排（线性代数除外）。解决了态度问题，接下来还是有一个不可回避的问题，有时候觉得讲得太慢，不想听。所以就带了自己的书，讲到不懂的，就认真听课，其余时间就好好看自己的书，学习别的东西。
 接下来是平时的自习，作业了。说来惭愧，一个学期都没有去过图书馆自习，一般都是晚自习做完作业，如果做不完就回宿舍做。因为是上床下桌，有一个隔板，所以我可以不受干扰的自己看书。在大一上学期，我自学了《数学文化》这门课程，并且进一步的了解了微分方程，以及线性代数。当然，还有很多没有做完的事情，比如《中国古代哲学史》没有如期看完，做志愿者时问学者要的《唐代文学研究》看了一篇《唐宋科举制度对诗词体裁的影响》就没有坚持看下去。
@@ -897,10 +897,10 @@ UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没
     
     <item>
       <title>ACM-ICPC 寒假练习 01</title>
-      <link>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
       <pubDate>Fri, 06 Feb 2015 17:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
       <description>这一系列的练习主要在 Virtual Judge 上进行，题目为小白书上的题目推荐。
 UVa 10055 求两方军队人数的差值，直接相减即可。
 不过要注意两个数的大小关系。
@@ -910,19 +910,19 @@ UVa 10055 求两方军队人数的差值，直接相减即可。
     
     <item>
       <title>SGU 127 - Telephone directory</title>
-      <link>https://kwang.life/posts/2015/sgu-127-telephone-directory/</link>
+      <link>https://kwang.life/2015/02/sgu-127-telephone-directory/</link>
       <pubDate>Thu, 05 Feb 2015 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-127-telephone-directory/</guid>
+      <guid>https://kwang.life/2015/02/sgu-127-telephone-directory/</guid>
       <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with digits 0 and 8.</description>
     </item>
     
     <item>
       <title>SGU 112 - a^b - b^a</title>
-      <link>https://kwang.life/posts/2015/sgu-112-ab-ba/</link>
+      <link>https://kwang.life/2015/02/sgu-112-ab-ba/</link>
       <pubDate>Thu, 05 Feb 2015 14:52:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-112-ab-ba/</guid>
+      <guid>https://kwang.life/2015/02/sgu-112-ab-ba/</guid>
       <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$.
 Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$).
 Output Write answer to output.
@@ -932,20 +932,20 @@ Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; usi
     
     <item>
       <title>SGU 113 - Nearly prime numbers</title>
-      <link>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</link>
+      <link>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</link>
       <pubDate>Thu, 05 Feb 2015 14:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</guid>
       <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise.
 Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\leq N\leq 10$).</description>
     </item>
     
     <item>
       <title>SGU 107 - 987654321 problem</title>
-      <link>https://kwang.life/posts/2015/sgu-107-987654321-problem/</link>
+      <link>https://kwang.life/2015/02/sgu-107-987654321-problem/</link>
       <pubDate>Thu, 05 Feb 2015 14:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-107-987654321-problem/</guid>
+      <guid>https://kwang.life/2015/02/sgu-107-987654321-problem/</guid>
       <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321.
 Input Input contains integer number $N$ ($1\leq N\leq 10^6$).
 Output Write answer in output file.
@@ -956,28 +956,28 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
     
     <item>
       <title>SGU 184 - Patties</title>
-      <link>https://kwang.life/posts/2015/sgu-184-patties/</link>
+      <link>https://kwang.life/2015/01/sgu-184-patties/</link>
       <pubDate>Fri, 30 Jan 2015 17:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-184-patties/</guid>
+      <guid>https://kwang.life/2015/01/sgu-184-patties/</guid>
       <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage. He has plenty of other ingredients.</description>
     </item>
     
     <item>
       <title>SGU 135 - Drawing Lines</title>
-      <link>https://kwang.life/posts/2015/sgu-135-drawing-lines/</link>
+      <link>https://kwang.life/2015/01/sgu-135-drawing-lines/</link>
       <pubDate>Thu, 29 Jan 2015 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-135-drawing-lines/</guid>
+      <guid>https://kwang.life/2015/01/sgu-135-drawing-lines/</guid>
       <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if the lines are identical) zones.</description>
     </item>
     
     <item>
       <title>SGU 115 - Calendar</title>
-      <link>https://kwang.life/posts/2015/sgu-115-calendar/</link>
+      <link>https://kwang.life/2015/01/sgu-115-calendar/</link>
       <pubDate>Thu, 29 Jan 2015 21:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-115-calendar/</guid>
+      <guid>https://kwang.life/2015/01/sgu-115-calendar/</guid>
       <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001.
 Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100.
 Output Write current number of the day of the week for given date (Monday – number 1, … , Sunday – number 7) or phrase &amp;ldquo;Impossible&amp;rdquo; if such date does not exist.</description>
@@ -985,10 +985,10 @@ Output Write current number of the day of the week for given date (Monday – nu
     
     <item>
       <title>SGU 123 - The Sum</title>
-      <link>https://kwang.life/posts/2015/sgu-123-the-sum/</link>
+      <link>https://kwang.life/2015/01/sgu-123-the-sum/</link>
       <pubDate>Thu, 29 Jan 2015 21:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-123-the-sum/</guid>
+      <guid>https://kwang.life/2015/01/sgu-123-the-sum/</guid>
       <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers.
 Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$).
 Output First line should contain number $S$.
@@ -999,10 +999,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 
     
     <item>
       <title>SGU 105 - Div 3</title>
-      <link>https://kwang.life/posts/2015/sgu-105-div-3/</link>
+      <link>https://kwang.life/2015/01/sgu-105-div-3/</link>
       <pubDate>Thu, 29 Jan 2015 20:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-105-div-3/</guid>
+      <guid>https://kwang.life/2015/01/sgu-105-div-3/</guid>
       <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3.
 Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$).
 Output Write answer in output file.
@@ -1012,10 +1012,10 @@ Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于�
     
     <item>
       <title>SGU 102 - Coprimes</title>
-      <link>https://kwang.life/posts/2015/sgu-102-coprimes/</link>
+      <link>https://kwang.life/2015/01/sgu-102-coprimes/</link>
       <pubDate>Thu, 29 Jan 2015 20:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-102-coprimes/</guid>
+      <guid>https://kwang.life/2015/01/sgu-102-coprimes/</guid>
       <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$).
 Input Input file contains integer $N$.
 Output Write answer in output file.
@@ -1024,10 +1024,10 @@ Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varp
     
     <item>
       <title>SGU 100 - A &#43; B</title>
-      <link>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</link>
+      <link>https://kwang.life/2015/01/sgu-100-a--b/</link>
       <pubDate>Thu, 29 Jan 2015 20:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</guid>
+      <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
       <description>[100. A+B]
 Description Read integers $A$ and $B$ from input file and write their sum in output file.
 Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$).
@@ -1038,10 +1038,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>甲午志（2014 年度总结）</title>
-      <link>https://kwang.life/posts/2014/%E7%94%B2%E5%8D%88%E5%BF%972014-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2014/12/%E7%94%B2%E5%8D%88%E5%BF%972014-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Wed, 31 Dec 2014 20:38:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E7%94%B2%E5%8D%88%E5%BF%972014-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2014/12/%E7%94%B2%E5%8D%88%E5%BF%972014-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>2015
 时光匆匆流去，转眼又已迎来新的一年。按照惯例，应该写篇文章总结一下，突然发现要说的事情太多了。各位看官且莫着急，听我慢慢道来。
 总的来说，整个 2014 感觉过的很漫长，这似乎和某个研究结果相符：每天遇到的事件越多，觉得一天的时间越长。我想这大概是因为这一年发生过太多事情的缘故吧。面对着早已习惯的分别，也已变得不太在意。要说总结，我也不知道该怎么总结。对我来说，这一年只有两个阶段：为了高考奋斗、进入大学学习。当然，除此之外也干了很多有意义的事。且从头说起罢。
@@ -1064,10 +1064,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>期中随记</title>
-      <link>https://kwang.life/posts/2014/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</link>
+      <link>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</link>
       <pubDate>Wed, 10 Dec 2014 23:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</guid>
+      <guid>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</guid>
       <description>其实期中考试上上周就考完了，只是这几天才出分数。客观的来说，不算低了，却觉得不够。就好像今天刚刚结束的第二场ACM校选赛，第三名，却觉得为什么不是第一名。
 很久之前就有人回复我说，为什么还不更新博客。自从开学以来，忙东忙西，一直没有时间，因为我自己也不知道大学究竟是什么，回想起之前写过的一篇《我为什么要上大学》，总觉得讲不到点子上，有很多想法没有表达出来，看来很有可能会诞生一篇续集吧。
 几天前，Godaddy 给我发了一封电子邮件，说我的域名要到期了，突然意识到这个小小的博客已经存在了将近两年了。在这两年间，我也如当初创立博客的设想一样，记录着自己的生活，学习，也算是一笔宝贵的精神财富吧。
@@ -1081,10 +1081,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>浅谈等价无穷小量代换原理</title>
-      <link>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link>
+      <link>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
       <description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的研究了这个问题，整理如下：
 等价无穷小的定义及常用的等价无穷小 无穷小量是指某变化过程中极限为 $ 0 $ 的变量。而等价无穷小量是指在某变化过程中比值极限为 $ 1 $ 的两个无穷小量。
 常用的等价无穷小有： $$ \sin{x}\sim \tan{x}\sim\arctan{x}\sim\arcsin{x}\sim \ln{\left(1+x \right )}\sim x\left(x\rightarrow 0\right ) $$ $$ 1-\cos{x}\sim \frac{x^{2}}{2},\sqrt[n]{1+x}-1\sim \frac{x}{n} \left(x\rightarrow 0\right ) $$ 等价无穷小量在求极限问题中非常重要。恰当的使用等价无穷小量代换常常使极限问题大大简化。但是有时却不能使用等价无穷小量代换。
@@ -1097,10 +1097,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>我为什么要读大学</title>
-      <link>https://kwang.life/posts/2014/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AF%BB%E5%A4%A7%E5%AD%A6/</link>
+      <link>https://kwang.life/2014/10/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AF%BB%E5%A4%A7%E5%AD%A6/</link>
       <pubDate>Sat, 18 Oct 2014 23:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AF%BB%E5%A4%A7%E5%AD%A6/</guid>
+      <guid>https://kwang.life/2014/10/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AF%BB%E5%A4%A7%E5%AD%A6/</guid>
       <description>自从上了大学以后，时常想起浅栖的一篇文章《为什么要读大学》。我也一直在思考，我为什么要读大学，前几天看了朱秀林校长的演讲，他也问了同样的问题，为什么要读大学，这是一个基本的问题，想明白了这个问题，可以解决很多问题。利用一节高数课，我仔细的思考了这个问题，并给出了自己的答案——为了成为更完整的人。
 还记得高中里，常常听别人说起，现在辛苦一点，到了大学里就会轻松很多。到了大学里才发现，其实大学比高三辛苦多了，说轻松只是相对于那些高中不认真的人来说，想要达到同一高度，是轻松一些。但是如果对自己有更高的要求，那也不见得会和「轻松」这两个字有什么关系。
 「想清楚自己想要什么」是一个先决问题，它会影响我们后续的一连串选择，人生就是由不同的选择构成的。要时刻记得自己想要什么，这样才能在大学这个充满诱惑的地方守住自己的方寸之地。
@@ -1127,10 +1127,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>中秋望月感怀（2014）</title>
-      <link>https://kwang.life/posts/2014/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802014/</link>
+      <link>https://kwang.life/2014/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802014/</link>
       <pubDate>Mon, 08 Sep 2014 22:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802014/</guid>
+      <guid>https://kwang.life/2014/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802014/</guid>
       <description>月
 水调歌头
 丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
@@ -1147,10 +1147,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>夏夜寄思</title>
-      <link>https://kwang.life/posts/2014/%E5%A4%8F%E5%A4%9C%E5%AF%84%E6%80%9D/</link>
+      <link>https://kwang.life/2014/08/%E5%A4%8F%E5%A4%9C%E5%AF%84%E6%80%9D/</link>
       <pubDate>Fri, 22 Aug 2014 00:15:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%A4%8F%E5%A4%9C%E5%AF%84%E6%80%9D/</guid>
+      <guid>https://kwang.life/2014/08/%E5%A4%8F%E5%A4%9C%E5%AF%84%E6%80%9D/</guid>
       <description>夏虫也为我沉默，
 沉默是今晚的康桥。
 窗外的夏虫唧唧喳喳的叫着，在 iPad 上打字，以前感觉很慢，去突然间感觉快了起来。
@@ -1167,10 +1167,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>P2P.edu - 个人总结</title>
-      <link>https://kwang.life/posts/2014/p2p.edu-%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2014/08/p2p.edu-%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 18 Aug 2014 21:53:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/p2p.edu-%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2014/08/p2p.edu-%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</guid>
       <description>P2P.edu 是我们学生自发组织、创办，自主管理的一个补课机构，地点租在南门路与南环路的交界处的「圆梦教育」。总的来说，没有满六位数的营业额，或许不能算作是一次非常成功的创业，但是却是一次非常成功的尝试。
 从 6 月底持续到现在，很多课程都已经进入尾声，我的课程已正式结束了，写下此个人总结，算是打点计时器，记录一下这个事件吧。
 给我的感觉，在创办前期，策划、广告宣传、洽谈生意等，在此期间学到了很多。从设计报价单、学员登记表、签到表，到传单的制作、发放，再到与家长及学生的交流。整个过程，使得我对于自主创业有了一个非常基本的概念和模型，但是这些经历还远远不够。
@@ -1199,10 +1199,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>忆昨日·NOIP - 第四回 小试身手</title>
-      <link>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E5%B0%8F%E8%AF%95%E8%BA%AB%E6%89%8B/</link>
+      <link>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E5%B0%8F%E8%AF%95%E8%BA%AB%E6%89%8B/</link>
       <pubDate>Mon, 28 Jul 2014 20:34:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E5%B0%8F%E8%AF%95%E8%BA%AB%E6%89%8B/</guid>
+      <guid>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E5%B0%8F%E8%AF%95%E8%BA%AB%E6%89%8B/</guid>
       <description>上回说到张兴给了我一本初赛的辅导书，让我备战全国初赛。
 我记得第一天运动会，我下午去机房，听到高二的说，他们准备明天一天都在机房自习，当时我也很想这样，但是当时的班主任却绝不会同意，所以也就罢了这个念头。当天就准备简单的做做题目。也是那时候第一次接触「Tyvj」——一个在线评测网站（其他竞赛做题目可以刷书，我们做题目必须在电脑上。）。
 第一道题目是高二的人给我的一道题目，现在看来只是一道简单的前序和（其实当时的题目数据也用不到这个算法），但是我却不会做。他们认为我什么都不会，于是说，做「A+B Problem」吧，当时我不知道是什么意思，看了题目才知道。（感觉是一股嘲笑味。）当下自觉不解——什么我平时写了那么多程序，却连这种题目都不会做。后来才明白，我平日所涉猎的和当时所做的题目完全是两回事。（但当时的我却未能领会到这一点。）两天的集训（自习）很快就结束了，感觉自己也学到了一点东西，比如问了高三某大神关于图论的一些问题，他非常耐心的给我讲解了图论的基本概念。虽然这样下来，我还是不会做题目，但是理解起来便简单多了。
@@ -1220,10 +1220,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>忆昨日·NOIP - 第三回 初来乍到</title>
-      <link>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%88%9D%E6%9D%A5%E4%B9%8D%E5%88%B0/</link>
+      <link>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%88%9D%E6%9D%A5%E4%B9%8D%E5%88%B0/</link>
       <pubDate>Tue, 22 Jul 2014 21:47:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%88%9D%E6%9D%A5%E4%B9%8D%E5%88%B0/</guid>
+      <guid>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%88%9D%E6%9D%A5%E4%B9%8D%E5%88%B0/</guid>
       <description>上回说到，张兴让我以后每个星期六下午都到他那边去上课。
 刚开始，并不要求我周日下午提前到校再去学习，一来为了不让他人察觉（张兴为人比较低调），二来他也有些忙，抽不出太多时间。
 我记得第一节课只有我一个人，当时张老师拿了一本破旧的算法书（应该是他以前用过的），让我一个人根据书上的解说，将「快速排序」（竞赛的入门算法）写出来并成功运行。当天下午我就一直在研究这个，差不过用了一个多小时，才把基本框架写了出来。但是运行后的结果却错误百出。静态查错一直没什么效果。
@@ -1243,10 +1243,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>忆昨日·NOIP - 第二回 再入信竞</title>
-      <link>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E5%86%8D%E5%85%A5%E4%BF%A1%E7%AB%9E/</link>
+      <link>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E5%86%8D%E5%85%A5%E4%BF%A1%E7%AB%9E/</link>
       <pubDate>Mon, 21 Jul 2014 22:15:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E5%86%8D%E5%85%A5%E4%BF%A1%E7%AB%9E/</guid>
+      <guid>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E5%86%8D%E5%85%A5%E4%BF%A1%E7%AB%9E/</guid>
       <description>上回说到，我在初中的时候参加过一次普及组的初赛，后来由于种种原因退出了，开始了自己的自学之路。
 到了高中，此时的我已接触了多门编程语言、脚本语言。无意间听说高中还有信息学奥林匹克竞赛，非常欣喜，盼望着能够参加，也想和众位高手一较高下，看看自己多年的自学是否有成效。于是一直深信不疑学校中有许多深藏不露的高手，因此一直非常的低调。直到有一天，得他人引荐，认识了信息组的负责人，也就是后来我的辅导老师，也算是一个朋友——张兴老师。
 第一次交谈是在电话中，他粗略的问了一下我的情况，便说，「今天下午一点半到我办公室来一下，信息组三楼，网管室。」我听了一怔，「网管室」，听上去非常的厉害，想必那位张兴老师也不是泛泛之辈。当下欣喜，难以言表。于是匆匆准备，提前十分钟到了「网管室」。
@@ -1264,10 +1264,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>忆昨日·NOIP - 第一回 初入信竞</title>
-      <link>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%80%E5%9B%9E-%E5%88%9D%E5%85%A5%E4%BF%A1%E7%AB%9E/</link>
+      <link>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%80%E5%9B%9E-%E5%88%9D%E5%85%A5%E4%BF%A1%E7%AB%9E/</link>
       <pubDate>Sun, 20 Jul 2014 22:39:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%80%E5%9B%9E-%E5%88%9D%E5%85%A5%E4%BF%A1%E7%AB%9E/</guid>
+      <guid>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E4%B8%80%E5%9B%9E-%E5%88%9D%E5%85%A5%E4%BF%A1%E7%AB%9E/</guid>
       <description>时过期年，再次回首起 NOIP 之路，良多感慨。现下忙里偷闲，不妨记录下来。
 说起信竞（信息学奥林匹克竞赛），第一次接触是在初一的时候。依稀记得，那是初一的一个中午，王学良拿着一张纸（还是一本本子）走进教室，问道：「你们班谁参加过计算机方面的比赛？」当年的我少不更事，非常得意的举起了手。然后问了姓名，让我某天中午去机房开会。
 说来惭愧，当时真是自不量力。小学曾经参加过两次电脑打字比赛，居然恬不知耻的举手了。因此才有了这些事情。
@@ -1291,10 +1291,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int
     
     <item>
       <title>Codeforces 1B - Spreadsheet</title>
-      <link>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</link>
+      <link>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</link>
       <pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</guid>
       <description>1B Spreadsheet
 Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;).
 Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed.
@@ -1303,10 +1303,10 @@ if(C % 26 == 0) { strTmp = &#39;Z&#39; + strTmp; C /= 26; C--; continue; }</desc
     
     <item>
       <title>Codeforces 1A - Theatre Square</title>
-      <link>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</link>
+      <link>https://kwang.life/2014/07/codeforces-1a-theatre-square/</link>
       <pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1a-theatre-square/</guid>
       <description>1A Theatre Square
 Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer.
 Notice: Pay attention to the data range. Use unsigned long long.
@@ -1315,10 +1315,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>没有如果</title>
-      <link>https://kwang.life/posts/2014/%E6%B2%A1%E6%9C%89%E5%A6%82%E6%9E%9C/</link>
+      <link>https://kwang.life/2014/06/%E6%B2%A1%E6%9C%89%E5%A6%82%E6%9E%9C/</link>
       <pubDate>Wed, 25 Jun 2014 21:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%B2%A1%E6%9C%89%E5%A6%82%E6%9E%9C/</guid>
+      <guid>https://kwang.life/2014/06/%E6%B2%A1%E6%9C%89%E5%A6%82%E6%9E%9C/</guid>
       <description>没想到高考就这么结束了，分数就这样出来了。
 还没有缓过来，无法接受，横来的失败，令我不知所措。有句话可以比较准确的形容，失去了信仰。
 成绩刚出来，也只是觉得命中注定。中考如斯，高考如斯。但过了一阵子，静下来回忆一下之前的来路，不禁唏嘘。就这样结束了，就以这样的结果结束了？
@@ -1333,10 +1333,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>他</title>
-      <link>https://kwang.life/posts/2014/%E4%BB%96/</link>
+      <link>https://kwang.life/2014/04/%E4%BB%96/</link>
       <pubDate>Sat, 05 Apr 2014 21:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E4%BB%96/</guid>
+      <guid>https://kwang.life/2014/04/%E4%BB%96/</guid>
       <description>注：此为一模作文的再创作，之所以取这个题目，是因为当时考试时取的题目实在不堪看。至于将其归于「痴言」分类，大抵可以用曹雪芹的「都云作者痴，谁解其中味。」来解释吧。既然谓之「痴言」，自然是「假语村言」，看官们大可一笑罢之。正文如下：
 他躺在宿舍的床上，皎洁的月光安静的洒在地上。他的舍友早已入睡，只是楼上宿舍还时不时传来些许笑声，他知道他们定是在开卧谈会。
 这倒也无妨，反正他也睡不着，最近一系列的事情搅得他心绪不宁。刚刚从竞赛的前线败下阵来，回到教室，面对着成堆的作业。本来微弱的保送机会也早已化作了泡影。其实对于参加这次竞赛，他内心是极其矛盾的，本可以去参加数学决赛，说不定还可以弄个省一。不过转念一想，就算有了省一，这又都是他所想要的吗？答案自然是否定的。
@@ -1359,10 +1359,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>杂记（20140209）</title>
-      <link>https://kwang.life/posts/2014/%E6%9D%82%E8%AE%B020140209/</link>
+      <link>https://kwang.life/2014/02/%E6%9D%82%E8%AE%B020140209/</link>
       <pubDate>Sun, 09 Feb 2014 21:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%9D%82%E8%AE%B020140209/</guid>
+      <guid>https://kwang.life/2014/02/%E6%9D%82%E8%AE%B020140209/</guid>
       <description>最近将自己博客里的 HTML 富文本编辑器换成了 Markdown 编辑器，这样可以更加专注于写文章，而不用去关注排版。它比 Word 轻巧，又不如 Latex 般繁复，用来写博客是再适合不过了。
 还记得在放假的时候写的文章中提到希望可以在寒假里再赚一些钱，前几天我们团队（据说已经注册了公司）的队长找到我，让我参与开发一个项目。这个项目据他说是国际项目，分别发布在 Windows、Linux 以及 Mac 三个平台上。他希望我协助开发 Linux 平台，并称会将日后 Linux 平台盈利额的 30% 作为报酬，这是一笔非常可观的收入，要求五月份完工，虽然我非常的欣喜，毕竟这不仅是赚钱的机会，更是对自我能力的提升，但是最后考虑到高考还是没有接。他说我可以只开发 UI，这样可以获得盈利额 12% 作为报酬。思前想后，最终我还是没有接下这个活。
 不知不觉已经正月初十，马上就要开学了，下个学期注定是个不同寻常的学期。当然，我相信我们的 OIer 精神一定可以得到更加淋漓尽致的诠释。就在过年的时候，看到我们团队中一个高三学生写的一篇日志，内容是写给自己的一封信，本想摘录一部分，但是无奈他文笔实在是好，所以索性一并摘录过来（有删改，版权所有：Tjz）
@@ -1388,10 +1388,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>对于生活的一些反思</title>
-      <link>https://kwang.life/posts/2014/%E5%AF%B9%E4%BA%8E%E7%94%9F%E6%B4%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%8D%E6%80%9D/</link>
+      <link>https://kwang.life/2014/01/%E5%AF%B9%E4%BA%8E%E7%94%9F%E6%B4%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%8D%E6%80%9D/</link>
       <pubDate>Thu, 30 Jan 2014 20:36:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E5%AF%B9%E4%BA%8E%E7%94%9F%E6%B4%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%8D%E6%80%9D/</guid>
+      <guid>https://kwang.life/2014/01/%E5%AF%B9%E4%BA%8E%E7%94%9F%E6%B4%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%8D%E6%80%9D/</guid>
       <description>本来很早以前就想要写这篇文章了，期间一直在反复思索，于是便一直拖到现在。本文主要是对于生活事件以及个人经历的一些反思，观点可能略有偏激，内容略有冗长，请有选择的阅读。
 这篇文章前几天就起笔了，竟一直拖到今天，不论如何，决不能拖到明年。
 第一个问题是关于为什么要写博客以及博客该写些什么的问题。
@@ -1417,10 +1417,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>杂记（20140121）</title>
-      <link>https://kwang.life/posts/2014/%E6%9D%82%E8%AE%B020140121/</link>
+      <link>https://kwang.life/2014/01/%E6%9D%82%E8%AE%B020140121/</link>
       <pubDate>Tue, 21 Jan 2014 20:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%9D%82%E8%AE%B020140121/</guid>
+      <guid>https://kwang.life/2014/01/%E6%9D%82%E8%AE%B020140121/</guid>
       <description>很早以前就想写篇日志了。一开始是用来抒发竞赛生涯结束的感慨，后来变成了对复赛成绩的凭吊，现在成了一篇随笔。所以题目叫做「杂」。
 期末考试终于结束了，成绩还没出来，至于总结也很难说。且按下不表。
 考前网购了一本书《图解：梅花易数》，想起自己之前靠自己看的那点易学知识，实在是太浅了。一直以为占卜算卦是非常难的事情，一定要有什么特殊的条件。昨天稍稍看了几章《梅花易数》，顿时感到易学的博大精深，对于人世间的种种世相都可以用来占卜，或许这样就可以到达真正的「掐指一算」的程度吧。
@@ -1437,10 +1437,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>癸巳志（2013 年度总结）</title>
-      <link>https://kwang.life/posts/2014/%E7%99%B8%E5%B7%B3%E5%BF%972013-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2014/01/%E7%99%B8%E5%B7%B3%E5%BF%972013-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Wed, 01 Jan 2014 20:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E7%99%B8%E5%B7%B3%E5%BF%972013-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2014/01/%E7%99%B8%E5%B7%B3%E5%BF%972013-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>2014
 恍惚间，一年的光阴又匆匆流过。不知从什么时候开始，每年写一篇文章似乎成了惯例。今年本来并不打算动笔，但是思来想去还是写写罢，也算是对过往的怀念与铭记，对未来的向往与期待。
 要不是昨天小伙伴们的跨年短信，我还真不觉得昨天的日子有什么特殊的地方。
@@ -1464,10 +1464,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>关于二次曲线切线问题的研究</title>
-      <link>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link>
+      <link>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link>
       <pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid>
+      <guid>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid>
       <description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线上某点的切线方程，另一个是关于曲线的切点弦方程。
 一、关于曲线上某点的切线方程 1、圆 我们都知道，过圆 $ x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right ) $ 上一点 $ P\left(x_{0},y_{0}\right) $ 的切线方程是 $ x_{0}x+y_{0}y=r^{2} $ 。下面我们就更为一般的情形进行探究：
 定理1.1：给定圆 $ C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left ( r &amp;gt; 0 \right ) $ ，以及圆上一点 $ P\left(x_{0},y_{0}\right) $ ，则过该点的切线方程为 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$
@@ -1476,10 +1476,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>呓语（四）：清晰</title>
-      <link>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</link>
+      <link>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</link>
       <pubDate>Sun, 24 Nov 2013 09:45:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</guid>
+      <guid>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</guid>
       <description>NOIP 终于还是结束了，本来想写一篇文章好好记录一下这两年奋斗的历程，但自从周一知道成绩以后，便什么想法都没有了。凭心而论，今年题目比去年简单，可是我却考得没有去年高，实在惭愧。 现在想来，当初高二知道成绩以后的踌躇满志，就注定了高三竞赛的没落。
 本来写了一篇文章，现在也不想打出来了，一切都过去了。或许，竞赛的成绩并不是最重要的。它所教给我的，是一种精神，正如今年国际金牌得主代表清华大学在ACM开幕式上发言时所说「自己选的路，跪着也要走完。」这种永不言弃的精神将一直伴随着我走下去。
 当然，在竞赛的同时还收获了许多意料之外的惊喜。在刷 USACO、Codeforces 的时候，提高了英语的阅读水平。当然，还结交了几个志同道合的网友，虽然大家分布五湖四海，但是却有着相似的经历，同样的目标，虽然现在我们都注定要踏上高考这条路，但却还可以在文化课这一层面进行许多交流。
@@ -1494,10 +1494,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { uns
     
     <item>
       <title>算法专题：欧拉函数</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
       <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
       <description>昨天终于把欧拉函数想通了，现在总结一下。
 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。
 下面介绍欧拉函数的几个性质：
@@ -1506,10 +1506,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：求解线性方程组</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
       <pubDate>Tue, 05 Nov 2013 20:34:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
       <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。
 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。
 我写的高斯消元是将所有系数看成一个矩阵来求解的。
@@ -1521,10 +1521,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：不定方程</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
       <pubDate>Mon, 04 Nov 2013 19:41:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
       <description>关于这个算法，主要是参考 NOIP2012 Day2 T1。即这里所讲的是求解这样一个线性模方程： $$ ax\equiv 1\mod{p} $$ 的最小正整数解。
 去年我是暴搜做的，当时什么都不会。今天在这里介绍两种算法，一种是我国古代数学家秦九韶发明的「大衍求一术」，还一种是著名的「扩展欧几里德算法」。
 首先来看一下大衍求一术。这里只介绍它的计算方法，至于证明可以参考扩展欧几里德算法。
@@ -1536,10 +1536,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：强连通分量 - Kosaraju Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
       <pubDate>Mon, 04 Nov 2013 10:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
       <description>强连通分量（Strongly Connected Components），简称 SCC。是指在给定的一张图 $ G=\left(V,E\right) $ 的一个子图 $ G{}&amp;rsquo;=\left(V,E\right) $ 这个子图满足对于其中的任意一对点 $ \left \langle V_{i},V_{j} \right \rangle $ 均存在这样两条路径 $ \left \langle V_{i},\cdots,V_{j} \right \rangle,\left \langle V_{j},\cdots,V_{i} \right \rangle $ 。
 如果我们把强连通分量缩成一个点，这时候，原图 $ G $ 则会变成有向无环图。
 图 $ G=\left(V,E\right) $ 是有向无环图当且仅当该图中没有点集合元素个数大于1的强连通分量。且任意一个强连通分量都至少包含一个有向环。下面我们通过一张图片来理解一下强连通分量以及缩点：
@@ -1551,10 +1551,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：传递闭包</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
       <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
       <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。
 我们这里主要研究的是有向图的传递闭包问题。
 代码如下：
@@ -1563,10 +1563,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：欧拉回路</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
       <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
       <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。
 下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路：
 一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路：
@@ -1576,10 +1576,10 @@ $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\
     
     <item>
       <title>算法专题：拓扑排序</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
       <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题：
 给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。
 当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。
@@ -1592,10 +1592,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
       <description>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念：
 多源最短路径
 对于这一问题，比较有效的算法是 Floyd-Warshall Algorithm，简称 Floyd。它是基于动态规划的一种最短路径的算法。
@@ -1605,10 +1605,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：单源最短路径 - SPFA</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link>
       <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
       <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。
 算法的基本步骤如下：
 初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。
@@ -1619,10 +1619,10 @@ Toplogical Sorting
     
     <item>
       <title>算法专题：单源最短路径 – Bellman-Ford Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
       <description>上一篇文章介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。
 Ballman-Ford 是一个非常实用的算法，它是由美国数学家 Richard Ballman 和 Lester Ford 发明的。Ballman-Ford 算法的基本流程如下：
 初始化 $ pDist\left [ \right ] $ 数组。 检查每一条边，如果源点到该条边的起点有通路，则更新原点到该条边的终点的最短路径。循环 $ V $ 次即可得到结果。 如若要检测是否存在负环，则再检查每一条边，若可以松弛，则有负环。
@@ -1635,10 +1635,10 @@ Bellman-Ford 算法
     
     <item>
       <title>算法专题：单源最短路径 – Dijkstra Algorithm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link>
       <pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
       <description>这个星期开始复习最短路的一些算法。
 单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。
 首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。
@@ -1650,10 +1650,10 @@ Bellman-Ford 算法
     
     <item>
       <title>算法专题：最小生成树 – Kruskal Algoritm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
       <pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
       <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下：
 取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。 重复上述操作，直至加入了 $ N-1 $ 条边。 我们还是先来看一张图片来理解一下这个算法：
 Kruskal 算法
@@ -1665,10 +1665,10 @@ Kruskal 算法
     
     <item>
       <title>算法专题：最小生成树 – Prim Algoritm</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
       <pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
       <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。
 最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。
 首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的边的长度的和最小。
@@ -1680,10 +1680,10 @@ Kruskal 算法
     
     <item>
       <title>杂记（20130930）</title>
-      <link>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130930/</link>
+      <link>https://kwang.life/2013/09/%E6%9D%82%E8%AE%B020130930/</link>
       <pubDate>Mon, 30 Sep 2013 21:01:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130930/</guid>
+      <guid>https://kwang.life/2013/09/%E6%9D%82%E8%AE%B020130930/</guid>
       <description>随便写写，记录一下最近发生的事情。
 高中最后一次运动会居然是在停课中度过的。不过比起化学组去省选的那些人还算幸运的，至少也参与了一点，虽然成绩只有一个引体向上。
 29号晚自习，我在机房给高二的上课，讲解初赛的选择题。真正感觉到了「后生可畏」的感觉。本来想冲个省队的，但是我们的国赛在明年7月份，那时候我们已经毕业了，所以不能代表江苏省参赛。信息学竞赛就这点不好，各门竞赛大多高三才到炉火纯青的地步，却不给省队资格。虽然我们全国各地的高三选手联名向CCF抗议，但还是无疾而终。挺可惜的，但至少可以拿个省一回来，给竞赛画上圆满的句号。
@@ -1700,10 +1700,10 @@ Kruskal 算法
     
     <item>
       <title>中秋望月感怀（2013）</title>
-      <link>https://kwang.life/posts/2013/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</link>
+      <link>https://kwang.life/2013/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</link>
       <pubDate>Thu, 19 Sep 2013 20:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</guid>
+      <guid>https://kwang.life/2013/09/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</guid>
       <description>在我的印象中，从来没有过真正意义上的赏月。小时候虽然每年都会如约赏月，但那时候年纪尚小，即使望月，也不会有什么特别的感触。
 自从高二受了周红娟老师的耳濡目染，再者，加上《唐诗之旅》的熏陶，开始对明月产生了一种别样的情怀。自此以后，每当看到明月，想到的不再时冷冰冰的月球，而是嫦娥玉兔，吴刚伐树。有时候甚至会像李白一样「举杯邀明月，对影成三人」。
 前几天住宿的时候，便已经感到了中秋的到来。熄灯后，一束月光打在床上，真如太白所记「床前明月光，疑是地上霜」。
@@ -1724,10 +1724,10 @@ Kruskal 算法
     
     <item>
       <title>关于复数的一些补充</title>
-      <link>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</link>
+      <link>https://kwang.life/2013/08/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</link>
       <pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid>
+      <guid>https://kwang.life/2013/08/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid>
       <description>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。
 一、复数的概念 1.1 数的概念的发展 数的概念是从实践中产生和发展起来的。早在原始社会末期，由于记数的需要，人们就建立起自然熟的概念。自然数的全体构成自然数集 $ \mathbf{N} $ 。
 随着生产和科学的发展，熟的概念也得到了发展。
@@ -1740,10 +1740,10 @@ Kruskal 算法
     
     <item>
       <title>线段树 – 有改动求解区间最值 – 忠诚 2</title>
-      <link>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
       <pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
       <description>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章线段树 – 无改动求解区间最值 – 忠诚简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。
 首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了：
 int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNode-&amp;gt;nMoney != 2147483647) { return pNode-&amp;gt;nMoney; } else { return pNode-&amp;gt;nMoney = min(Update(pNode-&amp;gt;pLeft), Update(pNode-&amp;gt;pRight)); } } void Change(Node *pNode, int x, int nValue) { pNode-&amp;gt;nMoney = 2147483647; if(pNode-&amp;gt;nLeft == x &amp;amp;&amp;amp; x == pNode-&amp;gt;nRight) { pNode-&amp;gt;nMoney = nValue; } else { if(x &amp;lt;= (pNode-&amp;gt;nLeft + pNode-&amp;gt;nRight) / 2) { Change(pNode-&amp;gt;pLeft, x, nValue); } else { Change(pNode-&amp;gt;pRight, x, nValue); } } } 这样，除了第一次维护外，每次我们只需要维护一条路径，复杂度也大大降低低了。</description>
@@ -1751,10 +1751,10 @@ int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNod
     
     <item>
       <title>线段树 – 无改动求解区间最值 – 忠诚</title>
-      <link>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
       <pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
       <description>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。
 线段树可以直观的表示为下面这张图：
 线段树示意图
@@ -1765,10 +1765,10 @@ Node* Build(int l, int r) { Node *pNode = new Node(); // Init data if(l == r) { 
     
     <item>
       <title>0/1 背包 - NOIP2005P3</title>
-      <link>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</link>
+      <link>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link>
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
+      <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
       <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。
 我们约定有 $ N $ 件物品和一个容量为 $ C $ 的背包。第 $ i $ 件物品的重量是 $ w\left [ i \right ] $ ，价值是 $ v\left [ i \right ] $ 。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。
 二维数组表示 定义状态： $ f\left [ i \right ]\left [ c \right ] $ 表示前 $ i $ 件物品恰放入一个容量为 $ c $ 的背包可以获得的最大价值。
@@ -1777,10 +1777,10 @@ Node* Build(int l, int r) { Node *pNode = new Node(); // Init data if(l == r) { 
     
     <item>
       <title>暑假小结</title>
-      <link>https://kwang.life/posts/2013/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</link>
+      <link>https://kwang.life/2013/08/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</link>
       <pubDate>Thu, 22 Aug 2013 21:15:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</guid>
+      <guid>https://kwang.life/2013/08/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</guid>
       <description>一个暑假很快就过去了，还有一个多星期就要高三了。回顾这个暑假，总感觉比之前任何一个暑假都要充实，这种感觉就如同大块朵颐后的欣悦。简略的说几类事情吧，希望这次不会沉到草稿箱里。
 学习 大部分时间都在学校参加数学竞赛辅导。上午自习，下午讲课，最近加入了晚自习。 去扬州进行了为期十天的培训，留下了一篇游记。本来想把课上的讲义发上来的，但是没时间编辑，就一拖再拖。 读完了《博弈论导论》，并初步的学习了一下博弈论。 读完了《看见》，没来得及写下读书笔记。 坚持每天做英语阅读，有来不及的次日补上。 开始刷数学、物理的自主招生题目。 制订了阅读英文书籍的计划。 翻译了一篇论文：Methods of Computing Square Roots。 研究了一大堆闻所未闻的定理。 组织了一次 NOIP 模拟赛，取得了较好的效果。 进一步深入学习了数论，动态规划，树，图论，为 NOIP 2013 奠定基础。 学习使用 LaTeX 编辑文章，制作了一份 2012 年数学初赛试题的集锦，并在扬州坚持每天做一份。 学习使用 git 托管项目。 学习 Qt，并独立写出了第一个 IDE：Light-Cpp。有望参加明年的程序设计比赛。 加入了 Smart Online Judge 开发团队，进行网页的后台开发。 优化了博客的 UI，提高了用户体验质量。 娱乐 为了解决我们中午吃何种外卖，哪些人去拿的难题，制作了人员随机系统。 成功在 Ubuntu 系统下实现 GoAgent 翻墙。 学习了通过 PhotoShop 制作移轴摄影的特效。 新增了若干友链。 将博客的文章整理成书，并通过 LaTeX 编辑。 资金 通过写程序，赚到了真正意义上的第一桶金。这个暑假收入共计 1800。 琐事 有一天在学校上课，正好乘电梯回教室。巧遇周红娟，她兴高采烈的拉住我，和我唠嗑。大概讲了这些事情：
 她下学期要去她老家那边支教，不教我们了； 她老公在篮球队当总教练，今天她来看比赛，顺便收拾东西； 不说也罢，影响不好。 对于周红娟，虽然只教了我一年，但是感觉特别亲切，可能由于电教员经常和她接触吧。过一阵子写篇文章，聊表纪念吧。
@@ -1789,10 +1789,10 @@ Node* Build(int l, int r) { Node *pNode = new Node(); // Init data if(l == r) { 
     
     <item>
       <title>Dilworth 定理 - NOIP1999T1</title>
-      <link>https://kwang.life/posts/2013/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
+      <link>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
       <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
+      <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
       <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下：
 这是一个关于偏序集的定理。偏序集即偏序集合。
 偏序的概念：设 $ \textbf{A} $ 是一个非空集合。 $ P $ 是 $ \textbf{A} $ 上的一个关系，若关系 $ P $ 是自反的、反对称的、传递的，则称 $ P $ 是集合 $ \textbf{A} $ 上的偏序关系。
@@ -1802,10 +1802,10 @@ $ \forall a\in\textbf{A},\left ( a,a \right )\in P $ ； 若 $ \left ( a,b \righ
     
     <item>
       <title>BFS 解决蛇形填数 - NOIP1995P2</title>
-      <link>https://kwang.life/posts/2013/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</link>
+      <link>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</link>
       <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
+      <guid>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
       <description>题目描述是经典的蛇形填数问题。
 以前解决这类问题，通常是通过控制 $ i,j $ 的值来定位数组元素的位置，然后进行赋值。但是这种方法非常的繁琐，且难于理解。容易出错。
 今天在做这道题目的时候，通过搜索资料，思索出了一种新解法，相较于原来的解法更以理解，且时间复杂度更低。解法的基本思想是 BFS。下面我们仔细来探讨一下。
@@ -1817,10 +1817,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>杂记（20130809）</title>
-      <link>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130809/</link>
+      <link>https://kwang.life/2013/08/%E6%9D%82%E8%AE%B020130809/</link>
       <pubDate>Fri, 09 Aug 2013 21:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130809/</guid>
+      <guid>https://kwang.life/2013/08/%E6%9D%82%E8%AE%B020130809/</guid>
       <description>今天同学聚会，感慨颇多。彼此分别已有两年，有些人还是像以前一样，有些人却已很难辨认。不禁喟叹「时间」的伟大。还是简单的提一下今天聚会的事情吧。
 最令我意外的，是虞永春老师。没想到时隔三四年他还记得那次我踢球撞破眼睑去医院缝了好几针。一见面直接就问，上次缝针的那里还看得出吗。还有就是以前宿舍里的兄弟们，大家还是这么亲近，随意的开玩笑，嬉戏打闹，感觉很好。还有小伙伴们，我想死你们了！有些话无须多言，好兄弟们！
 下面讲讲最近发生的一些事情吧，太零碎，将就着看吧。
@@ -1834,10 +1834,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>扬州拾遗（零）</title>
-      <link>https://kwang.life/posts/2013/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</link>
+      <link>https://kwang.life/2013/08/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</link>
       <pubDate>Thu, 01 Aug 2013 18:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</guid>
+      <guid>https://kwang.life/2013/08/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</guid>
       <description>注：这篇文章在草稿箱里沉睡了许久，现在勉强将其写完，可能有所遗漏。
 7月15日至7月24日去扬州参加了数学夏令营。现在将沿途一些所见所闻所感记录于此。这几天的经历可以用一句话来概括「生活单调的像巴甫洛夫的狗，日子凄惨的如薛定谔的猫。」
 7月15日中午我们乘坐大巴从学校赶往扬州。当大巴驶在宽阔的长江大桥上，我被长江的宽阔与雄壮所折服。从杨舍到扬州有将近2小时45分钟的车程。去的路上大家都很激动，不断的拍照直播。
@@ -1866,10 +1866,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>扬州拾遗（一）：竞赛中的函数</title>
-      <link>https://kwang.life/posts/2013/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</link>
+      <link>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</link>
       <pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
       <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。
 解：作图像得，正根个数为 $ 1 $ 。
 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。
@@ -1880,10 +1880,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>浅谈鸽巢原理及其应用</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
+      <link>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
       <pubDate>Sat, 13 Jul 2013 20:27:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
       <description>鸽巢原理：如果 $k+1$ 个或更多的物体放入 $k$ 个盒子，那么至少有一个盒子包含了 $2$ 个或更多的物体。
 有时候鸽巢原理也被称为抽屉原理，更准确地说应该叫做“狄利克雷抽屉原理”。至于狄利克雷这个名字，还有有趣的函数也是用他的名字命名的。它就是大名鼎鼎的狄利克雷函数 $$f\left(x\right)=\begin{cases}1,&amp;amp;x\in\mathbf{Q}\\ 0,&amp;amp;x\not\in\mathbf{Q}\end{cases}$$ 这个函数的有趣之处就在于它没有对应的图像。扯远了。
 下面给出鸽巢原理的证明：假定 $k$ 个盒子中没有一个盒子包含的物体多余 $1$ 个，那么物体总数至多是 $k$，这与至少有 $k+1$ 物体矛盾。证毕。
@@ -1896,10 +1896,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>浅谈数列中常系数线性齐次递推关系的求解</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</link>
+      <link>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</link>
       <pubDate>Fri, 12 Jul 2013 16:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</guid>
+      <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</guid>
       <description>翻书复习之时，看到斐波那契数列，于是将一些关于数列递推关系方面的内容整理了一下。
 定义1：一个常系数的 $k$ 阶线性齐次递推关系是形如 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的递推关系，其中 $c_{1},c_{2},\cdots,c_{k}$ 是实数，$c_{k}\neq 0$。
 这个定义中递推关系是线性的，因为它的右边是数列前项的倍数之和。这个递推关系是齐次的，因为所出现的各项都是 $a_{j}$ 的倍数。数列各项的系数都是常数而不是依赖于 $n$ 的函数。阶为 $k$ 是因为 $a_{n}$ 由序列前面的 $k$ 项来表示。
@@ -1912,10 +1912,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>光阴的故事</title>
-      <link>https://kwang.life/posts/2013/%E5%85%89%E9%98%B4%E7%9A%84%E6%95%85%E4%BA%8B/</link>
+      <link>https://kwang.life/2013/06/%E5%85%89%E9%98%B4%E7%9A%84%E6%95%85%E4%BA%8B/</link>
       <pubDate>Fri, 28 Jun 2013 10:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%85%89%E9%98%B4%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
+      <guid>https://kwang.life/2013/06/%E5%85%89%E9%98%B4%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
       <description>歌词如下：
 春天的花开秋天的风，以及冬天的落阳
 忧郁的青春年少的我，曾经无知的这么想
@@ -1945,10 +1945,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>呓语（三）：彷徨</title>
-      <link>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</link>
+      <link>https://kwang.life/2013/06/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</link>
       <pubDate>Wed, 12 Jun 2013 17:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</guid>
+      <guid>https://kwang.life/2013/06/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</guid>
       <description>好久没来打理博客了，一直没时间。有时候想要写些文字也就这样耽搁了。比如说《谁是少数幸福的人——读&amp;lt;红与黑&amp;gt;有感》，这篇文章我写在了随笔本上，却一直没时间把它发到博客上来。慢慢发现现在我们自由支配的时间越来越少了，想要安安静静地阅读名家大作也就成了一种奢望。
 高考三天在学校上课，我们在图文信息楼四楼最西边的小教室里。根据张伟兴的暗示，隔壁就成了食堂和棋牌室。三天上课，我们一共吃了三顿东池。中午休息的时候看电影，躲在心缘爱心社玩。还差点被周汉东抓到。高一的就没这么幸运了，第一天晚自习就吵得不得了，被王胖子轻而易举地抓了现行，揪去见张新宇了。然后王胖子带着他的战利品笑嘻嘻的来到我们教室说：高二的和高一的就是不一样，到底是有追求的了。
 三天做了很多题目，其中最有趣的，被我们改编成课余娱乐项目的便是这道题目：
@@ -1967,10 +1967,10 @@ x = 1; y = N; i = 0; f[x][y] = nNum++; 其中， $ x,y $ 用来保存当前坐�
     
     <item>
       <title>浅谈塞瓦定理在平面几何中的应用</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。
 塞瓦定理：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。
 塞瓦定理逆定理：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形）
@@ -1981,10 +1981,10 @@ Ceva 定理示意图
     
     <item>
       <title>To NOIP</title>
-      <link>https://kwang.life/posts/2013/to-noip/</link>
+      <link>https://kwang.life/2013/05/to-noip/</link>
       <pubDate>Sat, 18 May 2013 20:38:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/to-noip/</guid>
+      <guid>https://kwang.life/2013/05/to-noip/</guid>
       <description>NOIP 2012 获奖证书
 上面这张证书是星期四下午拿到的，至此 NOIP 2012 画上了一个不完美但却圆满的句号。
 由于最近的一系列事件，加之以徐丹的高压政策下，我们被迫交出了机房的钥匙。一开始当然不会同意，但最后还是交出了钥匙。因为想明白了一些事情。首先，钥匙交给我们保管，是为了让我们在老师不在的时候可以进入机房得到联系。信息学不像数理化，只要一本题典，一堆草稿纸就可以应付的。但是，如果我们在机房，并不能干很多事情，并不能把时间全部高效利用，并不能 AC 更多的题目，而更多的时候是在磨洋工。那么这把钥匙给了我们，又有什么积极用处呢？在上交钥匙的时候，便决定以后周六、周日不再踏入机房。而周四，本来还想去联合电子看看的。不过徐丹非要把我们押在那里，看来计划又要有变化了。对于徐丹，并不是不尊重，而是她有时候说话的气焰太嚣张了。一个连 C++ 语法都讲不连贯的人，居然妄想着辅导我们算法，简直是可笑不自量。
@@ -2006,10 +2006,10 @@ Ceva 定理示意图
     
     <item>
       <title>浅谈线性同余及中国剩余定理</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</link>
+      <link>https://kwang.life/2013/05/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</link>
       <pubDate>Sat, 04 May 2013 21:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</guid>
+      <guid>https://kwang.life/2013/05/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</guid>
       <description>我记得在计算机复赛前一天晚上本想看看同余方程的解法，结果第二天就考到了。明天是数学竞赛初赛，简略的复习一下线性同余及中国剩余定理，顺便记下一些笔记。
 定理1：令 $m$ 为正整数。若 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m \end{cases}$，那么 $\begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m\end{cases}$。
 证明：因为 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m\end{cases}$，所以有整数 $s$ 和 $t$ 使 $\begin{cases} b=a+sm \\ d=c+tm\end{cases}$。于是 $$ \begin{cases} b+d=(a+sm)+(c+tm)=(a+c)+m(s+t)\\ bd=(a+sm)(c+tm)=ac+m(at+cs+stm) \end{cases} \Rightarrow \begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m \end{cases}$$
@@ -2018,10 +2018,10 @@ Ceva 定理示意图
     
     <item>
       <title>呓语（二）：感悟</title>
-      <link>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</link>
+      <link>https://kwang.life/2013/04/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</link>
       <pubDate>Mon, 29 Apr 2013 21:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</guid>
+      <guid>https://kwang.life/2013/04/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</guid>
       <description>向生命的来处张望，不禁唏嘘，时光竟如此匆匆流过。
 现在的我已是一名高二的学生，想想明年就要高考，却和理想的大学相差一些距离。前一阵子看了一本书，讲的是一个英语成绩班级倒数的人通过三年的努力成为全省第五的故事。当时感到了一股强大的正能量，过了几天，我根据自己的情况，也制定了一份计划，把刷英语由原来的自发变成了自觉。最近各门科目，尤其是理科上课教的非常快。似乎老师们都认为，把知识讲完了，通过做题就可以把那些没弄懂的都巩固了。这种思维固然不错，但是却显露着填压式教育的影子。
 最近慢慢的，真的懂得了学习。以前就好比是在黑暗的泥泞中摸着石头过河，却总是失足落水。我们的学习并不是为了老师，并不是为了父母，抑或其他。不认真便是对自己的不负责任。但是尽力的，却另当别论。但是科学研究表明，人类的潜力是非常巨大的，所以对于这五门学科，只要肯下工夫，并不存在任何问题。但是如果把所有的经历都放在了这上面，生活就未免有些单调。对我来说，也是不现实的。
@@ -2039,10 +2039,10 @@ Ceva 定理示意图
     
     <item>
       <title>浅谈伴随矩阵在逆矩阵求解中的应用</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Mon, 29 Apr 2013 15:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>最近数学课上讲了矩阵，很久以前便对矩阵很有兴趣，但由于一些原因没有深入学习。正好趁这个机会，有思考了一下关于矩阵的内容。目前应用较广的应该是运用逆矩阵求解线性方程组，尤其对于三元一次方程组，运用逆矩阵求解会非常方便。
 一个方形矩阵的伴随矩阵是一个类似于逆矩阵的概念。如果矩阵可逆，那么它的逆矩阵和它的伴随矩阵之间只差一个系数。然而，伴随矩阵对不可逆的矩阵也有定义，并且不需要用到除法。我们对这种情况不做深入讨论。
 引理1：对于一个 $n$ 阶矩阵 $\mathbf{A}$，以及两个整数 $i,j$，其中 $1\leq i,j\leq n$。去掉 $\mathbf{A}$ 的第 $i$ 行以及第 $j$ 列，得到一个 $n-1$ 阶子矩阵。记这个子矩阵的行列式为 $\mathbf{M}_{ij}$。称为余子式。
@@ -2053,10 +2053,10 @@ Ceva 定理示意图
     
     <item>
       <title>浅谈欧拉公式在富勒烯及其衍生物中的应用</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Sun, 21 Apr 2013 14:12:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>前几天在做化学竞赛初赛试题时遇到一道关于富勒烯衍生物的习题。大意是求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数。但是去问浦建芳，她把施锦元叫了上来，大师兄便给我讲了欧拉公式。当天晚上没有完全弄清楚，回家谷歌以后，现在将内容整理如下。（以 $\mathrm{C_{50}Cl_{10}}$ 为例）
 1、求 $\mathrm{C_{50}Cl_{10}}$ 中五边形以及六边形的个数 这类题目可以应用欧拉公式，设 $\mathrm{C_{50}Cl_{10}}$ 中存在 $x$ 个五边形及 $y$ 个六边形。由欧拉公式可以得到结果：
 $$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2} \end{cases}\Rightarrow \begin{cases}x=12 \\ y=15\end{cases} $$
@@ -2067,10 +2067,10 @@ $$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2
     
     <item>
       <title>杂记（20130404）</title>
-      <link>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130404/</link>
+      <link>https://kwang.life/2013/04/%E6%9D%82%E8%AE%B020130404/</link>
       <pubDate>Thu, 04 Apr 2013 20:02:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130404/</guid>
+      <guid>https://kwang.life/2013/04/%E6%9D%82%E8%AE%B020130404/</guid>
       <description>好久没更新博客了。英语课上把博客地址写在了黑板上，不知道郭华老师和周红娟老师会不会光临这么一个小角落。第一反应是博客的访问量可能会增加，接着就想到：如果周红娟老师看到我写的这些文章，岂不是贻笑大方。
 先来说说卖泡面的事情吧。经过一个寒假的考虑和筹划。准备这个学期搞得稍微正规点。所以在开学的时候准备发行债券，无奈去年出现一例质量问题，所以没人敢买债券。既然这条融资途径无效，那么只能自己先垫出一部分。于是乎，昨天又去进货了，而且列了进货清单。还得感谢 Microsoft OneNote——这款平时用来记笔记的软件，在这种情况下也可以用来记录销售情况。
 前段时间给自己的小卖部起了个名字——斯凯泰。开发了一个网上订购系统，主要解决有的时候同学来买泡面，却发现水不够了，或者卖完了。通过网上订购系统，可以提前预订，这样就可以预留出订购者所需要的数目。网站做的很简单，只是实现了基本功能。
@@ -2089,10 +2089,10 @@ $$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2
     
     <item>
       <title>为小高考打个点</title>
-      <link>https://kwang.life/posts/2013/%E4%B8%BA%E5%B0%8F%E9%AB%98%E8%80%83%E6%89%93%E4%B8%AA%E7%82%B9/</link>
+      <link>https://kwang.life/2013/03/%E4%B8%BA%E5%B0%8F%E9%AB%98%E8%80%83%E6%89%93%E4%B8%AA%E7%82%B9/</link>
       <pubDate>Sun, 17 Mar 2013 19:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E4%B8%BA%E5%B0%8F%E9%AB%98%E8%80%83%E6%89%93%E4%B8%AA%E7%82%B9/</guid>
+      <guid>https://kwang.life/2013/03/%E4%B8%BA%E5%B0%8F%E9%AB%98%E8%80%83%E6%89%93%E4%B8%AA%E7%82%B9/</guid>
       <description>高中的一个重要的转折点——小高考，就这样过去了。写下一篇日志来记录一下小高考复习期间的一些感受和想法。打点计时器真可谓是人类一项伟大的发明。
 这段时间，思考了很多，体会了很多，感悟了很多。且听我慢慢道来。
 江畔何人初见月？江月何年初照人？
@@ -2121,10 +2121,10 @@ $$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2
     
     <item>
       <title>杂记（20130221）</title>
-      <link>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130221/</link>
+      <link>https://kwang.life/2013/02/%E6%9D%82%E8%AE%B020130221/</link>
       <pubDate>Thu, 21 Feb 2013 20:49:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%9D%82%E8%AE%B020130221/</guid>
+      <guid>https://kwang.life/2013/02/%E6%9D%82%E8%AE%B020130221/</guid>
       <description>先来谈谈最近很火的《新笑傲江湖》吧。抱着对金庸小说《笑傲江湖》的喜爱，尝试得看了第一集，细细的看了第二集，忍耐的看了第三集，然后，就没有然后了。
 首先引用一些外界评论吧：
 看于正才知张纪中厚道
@@ -2161,10 +2161,10 @@ Follow your heart. Stay hungry, stay foolish.
     
     <item>
       <title>Linux 迁移记（一）</title>
-      <link>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
+      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
       <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
+      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
       <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：
 Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。
 安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是 GUI 界面，相对容易些。
@@ -2176,10 +2176,10 @@ sudo apt-get --auto-remove purge unity sudo apt-get --auto-remove purge unity-co
     
     <item>
       <title>天地作合</title>
-      <link>https://kwang.life/posts/2013/%E5%A4%A9%E5%9C%B0%E4%BD%9C%E5%90%88/</link>
+      <link>https://kwang.life/2013/02/%E5%A4%A9%E5%9C%B0%E4%BD%9C%E5%90%88/</link>
       <pubDate>Mon, 11 Feb 2013 20:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%A4%A9%E5%9C%B0%E4%BD%9C%E5%90%88/</guid>
+      <guid>https://kwang.life/2013/02/%E5%A4%A9%E5%9C%B0%E4%BD%9C%E5%90%88/</guid>
       <description>歌词如下：
 莽莽苍苍兮群山巍峨
 日月光照兮纷纭错落
@@ -2195,10 +2195,10 @@ sudo apt-get --auto-remove purge unity sudo apt-get --auto-remove purge unity-co
     
     <item>
       <title>呓语（一）：无题</title>
-      <link>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%B8%80%E6%97%A0%E9%A2%98/</link>
+      <link>https://kwang.life/2013/02/%E5%91%93%E8%AF%AD%E4%B8%80%E6%97%A0%E9%A2%98/</link>
       <pubDate>Mon, 04 Feb 2013 21:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%91%93%E8%AF%AD%E4%B8%80%E6%97%A0%E9%A2%98/</guid>
+      <guid>https://kwang.life/2013/02/%E5%91%93%E8%AF%AD%E4%B8%80%E6%97%A0%E9%A2%98/</guid>
       <description>其实这应该是很早以前写的，但是一直没时间静下来。
 NOIP 2012 复赛备战期间，让我体会到了什么是真正的刷题，这远比期末每天好几张的试卷来的恐怖。刷题，不仅仅是整日做题目，这只是基础。重要的是对于每道做过的题目做完后探寻更简便的方法来解决它。而且刷题注重的是效率，一道题刷过就必须 Accepted。任何不起眼的错误导致的 Wrong Answer 都必须避免。回想起那段刷题时光，现在的状态与那时相比，恐怕相差甚远。
 对于作业，还有些话要讲，首先引用一位神犇的分析：
@@ -2221,10 +2221,10 @@ NOIP 2012 复赛备战期间，让我体会到了什么是真正的刷题，这�
     
     <item>
       <title>寒假，来了！</title>
-      <link>https://kwang.life/posts/2013/%E5%AF%92%E5%81%87%E6%9D%A5%E4%BA%86/</link>
+      <link>https://kwang.life/2013/02/%E5%AF%92%E5%81%87%E6%9D%A5%E4%BA%86/</link>
       <pubDate>Sat, 02 Feb 2013 09:15:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E5%AF%92%E5%81%87%E6%9D%A5%E4%BA%86/</guid>
+      <guid>https://kwang.life/2013/02/%E5%AF%92%E5%81%87%E6%9D%A5%E4%BA%86/</guid>
       <description>迷迷糊糊，期末复习，小高考补课就这么过去了。不得不提一下数学，没想到啊。就这样，迎来了这一不寻常的寒假。最后一天突然下起了雨，似乎把一切繁杂和浮躁都冲洗而去。
 仔细算来，从今天到开学前一共还有 23 天。时间不容我们挥霍。像以往一样制定一个计划吧（当然不是学校里那种按天数来划的），以前总是写在纸上，这次就直接发到博客上吧。
 寒假作业 语文 练字（黑色钢笔）。 专题摘抄 3000 字，并写一篇书评。 预习《唐诗宋词选读》，背诵 14 篇，熟读 2 篇。 关注时事，写一篇社会评论。 数学 复习必修 2、选修 2-1、选修 2-2。 寒假作业（好像只要做几张综合卷）。 综合练习。 附加题练习。 自选一本与本学期有关试题。 英语 暂无。
@@ -2243,10 +2243,10 @@ EE 计划 制作 AM/FM 调频收音机。 DIY 太阳能便携式充电器。 制
     
     <item>
       <title>《中国通史》纪录片：031 诸葛亮治蜀</title>
-      <link>https://kwang.life/posts/2013/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</link>
+      <link>https://kwang.life/2013/01/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</link>
       <pubDate>Sat, 26 Jan 2013 16:32:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</guid>
+      <guid>https://kwang.life/2013/01/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</guid>
       <description>本文主要整理了《中国通史：诸葛亮治蜀》的解说稿。
 东汉末年，各个地方势力，各据一方，天下大乱。公元 208 年，在曹操百万大军的高压下，刘备派诸葛亮出使山东，与孙权结盟。孙刘联军在赤壁大破曹军，魏、蜀、吴三分天下之势初步形成。公元 219 年，刘备北伐，孙权偷袭荆州，杀死关羽，刘备北伐失败。公元 221 年，刘备亲率数万大军讨伐孙权，双方在夷陵相持。第二年，刘备被孙权的军队连连击败。夷陵之战惨败，刘备忧愤成疾。弥留之际，刘备将儿子刘禅，托付给诸葛亮，随即病逝。后主刘禅，封诸葛亮为武乡侯，领益州牧1，总理朝政。自此，举国重任，落在诸葛亮一人肩上。
 这是一条使命之船，船上的主人名叫邓芝2，在蜀汉政权中担任尚书。蜀汉建兴元年十月，也就是夷陵之战的第二年，邓芝受诸葛亮的委派，前往东吴。孙权背盟，偷袭荆州，按照一般的情理，蜀汉与东吴从此应该结下不共戴天的深仇大恨。然而，这时的诸葛亮，却做出了一个惊人的决策——再次与东吴结盟。
@@ -2302,10 +2302,10 @@ EE 计划 制作 AM/FM 调频收音机。 DIY 太阳能便携式充电器。 制
     
     <item>
       <title>壬辰志（2012 年度总结）</title>
-      <link>https://kwang.life/posts/2012/%E5%A3%AC%E8%BE%B0%E5%BF%972012-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://kwang.life/2012/12/%E5%A3%AC%E8%BE%B0%E5%BF%972012-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 31 Dec 2012 21:11:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2012/%E5%A3%AC%E8%BE%B0%E5%BF%972012-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://kwang.life/2012/12/%E5%A3%AC%E8%BE%B0%E5%BF%972012-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>2013
 充满传奇色彩的 2012 年就这样过去了。自从上了高中以后，总觉得时间好快，有种跟不上节奏的感觉。
 先简单总结一下过去的一年。高一下学期，为了一个信念努力拼搏，虽然如愿以偿，但总是觉得怪怪的。高二，一直被一种莫名的情绪笼罩。
@@ -2327,10 +2327,10 @@ EE 计划 制作 AM/FM 调频收音机。 DIY 太阳能便携式充电器。 制
     
     <item>
       <title>Hello World</title>
-      <link>https://kwang.life/posts/2012/hello-world/</link>
+      <link>https://kwang.life/2012/12/hello-world/</link>
       <pubDate>Mon, 31 Dec 2012 15:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2012/hello-world/</guid>
+      <guid>https://kwang.life/2012/12/hello-world/</guid>
       <description>网站终于好了，在 2012 年的最后一天写下第一篇文章。
 搭建网站的想法很早就有了，由于一些事情耽搁了，主要是经济来源问题。由于前段时间在宿舍中卖泡面赚了些钱，所以才搭起了这个网站。搭建这个网站也不容易，从申请域名，设置 A 记录，配置 DNS 服务器，域名解析到空间的选择等，可以说又是一次历练吧。现在的网站还非常简陋，以后会慢慢完善。
 有人问我，什么不用 QQ 空间。我想还是因为这里比较自由吧。主要还是写一些关于生活的文章，包括一些杂感、竞赛，抑或其他。

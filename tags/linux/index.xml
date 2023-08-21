@@ -13,30 +13,30 @@
     <lastBuildDate>Tue, 23 Aug 2022 11:27:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 配置 GitHub 账号</title>
-      <link>https://kwang.life/posts/2022/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link>
+      <link>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</link>
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
+      <guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
       <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）：
 [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | .</description>
     </item>
     
     <item>
       <title>结合 TAR 和 OpenSSL 加密文件及目录</title>
-      <link>https://kwang.life/posts/2022/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link>
+      <link>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</link>
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2022/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
+      <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
       <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。
 加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ openssl enc -d -aes256 -in &amp;lt;Filename&amp;gt; | tar -xzv # 3.</description>
     </item>
     
     <item>
       <title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title>
-      <link>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
+      <link>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
+      <guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
       <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。
 本文所用到的软件资源，可单击此处下载，提取码为：njup。
 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。
@@ -53,10 +53,10 @@
     
     <item>
       <title>Linux 迁移记（一）</title>
-      <link>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
+      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
       <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
+      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
       <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：
 Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。
 安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是 GUI 界面，相对容易些。

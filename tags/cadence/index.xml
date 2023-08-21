@@ -13,10 +13,10 @@
     <lastBuildDate>Sat, 03 Apr 2021 11:00:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/cadence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title>
-      <link>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
+      <link>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link>
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2021/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
+      <guid>https://kwang.life/2021/04/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid>
       <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。
 本文所用到的软件资源，可单击此处下载，提取码为：njup。
 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。

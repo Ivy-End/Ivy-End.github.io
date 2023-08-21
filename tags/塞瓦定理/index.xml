@@ -13,10 +13,10 @@
     <lastBuildDate>Sat, 01 Jun 2013 19:43:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>浅谈塞瓦定理在平面几何中的应用</title>
-      <link>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <link>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
       <pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <guid>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
       <description>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。
 塞瓦定理：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。
 塞瓦定理逆定理：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形）

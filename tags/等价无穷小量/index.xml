@@ -13,10 +13,10 @@
     <lastBuildDate>Sat, 01 Nov 2014 00:33:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>浅谈等价无穷小量代换原理</title>
-      <link>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link>
+      <link>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://kwang.life/2014/11/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid>
       <description>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的研究了这个问题，整理如下：
 等价无穷小的定义及常用的等价无穷小 无穷小量是指某变化过程中极限为 $ 0 $ 的变量。而等价无穷小量是指在某变化过程中比值极限为 $ 1 $ 的两个无穷小量。
 常用的等价无穷小有： $$ \sin{x}\sim \tan{x}\sim\arctan{x}\sim\arcsin{x}\sim \ln{\left(1+x \right )}\sim x\left(x\rightarrow 0\right ) $$ $$ 1-\cos{x}\sim \frac{x^{2}}{2},\sqrt[n]{1+x}-1\sim \frac{x}{n} \left(x\rightarrow 0\right ) $$ 等价无穷小量在求极限问题中非常重要。恰当的使用等价无穷小量代换常常使极限问题大大简化。但是有时却不能使用等价无穷小量代换。

@@ -13,10 +13,10 @@
     <lastBuildDate>Sun, 03 Nov 2013 19:48:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>算法专题：传递闭包</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
       <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
       <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。
 我们这里主要研究的是有向图的传递闭包问题。
 代码如下：

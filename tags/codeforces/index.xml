@@ -13,10 +13,10 @@
     <lastBuildDate>Sun, 20 Jul 2014 10:08:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Codeforces 1B - Spreadsheet</title>
-      <link>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</link>
+      <link>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</link>
       <pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1b-spreadsheet/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</guid>
       <description>1B Spreadsheet
 Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;).
 Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed.
@@ -25,10 +25,10 @@ if(C % 26 == 0) { strTmp = &#39;Z&#39; + strTmp; C /= 26; C--; continue; }</desc
     
     <item>
       <title>Codeforces 1A - Theatre Square</title>
-      <link>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</link>
+      <link>https://kwang.life/2014/07/codeforces-1a-theatre-square/</link>
       <pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2014/codeforces-1a-theatre-square/</guid>
+      <guid>https://kwang.life/2014/07/codeforces-1a-theatre-square/</guid>
       <description>1A Theatre Square
 Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer.
 Notice: Pay attention to the data range. Use unsigned long long.

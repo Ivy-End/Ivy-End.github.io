@@ -13,10 +13,10 @@
     <lastBuildDate>Sun, 03 Nov 2013 19:43:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>算法专题：欧拉回路</title>
-      <link>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
       <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
       <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。
 下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路：
 一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路：

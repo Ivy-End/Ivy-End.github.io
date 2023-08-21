@@ -12,10 +12,10 @@
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://kwang.life/tags/0/1-%E8%83%8C%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0/1 背包 - NOIP2005P3</title>
-      <link>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</link>
+      <link>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link>
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2013/01-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
+      <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
       <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。
 我们约定有 $ N $ 件物品和一个容量为 $ C $ 的背包。第 $ i $ 件物品的重量是 $ w\left [ i \right ] $ ，价值是 $ v\left [ i \right ] $ 。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。
 二维数组表示 定义状态： $ f\left [ i \right ]\left [ c \right ] $ 表示前 $ i $ 件物品恰放入一个容量为 $ c $ 的背包可以获得的最大价值。

@@ -13,38 +13,38 @@
     <lastBuildDate>Wed, 22 Jul 2015 20:46:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/sgu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SGU 144 - Meeting</title>
-      <link>https://kwang.life/posts/2015/sgu-144-meeting/</link>
+      <link>https://kwang.life/2015/07/sgu-144-meeting/</link>
       <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-144-meeting/</guid>
+      <guid>https://kwang.life/2015/07/sgu-144-meeting/</guid>
       <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they will meet.</description>
     </item>
     
     <item>
       <title>SGU 116 - Index of super-prime</title>
-      <link>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</link>
+      <link>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</link>
       <pubDate>Mon, 20 Jul 2015 13:39:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-116-index-of-super-prime/</guid>
+      <guid>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</guid>
       <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists, index is equal to minimal number of items in such presentation.</description>
     </item>
     
     <item>
       <title>SGU 114 - Telecasting station</title>
-      <link>https://kwang.life/posts/2015/sgu-114-telecasting-station/</link>
+      <link>https://kwang.life/2015/03/sgu-114-telecasting-station/</link>
       <pubDate>Sat, 07 Mar 2015 19:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-114-telecasting-station/</guid>
+      <guid>https://kwang.life/2015/03/sgu-114-telecasting-station/</guid>
       <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal.
 Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;lt;15000$) – amount of cities in Berland.</description>
     </item>
     
     <item>
       <title>SGU 222 - Little Rooks</title>
-      <link>https://kwang.life/posts/2015/sgu-222-little-rooks/</link>
+      <link>https://kwang.life/2015/03/sgu-222-little-rooks/</link>
       <pubDate>Sat, 07 Mar 2015 14:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-222-little-rooks/</guid>
+      <guid>https://kwang.life/2015/03/sgu-222-little-rooks/</guid>
       <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks.
 A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other.
 Given two numbers $n$ and $k$, your job is to determine the number of ways one can put $k$ rooks on an $n\times n$ chessboard so that no two of them are in attacking positions.</description>
@@ -52,10 +52,10 @@ Given two numbers $n$ and $k$, your job is to determine the number of ways one c
     
     <item>
       <title>SGU 154 - Factorial</title>
-      <link>https://kwang.life/posts/2015/sgu-154-factorial/</link>
+      <link>https://kwang.life/2015/03/sgu-154-factorial/</link>
       <pubDate>Sat, 07 Mar 2015 13:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-154-factorial/</guid>
+      <guid>https://kwang.life/2015/03/sgu-154-factorial/</guid>
       <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail.
 Input One number $Q$ written in the input ($0\leq Q\leq 10^8$).
 Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise.
@@ -64,46 +64,46 @@ Sample Input 2 Sample Output 10 Analysis 统计 $N!</description>
     
     <item>
       <title>SGU 130 - Circle</title>
-      <link>https://kwang.life/posts/2015/sgu-130-circle/</link>
+      <link>https://kwang.life/2015/03/sgu-130-circle/</link>
       <pubDate>Sat, 07 Mar 2015 11:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-130-circle/</guid>
+      <guid>https://kwang.life/2015/03/sgu-130-circle/</guid>
       <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of parts $P$.</description>
     </item>
     
     <item>
       <title>SGU 276 - Andrew&#39;s Troubles</title>
-      <link>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</link>
+      <link>https://kwang.life/2015/03/sgu-276-andrews-troubles/</link>
       <pubDate>Sat, 07 Mar 2015 09:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-276-andrews-troubles/</guid>
+      <guid>https://kwang.life/2015/03/sgu-276-andrews-troubles/</guid>
       <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he owes a cup of tea to other team members.</description>
     </item>
     
     <item>
       <title>SGU 126 - Boxes</title>
-      <link>https://kwang.life/posts/2015/sgu-126-boxes/</link>
+      <link>https://kwang.life/2015/03/sgu-126-boxes/</link>
       <pubDate>Sat, 07 Mar 2015 09:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-126-boxes/</guid>
+      <guid>https://kwang.life/2015/03/sgu-126-boxes/</guid>
       <description>Description There are two boxes. There are $A$ balls in the first box, and $B$ balls in the second box ($0 &amp;lt; A + B &amp;lt; 2147483648$). It is possible to move balls from one box to another. From one box into another one should move as many balls as the other box already contains. You have to determine, whether it is possible to move all balls into one box.</description>
     </item>
     
     <item>
       <title>SGU 118 - Digital Root</title>
-      <link>https://kwang.life/posts/2015/sgu-118-digital-root/</link>
+      <link>https://kwang.life/2015/02/sgu-118-digital-root/</link>
       <pubDate>Tue, 24 Feb 2015 15:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-118-digital-root/</guid>
+      <guid>https://kwang.life/2015/02/sgu-118-digital-root/</guid>
       <description>Description Let $f(n)$ be a sum of digits for positive integer $n$. If $f(n)$ is one-digit number then it is a digital root for $n$ and otherwise digital root of $n$ is equal to digital root of $f(n)$. For example, digital root of 987 is 6. Your task is to find digital root for expression $$ A_1\cdot A_2\cdots A_N + A_1\cdot A_2\cdots A_{N-1} + \cdots + A_1\cdot A_2 + A_1$$</description>
     </item>
     
     <item>
       <title>SGU 117 - Counting</title>
-      <link>https://kwang.life/posts/2015/sgu-117-counting/</link>
+      <link>https://kwang.life/2015/02/sgu-117-counting/</link>
       <pubDate>Tue, 24 Feb 2015 14:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-117-counting/</guid>
+      <guid>https://kwang.life/2015/02/sgu-117-counting/</guid>
       <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$.
 Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line.
 Output Write answer for given task.</description>
@@ -111,19 +111,19 @@ Output Write answer for given task.</description>
     
     <item>
       <title>SGU 104 - Little shop of flowers</title>
-      <link>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</link>
+      <link>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</link>
       <pubDate>Tue, 24 Feb 2015 13:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-104-little-shop-of-flowers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</guid>
       <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase $V$ is the rightmost vase.</description>
     </item>
     
     <item>
       <title>SGU 101 - Domino</title>
-      <link>https://kwang.life/posts/2015/sgu-101-domino/</link>
+      <link>https://kwang.life/2015/02/sgu-101-domino/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-101-domino/</guid>
+      <guid>https://kwang.life/2015/02/sgu-101-domino/</guid>
       <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards.
 The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip;
 The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered.</description>
@@ -131,19 +131,19 @@ The principle in nearly all modern dominoes games is to match one end of a piece
     
     <item>
       <title>SGU 347 - Join the Strings</title>
-      <link>https://kwang.life/posts/2015/sgu-347-join-the-strings/</link>
+      <link>https://kwang.life/2015/02/sgu-347-join-the-strings/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-347-join-the-strings/</guid>
+      <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
       <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own.</description>
     </item>
     
     <item>
       <title>SGU 151 - Construct a triangle</title>
-      <link>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</link>
+      <link>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</link>
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-151-construct-a-triangle/</guid>
+      <guid>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</guid>
       <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle.
 Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits.
 Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates of $B$ to second line and coordinates of $C$ to third line.</description>
@@ -151,10 +151,10 @@ Output If solution exists, write three lines. Write coordinates of point $A$ to 
     
     <item>
       <title>SGU 180 - Inversions</title>
-      <link>https://kwang.life/posts/2015/sgu-180-inversions/</link>
+      <link>https://kwang.life/2015/02/sgu-180-inversions/</link>
       <pubDate>Tue, 17 Feb 2015 11:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-180-inversions/</guid>
+      <guid>https://kwang.life/2015/02/sgu-180-inversions/</guid>
       <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$.
 Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$.
 Output Write amount of such pairs.
@@ -163,19 +163,19 @@ Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可
     
     <item>
       <title>SGU 127 - Telephone directory</title>
-      <link>https://kwang.life/posts/2015/sgu-127-telephone-directory/</link>
+      <link>https://kwang.life/2015/02/sgu-127-telephone-directory/</link>
       <pubDate>Thu, 05 Feb 2015 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-127-telephone-directory/</guid>
+      <guid>https://kwang.life/2015/02/sgu-127-telephone-directory/</guid>
       <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with digits 0 and 8.</description>
     </item>
     
     <item>
       <title>SGU 112 - a^b - b^a</title>
-      <link>https://kwang.life/posts/2015/sgu-112-ab-ba/</link>
+      <link>https://kwang.life/2015/02/sgu-112-ab-ba/</link>
       <pubDate>Thu, 05 Feb 2015 14:52:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-112-ab-ba/</guid>
+      <guid>https://kwang.life/2015/02/sgu-112-ab-ba/</guid>
       <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$.
 Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$).
 Output Write answer to output.
@@ -185,20 +185,20 @@ Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; usi
     
     <item>
       <title>SGU 113 - Nearly prime numbers</title>
-      <link>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</link>
+      <link>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</link>
       <pubDate>Thu, 05 Feb 2015 14:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-113-nearly-prime-numbers/</guid>
+      <guid>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</guid>
       <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise.
 Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\leq N\leq 10$).</description>
     </item>
     
     <item>
       <title>SGU 107 - 987654321 problem</title>
-      <link>https://kwang.life/posts/2015/sgu-107-987654321-problem/</link>
+      <link>https://kwang.life/2015/02/sgu-107-987654321-problem/</link>
       <pubDate>Thu, 05 Feb 2015 14:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-107-987654321-problem/</guid>
+      <guid>https://kwang.life/2015/02/sgu-107-987654321-problem/</guid>
       <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321.
 Input Input contains integer number $N$ ($1\leq N\leq 10^6$).
 Output Write answer in output file.
@@ -209,28 +209,28 @@ Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数�
     
     <item>
       <title>SGU 184 - Patties</title>
-      <link>https://kwang.life/posts/2015/sgu-184-patties/</link>
+      <link>https://kwang.life/2015/01/sgu-184-patties/</link>
       <pubDate>Fri, 30 Jan 2015 17:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-184-patties/</guid>
+      <guid>https://kwang.life/2015/01/sgu-184-patties/</guid>
       <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage. He has plenty of other ingredients.</description>
     </item>
     
     <item>
       <title>SGU 135 - Drawing Lines</title>
-      <link>https://kwang.life/posts/2015/sgu-135-drawing-lines/</link>
+      <link>https://kwang.life/2015/01/sgu-135-drawing-lines/</link>
       <pubDate>Thu, 29 Jan 2015 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-135-drawing-lines/</guid>
+      <guid>https://kwang.life/2015/01/sgu-135-drawing-lines/</guid>
       <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if the lines are identical) zones.</description>
     </item>
     
     <item>
       <title>SGU 115 - Calendar</title>
-      <link>https://kwang.life/posts/2015/sgu-115-calendar/</link>
+      <link>https://kwang.life/2015/01/sgu-115-calendar/</link>
       <pubDate>Thu, 29 Jan 2015 21:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-115-calendar/</guid>
+      <guid>https://kwang.life/2015/01/sgu-115-calendar/</guid>
       <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001.
 Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100.
 Output Write current number of the day of the week for given date (Monday – number 1, … , Sunday – number 7) or phrase &amp;ldquo;Impossible&amp;rdquo; if such date does not exist.</description>
@@ -238,10 +238,10 @@ Output Write current number of the day of the week for given date (Monday – nu
     
     <item>
       <title>SGU 123 - The Sum</title>
-      <link>https://kwang.life/posts/2015/sgu-123-the-sum/</link>
+      <link>https://kwang.life/2015/01/sgu-123-the-sum/</link>
       <pubDate>Thu, 29 Jan 2015 21:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-123-the-sum/</guid>
+      <guid>https://kwang.life/2015/01/sgu-123-the-sum/</guid>
       <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers.
 Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$).
 Output First line should contain number $S$.
@@ -252,10 +252,10 @@ Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 
     
     <item>
       <title>SGU 105 - Div 3</title>
-      <link>https://kwang.life/posts/2015/sgu-105-div-3/</link>
+      <link>https://kwang.life/2015/01/sgu-105-div-3/</link>
       <pubDate>Thu, 29 Jan 2015 20:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-105-div-3/</guid>
+      <guid>https://kwang.life/2015/01/sgu-105-div-3/</guid>
       <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3.
 Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$).
 Output Write answer in output file.
@@ -265,10 +265,10 @@ Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于�
     
     <item>
       <title>SGU 102 - Coprimes</title>
-      <link>https://kwang.life/posts/2015/sgu-102-coprimes/</link>
+      <link>https://kwang.life/2015/01/sgu-102-coprimes/</link>
       <pubDate>Thu, 29 Jan 2015 20:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-102-coprimes/</guid>
+      <guid>https://kwang.life/2015/01/sgu-102-coprimes/</guid>
       <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$).
 Input Input file contains integer $N$.
 Output Write answer in output file.
@@ -277,10 +277,10 @@ Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varp
     
     <item>
       <title>SGU 100 - A &#43; B</title>
-      <link>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</link>
+      <link>https://kwang.life/2015/01/sgu-100-a--b/</link>
       <pubDate>Thu, 29 Jan 2015 20:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/posts/2015/sgu-100-a-&#43;-b/</guid>
+      <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
       <description>[100. A+B]
 Description Read integers $A$ and $B$ from input file and write their sum in output file.
 Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$).
