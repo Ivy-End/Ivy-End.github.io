@@ -72,19 +72,6 @@ $$ i^{2}=-1 $$
     </item>
     
     <item>
-      <title>Dilworth 定理 - NOIP1999T1</title>
-      <link>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
-      <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
-      <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下：
-这是一个关于偏序集的定理。偏序集即偏序集合。
-偏序的概念：设 $ \textbf{A} $ 是一个非空集合。 $ P $ 是 $ \textbf{A} $ 上的一个关系，若关系 $ P $ 是自反的、反对称的、传递的，则称 $ P $ 是集合 $ \textbf{A} $ 上的偏序关系。
-即 $ P $ 满足下列条件：
-$ \forall a\in\textbf{A},\left ( a,a \right )\in P $ ； 若 $ \left ( a,b \right )\in P,\left ( b,a \right )\in P $ ，则 $ a=b $ ； 若 $ \left ( a,b \right )\in P,\left ( b,c \right )\in P $ ，则 $ \left ( a,c \right )\in P $ 。 我们用 $ a\leq b $ 表示 $ \left ( a,b \right )\in P $ 。 注：“ $ \leq $ ”只是符号，不代表不等关系。</description>
-    </item>
-    
-    <item>
       <title>扬州拾遗（一）：竞赛中的函数</title>
       <link>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</link>
       <pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate>

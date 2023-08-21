@@ -19,9 +19,10 @@
       <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
       <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下：
 这是一个关于偏序集的定理。偏序集即偏序集合。
-偏序的概念：设 $ \textbf{A} $ 是一个非空集合。 $ P $ 是 $ \textbf{A} $ 上的一个关系，若关系 $ P $ 是自反的、反对称的、传递的，则称 $ P $ 是集合 $ \textbf{A} $ 上的偏序关系。
-即 $ P $ 满足下列条件：
-$ \forall a\in\textbf{A},\left ( a,a \right )\in P $ ； 若 $ \left ( a,b \right )\in P,\left ( b,a \right )\in P $ ，则 $ a=b $ ； 若 $ \left ( a,b \right )\in P,\left ( b,c \right )\in P $ ，则 $ \left ( a,c \right )\in P $ 。 我们用 $ a\leq b $ 表示 $ \left ( a,b \right )\in P $ 。 注：“ $ \leq $ ”只是符号，不代表不等关系。</description>
+偏序的概念：设$\textbf{A}$是一个非空集合。$P$是$\textbf{A}$上的一个关系，若关系$P$是自反的、反对称的、传递的，则称$P$是集合$\textbf{A}$上的偏序关系。
+即$P$满足下列条件：
+$\forall a\in\textbf{A},\left ( a,a \right )\in P$； 若$\left ( a,b \right )\in P,\left ( b,a \right )\in P$，则$a=b$； 若$\left ( a,b \right )\in P,\left ( b,c \right )\in P$，则$\left ( a,c \right )\in P$。 我们用$a\leq b$表示$\left ( a,b \right )\in P$。 注：“$\leq$”只是符号，不代表不等关系。
+例如，$\left ( \textbf{A},\leq \right )$是一个偏序集，我们定义$A=\left \{ 1,2,3 \right \}$，偏序$\leq$在$\textbf{A}$上表现为大于等于关系，则有：$\leq =\left \{ \left \langle 3,3 \right \rangle,\left \langle 3,2 \right \rangle,\left \langle 3,1 \right \rangle\left \langle 2,2 \right \rangle,\left \langle 2,1 \right \rangle,\left \langle 1,1 \right \rangle \right \}$。</description>
     </item>
     
   </channel>
