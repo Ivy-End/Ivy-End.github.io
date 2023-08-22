@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>集成电路版图设计 on 退思轩</title>
+    <link>https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 集成电路版图设计 on 退思轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 21 Dec 2022 11:09:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>集成电路版图设计实验（以运算放大器和带隙基准源为例）</title>
+      <link>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</link>
+      <pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2022/12/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E4%BB%A5%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E5%92%8C%E5%B8%A6%E9%9A%99%E5%9F%BA%E5%87%86%E6%BA%90%E4%B8%BA%E4%BE%8B/</guid>
+      <description>（本文根据 2017 年本科三年级的课程试验报告整理而来。当年采用的是 ICFB 软件，时至今日已广泛采用 IC617，但我认为这份材料依旧不乏可取之处，分享如下。） 一、运算放大器 1.1 实验目的 熟悉 CentOS 下的 Cadence 集成开发环境； 掌握元件库的调用方法，并由此进行原理图绘制及版图设计； 掌握版图设计中对称性和紧凑性的要求，并能熟练运用； 掌握版图设计中的中心对称技术和屏蔽技术，并能熟练运用； 掌握 DRC（Design Rule Check，设计规则检验）和 LVS（Layout Versus Schematic，版图与电路一致性检验）操作，并能运用其对设计的版图进</description>
+    </item>
+    
+  </channel>
+</rss>

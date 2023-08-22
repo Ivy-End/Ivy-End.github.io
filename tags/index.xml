@@ -17,11 +17,20 @@
     </item>
     
     <item>
-      <title>希腊史</title>
-      <link>https://kwang.life/tags/%E5%B8%8C%E8%85%8A%E5%8F%B2/</link>
+      <title>希波战争</title>
+      <link>https://kwang.life/tags/%E5%B8%8C%E6%B3%A2%E6%88%98%E4%BA%89/</link>
       <pubDate>Fri, 18 Aug 2023 20:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E5%B8%8C%E8%85%8A%E5%8F%B2/</guid>
+      <guid>https://kwang.life/tags/%E5%B8%8C%E6%B3%A2%E6%88%98%E4%BA%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>希腊城邦</title>
+      <link>https://kwang.life/tags/%E5%B8%8C%E8%85%8A%E5%9F%8E%E9%82%A6/</link>
+      <pubDate>Fri, 18 Aug 2023 20:04:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E5%B8%8C%E8%85%8A%E5%9F%8E%E9%82%A6/</guid>
       <description></description>
     </item>
     
@@ -31,6 +40,15 @@
       <pubDate>Fri, 18 Aug 2023 20:04:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博士生活</title>
+      <link>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Fri, 18 Aug 2023 11:27:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     
@@ -98,11 +116,11 @@
     </item>
     
     <item>
-      <title>集成电路版图</title>
-      <link>https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE/</link>
+      <title>集成电路版图设计</title>
+      <link>https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Wed, 21 Dec 2022 11:09:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE/</guid>
+      <guid>https://kwang.life/tags/%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%89%88%E5%9B%BE%E8%AE%BE%E8%AE%A1/</guid>
       <description></description>
     </item>
     
@@ -116,11 +134,11 @@
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://kwang.life/tags/git/</link>
+      <title>GitHub</title>
+      <link>https://kwang.life/tags/github/</link>
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/git/</guid>
+      <guid>https://kwang.life/tags/github/</guid>
       <description></description>
     </item>
     
@@ -134,11 +152,29 @@
     </item>
     
     <item>
+      <title>SSH</title>
+      <link>https://kwang.life/tags/ssh/</link>
+      <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Spice</title>
       <link>https://kwang.life/tags/spice/</link>
       <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/spice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v2lvs</title>
+      <link>https://kwang.life/tags/v2lvs/</link>
+      <pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/v2lvs/</guid>
       <description></description>
     </item>
     
@@ -170,20 +206,20 @@
     </item>
     
     <item>
-      <title>信息安全</title>
-      <link>https://kwang.life/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</link>
+      <title>TAR</title>
+      <link>https://kwang.life/tags/tar/</link>
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</guid>
+      <guid>https://kwang.life/tags/tar/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>博士生活</title>
-      <link>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Tue, 21 Sep 2021 22:10:00 +0800</pubDate>
+      <title>数据加密</title>
+      <link>https://kwang.life/tags/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/</link>
+      <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</guid>
+      <guid>https://kwang.life/tags/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/</guid>
       <description></description>
     </item>
     
@@ -197,11 +233,38 @@
     </item>
     
     <item>
+      <title>中秋赏月</title>
+      <link>https://kwang.life/tags/%E4%B8%AD%E7%A7%8B%E8%B5%8F%E6%9C%88/</link>
+      <pubDate>Tue, 21 Sep 2021 22:10:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E4%B8%AD%E7%A7%8B%E8%B5%8F%E6%9C%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>大学生活</title>
+      <link>https://kwang.life/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Thu, 16 Sep 2021 00:38:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cadence</title>
       <link>https://kwang.life/tags/cadence/</link>
       <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/cadence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VMware</title>
+      <link>https://kwang.life/tags/vmware/</link>
+      <pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/vmware/</guid>
       <description></description>
     </item>
     
@@ -233,29 +296,20 @@
     </item>
     
     <item>
+      <title>人生感悟</title>
+      <link>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Tue, 31 Dec 2019 16:04:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>数字集成电路</title>
       <link>https://kwang.life/tags/%E6%95%B0%E5%AD%97%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/</link>
       <pubDate>Tue, 31 Dec 2019 16:04:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E6%95%B0%E5%AD%97%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>大学生活</title>
-      <link>https://kwang.life/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Mon, 31 Dec 2018 11:25:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>个人成长</title>
-      <link>https://kwang.life/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
-      <pubDate>Sun, 30 Dec 2018 22:13:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
       <description></description>
     </item>
     
@@ -278,15 +332,6 @@
     </item>
     
     <item>
-      <title>䇹政基金</title>
-      <link>https://kwang.life/tags/%E4%87%B9%E6%94%BF%E5%9F%BA%E9%87%91/</link>
-      <pubDate>Sun, 31 Dec 2017 23:13:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%87%B9%E6%94%BF%E5%9F%BA%E9%87%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>武侠小说</title>
       <link>https://kwang.life/tags/%E6%AD%A6%E4%BE%A0%E5%B0%8F%E8%AF%B4/</link>
       <pubDate>Fri, 10 Nov 2017 13:44:00 +0800</pubDate>
@@ -305,11 +350,11 @@
     </item>
     
     <item>
-      <title>暑期交流</title>
-      <link>https://kwang.life/tags/%E6%9A%91%E6%9C%9F%E4%BA%A4%E6%B5%81/</link>
+      <title>游学经历</title>
+      <link>https://kwang.life/tags/%E6%B8%B8%E5%AD%A6%E7%BB%8F%E5%8E%86/</link>
       <pubDate>Thu, 24 Aug 2017 23:31:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E6%9A%91%E6%9C%9F%E4%BA%A4%E6%B5%81/</guid>
+      <guid>https://kwang.life/tags/%E6%B8%B8%E5%AD%A6%E7%BB%8F%E5%8E%86/</guid>
       <description></description>
     </item>
     
@@ -427,15 +472,6 @@
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>中秋赏月</title>
-      <link>https://kwang.life/tags/%E4%B8%AD%E7%A7%8B%E8%B5%8F%E6%9C%88/</link>
-      <pubDate>Mon, 08 Sep 2014 22:10:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%B8%AD%E7%A7%8B%E8%B5%8F%E6%9C%88/</guid>
       <description></description>
     </item>
     
