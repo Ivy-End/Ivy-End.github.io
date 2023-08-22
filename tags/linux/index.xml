@@ -34,5 +34,14 @@
       <description>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。 本文所用到的软件资源，可单击此处下载，提取码为：njup。 安装 VMware Workstation 安装 Microsoft VC Redistributable 双击运行 VC_redist.x64.exe 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。 安装 Microsoft VC Redistributable 勾选“我同意许可条款和条件”后，单击“安装”。稍等片刻后，即可完成 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 的安装。 安装 Microsoft VC Redistributable 正式安装 VMware Workstation 双击运行 VMware-workstation-full-16.1.1-17801498.exe 文件，开始安装 Vmware Workstation。 正式安装 VMware Workstation 单击“下一步”。 正式安装 VMware Workstation 勾选“我接受许可协议中的条款”，单击“下一步”。 正式安装 VMware Workstation 配置“安装位置”，并勾选“增强型键盘驱</description>
     </item>
     
+    <item>
+      <title>Linux 迁移记（一）</title>
+      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
+      <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同： Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。 安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是</description>
+    </item>
+    
   </channel>
 </rss>

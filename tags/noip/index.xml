@@ -71,12 +71,30 @@
     </item>
     
     <item>
+      <title>算法专题：不定方程</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
+      <pubDate>Mon, 04 Nov 2013 19:41:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
+      <description>关于这个算法，主要是参考 NOIP2012 Day2 T1。即这里所讲的是求解这样一个线性模方程： $$ ax\equiv 1\mod{p} $$ 的最小正整数解。 去年我是暴搜做的，当时什么都不会。今天在这里介绍两种算法，一种是我国古代数学家秦九韶发明的「大衍求一术」，还一种是著名的「扩展欧几里德算法」。 首先来看一下大衍求一术。这里只介绍它的计算方法，至于证明可以参考扩展欧几里德算法。 例1：求解方程 $ 23x\equiv 1\mod{97} $ 。 解：我们只需要列出下面这张表就可以得到求解 $$ \begin{matrix}23^{1} &amp;amp; 23^{1} &amp;amp; 3^{17} &amp;amp; 3^{17} &amp;amp; 1^{38}\\ 97^{0} &amp;amp; 5^{4} &amp;amp; 5^{4} &amp;amp; 2^{21} &amp;amp; 2^{21}\end{matrix} $$ 结果就是 38。 接下来我们来理论化的表述一下这个算法的过程： 假设输入 $ a,b $ 满</description>
+    </item>
+    
+    <item>
       <title>算法专题：强连通分量 - Kosaraju Algorithm</title>
       <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
       <pubDate>Mon, 04 Nov 2013 10:14:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
       <description>强连通分量（Strongly Connected Components），简称 SCC。是指在给定的一张图 $ G=\left(V,E\right) $ 的一个子图 $ G{}&amp;rsquo;=\left(V,E\right) $ 这个子图满足对于其中的任意一对点 $ \left \langle V_{i},V_{j} \right \rangle $ 均存在这样两条路径 $ \left \langle V_{i},\cdots,V_{j} \right \rangle,\left \langle V_{j},\cdots,V_{i} \right \rangle $ 。 如果我们把强连通分量缩成一个点，这时候，原图 $ G $ 则会变成有向无环图。 图 $ G=\left(V,E\right) $ 是有向无环图当且仅当该图中没有点集合元素个数大于1的强连通分量。且任意一个强连通分量都至少包含一个有向环。下面我们通过一张图片来理解一下强连通分量以及缩点： 强连通分量 对于统计给定的图 $ G=\left(V,E\right) $ 中强连通分量的个数，我们可以应用并查集在</description>
+    </item>
+    
+    <item>
+      <title>算法专题：传递闭包</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
+      <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
+      <description>传递闭包（Transitive Closure）主要是研究图上两点之间的连通性。对于这个问题，我们只需要改进一下 Floyd-Warshall Algorithm 就可以很方便的求出它的解。 我们这里主要研究的是有向图的传递闭包问题。 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 10240; const int INF = 65536; int N, M; bool f[MAX][MAX], pMap[MAX][MAX]; void Floyd(); int main() { cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { pMap[i][j] = f[i][j] = (i == j) ? 1 : 0; // 初始化 } } for(int i = 1; i &amp;lt;= M; i++) { int s, e; cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; e; pMap[s][e] = pMap[e][s] = true; // 无向图 f[s][e] = f[e][s] = true; } Floyd(); return 0;</description>
     </item>
     
     <item>
@@ -104,6 +122,33 @@
       
       <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
       <description>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念： 多源最短路径 对于这一问题，比较有效的算法是 Floyd-Warshall Algorithm，简称 Floyd。它是基于动态规划的一种最短路径的算法。 我们用 $ f^{k}\left ( i,j \right ) $ 来表示从顶点 $ i $ 到顶点 $ j $ 不经过索引比 $ k $ 大的点的最短路径。这样一来，我们就可以根据 $ f^{k-1}\left ( i,j \right ) $ 推出 $ f^{k}\left ( i,j \right ) $ 。 假设我们目前已知 $ f^{k-1}\left ( i,j \right ) $ ，要推出 $ f^{k}\left ( i,j \right ) $ ，无外</description>
+    </item>
+    
+    <item>
+      <title>算法专题：单源最短路径 - SPFA</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link>
+      <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid>
+      <description>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。 算法的基本步骤如下： 初始化队列和标记数组，将源点入队。 每次取队首元素，对其发出的所有边进行松弛。并将松弛过的且不在队列中的顶点加入到队列中。 重复第二步直至队列为空。 若要判断负环，则当某个顶点松弛超过V次，即存在负环。 对于SPFA还是比较容易理解的，它的复杂度为 $O\left(kE\right)$。 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57</description>
+    </item>
+    
+    <item>
+      <title>算法专题：单源最短路径 – Bellman-Ford Algorithm</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link>
+      <pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid>
+      <description>上一篇文章介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。 Ballman-Ford 是一个非常实用的算法，它是由美国数学家 Richard Ballman 和 Lester Ford 发明的。Ballman-Ford 算法的基本流程如下： 初始化 $ pDist\left [ \right ] $ 数组。 检查每一条边，如果源点到该条边的起点有通路，则更新原点到该条边的终点的最短路径。循环 $ V $ 次即可得到结果。 如若要检测是否存在负环，则再检查每一条边，若可以松弛，则有负环。 我们来看一张图片具体体会一下 Bellman-Ford Alg</description>
+    </item>
+    
+    <item>
+      <title>算法专题：单源最短路径 – Dijkstra Algorithm</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link>
+      <pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid>
+      <description>这个星期开始复习最短路的一些算法。 单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。 首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。 单源最短路径 上面这幅图标出了从源点 $ s $ 到各个顶点的最短路径，大家可以根</description>
     </item>
     
     <item>

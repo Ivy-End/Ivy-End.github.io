@@ -44,15 +44,6 @@
     </item>
     
     <item>
-      <title>博士生活</title>
-      <link>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Fri, 18 Aug 2023 11:27:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>测度论</title>
       <link>https://kwang.life/tags/%E6%B5%8B%E5%BA%A6%E8%AE%BA/</link>
       <pubDate>Fri, 18 Aug 2023 11:27:00 +0800</pubDate>
@@ -220,6 +211,15 @@
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博士生活</title>
+      <link>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Tue, 21 Sep 2021 22:10:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E5%8D%9A%E5%A3%AB%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     
@@ -449,24 +449,6 @@
     </item>
     
     <item>
-      <title>计算几何</title>
-      <link>https://kwang.life/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
-      <pubDate>Tue, 17 Feb 2015 11:37:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数论</title>
-      <link>https://kwang.life/tags/%E6%95%B0%E8%AE%BA/</link>
-      <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E6%95%B0%E8%AE%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>等价无穷小量</title>
       <link>https://kwang.life/tags/%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/</link>
       <pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate>
@@ -530,60 +512,6 @@
     </item>
     
     <item>
-      <title>不定方程</title>
-      <link>https://kwang.life/tags/%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</link>
-      <pubDate>Mon, 04 Nov 2013 19:41:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>传递闭包</title>
-      <link>https://kwang.life/tags/%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</link>
-      <pubDate>Sun, 03 Nov 2013 19:48:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>单源最短路径</title>
-      <link>https://kwang.life/tags/%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</link>
-      <pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>背包问题</title>
-      <link>https://kwang.life/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>空间复杂度</title>
-      <link>https://kwang.life/tags/%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
-      <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>时间复杂度</title>
-      <link>https://kwang.life/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
-      <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Dilworth 定理</title>
       <link>https://kwang.life/tags/dilworth-%E5%AE%9A%E7%90%86/</link>
       <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
@@ -620,20 +548,29 @@
     </item>
     
     <item>
-      <title>广度优先搜索（BFS）</title>
-      <link>https://kwang.life/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2bfs/</link>
+      <title>广度优先搜索</title>
+      <link>https://kwang.life/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2bfs/</guid>
+      <guid>https://kwang.life/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>富勒烯</title>
-      <link>https://kwang.life/tags/%E5%AF%8C%E5%8B%92%E7%83%AF/</link>
+      <title>时间复杂度</title>
+      <link>https://kwang.life/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+      <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>化学竞赛</title>
+      <link>https://kwang.life/tags/%E5%8C%96%E5%AD%A6%E7%AB%9E%E8%B5%9B/</link>
       <pubDate>Sun, 21 Apr 2013 14:12:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E5%AF%8C%E5%8B%92%E7%83%AF/</guid>
+      <guid>https://kwang.life/tags/%E5%8C%96%E5%AD%A6%E7%AB%9E%E8%B5%9B/</guid>
       <description></description>
     </item>
     
@@ -643,15 +580,6 @@
       <pubDate>Sun, 17 Mar 2013 19:30:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E8%80%81%E5%BA%84%E5%93%B2%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux 系统</title>
-      <link>https://kwang.life/tags/linux-%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/linux-%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     

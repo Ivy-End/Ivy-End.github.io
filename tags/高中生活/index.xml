@@ -116,93 +116,12 @@
     </item>
     
     <item>
-      <title>关于二次曲线切线问题的研究</title>
-      <link>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link>
-      <pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/12/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid>
-      <description>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线上某点的切线方程，另一个是关于曲线的切点弦方程。 一、关于曲线上某点的切线方程 1、圆 我们都知道，过圆$x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right )$上一点$P\left(x_{0},y_{0}\right)$的切线方程是$x_{0}x+y_{0}y=r^{2}$。下面我们就更为一般的情形进行探究： 定理1.1：给定圆$C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left (</description>
-    </item>
-    
-    <item>
       <title>呓语（四）：清晰</title>
       <link>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</link>
       <pubDate>Sun, 24 Nov 2013 09:45:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</guid>
       <description>NOIP 终于还是结束了，本来想写一篇文章好好记录一下这两年奋斗的历程，但自从周一知道成绩以后，便什么想法都没有了。凭心而论，今年题目比去年简单，可是我却考得没有去年高，实在惭愧。 现在想来，当初高二知道成绩以后的踌躇满志，就注定了高三竞赛的没落。 本来写了一篇文章，现在也不想打出来了，一切都过去了。或许，竞赛的成绩并不是最重要的。它所教给我的，是一种精神，正如今年国际金牌得主代表清华大学在ACM开幕式上发言时所说「自己选的路，跪着也要走完。」这种永不言弃的精神将一直伴随着我走下去。 当然，在竞赛的同时还收获</description>
-    </item>
-    
-    <item>
-      <title>算法专题：欧拉函数</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
-      <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
-      <description>昨天终于把欧拉函数想通了，现在总结一下。 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。 下面介绍欧拉函数的几个性质： $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\right )=N\cdot\prod_{p\mid N}\left ( \frac{p-1}{p} \right ) $； $ \displaystyle\varphi \left ( p^{k} \right ) = p^{k}-p^{k-1}=\left(p-1 \right )\cdot p^{k-1} $ ，其中 $ p $ 为质数； $ \displaystyle\varphi \left(mn \right )=\varphi \left(m \right )\cdot \varphi \left(n \right ) $ ，其中 $ \gcd \left ( m,n \right )=1 $ 。 我们根据这几个性质就可以求出欧拉函数。 基本思路是首先置 $ \varphi \left ( N \right )=N $ ，然后再枚举素数 $ p $ ，将 $ p $ 的整数倍的欧拉函数 $ \varphi \left ( kp \right ) $ 进行操作 $ \varphi \left ( kp \right )=\varphi \left ( kp \right )\cdot \frac{p-1}{p} $ 即可。 代码如下： 1 2</description>
-    </item>
-    
-    <item>
-      <title>算法专题：求解线性方程组</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
-      <pubDate>Tue, 05 Nov 2013 20:34:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
-      <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。 我写的高斯消元是将所有系数看成一个矩阵来求解的。 下面来简要讲一下高斯消元的过程： 首先，我们根据方程组写出增广矩阵。每次都找 $ x_{i} $ 系数的绝对值最大的那个方程，将它移到上方，而将下面的方程组的 $ x_{i} $ 的系数全部化成 0。以此类推，到最后再逆序求解每个未知数的解。 我们来看一个例子，求解方程组 $ \begin{cases}2x+y-z=8\\ -3x-y+2z=-11\\ -2x+y+2z=-3\end{cases} $ 首先我们写出它的增广矩阵 $$</description>
-    </item>
-    
-    <item>
-      <title>算法专题：强连通分量 - Kosaraju Algorithm</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
-      <pubDate>Mon, 04 Nov 2013 10:14:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
-      <description>强连通分量（Strongly Connected Components），简称 SCC。是指在给定的一张图 $ G=\left(V,E\right) $ 的一个子图 $ G{}&amp;rsquo;=\left(V,E\right) $ 这个子图满足对于其中的任意一对点 $ \left \langle V_{i},V_{j} \right \rangle $ 均存在这样两条路径 $ \left \langle V_{i},\cdots,V_{j} \right \rangle,\left \langle V_{j},\cdots,V_{i} \right \rangle $ 。 如果我们把强连通分量缩成一个点，这时候，原图 $ G $ 则会变成有向无环图。 图 $ G=\left(V,E\right) $ 是有向无环图当且仅当该图中没有点集合元素个数大于1的强连通分量。且任意一个强连通分量都至少包含一个有向环。下面我们通过一张图片来理解一下强连通分量以及缩点： 强连通分量 对于统计给定的图 $ G=\left(V,E\right) $ 中强连通分量的个数，我们可以应用并查集在</description>
-    </item>
-    
-    <item>
-      <title>算法专题：欧拉回路</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
-      <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
-      <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。 下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路： 一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路： 计算各个顶点的度，如果存在 1 个奇数度，或者奇数度个数大</description>
-    </item>
-    
-    <item>
-      <title>算法专题：拓扑排序</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
-      <pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
-      <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题： 给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。 当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。 关于拓扑排序，我们来看一下下面这张图片： Toplogical Sorting 我们可以用队列来实现这个算法，具体改进的过程如下： 记录每个点的入度； 将入度为 0 的顶点加入队列； 依次对入度为 0 的点进行删边操作，同</description>
-    </item>
-    
-    <item>
-      <title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title>
-      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
-      <pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
-      <description>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念： 多源最短路径 对于这一问题，比较有效的算法是 Floyd-Warshall Algorithm，简称 Floyd。它是基于动态规划的一种最短路径的算法。 我们用 $ f^{k}\left ( i,j \right ) $ 来表示从顶点 $ i $ 到顶点 $ j $ 不经过索引比 $ k $ 大的点的最短路径。这样一来，我们就可以根据 $ f^{k-1}\left ( i,j \right ) $ 推出 $ f^{k}\left ( i,j \right ) $ 。 假设我们目前已知 $ f^{k-1}\left ( i,j \right ) $ ，要推出 $ f^{k}\left ( i,j \right ) $ ，无外</description>
-    </item>
-    
-    <item>
-      <title>算法专题：最小生成树 – Kruskal Algoritm</title>
-      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
-      <pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
-      <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下： 取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。 重复上述操作，直至加入了 $ N-1 $ 条边。 我们还是先来看一张图片来理解一下这个算法： Kruskal 算法 下面我们来考虑这个算法，最棘手的问题是判断是否构成环，这里我们采用并查集来处理这个问题，它的复杂度是 $ O\left(V*\alpha\left(V\right)\right) $ 。对于每次寻找权值最小的边，复杂度是 $ O\left(E\right) $ 。这样一来，复杂度将高达 $ O\left(V*\alpha\left(V\right)+VE\right) $ ，即 $ O\left(VE\right) $ 。 我们考虑优化，每次寻找权值最小的边，可以</description>
-    </item>
-    
-    <item>
-      <title>算法专题：最小生成树 – Prim Algoritm</title>
-      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
-      <pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
-      <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。 最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。 首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的</description>
     </item>
     
     <item>
@@ -224,66 +143,12 @@
     </item>
     
     <item>
-      <title>关于复数的一些补充</title>
-      <link>https://kwang.life/2013/08/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</link>
-      <pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid>
-      <description>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。 一、复数的概念 1.1 数的概念的发展 数的概念是从实践中产生和发展起来的。早在原始社会末期，由于记数的需要，人们就建立起自然熟的概念。自然数的全体构成自然数集$\mathbf{N}$。 随着生产和科学的发展，熟的概念也得到了发展。 为了表示各种具有相反意义的量以及满足记数法的要求，人们引进了零和负数，把自然数看作</description>
-    </item>
-    
-    <item>
-      <title>线段树 – 有改动求解区间最值 – 忠诚 2</title>
-      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
-      <pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
-      <description>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章线段树 – 无改动求解区间最值 – 忠诚简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。 首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNode-&amp;gt;nMoney != 2147483647) { return pNode-&amp;gt;nMoney; } else { return pNode-&amp;gt;nMoney =</description>
-    </item>
-    
-    <item>
-      <title>线段树 – 无改动求解区间最值 – 忠诚</title>
-      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
-      <pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
-      <description>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。 线段树可以直观的表示为下面这张图： 线段树示意图 对于一个给定的区间，不断的二分，直到区间变为一个点为止。当然，平时我们所需要的线段树不是这么简陋的，我们需要一些数据域： 1 2 3 4 5 6 struct Node { int nLeft, nRight; unsigned long long nMoney; Node *pLeft, *pRight; }; 有了节点的数据结构，我们需要构建这棵树，我们使用递归的方式生成这棵树</description>
-    </item>
-    
-    <item>
-      <title>0/1 背包 - NOIP2005P3</title>
-      <link>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link>
-      <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
-      <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$，价值是$v\left [ i \right ]$。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。 二维数组表示 定义状态：$f\left [ i \right ]\left [ c \right ]$表示前$i$件物品恰放入一个容量为$c$的背包可以获得的最大价值。 状态转移方程：$f\left [ i \right ]\left [ c \right ]=\max\left \{ f\left [ i-1 \right ]\left [ c \right ],f\left [i-1 \right ]\left [ c-w\left [ i \right ] \right ] +v\left [ i \right ]\right \}$ 代码模版： 1 2 3 4 5 6 7 8 9 for(int i = 1; i &amp;lt;= N; i++) { for(int c =</description>
-    </item>
-    
-    <item>
       <title>暑假小结</title>
       <link>https://kwang.life/2013/08/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</link>
       <pubDate>Thu, 22 Aug 2013 21:15:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/%E6%9A%91%E5%81%87%E5%B0%8F%E7%BB%93/</guid>
       <description>一个暑假很快就过去了，还有一个多星期就要高三了。回顾这个暑假，总感觉比之前任何一个暑假都要充实，这种感觉就如同大块朵颐后的欣悦。简略的说几类事情吧，希望这次不会沉到草稿箱里。 学习 大部分时间都在学校参加数学竞赛辅导。上午自习，下午讲课，最近加入了晚自习。 去扬州进行了为期十天的培训，留下了一篇游记。本来想把课上的讲义发上来的，但是没时间编辑，就一拖再拖。 读完了《博弈论导论》，并初步的学习了一下博弈论。 读完了《看见》，没来得及写下读书笔记。 坚持每天做英语阅读，有来不及的次日补上。 开始刷数学、物理的自主</description>
-    </item>
-    
-    <item>
-      <title>Dilworth 定理 - NOIP1999T1</title>
-      <link>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
-      <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
-      <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下： 这是一个关于偏序集的定理。偏序集即偏序集合。 偏序的概念：设$\textbf{A}$是一个非空集合。$P$是$\textbf{A}$上的一个关系，若关系$P$是自反的、反对称的、传递的，则称$P$是集合$\textbf{A}$上的偏序关系。 即$P$满足下列条件： $\forall a\in\textbf{A},\left ( a,a \right )\in P$； 若$\left ( a,b \right )\in P,\left ( b,a \right )\in P$，则$a=b$； 若$\left ( a,b \right</description>
-    </item>
-    
-    <item>
-      <title>BFS 解决蛇形填数 - NOIP1995P2</title>
-      <link>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</link>
-      <pubDate>Thu, 22 Aug 2013 10:36:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/bfs-%E8%A7%A3%E5%86%B3%E8%9B%87%E5%BD%A2%E5%A1%AB%E6%95%B0-noip1995p2/</guid>
-      <description>题目描述是经典的蛇形填数问题。 以前解决这类问题，通常是通过控制$i,j$的值来定位数组元素的位置，然后进行赋值。但是这种方法非常的繁琐，且难于理解。容易出错。 今天在做这道题目的时候，通过搜索资料，思索出了一种新解法，相较于原来的解法更以理解，且时间复杂度更低。解法的基本思想是 BFS。下面我们仔细来探讨一下。 首先我们定义一组偏移量数组： 1 2 const int dx[] = { 1, 0, -1, 0 }; const int dy[] = { 0, -1, 0, 1 }; 这个数组的顺序必须和填数的顺序一致。在这里，它被定义为逆时针填数。 然后我们需要设置 BFS 的起点： 1 2 x = 1; y = N; i = 0; f[x][y] = nNum++;</description>
     </item>
     
     <item>
@@ -296,57 +161,12 @@
     </item>
     
     <item>
-      <title>扬州拾遗（零）</title>
-      <link>https://kwang.life/2013/08/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</link>
-      <pubDate>Thu, 01 Aug 2013 18:57:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/08/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E9%9B%B6/</guid>
-      <description>注：这篇文章在草稿箱里沉睡了许久，现在勉强将其写完，可能有所遗漏。 7月15日至7月24日去扬州参加了数学夏令营。现在将沿途一些所见所闻所感记录于此。这几天的经历可以用一句话来概括「生活单调的像巴甫洛夫的狗，日子凄惨的如薛定谔的猫。」 7月15日中午我们乘坐大巴从学校赶往扬州。当大巴驶在宽阔的长江大桥上，我被长江的宽阔与雄壮所折服。从杨舍到扬州有将近2小时45分钟的车程。去的路上大家都很激动，不断的拍照直播。 我们入住的宾馆叫做辰源宾馆，双人间，自由组合，我便和陈力江住在了一起。刚进入房间，一股恶臭扑</description>
-    </item>
-    
-    <item>
-      <title>扬州拾遗（一）：竞赛中的函数</title>
-      <link>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</link>
-      <pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/07/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid>
-      <description>一、函数问题基本方法 1. 数型结合法 例1：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。 解：作图像得，正根个数为 $ 1 $ 。 例2：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。 解： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $ 即表示点 $ P\left(x,x^{2}\right) $ 到点 $ A\left(3,2\right),B\left(0,1\right) $ 的距离之差，点 $ P $ 在抛物线 $ y=x^{2} $ 上。 易得点 $ P $ 在直线 $ l_{AB}:x-3y+3=0 $ 上，因此得到 $ P\left(\frac{1-\sqrt{37}}{6},\frac{19-\sqrt{37}}{18}\right) $ ，故 $$ \begin{align*} f\left(x\right)_{max} &amp;amp;=\sqrt{\left[\left(\frac{1-\sqrt{37}}{6}-3\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-2\right)^{2}\right]-\left[\left(\frac{1-\sqrt{37}}{6}\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-1\right)^{2}\right]} \\ &amp;amp;=\frac{2\sqrt{245+34\sqrt{37}}}{9} \end{align*}$$ 2. 函数性质的应用 例3：设 $ x,y\in\mathbf{R} $ ，且满足 $ \begin{cases} \left ( x-1 \right )^{3}+1997\left ( x-1 \right )=-1\\ \left ( y-1 \right )^{3}+1997\left ( y-1 \right )=1 \end{cases} $ ，求 $ x+y $ 。 解：考虑函数 $ f\left(s\right)=s^{3}+1997s $ ，该函数既是奇函数又是增函数。又 $ f\left(x-1\right)=-f\left(y-1\right) $ ，得 $ \left(x-1\right)+\left(y-1\right)=0 $ ，因此 $ x+y=2 $ 。 例4：奇函数 $ f\left(x\right) $ 在定义域 $ \left(-1,1\right) $ 内是减函数，又 $ f\left(1-a\right)+f\left(1-a^{2}\right)&amp;lt;0 $ ，求 $ a $ 的</description>
-    </item>
-    
-    <item>
-      <title>浅谈鸽巢原理及其应用</title>
-      <link>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Sat, 13 Jul 2013 20:27:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
-      <description>鸽巢原理：如果 $k+1$ 个或更多的物体放入 $k$ 个盒子，那么至少有一个盒子包含了 $2$ 个或更多的物体。 有时候鸽巢原理也被称为抽屉原理，更准确地说应该叫做“狄利克雷抽屉原理”。至于狄利克雷这个名字，还有有趣的函数也是用他的名字命名的。它就是大名鼎鼎的狄利克雷函数 $$f\left(x\right)=\begin{cases}1,&amp;amp;x\in\mathbf{Q}\\ 0,&amp;amp;x\not\in\mathbf{Q}\end{cases}$$ 这个函数的有趣之处就在于它没有对应的图像。扯远了。 下面给出鸽巢原理的证明：假定 $k$ 个盒子中没有一个盒子包含的物体多余 $1$ 个，那么物体总数至多是 $k$，这与至少有 $k+1$ 物体矛盾。证毕。 例1：在一组 $367$ 个人中一定至少有 $2$ 个人有相同的生日，这是由于只有 $366$ 个可能的生日。</description>
-    </item>
-    
-    <item>
-      <title>浅谈数列中常系数线性齐次递推关系的求解</title>
-      <link>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</link>
-      <pubDate>Fri, 12 Jul 2013 16:03:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/07/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</guid>
-      <description>翻书复习之时，看到斐波那契数列，于是将一些关于数列递推关系方面的内容整理了一下。 定义1：一个常系数的 $k$ 阶线性齐次递推关系是形如 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的递推关系，其中 $c_{1},c_{2},\cdots,c_{k}$ 是实数，$c_{k}\neq 0$。 这个定义中递推关系是线性的，因为它的右边是数列前项的倍数之和。这个递推关系是齐次的，因为所出现的各项都是 $a_{j}$ 的倍数。数列各项的系数都是常数而不是依赖于 $n$ 的函数。阶为 $k$ 是因为 $a_{n}$ 由序列前面的 $k$ 项来表示。 例1：递推关系 $p_{n}=2p_{n-1}$ 是 $1$ 阶的线性齐次递推关系。递推关系 $f_{n}=f_{n-1}+f_{n-2}$ 是 $2$ 阶的线性齐次递推关系。 例2：递推关系 $a_{n}=a_{n-1}+a_{n-2}^{2}$ 不是线性的。递推关系 $h_{n}=2h_{n-1}+1$ 不是齐次</description>
-    </item>
-    
-    <item>
       <title>呓语（三）：彷徨</title>
       <link>https://kwang.life/2013/06/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</link>
       <pubDate>Wed, 12 Jun 2013 17:37:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/06/%E5%91%93%E8%AF%AD%E4%B8%89%E5%BD%B7%E5%BE%A8/</guid>
       <description>好久没来打理博客了，一直没时间。有时候想要写些文字也就这样耽搁了。比如说《谁是少数幸福的人——读&amp;lt;红与黑&amp;gt;有感》，这篇文章我写在了随笔本上，却一直没时间把它发到博客上来。慢慢发现现在我们自由支配的时间越来越少了，想要安安静静地阅读名家大作也就成了一种奢望。 高考三天在学校上课，我们在图文信息楼四楼最西边的小教室里。根据张伟兴的暗示，隔壁就成了食堂和棋牌室。三天上课，我们一共吃了三顿东池。中午休息的时候看电影，躲在心缘爱心社玩。还差点被周汉东抓到。高一的就没这么幸运了，第一天晚自习就吵得</description>
-    </item>
-    
-    <item>
-      <title>浅谈塞瓦定理在平面几何中的应用</title>
-      <link>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/06/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
-      <description>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。 塞瓦定理：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。 塞瓦定理逆定理：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形） Ceva 定理示意图 证明如下： 首先 $$\frac {BD} {DC}=\frac {S_{\triangle ABD}}{S_{\triangle ADC}}=\frac {S_{\triangle OBD}}{S_{\triangle ODC}} \Rightarrow \frac {BD} {DC}=\frac {S_{\triangle ABD}-S_{\triangle OBD}}{S_{\triangle ADC}-S_{\triangle ODC}}=\frac {S_{\triangle ABO}}{S_{\triangle CAO}}$$ 同理 $$\frac {CE} {EA}=\frac {S_{\triangle BCO}}{S_{\triangle ABO}},\frac {AF}</description>
     </item>
     
     <item>
@@ -359,30 +179,12 @@
     </item>
     
     <item>
-      <title>浅谈线性同余及中国剩余定理</title>
-      <link>https://kwang.life/2013/05/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</link>
-      <pubDate>Sat, 04 May 2013 21:31:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/05/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</guid>
-      <description>我记得在计算机复赛前一天晚上本想看看同余方程的解法，结果第二天就考到了。明天是数学竞赛初赛，简略的复习一下线性同余及中国剩余定理，顺便记下一些笔记。 定理1：令 $m$ 为正整数。若 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m \end{cases}$，那么 $\begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m\end{cases}$。 证明：因为 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m\end{cases}$，所以有整数 $s$ 和 $t$ 使 $\begin{cases} b=a+sm \\ d=c+tm\end{cases}$。于是 $$ \begin{cases} b+d=(a+sm)+(c+tm)=(a+c)+m(s+t)\\ bd=(a+sm)(c+tm)=ac+m(at+cs+stm) \end{cases} \Rightarrow \begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m \end{cases}$$ 例：由于 $\begin{cases} 7 \equiv 2 \pmod 5 \\ 11 \equiv 1 \pmod 5\end{cases}$，从</description>
-    </item>
-    
-    <item>
       <title>呓语（二）：感悟</title>
       <link>https://kwang.life/2013/04/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</link>
       <pubDate>Mon, 29 Apr 2013 21:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/04/%E5%91%93%E8%AF%AD%E4%BA%8C%E6%84%9F%E6%82%9F/</guid>
       <description>向生命的来处张望，不禁唏嘘，时光竟如此匆匆流过。 现在的我已是一名高二的学生，想想明年就要高考，却和理想的大学相差一些距离。前一阵子看了一本书，讲的是一个英语成绩班级倒数的人通过三年的努力成为全省第五的故事。当时感到了一股强大的正能量，过了几天，我根据自己的情况，也制定了一份计划，把刷英语由原来的自发变成了自觉。最近各门科目，尤其是理科上课教的非常快。似乎老师们都认为，把知识讲完了，通过做题就可以把那些没弄懂的都巩固了。这种思维固然不错，但是却显露着填压式教育的影子。 最近慢慢的，真的懂得了学习。以</description>
-    </item>
-    
-    <item>
-      <title>浅谈伴随矩阵在逆矩阵求解中的应用</title>
-      <link>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Mon, 29 Apr 2013 15:30:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/04/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
-      <description>最近数学课上讲了矩阵，很久以前便对矩阵很有兴趣，但由于一些原因没有深入学习。正好趁这个机会，有思考了一下关于矩阵的内容。目前应用较广的应该是运用逆矩阵求解线性方程组，尤其对于三元一次方程组，运用逆矩阵求解会非常方便。 一个方形矩阵的伴随矩阵是一个类似于逆矩阵的概念。如果矩阵可逆，那么它的逆矩阵和它的伴随矩阵之间只差一个系数。然而，伴随矩阵对不可逆的矩阵也有定义，并且不需要用到除法。我们对这种情况不做深入讨论。 引理1：对于一个 $n$ 阶矩阵 $\mathbf{A}$，以及两个整数 $i,j$，其中 $1\leq i,j\leq n$。去</description>
     </item>
     
     <item>
@@ -413,15 +215,6 @@
     </item>
     
     <item>
-      <title>Linux 迁移记（一）</title>
-      <link>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link>
-      <pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/02/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid>
-      <description>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同： Windows 系列的系统臃肿而且不实用，很多东西华而不实。 Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。 我选择的是 Ubuntu 12.04 LTS，主要还是看中了 LTS（Long Term Support），这样可以获取更长时间的技术支持。 安装过程就略过不提了。我采用的是 USB 安装，毕竟刻录光盘很奢侈。将移动硬盘分出一个 4GB 的分区，然后用 Universal USB Installer 写了启动引导，接下去的过程就很简单了，因为都是</description>
-    </item>
-    
-    <item>
       <title>呓语（一）：无题</title>
       <link>https://kwang.life/2013/02/%E5%91%93%E8%AF%AD%E4%B8%80%E6%97%A0%E9%A2%98/</link>
       <pubDate>Mon, 04 Feb 2013 21:28:00 +0800</pubDate>
@@ -437,15 +230,6 @@
       
       <guid>https://kwang.life/2013/02/%E5%AF%92%E5%81%87%E6%9D%A5%E4%BA%86/</guid>
       <description>迷迷糊糊，期末复习，小高考补课就这么过去了。不得不提一下数学，没想到啊。就这样，迎来了这一不寻常的寒假。最后一天突然下起了雨，似乎把一切繁杂和浮躁都冲洗而去。 仔细算来，从今天到开学前一共还有 23 天。时间不容我们挥霍。像以往一样制定一个计划吧（当然不是学校里那种按天数来划的），以前总是写在纸上，这次就直接发到博客上吧。 寒假作业 语文 练字（黑色钢笔）。 专题摘抄 3000 字，并写一篇书评。 预习《唐诗宋词选读》，背诵 14 篇，熟读 2 篇。 关注时事，写一篇社会评论。 数学 复习必修 2、选修 2-1、选修 2-2。 寒假作业（好像只要</description>
-    </item>
-    
-    <item>
-      <title>《中国通史》纪录片：031 诸葛亮治蜀</title>
-      <link>https://kwang.life/2013/01/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</link>
-      <pubDate>Sat, 26 Jan 2013 16:32:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2013/01/%E4%B8%AD%E5%9B%BD%E9%80%9A%E5%8F%B2%E7%BA%AA%E5%BD%95%E7%89%87031-%E8%AF%B8%E8%91%9B%E4%BA%AE%E6%B2%BB%E8%9C%80/</guid>
-      <description>本文主要整理了《中国通史：诸葛亮治蜀》的解说稿。 东汉末年，各个地方势力，各据一方，天下大乱。公元 208 年，在曹操百万大军的高压下，刘备派诸葛亮出使山东，与孙权结盟。孙刘联军在赤壁大破曹军，魏、蜀、吴三分天下之势初步形成。公元 219 年，刘备北伐，孙权偷袭荆州，杀死关羽，刘备北伐失败。公元 221 年，刘备亲率数万大军讨伐孙权，双方在夷陵相持。第二年，刘备被孙权的军队连连击败。夷陵之战惨败，刘备忧愤成疾。弥留之际，刘备将儿子刘禅，托付给诸葛亮，随即病逝。后主刘禅，封诸葛亮为武乡侯，领益州牧1，总理朝政。自此，举国重</description>
     </item>
     
     <item>
