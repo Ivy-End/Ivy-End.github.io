@@ -6,7 +6,25 @@
     <description>Recent content in ACM-ICPC on 退思轩</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 Apr 2016 22:40:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/acm-icpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Feb 2018 20:18:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/acm-icpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>恰同学少年</title>
+      <link>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</link>
+      <pubDate>Fri, 02 Feb 2018 20:18:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</guid>
+      <description>今阅前文，偶见于丁酉六月应《院刊》约稿所著之文。读毕愈觉其实为吾大学向之三秋一概述，现列叙如下。 依稀记得三年前刚刚步入大学时的懵懂无知，如今却已成大四，凝眸回望来时的道路，曾经留下的足迹亦如沙滩上的脚印，在潮涨潮落中渐渐模糊不清。 那是在姑苏的第一个秋天，人行道上金黄的落叶在夕阳下显得别有一番景致。当时的我第一次与当年苏州大学 ACM-ICPC 集训队队长在咖啡厅内相遇，却不曾料到此后一年多的时间内，我会全身心的投入到 ACM-ICPC 集训队的训练之中。 那无数个在实验室的日日日夜夜，让我体会到了较高三更为枯燥的生活，却也带给了我许</description>
+    </item>
+    
+    <item>
+      <title>丙申志（2016 年度总结）</title>
+      <link>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 31 Dec 2016 19:57:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <description>一直想写年终总结，却总是忙于应付各种事务，导致一拖再拖。适逢今天立春之际，写下这篇文章，权当是对过去一年的反思与总结。 时间真是个猝不及防的东西，不知不觉中高中时创建的这个博客已经在巨大的互联网世界中立足四年了，而我也已经从当时特别无知的高中生变成了如今比较无知的大学生了，年龄总是一年一年的增加，但是真正的智慧却不会随着时间线性的增长，总是需要及时的去反思总结并且在实践中进行运用才能真正的内化成智慧。 如果说 2015 年的关键词是“比赛”，那么 2016 年的关键词一定是“项目”。虽然许多人习惯在“项目”前面加上“科</description>
+    </item>
+    
     <item>
       <title>再见了，ACM-ICPC</title>
       <link>https://kwang.life/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</link>
@@ -62,11 +80,11 @@
     </item>
     
     <item>
-      <title>Dynamic Programming - HDU</title>
-      <link>https://kwang.life/2015/03/dynamic-programming-hdu/</link>
+      <title>动态规划 - HDU</title>
+      <link>https://kwang.life/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</link>
       <pubDate>Sat, 14 Mar 2015 13:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/dynamic-programming-hdu/</guid>
+      <guid>https://kwang.life/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</guid>
       <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。 原因：概率应该是相乘，而不是相加。 后来看了题解想到了另外一种方法，使用逃脱概率来计算，用 $f[j]$ 表示偷走 $j$ 价值后逃脱的概率。易知，多次逃脱概率为每次逃脱概率相乘。这里不使用被逮捕的概率是因为被逮捕的情况比较复杂（例如偷第一件物品不被逮捕，偷第二件物品被逮捕，被逮捕的概率应该为头第一件物品不被逮捕的概率乘以偷第二件物品不被逮捕的概率。），而当我们转而考虑它的对立事件——逃脱时，问题就会变得容易了，</description>
     </item>
     
@@ -242,6 +260,15 @@
     </item>
     
     <item>
+      <title>REFLECTIONS</title>
+      <link>https://kwang.life/2015/02/reflections/</link>
+      <pubDate>Fri, 06 Feb 2015 20:57:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2015/02/reflections/</guid>
+      <description>刚刚结束了 ACM 的集训，仔细反思了第一学期的大学学习生活。 首先要说的是上课，在一开始的时候，我每次都会提前很久去占座。但是这样的情况并没有持续很久，有一段时间由于感觉老师讲得太慢，经常上课开小差。但是事后自习想了想，还是决定回到开学时的状态。但是这时候我却惊讶的发现，并不需要占座了，就算是踩着上课铃去上课，也依旧可以坐到第一排（线性代数除外）。解决了态度问题，接下来还是有一个不可回避的问题，有时候觉得讲得太慢，不想听。所以就带了自己的书，讲到不懂的，就认真听课，其余时间就好好看自己的书，学习别的东西</description>
+    </item>
+    
+    <item>
       <title>ACM-ICPC 寒假练习 01</title>
       <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
       <pubDate>Fri, 06 Feb 2015 17:33:00 +0800</pubDate>
@@ -347,6 +374,15 @@
       
       <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
       <description>[100. A+B] Description Read integers $A$ and $B$ from input file and write their sum in output file. Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$). Output Write answer in output file. Sample Input 1 5 3 Sample Output 1 8 Analysis 水题。 Solution 1 2 3 4 5 6 7 8 9 10 11 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int a, b; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl; return 0; } 到了大学，开始接触 ACM。高中里参加了 3 年 NOIP，拿了两年的二等奖，现在终于接触到了 ACM，找到了 SGU 这个 OJ 开始刷题。 一方面，这上面的题目都有些难度，另一方面，由于是英文的，可以在一定程度上提高我的英语水平。 我是按照 SGU 上题目的 AC 数来刷的，并不是完全按照编号往下刷的。</description>
+    </item>
+    
+    <item>
+      <title>期中随记</title>
+      <link>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</link>
+      <pubDate>Wed, 10 Dec 2014 23:28:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</guid>
+      <description>其实期中考试上上周就考完了，只是这几天才出分数。客观的来说，不算低了，却觉得不够。就好像今天刚刚结束的第二场ACM校选赛，第三名，却觉得为什么不是第一名。 很久之前就有人回复我说，为什么还不更新博客。自从开学以来，忙东忙西，一直没有时间，因为我自己也不知道大学究竟是什么，回想起之前写过的一篇《我为什么要上大学》，总觉得讲不到点子上，有很多想法没有表达出来，看来很有可能会诞生一篇续集吧。 几天前，Godaddy 给我发了一封电子邮件，说我的域名要到期了，突然意识到这个小小的博客已经存在了将近两年了。在这</description>
     </item>
     
     <item>

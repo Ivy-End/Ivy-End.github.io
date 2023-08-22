@@ -116,15 +116,6 @@
     </item>
     
     <item>
-      <title>SGU 347 - Join the Strings</title>
-      <link>https://kwang.life/2015/02/sgu-347-join-the-strings/</link>
-      <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
-      <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own. Due to the ambiguous nature of misunderstanding and the crying injustice of history to ambiguity, he decided to leave all his royal responsibilities aside and made up his royal mind to find the chronicler, who will make him famous, depicting all his heroic deeds truthfully and gloriously enough. The King assembled the greatest minds of his kingdom at the Academic Chroniclers Meeting (ACM), as he named it, and decided to test their might. The task was to build the Smallest Lexicographical Concatenation (SLC) out of the given $N$ strings. SLC of $N$ strings $s_1,\cdots, s_N$ is the lexicographically smallest their concatenation $s_{i_1} + \cdots + s_{i_N}$, where $ i_1,\cdots, i_N $ is a permutation of integers from 1 through $N$. It&amp;rsquo;s a great privilege to be a chronicler, so don&amp;rsquo;t miss your chance and don&amp;rsquo;t screw it up! Make the king choose you! Input The first line of the input file contains a single integer $N$ ($1\leq N\leq 100$) indicating the number of strings. The following $N$ lines contain $N$ strings,</description>
-    </item>
-    
-    <item>
       <title>SGU 151 - Construct a triangle</title>
       <link>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</link>
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>

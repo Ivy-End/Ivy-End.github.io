@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数论 on 退思轩</title>
+    <link>https://kwang.life/tags/%E6%95%B0%E8%AE%BA/</link>
+    <description>Recent content in 数论 on 退思轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 13 Feb 2015 12:50:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ACM-ICPC 寒假练习 06</title>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
+      <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
+      <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制转换的公式，然后根据公式计算即可。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 #include &amp;lt;iostream&amp;gt; using namespace std; int Pow(int x, int y); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(x == &amp;#34;0&amp;#34;) { break; } int ans = 0; for(int i = 0; i &amp;lt; x.length(); i++) { ans += (x[i] - &amp;#39;0&amp;#39;) * (Pow(2, x.length() - i) - 1); } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } int Pow(int x, int y) { int ret = 1; for(int i = 1; i &amp;lt;= y; i++) { ret *= x; } return ret; } UVaOJ 10110 这是一道典型的数论题，最后亮着的灯，它的开关一定被拨动了奇数次。所以，我们只要看它的因数个数</description>
+    </item>
+    
+    <item>
+      <title>ACM-ICPC 寒假练习 05</title>
+      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
+      <pubDate>Thu, 12 Feb 2015 14:24:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
+      <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。 UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 double 解决，当时没有 AC。 现在重新做了一遍，需要注意的是最后输出的结果一定要转换成int，否则会 WA。 同时，double 转换为 int 的时候可以采取这样的方式：(int)floor(x + 0.5)。 1 2 3 4 5 6 7 8 9 10 11 12 #include &amp;lt;iostream&amp;gt; #include &amp;lt;math.h&amp;gt; using namespace std; int main() { double x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { cout &amp;lt;&amp;lt; (int)floor(pow(y, 1 / x) + 0.5) &amp;lt;&amp;lt; endl; } return 0; } UVaOJ 10161 这道题目是通常的找规律题目，和一道《Canto</description>
+    </item>
+    
+  </channel>
+</rss>

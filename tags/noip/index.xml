@@ -6,16 +6,7 @@
     <description>Recent content in NOIP on 退思轩</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 06 Feb 2015 20:57:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/noip/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>REFLECTIONS</title>
-      <link>https://kwang.life/2015/02/reflections/</link>
-      <pubDate>Fri, 06 Feb 2015 20:57:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/2015/02/reflections/</guid>
-      <description>刚刚结束了 ACM 的集训，仔细反思了第一学期的大学学习生活。 首先要说的是上课，在一开始的时候，我每次都会提前很久去占座。但是这样的情况并没有持续很久，有一段时间由于感觉老师讲得太慢，经常上课开小差。但是事后自习想了想，还是决定回到开学时的状态。但是这时候我却惊讶的发现，并不需要占座了，就算是踩着上课铃去上课，也依旧可以坐到第一排（线性代数除外）。解决了态度问题，接下来还是有一个不可回避的问题，有时候觉得讲得太慢，不想听。所以就带了自己的书，讲到不懂的，就认真听课，其余时间就好好看自己的书，学习别的东西</description>
-    </item>
-    
+    <lastBuildDate>Mon, 28 Jul 2014 20:34:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/noip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>忆昨日·NOIP - 第四回 小试身手</title>
       <link>https://kwang.life/2014/07/%E5%BF%86%E6%98%A8%E6%97%A5noip-%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E5%B0%8F%E8%AF%95%E8%BA%AB%E6%89%8B/</link>
@@ -53,12 +44,120 @@
     </item>
     
     <item>
+      <title>呓语（四）：清晰</title>
+      <link>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</link>
+      <pubDate>Sun, 24 Nov 2013 09:45:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E5%91%93%E8%AF%AD%E5%9B%9B%E6%B8%85%E6%99%B0/</guid>
+      <description>NOIP 终于还是结束了，本来想写一篇文章好好记录一下这两年奋斗的历程，但自从周一知道成绩以后，便什么想法都没有了。凭心而论，今年题目比去年简单，可是我却考得没有去年高，实在惭愧。 现在想来，当初高二知道成绩以后的踌躇满志，就注定了高三竞赛的没落。 本来写了一篇文章，现在也不想打出来了，一切都过去了。或许，竞赛的成绩并不是最重要的。它所教给我的，是一种精神，正如今年国际金牌得主代表清华大学在ACM开幕式上发言时所说「自己选的路，跪着也要走完。」这种永不言弃的精神将一直伴随着我走下去。 当然，在竞赛的同时还收获</description>
+    </item>
+    
+    <item>
+      <title>算法专题：欧拉函数</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 06 Nov 2013 07:44:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</guid>
+      <description>昨天终于把欧拉函数想通了，现在总结一下。 欧拉函数 $ \varphi \left ( N \right ) $ 表示小于或等于 $ N $ 的正整数中与 $ N $ 互质的数的个数。又称 $ \varphi $ 函数、欧拉商数。 下面介绍欧拉函数的几个性质： $ \displaystyle\varphi\left ( 1 \right )=1 $； $ \displaystyle\varphi \left( N\right )=N\cdot\prod_{p\mid N}\left ( \frac{p-1}{p} \right ) $； $ \displaystyle\varphi \left ( p^{k} \right ) = p^{k}-p^{k-1}=\left(p-1 \right )\cdot p^{k-1} $ ，其中 $ p $ 为质数； $ \displaystyle\varphi \left(mn \right )=\varphi \left(m \right )\cdot \varphi \left(n \right ) $ ，其中 $ \gcd \left ( m,n \right )=1 $ 。 我们根据这几个性质就可以求出欧拉函数。 基本思路是首先置 $ \varphi \left ( N \right )=N $ ，然后再枚举素数 $ p $ ，将 $ p $ 的整数倍的欧拉函数 $ \varphi \left ( kp \right ) $ 进行操作 $ \varphi \left ( kp \right )=\varphi \left ( kp \right )\cdot \frac{p-1}{p} $ 即可。 代码如下： 1 2</description>
+    </item>
+    
+    <item>
+      <title>算法专题：求解线性方程组</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
+      <pubDate>Tue, 05 Nov 2013 20:34:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%B1%82%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
+      <description>求解线性方程组的有效方法是高斯消元。这个算法我看了半个下午才真正理解并且写了出来。 这个算法的核心思想就是将一个方程组的增广矩阵通过初等行变换转变成上三角矩阵，然后求解各个未知数的解。 我写的高斯消元是将所有系数看成一个矩阵来求解的。 下面来简要讲一下高斯消元的过程： 首先，我们根据方程组写出增广矩阵。每次都找 $ x_{i} $ 系数的绝对值最大的那个方程，将它移到上方，而将下面的方程组的 $ x_{i} $ 的系数全部化成 0。以此类推，到最后再逆序求解每个未知数的解。 我们来看一个例子，求解方程组 $ \begin{cases}2x+y-z=8\\ -3x-y+2z=-11\\ -2x+y+2z=-3\end{cases} $ 首先我们写出它的增广矩阵 $$</description>
+    </item>
+    
+    <item>
+      <title>算法专题：强连通分量 - Kosaraju Algorithm</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</link>
+      <pubDate>Mon, 04 Nov 2013 10:14:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F-kosaraju-algorithm/</guid>
+      <description>强连通分量（Strongly Connected Components），简称 SCC。是指在给定的一张图 $ G=\left(V,E\right) $ 的一个子图 $ G{}&amp;rsquo;=\left(V,E\right) $ 这个子图满足对于其中的任意一对点 $ \left \langle V_{i},V_{j} \right \rangle $ 均存在这样两条路径 $ \left \langle V_{i},\cdots,V_{j} \right \rangle,\left \langle V_{j},\cdots,V_{i} \right \rangle $ 。 如果我们把强连通分量缩成一个点，这时候，原图 $ G $ 则会变成有向无环图。 图 $ G=\left(V,E\right) $ 是有向无环图当且仅当该图中没有点集合元素个数大于1的强连通分量。且任意一个强连通分量都至少包含一个有向环。下面我们通过一张图片来理解一下强连通分量以及缩点： 强连通分量 对于统计给定的图 $ G=\left(V,E\right) $ 中强连通分量的个数，我们可以应用并查集在</description>
+    </item>
+    
+    <item>
+      <title>算法专题：欧拉回路</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
+      <pubDate>Sun, 03 Nov 2013 19:43:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</guid>
+      <description>欧拉回路（Euler Circuit）是指：在一个无向图中，一条包含所有边，且其中每一条边只经过一次的路径。欧拉回路最常见的应用是一笔画。 下面介绍几个用于判断给定的图 $ G=\left(V,E\right) $ 中是否欧拉通路或欧拉回路： 一个图有欧拉回路当且仅当它是连通的且每个顶点都有偶数度。 一个图有欧拉通路当且经当它是连通的且除两个顶点外，其他顶点都有偶数度。 在第二个定理下，含奇数度的两个节点中，一个必为欧拉通路起点，另一个必为欧拉通路的终点。 这样，我们就可以很容易想出程序的思路： 计算各个顶点的度，如果存在 1 个奇数度，或者奇数度个数大</description>
+    </item>
+    
+    <item>
+      <title>算法专题：拓扑排序</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
+      <description>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题： 给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。 当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。 关于拓扑排序，我们来看一下下面这张图片： Toplogical Sorting 我们可以用队列来实现这个算法，具体改进的过程如下： 记录每个点的入度； 将入度为 0 的顶点加入队列； 依次对入度为 0 的点进行删边操作，同</description>
+    </item>
+    
+    <item>
+      <title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title>
+      <link>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link>
+      <pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/11/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid>
+      <description>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念： 多源最短路径 对于这一问题，比较有效的算法是 Floyd-Warshall Algorithm，简称 Floyd。它是基于动态规划的一种最短路径的算法。 我们用 $ f^{k}\left ( i,j \right ) $ 来表示从顶点 $ i $ 到顶点 $ j $ 不经过索引比 $ k $ 大的点的最短路径。这样一来，我们就可以根据 $ f^{k-1}\left ( i,j \right ) $ 推出 $ f^{k}\left ( i,j \right ) $ 。 假设我们目前已知 $ f^{k-1}\left ( i,j \right ) $ ，要推出 $ f^{k}\left ( i,j \right ) $ ，无外</description>
+    </item>
+    
+    <item>
+      <title>算法专题：最小生成树 – Kruskal Algoritm</title>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link>
+      <pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid>
+      <description>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下： 取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。 重复上述操作，直至加入了 $ N-1 $ 条边。 我们还是先来看一张图片来理解一下这个算法： Kruskal 算法 下面我们来考虑这个算法，最棘手的问题是判断是否构成环，这里我们采用并查集来处理这个问题，它的复杂度是 $ O\left(V*\alpha\left(V\right)\right) $ 。对于每次寻找权值最小的边，复杂度是 $ O\left(E\right) $ 。这样一来，复杂度将高达 $ O\left(V*\alpha\left(V\right)+VE\right) $ ，即 $ O\left(VE\right) $ 。 我们考虑优化，每次寻找权值最小的边，可以</description>
+    </item>
+    
+    <item>
+      <title>算法专题：最小生成树 – Prim Algoritm</title>
+      <link>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link>
+      <pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/10/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid>
+      <description>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。 最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。 首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的</description>
+    </item>
+    
+    <item>
+      <title>线段树 – 有改动求解区间最值 – 忠诚 2</title>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link>
+      <pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid>
+      <description>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章线段树 – 无改动求解区间最值 – 忠诚简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。 首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 int Update(Node *pNode) { if(pNode-&amp;gt;nLeft == pNode-&amp;gt;nRight || pNode-&amp;gt;nMoney != 2147483647) { return pNode-&amp;gt;nMoney; } else { return pNode-&amp;gt;nMoney =</description>
+    </item>
+    
+    <item>
+      <title>线段树 – 无改动求解区间最值 – 忠诚</title>
+      <link>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link>
+      <pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/08/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid>
+      <description>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。 线段树可以直观的表示为下面这张图： 线段树示意图 对于一个给定的区间，不断的二分，直到区间变为一个点为止。当然，平时我们所需要的线段树不是这么简陋的，我们需要一些数据域： 1 2 3 4 5 6 struct Node { int nLeft, nRight; unsigned long long nMoney; Node *pLeft, *pRight; }; 有了节点的数据结构，我们需要构建这棵树，我们使用递归的方式生成这棵树</description>
+    </item>
+    
+    <item>
       <title>0/1 背包 - NOIP2005P3</title>
       <link>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link>
       <pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate>
       
       <guid>https://kwang.life/2013/08/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid>
       <description>题目是经典的采药问题。也是最基础的 0/1 背包问题。 我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$，价值是$v\left [ i \right ]$。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。 二维数组表示 定义状态：$f\left [ i \right ]\left [ c \right ]$表示前$i$件物品恰放入一个容量为$c$的背包可以获得的最大价值。 状态转移方程：$f\left [ i \right ]\left [ c \right ]=\max\left \{ f\left [ i-1 \right ]\left [ c \right ],f\left [i-1 \right ]\left [ c-w\left [ i \right ] \right ] +v\left [ i \right ]\right \}$ 代码模版： 1 2 3 4 5 6 7 8 9 for(int i = 1; i &amp;lt;= N; i++) { for(int c =</description>
+    </item>
+    
+    <item>
+      <title>Dilworth 定理 - NOIP1999T1</title>
+      <link>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link>
+      <pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2013/08/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid>
+      <description>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下： 这是一个关于偏序集的定理。偏序集即偏序集合。 偏序的概念：设$\textbf{A}$是一个非空集合。$P$是$\textbf{A}$上的一个关系，若关系$P$是自反的、反对称的、传递的，则称$P$是集合$\textbf{A}$上的偏序关系。 即$P$满足下列条件： $\forall a\in\textbf{A},\left ( a,a \right )\in P$； 若$\left ( a,b \right )\in P,\left ( b,a \right )\in P$，则$a=b$； 若$\left ( a,b \right</description>
     </item>
     
     <item>
