@@ -13,7 +13,7 @@
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
-      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。 加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out</description>
+      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。 加密 1 2 3 4 5 6 7 8 9 10 11 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 1 2 3 4 5 6 7 8 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示</description>
     </item>
     
   </channel>
