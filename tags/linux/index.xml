@@ -13,7 +13,7 @@
       <pubDate>Tue, 23 Aug 2022 11:27:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/08/linux-%E9%85%8D%E7%BD%AE-github-%E8%B4%A6%E5%8F%B7/</guid>
-      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | ..*B *. | | . o.@ = | | . + @ . | | E + + o | | . S o | | | | | | | | | +-----------------+ Step 2 配置 SSH 公钥 登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。 GitHub 配置 SSH 公钥 Step 3 克隆 Repo 在服务器终</description>
+      <description>Step 1 生成 SSH 私钥/公钥 打开终端，使用 ssh-keygen 工具生成 SSH 私钥（GitHub 推荐方法）： [kwang@Slave02 ~]$ ssh-keygen -t ecdsa -b 521 -C &amp;#34;prc.wkai@gmail.com&amp;#34; Generating public/private ecdsa key pair. Enter file in which to save the key (/home/kwang/.ssh/id_ecdsa): /home/kwang/.ssh/id_ecdsa Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/kwang/.ssh/id_ecdsa. Your public key has been saved in /home/kwang/.ssh/id_ecdsa.pub. The key fingerprint is: 14:21:b7:06:4c:e4:cd:39:c8:1f:bd:09:64:42:80:3b prc.wkai@gmail.com The key&amp;#39;s randomart image is: +--[ECDSA 521]---+ | ..*B *. | | . o.@ = | | . + @ . | | E + + o | | . S o | | | | | | | | | +-----------------+ Step 2 配置 SSH 公钥 登录 GitHub 主页，在个人设置中选择“SSH and GPG keys”，单击“New SSH key”，将上一步中生成的公钥（id_ecdsa.pub）复制进来（下图）。 GitHub 配置 SSH 公钥 Step 3 克隆 Repo 在服务器终端运行 git 配置账号和对应的 repo： [kwang@Slave02 ~]$ git clone</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 27 Jun 2022 17:22:00 +0800</pubDate>
       
       <guid>https://kwang.life/2022/06/%E7%BB%93%E5%90%88-tar-%E5%92%8C-openssl-%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95/</guid>
-      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。 加密 1 2 3 4 5 6 7 8 9 10 11 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 1 2 3 4 5 6 7 8 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示</description>
+      <description>当需要在网络上传递敏感数据时，通常需要对文件和目录进行加密，而普通的加密方法又非常容易被破解。为了应对这一难题，我们可以采用 RedHat 系统中的 TAR 打包工具和 OpenSSL 实现数据的加密。 加密 # 1. 切换到需要进行加密的文件目录下 [user@Server ~]$ cd &amp;lt;Directory to be encrypted&amp;gt; # 2. 使用下列语句对文件目录进行加密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out 表示加密输出的文件 [user@Server ~]$ tar -czf - * | openssl enc -e -aes256 -out File.tar.gz # 3. 输入秘钥 enter aes-256-cbc encryption password: Verifying -enter aes-256-cbc-encryption password: 解密 # 1. 使用下列语句对加密文件进行解密 # enc 表示使用加密进行编码 # -e 表示使用加密选项 # -aes256 表示使用 aes256 加密算法 # -out</description>
     </item>
     
     <item>
