@@ -8,11 +8,29 @@
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 Sep 2023 12:22:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>概率</title>
-      <link>https://kwang.life/tags/%E6%A6%82%E7%8E%87/</link>
+      <title>博弈论</title>
+      <link>https://kwang.life/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/</link>
       <pubDate>Wed, 06 Sep 2023 12:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/tags/%E6%A6%82%E7%8E%87/</guid>
+      <guid>https://kwang.life/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>概率论</title>
+      <link>https://kwang.life/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+      <pubDate>Wed, 06 Sep 2023 12:22:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>人生感悟</title>
+      <link>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Wed, 06 Sep 2023 12:22:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
     
@@ -301,15 +319,6 @@
       <pubDate>Tue, 31 Dec 2019 16:04:00 +0800</pubDate>
       
       <guid>https://kwang.life/tags/%E5%9B%BD%E9%99%85%E4%BC%9A%E8%AE%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>人生感悟</title>
-      <link>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</link>
-      <pubDate>Tue, 31 Dec 2019 16:04:00 +0800</pubDate>
-      
-      <guid>https://kwang.life/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
     

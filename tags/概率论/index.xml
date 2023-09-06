@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>概率论 on 退思轩</title>
+    <link>https://kwang.life/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+    <description>Recent content in 概率论 on 退思轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 06 Sep 2023 12:22:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>蒙提·霍尔问题（Monty Hall Problem）</title>
+      <link>https://kwang.life/2023/09/%E8%92%99%E6%8F%90%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98monty-hall-problem/</link>
+      <pubDate>Wed, 06 Sep 2023 12:22:00 +0800</pubDate>
+      
+      <guid>https://kwang.life/2023/09/%E8%92%99%E6%8F%90%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98monty-hall-problem/</guid>
+      <description>蒙提霍尔问题（Monty Hall Problem）是一道关于博弈论的数学问题，通常也被称作山羊问题或三门问题。它出自一档由蒙提·霍尔（Monty Hall）主持的电视节目 Let&amp;rsquo;s Make a Deal，题目的描述如下。 假设你正在参加一个游戏节目，你被要求在三扇门中选择一扇：其中一扇后面有一辆车，其余两扇后面则是山羊。你选择了一道门，假设是一号门，然后知道门后面有什么的主持人，开启了另一扇后面有山羊的门，假设是三号门。他然后问你：“你想选择二号门吗？”转换你的选择对你来说是一种优势吗？ 蒙提·霍尔问题 对于这类问题最直观的解答</description>
+    </item>
+    
+  </channel>
+</rss>
