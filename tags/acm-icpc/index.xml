@@ -2,404 +2,404 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ACM-ICPC on 退思轩</title>
-    <link>https://kwang.life/tags/acm-icpc/</link>
+    <link>https://ivy-end.github.io/tags/acm-icpc/</link>
     <description>Recent content in ACM-ICPC on 退思轩</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 02 Feb 2018 20:18:00 +0800</lastBuildDate><atom:link href="https://kwang.life/tags/acm-icpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Feb 2018 20:18:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/acm-icpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>恰同学少年</title>
-      <link>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</link>
+      <link>https://ivy-end.github.io/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</link>
       <pubDate>Fri, 02 Feb 2018 20:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</guid>
+      <guid>https://ivy-end.github.io/2018/02/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/</guid>
       <description>今阅前文，偶见于丁酉六月应《院刊》约稿所著之文。读毕愈觉其实为吾大学向之三秋一概述，现列叙如下。 依稀记得三年前刚刚步入大学时的懵懂无知，如今却已成大四，凝眸回望来时的道路，曾经留下的足迹亦如沙滩上的脚印，在潮涨潮落中渐渐模糊不清。 那是在姑苏的第一个秋天，人行道上金黄的落叶在夕阳下显得别有一番景致。当时的我第一次与当年苏州大学 ACM-ICPC 集训队队长在咖啡厅内相遇，却不曾料到此后一年多的时间内，我会全身心的投入到 ACM-ICPC 集训队的训练之中。 那无数个在实验室的日日日夜夜，让我体会到了较高三更为枯燥的生活，却也带给了我许</description>
     </item>
     
     <item>
       <title>丙申志（2016 年度总结）</title>
-      <link>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://ivy-end.github.io/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sat, 31 Dec 2016 19:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://ivy-end.github.io/2016/12/%E4%B8%99%E7%94%B3%E5%BF%972016-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
       <description>一直想写年终总结，却总是忙于应付各种事务，导致一拖再拖。适逢今天立春之际，写下这篇文章，权当是对过去一年的反思与总结。 时间真是个猝不及防的东西，不知不觉中高中时创建的这个博客已经在巨大的互联网世界中立足四年了，而我也已经从当时特别无知的高中生变成了如今比较无知的大学生了，年龄总是一年一年的增加，但是真正的智慧却不会随着时间线性的增长，总是需要及时的去反思总结并且在实践中进行运用才能真正的内化成智慧。 如果说 2015 年的关键词是“比赛”，那么 2016 年的关键词一定是“项目”。虽然许多人习惯在“项目”前面加上“科</description>
     </item>
     
     <item>
       <title>再见了，ACM-ICPC</title>
-      <link>https://kwang.life/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</link>
+      <link>https://ivy-end.github.io/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</link>
       <pubDate>Tue, 05 Apr 2016 22:40:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</guid>
+      <guid>https://ivy-end.github.io/2016/04/%E5%86%8D%E8%A7%81%E4%BA%86acm-icpc/</guid>
       <description>终于还是来到了这一天，当双手在键盘上敲下这些文字的时候，竟有些颤抖。尽管曾经不止一次的思考过退役后的场景，也做足了充分的思想准备，但当这一刻真的到来，却有些不知所措。看着 ACM 交流群里热烈的讨论，关上窗口，退出该群；将 ACM 资料小心翼翼的放置在移动硬盘的角落，不小心瞥见 NOIP 退役时存放的资料，记忆一下子席卷而来。在算法竞赛的道路上跌跌撞撞的行走了将近五年，从 NOIP 到 ICPC，是时候说再见了。 此时的我，依然记得多年前第一次提交 A+B 时的激动，记得思索半天推导出 Segment Tree 时的满足，记得苦思冥想理解 Dancing Links 时的欣喜，记得写完几本草</description>
     </item>
     
     <item>
       <title>记 2015 ACM-ICPC亚洲区域赛（长春站、北京站）</title>
-      <link>https://kwang.life/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</link>
+      <link>https://ivy-end.github.io/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</link>
       <pubDate>Fri, 20 Nov 2015 21:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</guid>
+      <guid>https://ivy-end.github.io/2015/11/%E8%AE%B0-2015-acm-icpc%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%E9%95%BF%E6%98%A5%E7%AB%99%E5%8C%97%E4%BA%AC%E7%AB%99/</guid>
       <description>细细想来，已经有近四个月没有更新过博客，上一次还是在 7 月份。既然这样，那就从那时候讲起吧。 整个暑假，绝大部分时间在参加 ACM 训练，除此之外，还参加了全国大学生电子设计竞赛，拿了个一般的奖项；去英国走了一遭，体会了不同的风土人情。一直想好好记录这两件事情，但总是由于各种各样的原因搁置了。 这学期自从开学以来就一直非常的忙，刚开始备战 ACM，上个月在长春拿了一块铜牌，上星期在北京拿了一块银牌，周三刚刚把 FPGA 设计邀请赛的作品完成，明天一大早赶往上海交通大学参加微软 Hackthon 大赛，下周需要提交全国移动互联网开发大赛的作</description>
     </item>
     
     <item>
       <title>SGU 144 - Meeting</title>
-      <link>https://kwang.life/2015/07/sgu-144-meeting/</link>
+      <link>https://ivy-end.github.io/2015/07/sgu-144-meeting/</link>
       <pubDate>Wed, 22 Jul 2015 20:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/07/sgu-144-meeting/</guid>
+      <guid>https://ivy-end.github.io/2015/07/sgu-144-meeting/</guid>
       <description>Description Two of the three members of the winning team of one of the ACM regional contests are going to meet in order to train for the upcoming World Finals. They decided that they will meet sometime between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock. Because they never get anywhere on time (they were late even on the day of the regional contest), they did not set an exact time when they will meet. However, they decided that the one who gets first at the meeting point will not wait more than $Z$ minutes for the other one (they calculated that, if the other one will not come within $Z$ minutes from the arrival of the first of them, then it is very probable that he will not show up at all). Knowing that, in the end, both of them will show up at some time between $X$ o&amp;rsquo;clock and $Y$ o&amp;rsquo;clock (not necessarily after an integer number of minutes), compute which is the probability that they will actually meet. Input The input will contain 2 integer numbers $X$ and $Y$ ($0\leq X &amp;lt; Y\leq 24$) and one real number $Z$ ($0 &amp;lt; Z\leq 60(Y-X)$). Output You should output the required probability with 7 decimal digits (rounded according to the 8th decimal digit). Sample Input 11 12 20.0 Sample Output 0.5555556 Analysis 这是一道纯粹的数学概率题，我们可以进行公式推导。首先我们需要</description>
     </item>
     
     <item>
       <title>SGU 116 - Index of super-prime</title>
-      <link>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</link>
+      <link>https://ivy-end.github.io/2015/07/sgu-116-index-of-super-prime/</link>
       <pubDate>Mon, 20 Jul 2015 13:39:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/07/sgu-116-index-of-super-prime/</guid>
+      <guid>https://ivy-end.github.io/2015/07/sgu-116-index-of-super-prime/</guid>
       <description>Description Let $P_1, P_2,\cdots ,P_N,\cdots$ be a sequence of prime numbers. Super-prime number is such a prime number that its current number in prime numbers sequence is a prime number too. For example, 3 is a super-prime number, but 7 is not. Index of super-prime for number is 0 iff it is impossible to present it as a sum of few (maybe one) super-prime numbers, and if such presentation exists, index is equal to minimal number of items in such presentation. Your task is to find index of super-prime for given numbers and find optimal presentation as a sum of super-primes. Input There is a positive integer number in input. Number is not more than 10000. Output Write index $I$ for given number as the first number in line. Write I super-primes numbers that are items in optimal presentation for given number. Write these I numbers in order of non-increasing. Sample Input 6 Sample Output 2 3 3 Analysis 首先，我们可以根据筛法求出 10000 以内的素数，接下来我们继续利用筛法，求出这些素数中，下标为素数的超级素数，这样我们就得到了题目中所需要的超级素数。 对于寻找一个最优的组合，我们可以使用 0/1 背</description>
     </item>
     
     <item>
       <title>专题一、简单搜索 - Virtual Judge</title>
-      <link>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
+      <link>https://ivy-end.github.io/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</link>
       <pubDate>Mon, 08 Jun 2015 21:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
+      <guid>https://ivy-end.github.io/2015/06/%E4%B8%93%E9%A2%98%E4%B8%80%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2-virtual-judge/</guid>
       <description>很久以前刷完了 Virtual Judge 上的简单搜索专题，现总结如下： POJ 1321 由于题目的数据范围比较小，可以直接 dfs 暴力。读入时记录每个空位的位置，保存在 pX[] 以及 pY[] 数组中。暴力的时候统计当前处理第几个空格以及当前处理到了第几行即可。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 128; long long ans; int N, K, nCnt; bool pUsed[MAX]; int pX[MAX], pY[MAX]; int pRow[MAX], pCol[MAX]; void dfs(int x, int y); int main() { char dwTmp; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K) { if(N == -1 &amp;amp;&amp;amp; K == -1) { break; } nCnt = 0; ans = 0; for(int i = 1; i &amp;lt;= N; i++) { for(int j = 1; j &amp;lt;= N; j++) { cin &amp;gt;&amp;gt; dwTmp; if(dwTmp == &amp;#39;#&amp;#39;) { nCnt++; pX[nCnt] = i; pY[nCnt] = j; } } cin.ignore(); } memset(pRow, 0, sizeof(pRow)); memset(pCol, 0, sizeof(pCol)); memset(pUsed, false, sizeof(pUsed)); dfs(1, 0); cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } void dfs(int x, int y) { if(y == K) { ans++; } else { for(int i = x; i &amp;lt;= nCnt; i++) { if(!(pUsed[i] || pRow[pX[i]] || pCol[pY[i]])) { pRow[pX[i]]++; pCol[pY[i]]++; pUsed[i] = true;</description>
     </item>
     
     <item>
       <title>记 2015 ACM-ICPC 上海大都会赛</title>
-      <link>https://kwang.life/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</link>
+      <link>https://ivy-end.github.io/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</link>
       <pubDate>Sat, 30 May 2015 09:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</guid>
+      <guid>https://ivy-end.github.io/2015/05/%E8%AE%B0-2015-acm-icpc-%E4%B8%8A%E6%B5%B7%E5%A4%A7%E9%83%BD%E4%BC%9A%E8%B5%9B/</guid>
       <description>到今天为止，距离 2015 ACM 国际大学生程序设计竞赛上海大都会赛结束已经快有一个星期了，趁着记忆中暂存的些许余温，将其记录下来。 我们从上周四开始，放下手中正在做的题目，转而准备比赛所需要的材料。由于比赛是可以携带纸质材料进场，因此我们准备了一些较为常用的算法模板，并且幻想着可能会遇到类似的题目。然而事实证明，携带的这些模板并没有什么作用，当然，这是后话。 周五晚上，我们开始整理行装。由于第二天早上需要六点半之前集合，所以便早早的入睡了。早上起来稍微打点一下，已是六点。草草地吃了一块面包，关上宿舍门便出发了。</description>
     </item>
     
     <item>
       <title>动态规划 - HDU</title>
-      <link>https://kwang.life/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</link>
+      <link>https://ivy-end.github.io/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</link>
       <pubDate>Sat, 14 Mar 2015 13:22:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</guid>
+      <guid>https://ivy-end.github.io/2015/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-hdu/</guid>
       <description>HDU 2955 这是一道概率 DP，我第一次的想法是把概率 $P$ 乘以 100，变成一个背包然后做 0/1 背包，后来发现这样做是错误的。 原因：概率应该是相乘，而不是相加。 后来看了题解想到了另外一种方法，使用逃脱概率来计算，用 $f[j]$ 表示偷走 $j$ 价值后逃脱的概率。易知，多次逃脱概率为每次逃脱概率相乘。这里不使用被逮捕的概率是因为被逮捕的情况比较复杂（例如偷第一件物品不被逮捕，偷第二件物品被逮捕，被逮捕的概率应该为头第一件物品不被逮捕的概率乘以偷第二件物品不被逮捕的概率。），而当我们转而考虑它的对立事件——逃脱时，问题就会变得容易了，</description>
     </item>
     
     <item>
       <title>SGU 114 - Telecasting station</title>
-      <link>https://kwang.life/2015/03/sgu-114-telecasting-station/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-114-telecasting-station/</link>
       <pubDate>Sat, 07 Mar 2015 19:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-114-telecasting-station/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-114-telecasting-station/</guid>
       <description>Description Every city in Berland is situated on $Ox$ axis. The government of the country decided to build new telecasting station. After many experiments Berland scientists came to a conclusion that in any city citizens displeasure is equal to product of citizens amount in it by distance between city and TV-station. Find such point on $Ox$ axis for station so that sum of displeasures of all cities is minimal. Input Input begins from line with integer positive number $N$ ($0&amp;lt;N&amp;lt;15000$) – amount of cities in Berland. Following $N$ pairs $(X, P)$ describes cities ($0&amp;lt;X, P&amp;lt;50000$), where $X$ is a coordinate of city and $P$ is an amount of citizens. All numbers separated by whitespace(s). Output Write the best position for TV-station with accuracy $10^{-5}$. Sample Input 4 1 3 2 1 5 2 6 2 Sample Output 3.00000 Analysis 这道题目有几个地方需要注意： 最后精确到 $10^{-5}$ 的要求基本是多余的，只要在结果后面再输出“.00000”； 本题使用了 Special Judge，因此答案可能不唯一。 有了上面两点的认识，我们来考虑一般的解决方案。我们不妨考虑电视台建在城市中，很容</description>
     </item>
     
     <item>
       <title>SGU 222 - Little Rooks</title>
-      <link>https://kwang.life/2015/03/sgu-222-little-rooks/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-222-little-rooks/</link>
       <pubDate>Sat, 07 Mar 2015 14:26:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-222-little-rooks/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-222-little-rooks/</guid>
       <description>Description Inspired by a &amp;ldquo;Little Bishops&amp;rdquo; problem, Petya now wants to solve problem for rooks. A rook is a piece used in the game of chess which is played on a board of square grids. A rook can only move horizontally and vertically from its current position and two rooks attack each other if one is on the path of the other. Given two numbers $n$ and $k$, your job is to determine the number of ways one can put $k$ rooks on an $n\times n$ chessboard so that no two of them are in attacking positions. Input The input file contains two integers $n$ ($1\leq n\leq 10$) and $k$ ($0\leq k\leq n^2$). Output Write index $I$ for given number as the first number in line. Write $I$ super-primes numbers that are items in optimal presentation for given number. Write these $I$ numbers in order of non-increasing. Sample Input 6 Sample Output 2 3 3 Analysis 由于 $K$ 个车每行只能放一个，所以一共有 $K!$ 种情况，一共有 $N\times N$ 的棋盘，行列选择共 $\binom{N}{k}\cdot \binom{N}{k}$ 种情况。因此，通过排列组合，我们有 $$\mathrm{ans} = \binom{N}{k}\cdot \binom{N}{k}\cdot K!$$ 化简可得 $$\mathrm{ans} = \frac{N!}{K!\cdot (N - K)!}\cdot\frac{N!}{(N - K)!}$$ Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; const int MAX = 16; unsigned long long f[MAX]; int main() { f[0]</description>
     </item>
     
     <item>
       <title>SGU 154 - Factorial</title>
-      <link>https://kwang.life/2015/03/sgu-154-factorial/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-154-factorial/</link>
       <pubDate>Sat, 07 Mar 2015 13:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-154-factorial/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-154-factorial/</guid>
       <description>Description You task is to find minimal natural number $N$, so that $N!$ contains exactly $Q$ zeroes on the trail in decimal notation. As you know $N! = 1\cdot2\cdots N$. For example, $5! = 120$, 120 contains one zero on the trail. Input One number $Q$ written in the input ($0\leq Q\leq 10^8$). Output Write &amp;ldquo;No solution&amp;rdquo;, if there is no such number $N$, and $N$ otherwise. Sample Input 2 Sample Output 10 Analysis 统计 $N!$ 末尾 0 的个数，其实只要看因数 2 和 5 个数的最小值，因为只有 $2\times 5$ 会产生 0。然而实际上因数 2 的个数远大于因数 5 的个数，所以只要看因数 5 的个数。 由于题目给出的空间限制只有 4096KB，所以不能打表，会 MLE。百度题解以后发现可以用二分。 二分的时候统计 1 到 $N$ 这 $N$ 个数中因数 5 的个数，我们采用这样的方法：$$\mathrm{ans} = \left\lfloor\frac{N}{5}\right\rfloor + \left\lfloor\frac{N}{5^2}\right\rfloor + \left\lfloor\frac{N}{5^3}\right\rfloor + \cdots $$ 处理这个</description>
     </item>
     
     <item>
       <title>SGU 130 - Circle</title>
-      <link>https://kwang.life/2015/03/sgu-130-circle/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-130-circle/</link>
       <pubDate>Sat, 07 Mar 2015 11:04:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-130-circle/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-130-circle/</guid>
       <description>Description On a circle border there are $2k$ different points $A_1, A_2, \cdots , A_{2k}$, located contiguously. These points connect $k$ chords so that each of points $A_1, A_2, \cdots, A_{2k}$ is the end point of one chord. Chords divide the circle into parts. You have to find $N$ - the number of different ways to connect the points so that the circle is broken into minimal possible amount of parts $P$. Input The first line contains the integer $k$ ($1\leq k\leq 30$). Output The first line should contain two numbers $N$ and $P$ delimited by space. Sample Input 2 Sample Output 23 Analysis 我们可以采用分治的方法，固定某个点，从其上引一条弦，将圆分成左右两部分。我们可以将这两部分看成新的圆，那么方案数就是这两个圆的方案数相乘。即：$$f[N] = \sum{\left(f[i - 1] \cdot f[N - i]\right)}$$ 其中 $1\leq i\leq N$。$f[i-1]$ 表示左边的圆，为 $k = i - 1$ 时的情况，$f[N - i]$ 为右边的圆，表示 $k = N - i$ 时的情况。这样，我</description>
     </item>
     
     <item>
       <title>SGU 276 - Andrew&#39;s Troubles</title>
-      <link>https://kwang.life/2015/03/sgu-276-andrews-troubles/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-276-andrews-troubles/</link>
       <pubDate>Sat, 07 Mar 2015 09:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-276-andrews-troubles/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-276-andrews-troubles/</guid>
       <description>Description Famous Berland ACM-ICPC team Anisovka consists of three programmers: Andrew, Michael and Ilya. A long time ago, during the first few months the team was founded, Andrew was very often late to the trainings and contests. To stimulate Andrew to be more punctual, Ilya and Andrew decided to introduce a new rule for team participants. If somebody is late (i.e. comes at least one second after appointed time) he owes a cup of tea to other team members. If he is late for 5 minutes, he owes two cups of tea. If he is late for 15 minutes, he owes three cups of tea. And if he is late for 30 minutes or more, he owes 4 cups of tea. The training starts at the time $S$ (counted in seconds, from some predefined moment of time) and Andrew comes at the time $P$ (also in seconds, counted from the same moment of time). Your task is to find how many cups of tea Andrew owes. Input The input file contains single line with integer numbers $S$ and $P$ ($0\leq S, P\leq 10^4$). Output Write to the output file the number of cups Andrew owes. Sample Input #1 10 10 Sample Output #1 0 Sample Input #2 10 11 Sample Output #2 1 Sample Input #3 0 300 Sample Output #3 Analysis 水题。 Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int S, P; while(cin &amp;gt;&amp;gt; S &amp;gt;&amp;gt; P) { int nDiff = P - S; if(nDiff</description>
     </item>
     
     <item>
       <title>SGU 126 - Boxes</title>
-      <link>https://kwang.life/2015/03/sgu-126-boxes/</link>
+      <link>https://ivy-end.github.io/2015/03/sgu-126-boxes/</link>
       <pubDate>Sat, 07 Mar 2015 09:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/03/sgu-126-boxes/</guid>
+      <guid>https://ivy-end.github.io/2015/03/sgu-126-boxes/</guid>
       <description>Description There are two boxes. There are $A$ balls in the first box, and $B$ balls in the second box ($0 &amp;lt; A + B &amp;lt; 2147483648$). It is possible to move balls from one box to another. From one box into another one should move as many balls as the other box already contains. You have to determine, whether it is possible to move all balls into one box. Input The first line contains two integers $A$ and $B$, delimited by space. Output First line should contain the number $N$ - the number of moves which are required to move all balls into one box, or -1 if it is impossible. Sample Input 2 6 Sample Output 2 Analysis 模拟法 设定一个规定步数（经过反复测试，在给定的数据范围内32步即可满足要求），如果在规定步数内完成任务，则输出步数，否则输出-1。 数学法 首先我们有一个结论 $(x, y)$ 与 $\left(\frac{x}{\mathrm{gcd}(x, y)}, \frac{y}{\mathrm{gcd}(x, y)}\right)$ 具有相同的答案。 证明：我们可以运用整体的思想，将 $\mathrm{gcd}(x, y)$ 个球看成一个球。例如 5 5，我们可以看成 1</description>
     </item>
     
     <item>
       <title>SGU 118 - Digital Root</title>
-      <link>https://kwang.life/2015/02/sgu-118-digital-root/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-118-digital-root/</link>
       <pubDate>Tue, 24 Feb 2015 15:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-118-digital-root/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-118-digital-root/</guid>
       <description>Description Let $f(n)$ be a sum of digits for positive integer $n$. If $f(n)$ is one-digit number then it is a digital root for $n$ and otherwise digital root of $n$ is equal to digital root of $f(n)$. For example, digital root of 987 is 6. Your task is to find digital root for expression $$ A_1\cdot A_2\cdots A_N + A_1\cdot A_2\cdots A_{N-1} + \cdots + A_1\cdot A_2 + A_1$$ Input Input file consists of few test cases. There is $K$ ($1\leq K\leq 5$) in the first line of input. Each test case is a line. Positive integer number $N$ is written on the first place of test case ($N\leq 1000$). After it there are $N$ positive integer numbers (sequence $A$). Each of this numbers is non-negative and not more than $10^9$. Output Write one line for every test case. On each line write digital root for given expression. Sample Input 1 3 2 3 4 Sample Output 5 Analysis 结论题：$f(n) \equiv n \mod 9$。 证明如下： 令 $$n = a_0 \cdot 10^{p_0} + a_1 \cdot 10_{p_1} + \cdots + a_{m-1} \cdot 10^1 + a_m \cdot 10^0$$ 其中 $n$ 为 $m$ 位数。则 $$n \mod 9 = a_0 + a_1 + \cdots + a_{m-1} + a_m = f(n)$$ 即 $$f(n) \equiv n \mod 9$$ 证毕。 需要注意的是，当 $n \mod 9 = 0$ 的时候，</description>
     </item>
     
     <item>
       <title>SGU 117 - Counting</title>
-      <link>https://kwang.life/2015/02/sgu-117-counting/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-117-counting/</link>
       <pubDate>Tue, 24 Feb 2015 14:14:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-117-counting/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-117-counting/</guid>
       <description>Description Find amount of numbers for given sequence of integer numbers such that after raising them to the $M$-th power they will be divided by $K$. Input Input consists of two lines. There are three integer numbers $N, M, K$ ($0&amp;lt;N, M, K&amp;lt;10001$) on the first line. There are N positive integer numbers − given sequence (each number is not more than 10001) − on the second line. Output Write answer for given task. Sample Input 4 2 50 9 10 11 12 Sample Output 1 Analysis 快速幂，时间复杂度为 $O(n\log{n})$，应该是可以过的。 要注意用 int 的话会溢出，所以我直接用了 unsigned long long。 这道题目还有一个方法是质因数分解，求出 $M$ 次方以后的各个因数个数（就是把个因子个数乘以 $M$），然后和 $M$ 的个因子的个数比较即可。 Solution 快速幂 #include &amp;lt;iostream&amp;gt; using namespace std; typedef unsigned long long ull; ull Pow(ull x, ull y, ull z); int main() { ull nTmp; int N, M, K; while(cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M &amp;gt;&amp;gt; K) { int nCnt = 0; for(int</description>
     </item>
     
     <item>
       <title>SGU 104 - Little shop of flowers</title>
-      <link>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-104-little-shop-of-flowers/</link>
       <pubDate>Tue, 24 Feb 2015 13:13:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-104-little-shop-of-flowers/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-104-little-shop-of-flowers/</guid>
       <description>Description You want to arrange the window of your flower shop in a most pleasant way. You have $F$ bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through $V$, where $V$ is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase $V$ is the rightmost vase. The bunches are moveable and are uniquely identified by integers between 1 and $F$. These id-numbers have a significance: They determine the required order of appearance of the flower bunches in the row of vases so that the bunch i must be in a vase to the left of the vase containing bunch $j$ whenever $i &amp;lt; j$. Suppose, for example, you have bunch of azaleas (id-number=1), a bunch of begonias (id-number=2) and a bunch of carnations (id-number=3). Now, all the bunches must be put into the vases keeping their id-numbers in order. The bunch of azaleas must be in a vase to the left of begonias, and the bunch of begonias must be in a vase to the left of carnations. If there are more vases than bunches of flowers then the excess will be left empty. A vase can hold only one bunch of flowers. Each vase has a distinct characteristic (just like flowers do). Hence, putting a bunch of flowers in a vase results in a certain aesthetic</description>
     </item>
     
     <item>
       <title>SGU 101 - Domino</title>
-      <link>https://kwang.life/2015/02/sgu-101-domino/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-101-domino/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-101-domino/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-101-domino/</guid>
       <description>Description Dominoes – game played with small, rectangular blocks of wood or other material, each identified by a number of dots, or pips, on its face. The blocks usually are called bones, dominoes, or pieces and sometimes men, stones, or even cards. The face of each piece is divided, by a line or ridge, into two squares, each of which is marked as would be a pair of dice&amp;hellip; The principle in nearly all modern dominoes games is to match one end of a piece to another that is identically or reciprocally numbered. ENCYCLOPÆDIA BRITANNICA Given a set of domino pieces where each side is marked with two digits from 0 to 6. Your task is to arrange pieces in a line such way, that they touch through equal marked sides. It is possible to rotate pieces changing left and right side. Input The first line of the input contains a single integer $N$ ($1\leq N\leq 100$) representing the total number of pieces in the domino set. The following $N$ lines describe pieces. Each piece is represented on a separate line in a form of two digits from 0 to 6 separated by a space. Output Write &amp;ldquo;No solution&amp;rdquo;”&amp;quot; if it is impossible to arrange them described way. If it is possible, write any of way. Pieces must</description>
     </item>
     
     <item>
       <title>SGU 347 - Join the Strings</title>
-      <link>https://kwang.life/2015/02/sgu-347-join-the-strings/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-347-join-the-strings/</link>
       <pubDate>Sun, 22 Feb 2015 13:10:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-347-join-the-strings/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-347-join-the-strings/</guid>
       <description>Description His Royal Highness King of Berland Berl XV was a very wise man and had a very accomplished wife, who was aware of the fact, that prominent and outstanding personalities once having written down their names on the pages of glorious History, remain there forever. His Royal Highness King Berl XV experienced an intrinsic, lost nowadays, deep and sincere sense of respect and trust for his beloved spouse. So he decided to acquire a chronicler of his own. Due to the ambiguous nature of misunderstanding and the crying injustice of history to ambiguity, he decided to leave all his royal responsibilities aside and made up his royal mind to find the chronicler, who will make him famous, depicting all his heroic deeds truthfully and gloriously enough. The King assembled the greatest minds of his kingdom at the Academic Chroniclers Meeting (ACM), as he named it, and decided to test their might. The task was to build the Smallest Lexicographical Concatenation (SLC) out of the given $N$ strings. SLC of $N$ strings $s_1,\cdots, s_N$ is the lexicographically smallest their concatenation $s_{i_1} + \cdots + s_{i_N}$, where $ i_1,\cdots, i_N $ is a permutation of integers from 1 through $N$. It&amp;rsquo;s a great privilege to be a chronicler, so don&amp;rsquo;t miss your chance and don&amp;rsquo;t screw it up! Make the king choose you! Input The first line of the input file contains a single integer $N$ ($1\leq N\leq 100$) indicating the number of strings. The following $N$ lines contain $N$ strings,</description>
     </item>
     
     <item>
       <title>SGU 151 - Construct a triangle</title>
-      <link>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-151-construct-a-triangle/</link>
       <pubDate>Sun, 22 Feb 2015 12:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-151-construct-a-triangle/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-151-construct-a-triangle/</guid>
       <description>Description Find coordinates of any $\triangle ABC$ if it is know that $|AB|=c$, $|AC|=b$, $|AM|=m$, $AM$ is a median of triangle. Input There are three real numbers in input: $c$, $b$, $m$ ($0&amp;lt;c, b, m\leq 10^3$) separated by a space. Length of the fractional part of each number is not greater than 2 digits. Output If solution exists, write three lines. Write coordinates of point $A$ to first line, coordinates of $B$ to second line and coordinates of $C$ to third line. Separate numbers by a space; absolute value of each coordinate must not exceed $10^4$. Write numbers with 5 digits after decimal point. If there is no solution, write &amp;ldquo;Mission impossible&amp;rdquo;. Sample Input 5 5 3 Sample Output 0.00000 3.00000 -4.00000 0.00000 4.00000 0.00000 Analysis 解析几何的题目，因为是任意输出一个 $\triangle ABC$，为了简化计算，我们不妨令点 $A$ 为坐标原点，即 $A(0, 0)$。同时，我们可以令点 $B$ 在 $x$ 轴上，即 $B(c, 0)$。这样，问题就转化成了求解点 $C$ 的坐标了。根据中学有关解析几何的知识，我们可以得出下面的求解过程： 设 $C(x, y)$，则</description>
     </item>
     
     <item>
       <title>SGU 180 - Inversions</title>
-      <link>https://kwang.life/2015/02/sgu-180-inversions/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-180-inversions/</link>
       <pubDate>Tue, 17 Feb 2015 11:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-180-inversions/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-180-inversions/</guid>
       <description>Description There are $N$ integers ($1\leq N\leq 65537$) $A_1, A_2,\cdots, A_N$ ($0\leq A_i\leq 10^9$). You need to find amount of such pairs $(i, j)$ that $1\leq i &amp;lt; j\leq N$ and $A[i]&amp;gt;A[j]$. Input The first line of the input contains the number $N$. The second line contains $N$ numbers $A_1,\cdots,A_N$. Output Write amount of such pairs. Sample Input 5 2 3 1 5 4 Sample Output 3 Analysis 逆序数。树状数组即可。每次更新 $A[i]$ 为 1，然后所有的逆序数就是 $$A[i] - \sum{\left(A[i] - 1\right)} + 1$$ 更新的同时获取答案。 注意答案可能会超 int，所以使用 long long。 数据中 $A[i]$ 的值过大，但是 $N$ 最大只有 65537，所以使用离散化即可，离散化只要 sort 一下，然后用 lower_bound 即可。 Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 102400; int N; int T[MAX], A[MAX], B[MAX]; int LowBit(int x); void Update(int x, int y); long long Sum(int x); int main() { while(cin &amp;gt;&amp;gt; N) { long long ans = 0; memset(T, 0, sizeof(T)); for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; A[i]; B[i] = A[i]; } sort(B +</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 07</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</link>
       <pubDate>Tue, 17 Feb 2015 11:37:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-07/</guid>
       <description>断断续续终于刷完了计算几何专题，感觉太麻烦，小错误不断，尤其是精度问题。还有输出问题，有时候 printf 比 cout 要方便。 UVaOJ 10250 给出正方形的一组对角坐标，求另外两个坐标，用三角函数推到公式。 不妨设两点为 $A(x_1, y_1)$ 和 $C(x_2, y_2)$，则中点为 $G\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$，对角线长度为 $L = \sqrt{(x_1 - x_2)^2 - (y_1 - y_2)^2}$。 设直线 $AC$ 与 $x$ 轴的夹角为 $\alpha$，则 $$\sin\alpha = \frac{y_2 - y_1}{L},\quad \cos\alpha = \frac{x_2 - x_1}{L}$$ 则另外两个坐标分别为 $$B\left(G_x - \frac{1}{2}\cdot L \cdot \sin, G_y + \frac{1}{2}\cdot L \cdot \cos\alpha\right),\quad D\left(G_x + \frac{1}{2}\cdot L \cdot \sin\alpha, G_y - \frac{1}{2}\cdot L \cdot \cos\alpha\right)$$ #include &amp;lt;iostream&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;math.h&amp;gt; using namespace std; struct Point { double x, y; }; int main() { Point a, b; while(cin &amp;gt;&amp;gt; a.x &amp;gt;&amp;gt; a.y &amp;gt;&amp;gt; b.x &amp;gt;&amp;gt; b.y) { Point c, d;</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 06</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</link>
       <pubDate>Fri, 13 Feb 2015 12:50:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-06/</guid>
       <description>这一次主要是数论专题，感到思维量比上一次的数学题要多多了。同样的问题也是英文题看起来有些吃力。 UVaOJ 575 这应该算不上是一个数论题，它重新定义了一种进制转换的公式，然后根据公式计算即可。 #include &amp;lt;iostream&amp;gt; using namespace std; int Pow(int x, int y); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(x == &amp;#34;0&amp;#34;) { break; } int ans = 0; for(int i = 0; i &amp;lt; x.length(); i++) { ans += (x[i] - &amp;#39;0&amp;#39;) * (Pow(2, x.length() - i) - 1); } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; } return 0; } int Pow(int x, int y) { int ret = 1; for(int i = 1; i &amp;lt;= y; i++) { ret *= x; } return ret; } UVaOJ 10110 这是一道典型的数论题，最后亮着的灯，它的开关一定被拨动了奇数次。所以，我们只要看它的因数个数的奇偶性。 记得高中数学竞赛的时候遇到过类似的题目，有一</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 05</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</link>
       <pubDate>Thu, 12 Feb 2015 14:24:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-05/</guid>
       <description>刷完了数学专题，感觉思维量有些大，同时也对浮点数的运算有些接触。最重要的还是感觉有时候题目读起来有些吃力，需要借助中文翻译。 UVaOJ 113 这道题目是集训的时候第一天晚上的题目，据说可以 double 解决，当时没有 AC。 现在重新做了一遍，需要注意的是最后输出的结果一定要转换成int，否则会 WA。 同时，double 转换为 int 的时候可以采取这样的方式：(int)floor(x + 0.5)。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;math.h&amp;gt; using namespace std; int main() { double x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { cout &amp;lt;&amp;lt; (int)floor(pow(y, 1 / x) + 0.5) &amp;lt;&amp;lt; endl; } return 0; } UVaOJ 10161 这道题目是通常的找规律题目，和一道《Cantor 的数表》是差不多的，需</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 04</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</link>
       <pubDate>Wed, 11 Feb 2015 17:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-04/</guid>
       <description>断断续续的把排序和检索专题刷完了，感觉英语还是不够，题目太长以后看起来就会很吃力。 还有一点感触就是 STL 的广泛应用。学到了很多新东西。 当然，不能忍受的就是答案最后多输出一行空行，UVaOJ 会判 WA。 UVaOJ 340 简单模拟题，一开始没有看懂题目。百度以后才明白的题意。朴素模拟以后即可得到答案。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 1024; int pCode[MAX], pGuess[MAX], pVisited[MAX]; int main() { int N, nCase = 0; while(cin &amp;gt;&amp;gt; N) { if(N == 0) { break; } memset(pCode, 0, sizeof(pCode)); for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; pCode[i]; } cout &amp;lt;&amp;lt; &amp;#34;Game &amp;#34; &amp;lt;&amp;lt; ++nCase &amp;lt;&amp;lt; &amp;#34;:&amp;#34; &amp;lt;&amp;lt; endl; while(1) { int x = 0, y = 0, nCnt = 0; memset(pGuess, 0, sizeof(pGuess)); memset(pVisited, 0, sizeof(pVisited)); for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; pGuess[i]; if(pGuess[i] == 0) { nCnt++; } } if(nCnt == N) { break; } for(int i = 1; i &amp;lt;= N; i++)</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 03</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</link>
       <pubDate>Sun, 08 Feb 2015 14:02:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-03/</guid>
       <description>今天刷了高精度专题，本来准备写一个高精度类，然后直接套模版，后来发现根据每题的要求分开写高精度反而效率高。 主要涉及了高精度加法、乘法、除法、取余（其中后两项为高精度和低精度进行运算）。 终于打过一遍高精度除以低精度了，高精度专题也算圆满了。 UVaOJ 424 高精度加法，水题。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 10240; int nLen; int pData[MAX]; int main() { nLen = 1; memset(pData, 0, sizeof(pData)); string x; while(cin &amp;gt;&amp;gt; x) { if(x != &amp;#34;0&amp;#34;) { while(x[0] == &amp;#39;0&amp;#39;) { x = x.substr(1, x.length() - 1); } nLen = max(nLen, (int)x.length()); for(int i = 1; i &amp;lt;= x.length(); i++) { pData[i] += x[x.length() - i] - &amp;#39;0&amp;#39;; pData[i + 1] += pData[i] / 10; pData[i] %= 10; } while(pData[nLen + 1]) { nLen++; } } else { for(int i = nLen; i &amp;gt;= 1; i--) { cout &amp;lt;&amp;lt; pData[i]; } cout &amp;lt;&amp;lt; endl; nLen = 1; memset(pData, 0, sizeof(pData)); } } return 0; } UVaOJ 10106 高精度</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 02</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</link>
       <pubDate>Sat, 07 Feb 2015 19:29:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-02/</guid>
       <description>今天刷了小白书的字符串专题，各种 WA 以及 PE。UVaOJ 中有时候会把 PE 判成 WA，这样会导致很难查错。 UVa 401 这道题目有个坑，只有表格中列出的才是镜像字母，没有列出了的表示没有镜像字母，在这上 WA 了一次。 #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; using namespace std; const char pAlphabet[] = { &amp;#39;A&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;I&amp;#39;, &amp;#39;L&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;J&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;O&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;T&amp;#39;, &amp;#39;U&amp;#39;, &amp;#39;V&amp;#39;, &amp;#39;W&amp;#39;, &amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;S&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;Z&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;*&amp;#39; }; bool Palindrome(string x); bool Mirrored(string x); int main() { string x; while(cin &amp;gt;&amp;gt; x) { if(!Palindrome(x)) { if(Mirrored(x)) { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a mirrored string.&amp;#34; &amp;lt;&amp;lt; endl; } else { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is not a palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } } else { if(Mirrored(x)) { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a mirrored palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } else { cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &amp;#34; -- is a regular palindrome.&amp;#34; &amp;lt;&amp;lt; endl; } } cout &amp;lt;&amp;lt; endl; } return 0; } bool Palindrome(string x) { for(int i = 0; i &amp;lt; x.length() / 2; i++) { if(x[i] !=</description>
     </item>
     
     <item>
       <title>REFLECTIONS</title>
-      <link>https://kwang.life/2015/02/reflections/</link>
+      <link>https://ivy-end.github.io/2015/02/reflections/</link>
       <pubDate>Fri, 06 Feb 2015 20:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/reflections/</guid>
+      <guid>https://ivy-end.github.io/2015/02/reflections/</guid>
       <description>刚刚结束了 ACM 的集训，仔细反思了第一学期的大学学习生活。 首先要说的是上课，在一开始的时候，我每次都会提前很久去占座。但是这样的情况并没有持续很久，有一段时间由于感觉老师讲得太慢，经常上课开小差。但是事后自习想了想，还是决定回到开学时的状态。但是这时候我却惊讶的发现，并不需要占座了，就算是踩着上课铃去上课，也依旧可以坐到第一排（线性代数除外）。解决了态度问题，接下来还是有一个不可回避的问题，有时候觉得讲得太慢，不想听。所以就带了自己的书，讲到不懂的，就认真听课，其余时间就好好看自己的书，学习别的东西</description>
     </item>
     
     <item>
       <title>ACM-ICPC 寒假练习 01</title>
-      <link>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
+      <link>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</link>
       <pubDate>Fri, 06 Feb 2015 17:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
+      <guid>https://ivy-end.github.io/2015/02/acm-icpc-%E5%AF%92%E5%81%87%E7%BB%83%E4%B9%A0-01/</guid>
       <description>这一系列的练习主要在 Virtual Judge 上进行，题目为小白书上的题目推荐。 UVa 10055 求两方军队人数的差值，直接相减即可。 不过要注意两个数的大小关系。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { long long x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { if(x &amp;gt; y) { swap(x, y); } cout &amp;lt;&amp;lt; y - x &amp;lt;&amp;lt; endl; } return 0; } UVa 10071 简单物理题，求两倍时间内匀速运动的路程。即 $s = 2vt$。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int x, y; while(cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y) { cout &amp;lt;&amp;lt; x * y * 2 &amp;lt;&amp;lt; endl; } return 0; } UVa 10300 根据题目描述推导公式，$$ \mathrm{ans} = \sum{\left(\frac{x}{y}\cdot y\cdot z\right)} = \sum{xz}$$ 题中讲到了首先计算每只动物的占地面积，乘以环境友好常数，再乘以动物数目。这里可以直接将动物数目约去。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int T, N, x, y, z; cin &amp;gt;&amp;gt; T; for(int i</description>
     </item>
     
     <item>
       <title>SGU 127 - Telephone directory</title>
-      <link>https://kwang.life/2015/02/sgu-127-telephone-directory/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-127-telephone-directory/</link>
       <pubDate>Thu, 05 Feb 2015 21:30:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-127-telephone-directory/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-127-telephone-directory/</guid>
       <description>Description CIA has decided to create a special telephone directory for its agents. The first 2 pages of the directory contain the name of the directory and instructions for agents, telephone number records begin on the third page. Each record takes exactly one line and consists of 2 parts: the phone number and the location of the phone. The phone number is 4 digits long. Phone numbers cannot start with digits 0 and 8. Each page of the telephone directory can contain not more then $K$ lines. Phone numbers should be sorted in increasing order. For the first phone number with a new first digit, the corresponding record should be on a new page of the phone directory. You are to write a program, that calculates the minimal number P pages in the directory. For this purpose, CIA gives you the list of numbers containing $N$ records, but since the information is confidential, without the phones locations. Input The first line contains a natural number $K$ ($0 &amp;lt; K &amp;lt; 255$) - the maximum number of lines that one page can contain. The second line contains a natural $N$ ($0 &amp;lt; N &amp;lt; 8000$) - number of phone numbers supplied. Each of following $N$ lines contains a number consisting of 4 digits - phone numbers in any order, and it is known, that numbers in this list cannot repeat. Output First line should contain a natural number $P$ - the number of pages in the telephone directory. Sample Input 5</description>
     </item>
     
     <item>
       <title>SGU 112 - a^b - b^a</title>
-      <link>https://kwang.life/2015/02/sgu-112-ab-ba/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-112-ab-ba/</link>
       <pubDate>Thu, 05 Feb 2015 14:52:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-112-ab-ba/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-112-ab-ba/</guid>
       <description>Description You are given natural numbers $a$ and $b$. Find $a^b - b^a$. Input Input contains numbers $a$ and $b$ ($1\leq a,b\leq 100$). Output Write answer to output. Sample Input 2 3 Sample Output -1 Analysis 非常明显的高精度，再观察一下样例，要处理减法，而且有负数，注意一下好了。 Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;memory.h&amp;gt; using namespace std; const int MAX = 1024; const int HEX = 10000; const int BIT = 4; class Huge { public: Huge(); Huge(int x); ~Huge(); public: Huge&amp;amp; operator *= (int x); Huge&amp;amp; operator - (Huge &amp;amp;x); bool operator &amp;gt; (Huge x); public: friend ostream&amp;amp; operator &amp;lt;&amp;lt; (ostream &amp;amp;out, Huge &amp;amp;x); public: int m_pData[MAX]; int m_nLen; }; Huge::Huge() { memset(m_pData, 0, sizeof(m_pData)); m_nLen = 1; } Huge::Huge(int x) { memset(m_pData, 0, sizeof(m_pData)); m_pData[1] = x; m_nLen = 1; } Huge::~Huge() { } bool Huge::operator &amp;gt; (Huge x) { if(this-&amp;gt;m_nLen != x.m_nLen) { return this-&amp;gt;m_nLen &amp;gt; x.m_nLen; } else { for(int i = this-&amp;gt;m_nLen; i &amp;gt;= 1; i--) { if(this-&amp;gt;m_pData[i] != x.m_pData[i]) { return this-&amp;gt;m_pData[i] &amp;gt; x.m_pData[i]; } } } return true; } Huge&amp;amp; Huge::operator *= (int x) { for(int i = 1; i &amp;lt;= this-&amp;gt;m_nLen; i++) { this-&amp;gt;m_pData[i] *= x; } for(int i = 1; i &amp;lt;= this-&amp;gt;m_nLen; i++) { this-&amp;gt;m_pData[i + 1] += this-&amp;gt;m_pData[i] / HEX; this-&amp;gt;m_pData[i] %= HEX; } while(this-&amp;gt;m_pData[this-&amp;gt;m_nLen + 1]) { this-&amp;gt;m_nLen++; } return *this; } Huge&amp;amp; Huge::operator -</description>
     </item>
     
     <item>
       <title>SGU 113 - Nearly prime numbers</title>
-      <link>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-113-nearly-prime-numbers/</link>
       <pubDate>Thu, 05 Feb 2015 14:46:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-113-nearly-prime-numbers/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-113-nearly-prime-numbers/</guid>
       <description>Description Nearly prime number is an integer positive number for which it is possible to find such primes $P_1$ and $P_2$ that given number is equal to $P_1\cdot P_2$. There is given a sequence on $N$ integer positive numbers, you are to write a program that prints &amp;ldquo;Yes&amp;rdquo; if given number is nearly prime and &amp;ldquo;No&amp;rdquo; otherwise. Input Input file consists of $N + 1$ numbers. First is positive integer $N$ ($1\leq N\leq 10$). Next $N$ numbers followed by $N$. Each number is not greater than $10^9$. All numbers separated by whitespace(s). Output Write a line in output file for each number of given sequence. Write &amp;ldquo;Yes&amp;rdquo; in it if given number is nearly prime and &amp;ldquo;No&amp;rdquo; in other case. Sample Input 1 6 Sample Output Yes Analysis 考虑到数据范围不是很大，$10^9$ 以内仅有五千多万个质数，可以通过打表来解决。打表自然是筛法求素数。 每次读入数据以后，只要比较到 $\sqrt{X}$ 就可以了，这样我们就可以在 $O\left(\sqrt{n}\right)$ 的时间内求出结果。 这里有个小小的注意点，我们在循环的时候，最好使用 i * i &amp;lt;= X 来代替 i</description>
     </item>
     
     <item>
       <title>SGU 107 - 987654321 problem</title>
-      <link>https://kwang.life/2015/02/sgu-107-987654321-problem/</link>
+      <link>https://ivy-end.github.io/2015/02/sgu-107-987654321-problem/</link>
       <pubDate>Thu, 05 Feb 2015 14:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/02/sgu-107-987654321-problem/</guid>
+      <guid>https://ivy-end.github.io/2015/02/sgu-107-987654321-problem/</guid>
       <description>Description For given number $N$ you must output amount of $N$-digit numbers, such, that last digits of their square is equal to 987654321. Input Input contains integer number $N$ ($1\leq N\leq 10^6$). Output Write answer in output file. Sample Input 8 Sample Output 0 Analysis 在一定意义上，这也是一道数学题。 由于一个数平方的后X位，只与这个数字的后X位有关系，所以我们不妨使用下面的程序打一个表来看一下。 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { // sqrt(987654321) &amp;gt; 30000 for(long long i = 30000; i &amp;lt;= 999999999; i++) { long long x = i * i; if(x % 1000000000 == 987654321) { cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } } return 0; } 打完表以后，我们发现只有 8 个数字满足条件，而且分布在 100,000,000 到 999,999,999 之间。 下面我们来推导满足题目条件的答案与输入的位数 $N$ 的关系：$$\mathrm{ans} = \begin{cases}0, &amp;amp; N \leq 8\\ 8, &amp;amp; N = 9\\ 72\times 10^{N - 10}, &amp;amp; N \geq 10\end{cases}$$ 最后一</description>
     </item>
     
     <item>
       <title>SGU 184 - Patties</title>
-      <link>https://kwang.life/2015/01/sgu-184-patties/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-184-patties/</link>
       <pubDate>Fri, 30 Jan 2015 17:57:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-184-patties/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-184-patties/</guid>
       <description>Description Petya is well-known with his famous cabbage patties. Petya&amp;rsquo;s birthday will come very soon, and he wants to invite as many guests as possible. But the boy wants everybody to try his specialty of the house. That&amp;rsquo;s why he needs to know the number of the patties he can cook using the stocked ingredients. Petya has $P$ grams of flour, $M$ milliliters of milk and $C$ grams of cabbage. He has plenty of other ingredients. Petya knows that he needs $K$ grams of flour, $R$ milliliters of milk and $V$ grams of cabbage to cook one patty. Please, help Petya calculate the maximum number of patties he can cook. Input The input file contains integer numbers $P$, $M$, $C$, $K$, $R$ and $V$, separated by spaces and/or line breaks ($1 \leq P, M, C, K, R, V \leq 10000$). Output Output the maximum number of patties Petya can cook. Sample Input 3000 1000 500 30 15 60 Sample Output 8 Analysis 简单的数学分析就知道，所求答案为 $\left\lfloor\frac{P}{K}\right\rfloor$，$\left\lfloor\frac{M}{R}\right\rf</description>
     </item>
     
     <item>
       <title>SGU 135 - Drawing Lines</title>
-      <link>https://kwang.life/2015/01/sgu-135-drawing-lines/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-135-drawing-lines/</link>
       <pubDate>Thu, 29 Jan 2015 21:33:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-135-drawing-lines/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-135-drawing-lines/</guid>
       <description>Description Little Johnny likes to draw a lot. A few days ago he painted lots of straight lines on his sheet of paper. Then he counted in how many zones the sheet of paper was split by these lines. He noticed that this number is not always the same. For instance, if he draws 2 lines, the sheet of paper could be split into 4, 3 or even 2 (if the lines are identical) zones. Since he is a very curious kid, he would like to know which is the maximum number of zones into which he can split the sheet of paper, if he draws $N$ lines. The sheet of paper is to be considered a very large (=infinite) rectangle. Input The input file will contain an integer number: $N$ ($0\leq N\leq 65535$). Output You should output one integer: the maximum number of zones into which the sheet of paper can be split if Johnny draws $N$ lines. Sample Input #1 0 Sample Output #1 1 Sample Input #2 1 Sample Output #2 2 Analysis 数学题。直线分平面数，我们也可以通过找规律的方法来求出它的公式： 线段数 $N$ 平面数 $M$ 0 1 1 1 + 1 = 2 2 2 + 2 = 4 3 4 + 3 = 7 4 7 + 4 = 11 5 11 + 5 = 16 6 16</description>
     </item>
     
     <item>
       <title>SGU 115 - Calendar</title>
-      <link>https://kwang.life/2015/01/sgu-115-calendar/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-115-calendar/</link>
       <pubDate>Thu, 29 Jan 2015 21:18:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-115-calendar/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-115-calendar/</guid>
       <description>Description First year of new millenium is gone away. In commemoration of it write a program that finds the name of the day of the week for any date in 2001. Input Input is a line with two positive integer numbers $N$ and $M$, where $N$ is a day number in month $M$. $N$ and $M$ is not more than 100. Output Write current number of the day of the week for given date (Monday – number 1, … , Sunday – number 7) or phrase &amp;ldquo;Impossible&amp;rdquo; if such date does not exist. Sample Input 21 10 Sample Output 7 Analysis 翻看日历，我们可以知道 2001 年 1 月 1 日为星期一。 这样，我们只需要计算输入的日期为该年中的第几天就行了。 当然，要记得判断输入的日期是否合法。 Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int pDay[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; int main() { int N, M, ans = 0; cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M; if((M &amp;gt; 12 || N &amp;gt; 31) || (M == 4 || M == 6 || M == 9 || M == 11) &amp;amp;&amp;amp; N &amp;gt; 30 || M == 2 &amp;amp;&amp;amp; N &amp;gt; 28) { cout &amp;lt;&amp;lt; &amp;#34;Impossible&amp;#34; &amp;lt;&amp;lt; endl; } else</description>
     </item>
     
     <item>
       <title>SGU 123 - The Sum</title>
-      <link>https://kwang.life/2015/01/sgu-123-the-sum/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-123-the-sum/</link>
       <pubDate>Thu, 29 Jan 2015 21:03:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-123-the-sum/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-123-the-sum/</guid>
       <description>Description The Fibonacci sequence of numbers is known: $F_1 = 1$; $F_2 = 1$; $F_{n+1} = F_n + F_{n-1}$, for $n&amp;gt;1$. You have to find $S$ - the sum of the first $K$ Fibonacci numbers. Input First line contains natural number $K$ ($0&amp;lt;K&amp;lt;41$). Output First line should contain number $S$. Sample Input 5 Sample Output 12 Analysis 考虑到数据范围，这道题目只要模拟一下就行了。但是我还是比较喜欢使用数学方法来求解。 令 $S_n$ 表示斐波那契数列的前 $N$ 项和，那么我们很容易求得 $S_n = F_{n+2} - 1$。 Solution #include &amp;lt;iostream&amp;gt; using namespace std; const int MAX = 64; int f[MAX]; int main() { int N; cin &amp;gt;&amp;gt; N; f[1] = f[2] = 1; for(int i = 3; i &amp;lt;= N + 2; i++) { f[i] = f[i - 1] + f[i - 2]; } cout &amp;lt;&amp;lt; f[N + 2] - 1 &amp;lt;&amp;lt; endl; return 0; } 这道题目应该是非常简单的。当然，如果你不知道斐波那契数列可以在$O(n)$时间内求得，那么这道题目对于你来说还是有一定难度</description>
     </item>
     
     <item>
       <title>SGU 105 - Div 3</title>
-      <link>https://kwang.life/2015/01/sgu-105-div-3/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-105-div-3/</link>
       <pubDate>Thu, 29 Jan 2015 20:48:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-105-div-3/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-105-div-3/</guid>
       <description>Description There is sequence 1, 12, 123, 1234, &amp;hellip;, 12345678910, &amp;hellip; . Given first $N$ elements of that sequence. You must determine amount of numbers in it that are divisible by 3. Input Input contains $N$ ($1\leq N\leq 2^{31} - 1$). Output Write answer in output file. Sample Input 4 Sample Output 2 Analysis 由于一个数对 $3$ 取模恒等于这个数各个位上数字之和对 $3$ 取模。因此，非常容易想到的方法是找规律： 项数 $N$ 数列 除以 $3$ 的余数 答案 $ans$ 1 1 1 0 2 12 0 1 3 123 0 2 4 1234 1 2 5 12345 0 3 6 123456 0 4 7 1234567 1 4 8 12345678 0 5 9 123456789 0 6 由上述表格，我们可以大致的看出规律，即：$$\mathrm{ans} = \begin{cases} \mathrm{ans}, &amp;amp; N \mod 3 = 1\\ \mathrm{ans} + 1, &amp;amp; N \mod 3 = 0, 2\end{cases}$$ 有了上述的讨论，我们可以很容易的写出一个暴力算法，但是考虑到 $N$ 的数据范围比较大，这并不是一个非常</description>
     </item>
     
     <item>
       <title>SGU 102 - Coprimes</title>
-      <link>https://kwang.life/2015/01/sgu-102-coprimes/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-102-coprimes/</link>
       <pubDate>Thu, 29 Jan 2015 20:17:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-102-coprimes/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-102-coprimes/</guid>
       <description>Description For given integer $N$ ($1\leq N\leq 10^4$) find amount of positive numbers not greater than $N$ that coprime with $N$. Let us call two positive integers (say, $A$ and $B$, for example) coprime if (and only if) their greatest common divisor is 1. (i.e. $A$ and $B$ are coprime iff $\mathrm{gcd}\left(A,B\right) = 1$). Input Input file contains integer $N$. Output Write answer in output file. Sample Input 9 Sample Output 6 Analysis 我首先想到的是欧拉函数 $\varphi\left(N\right)$，后来发现数据量并不是特别的大，所以又用暴力做了一遍，也 AC 了。 这道题目的重点在于欧拉函数 $\varphi\left(N\right)$ 的求法，现总结如下： 欧拉函数 $\varphi\left(N\right)$：小于等于 $N$ 且与 $N$ 互素的正整数的个数。 欧拉函数据有如下性质： $\varphi\left(1\right) = 1$ $\varphi\left(N\right) = N\cdot\sum_{p|N}{\left(\fr</description>
     </item>
     
     <item>
       <title>SGU 100 - A &#43; B</title>
-      <link>https://kwang.life/2015/01/sgu-100-a--b/</link>
+      <link>https://ivy-end.github.io/2015/01/sgu-100-a--b/</link>
       <pubDate>Thu, 29 Jan 2015 20:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2015/01/sgu-100-a--b/</guid>
+      <guid>https://ivy-end.github.io/2015/01/sgu-100-a--b/</guid>
       <description>[100. A+B] Description Read integers $A$ and $B$ from input file and write their sum in output file. Input Input file contains $A$ and $B$ ($0&amp;lt;A,B&amp;lt;10001$). Output Write answer in output file. Sample Input 5 3 Sample Output 8 Analysis 水题。 Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { int a, b; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl; return 0; } 到了大学，开始接触 ACM。高中里参加了 3 年 NOIP，拿了两年的二等奖，现在终于接触到了 ACM，找到了 SGU 这个 OJ 开始刷题。 一方面，这上面的题目都有些难度，另一方面，由于是英文的，可以在一定程度上提高我的英语水平。 我是按照 SGU 上题目的 AC 数来刷的，并不是完全按照编号往下刷的。</description>
     </item>
     
     <item>
       <title>期中随记</title>
-      <link>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</link>
+      <link>https://ivy-end.github.io/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</link>
       <pubDate>Wed, 10 Dec 2014 23:28:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</guid>
+      <guid>https://ivy-end.github.io/2014/12/%E6%9C%9F%E4%B8%AD%E9%9A%8F%E8%AE%B0/</guid>
       <description>其实期中考试上上周就考完了，只是这几天才出分数。客观的来说，不算低了，却觉得不够。就好像今天刚刚结束的第二场ACM校选赛，第三名，却觉得为什么不是第一名。 很久之前就有人回复我说，为什么还不更新博客。自从开学以来，忙东忙西，一直没有时间，因为我自己也不知道大学究竟是什么，回想起之前写过的一篇《我为什么要上大学》，总觉得讲不到点子上，有很多想法没有表达出来，看来很有可能会诞生一篇续集吧。 几天前，Godaddy 给我发了一封电子邮件，说我的域名要到期了，突然意识到这个小小的博客已经存在了将近两年了。在这</description>
     </item>
     
     <item>
       <title>Codeforces 1B - Spreadsheet</title>
-      <link>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</link>
+      <link>https://ivy-end.github.io/2014/07/codeforces-1b-spreadsheet/</link>
       <pubDate>Sun, 20 Jul 2014 10:08:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2014/07/codeforces-1b-spreadsheet/</guid>
+      <guid>https://ivy-end.github.io/2014/07/codeforces-1b-spreadsheet/</guid>
       <description>1B Spreadsheet Analysis The essence of this problem lays in the conversion between decimal (&amp;lsquo;0&amp;rsquo;-&amp;lsquo;9&amp;rsquo;) and base 26 (&amp;lsquo;A&amp;rsquo;-&amp;lsquo;Z&amp;rsquo;). Notice: There is no number in the base 26 system that function as the number &amp;lsquo;0&amp;rsquo; in the decimal system, so when the decimal number is a multiple of 26, a special handle is needed. if(C % 26 == 0) { strTmp = &#39;Z&#39; + strTmp; C /= 26; C--; continue; } In the code above, C means the column, while strTmp stands for the base 26 string after conversion. Solution #include &amp;lt;iostream&amp;gt; #include &amp;lt;ctype.h&amp;gt; using namespace std; string Convert(string x); int N; string strInput; int main() { cin &amp;gt;&amp;gt; N; for(int i = 1; i &amp;lt;= N; i++) { cin &amp;gt;&amp;gt; strInput; cout &amp;lt;&amp;lt; Convert(strInput) &amp;lt;&amp;lt; endl; } return 0; } string Convert(string x) { string strRet = &amp;#34;&amp;#34;; int nTmp = 0; bool bTmp = false; for(int i = 0; i &amp;lt; x.size(); i++) { if(isdigit(x[i]) &amp;amp;&amp;amp; !bTmp) { bTmp = true; nTmp++; } if(!isdigit(x[i])) { bTmp = false; } } if(nTmp == 1) { string R, C; int nC = 0, nHex = 1; for(int i = 0; i &amp;lt; x.size(); i++) { if(isalpha(x[i])) { C += x[i]; } else { R += x[i]; } } for(int i = 0; i &amp;lt; C.size(); i++) { nC += (C[C.size() - i - 1] - &amp;#39;A&amp;#39; + 1) * nHex; nHex *= 26; } strRet += &amp;#34;R&amp;#34; + R + &amp;#34;C&amp;#34;; string strTmp = &amp;#34;&amp;#34;; while(nC) { strTmp = (char)(nC</description>
     </item>
     
     <item>
       <title>Codeforces 1A - Theatre Square</title>
-      <link>https://kwang.life/2014/07/codeforces-1a-theatre-square/</link>
+      <link>https://ivy-end.github.io/2014/07/codeforces-1a-theatre-square/</link>
       <pubDate>Sun, 20 Jul 2014 09:58:00 +0800</pubDate>
       
-      <guid>https://kwang.life/2014/07/codeforces-1a-theatre-square/</guid>
+      <guid>https://ivy-end.github.io/2014/07/codeforces-1a-theatre-square/</guid>
       <description>1A Theatre Square Analysis Calculate the number of flagstones used to cover the length and width, then multiply them to get the correct answer. Notice: Pay attention to the data range. Use unsigned long long. Solution #include &amp;lt;iostream&amp;gt; using namespace std; int main() { unsigned long long n, m, a, ans = 0; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m &amp;gt;&amp;gt; a; if(n % a == 0) { n /= a; } else { n = n / a + 1; } if(m % a == 0) { m /= a; } else { m = m / a + 1; } cout &amp;lt;&amp;lt; n * m &amp;lt;&amp;lt; endl; return 0; }</description>
     </item>
     
