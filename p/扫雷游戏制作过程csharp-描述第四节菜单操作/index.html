@@ -1,0 +1,411 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（"><title>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</title>
+<link rel=canonical href=https://ivy-end.github.io/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/><link rel=stylesheet href=/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css><meta property='og:title' content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><meta property='og:description' content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（"><meta property='og:url' content='https://ivy-end.github.io/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/'><meta property='og:site_name' content='Hugo Theme Stack Starter'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='CSharp'><meta property='article:tag' content='游戏开发'><meta property='article:published_time' content='2015-04-22T16:33:00+08:00'><meta property='article:modified_time' content='2015-04-22T16:33:00+08:00'><meta name=twitter:title content="扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作"><meta name=twitter:description content="我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。 在第二节中，我们曾经提出希望在对应级别（"><link rel="shortcut icon" href=/favicon.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu190e528798e90195d3cefef01f0a2d44_410_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>Hugo Theme Stack Starter</a></h1><h2 class=site-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div></header><ol class=menu-social><li><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com target=_blank title=Twitter rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Links</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E7%BC%96%E7%A8%8B%E7%8F%A0%E7%8E%91/>编程珠玑</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%9B%9B%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/>扫雷游戏制作过程（CSharp 描述）：第四节、菜单操作</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 22, 2015</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>6 minute read</time></div></footer></div></header><section class=article-content><p>我们现在的程序单击菜单的时候不会有任何反应，这一节我们主要介绍菜单的相关代码，使得菜单能够正常使用。</p><p>在第二节中，我们曾经提出希望在对应级别（初级、中级、高级、自定义）的按钮的显示勾，以表示目前的游戏等级。我们有两个时候需要对它进行操作，一个是加载上次游戏设置的时候，一个是在游戏过程中进行设置的时候，我们先介绍第一种情况。按照下图修改代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// 选择对应的游戏等级</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;/summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>SelectLevel</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=n>nWidth</span> <span class=p>==</span> <span class=m>10</span> <span class=p>&amp;&amp;</span> <span class=n>nHeight</span> <span class=p>==</span> <span class=m>10</span> <span class=p>&amp;&amp;</span> <span class=n>nMineCnt</span> <span class=p>==</span> <span class=m>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>beginnerBToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>intermediateIToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>expertEToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>settingSToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>nWidth</span> <span class=p>==</span> <span class=m>16</span> <span class=p>&amp;&amp;</span> <span class=n>nHeight</span> <span class=p>==</span> <span class=m>16</span> <span class=p>&amp;&amp;</span> <span class=n>nMineCnt</span> <span class=p>==</span> <span class=m>40</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>beginnerBToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>intermediateIToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>expertEToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>settingSToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>nWidth</span> <span class=p>==</span> <span class=m>30</span> <span class=p>&amp;&amp;</span> <span class=n>nHeight</span> <span class=p>==</span> <span class=m>16</span> <span class=p>&amp;&amp;</span> <span class=n>nMineCnt</span> <span class=p>==</span> <span class=m>99</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>beginnerBToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>intermediateIToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>expertEToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>settingSToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>beginnerBToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>intermediateIToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>expertEToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>settingSToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>注意到 beginnerBToolStripMenuItem、intermediateIToolStripMenuItem、expertEToolStripMenuItem、settingSToolStripMenuItem 分别表示四个等级的菜单的名称，通过修改它们的 Checked 属性来达到修改对应项目前面勾的状态。我们还需要在初始化函数中调用这个函数：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// 游戏参数设置</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;/summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;Width&#34;&gt;雷区宽度&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;Height&#34;&gt;雷区高度&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;MineCnt&#34;&gt;地雷数目&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>SetGame</span><span class=p>(</span><span class=kt>int</span> <span class=n>Width</span><span class=p>,</span> <span class=kt>int</span> <span class=n>Height</span><span class=p>,</span> <span class=kt>int</span> <span class=n>MineCnt</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=n>Width</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>nHeight</span> <span class=p>=</span> <span class=n>Height</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>nMineCnt</span> <span class=p>=</span> <span class=n>MineCnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>UpdateSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>这时候，我们运行就会发现Beginner菜单前面的勾被选中了：</p><figure><img src=https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B%EF%BC%88CSharp%20%E6%8F%8F%E8%BF%B0%EF%BC%89%EF%BC%9A%E7%AC%AC%E5%9B%9B%E8%8A%82%E3%80%81%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/mineSweeper_4_03.png alt=菜单示意图><figcaption><p>菜单示意图</p></figcaption></figure><p>下面我们来处理一下各个菜单按钮的事件，我们只需要双击菜单上的按钮，程序会自动创建对应的单击事件，我们只需要在其中书写代码即可。我们首先来创建 Beginner、Intermediate、Expert、Exit、About 菜单项目对应的事件。我们先介绍 Beginner、Intermediate、Expert 菜单项目对应的代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>intermediateIToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>40</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>expertEToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>30</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>99</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>接下来，我们处理 Exit 事件，我们希望在退出游戏之前询问游戏者是否确认退出，代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>exitXToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>MessageBox</span><span class=p>.</span><span class=n>Show</span><span class=p>(</span><span class=s>&#34;Are you sure to exit the game?&#34;</span><span class=p>,</span> <span class=s>&#34;Exit&#34;</span><span class=p>,</span> <span class=n>MessageBoxButtons</span><span class=p>.</span><span class=n>YesNo</span><span class=p>,</span> <span class=n>MessageBoxIcon</span><span class=p>.</span><span class=n>Question</span><span class=p>)</span> <span class=p>==</span> <span class=n>DialogResult</span><span class=p>.</span><span class=n>Yes</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>Application</span><span class=p>.</span><span class=n>Exit</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>然后，我们来处理 About 事件，我们希望得到类似 Windows 默认关于窗口的界面。为此，首先我们需要引用一个类，在代码的开头部分加上下图高亮部分的代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Collections.Generic</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.ComponentModal</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Data</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Drawing</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Linq</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Runtime.InteropServices</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Text</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Threading.Tasks</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.Windows.Forms</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><p>为了实现这样的功能，我们需要调用 Windows 系统内部的一个 API，添加这样一个函数：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// 系统关于对话框（API）</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;/summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;hWnd&#34;&gt;窗口句柄&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;szApp&#34;&gt;标题文本&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;szOtherStuff&#34;&gt;内容文本&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;param name=&#34;hIcon&#34;&gt;图标句柄&lt;/param&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;returns&gt;&lt;/returns&gt;</span>
+</span></span><span class=line><span class=cl><span class=na>        [DllImport(&#34;shell32.dll&#34;)]</span>
+</span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kd>extern</span> <span class=kd>static</span> <span class=kt>int</span> <span class=n>ShellAbout</span><span class=p>(</span><span class=n>IntPtr</span> <span class=n>hWnd</span><span class=p>,</span> <span class=kt>string</span> <span class=n>szApp</span><span class=p>,</span> <span class=kt>string</span> <span class=n>szOtherStuff</span><span class=p>,</span> <span class=n>IntPtr</span> <span class=n>hIcon</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>在 About 事件中添加如下代码进行调用：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>aboutAToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>ShellAbout</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=n>Handle</span><span class=p>,</span> <span class=s>&#34;Minesweeper&#34;</span><span class=p>,</span> <span class=s>&#34;A minesweeper game using CSharp language.&#34;</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=n>Icon</span><span class=p>.</span><span class=n>Handle</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>运行以后查看结果如下图所示：</p><figure><img src=https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B%EF%BC%88CSharp%20%E6%8F%8F%E8%BF%B0%EF%BC%89%EF%BC%9A%E7%AC%AC%E5%9B%9B%E8%8A%82%E3%80%81%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/mineSweeper_4_09.png alt=关于><figcaption><p>关于</p></figcaption></figure><p>可能细心的读者会发现，虽然我们通过菜单修改了游戏等级，但是我们窗口中的雷区却没有发生变化，因为我们没有在菜单被按下的时候没有调用 UpdateSize 函数。在三个按钮的事件中添加对 UpdateSize 函数的调用即可。代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>beginnerBToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>UpdateSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>intermediateIToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>40</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>UpdateSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>expertEToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=m>30</span><span class=p>;</span> <span class=n>nHeight</span> <span class=p>=</span> <span class=m>16</span><span class=p>;</span> <span class=n>nMineCnt</span> <span class=p>=</span> <span class=m>99</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>UpdateSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>在此运行的时候，我们发现修改游戏等级的时候，游戏界面也会发生相应的变化。但是还有一点瑕疵，就是在大规模变成小规模的时候，边上会有多余的雷区。为了修正这个 Bug，我们需要将原来 Paint 事件中代码放在一个新的函数 PaintGame 中，同时添加高亮区域的代码，并且在 Paint 事件中进行调用，代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>Form_Main_Paint</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>PaintEventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>PaintGame</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// 绘制游戏区</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;/summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>PaintGame</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>Graphics</span> <span class=n>g</span> <span class=p>=</span> <span class=k>this</span><span class=p>.</span><span class=n>CreateGraphics</span><span class=p>();</span>     <span class=c1>// 创建绘图句柄</span>
+</span></span><span class=line><span class=cl>            <span class=n>g</span><span class=p>.</span><span class=n>FillRectangle</span><span class=p>(</span><span class=n>Brushes</span><span class=p>.</span><span class=n>White</span><span class=p>,</span> <span class=k>new</span> <span class=n>Rectangle</span><span class=p>(</span><span class=m>0</span><span class=p>,</span> <span class=m>0</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=n>Width</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=n>Height</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 我们需要使雷区在用户显示的区域上下左右保持 6px 的偏移量，使得整体看起来更加协调</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nOffsetX</span> <span class=p>=</span> <span class=m>6</span><span class=p>;</span>   <span class=c1>// X 方向偏移量</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nOffsetY</span> <span class=p>=</span> <span class=m>6</span> <span class=p>+</span> <span class=n>MenuStrip_Main</span><span class=p>.</span><span class=n>Height</span><span class=p>;</span>   <span class=c1>// Y 方向偏移量</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=p>=</span> <span class=m>1</span><span class=p>;</span> <span class=n>i</span> <span class=p>&lt;=</span> <span class=n>nWidth</span><span class=p>;</span> <span class=n>i</span><span class=p>++)</span>   <span class=c1>// 绘制行</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=p>=</span> <span class=m>1</span><span class=p>;</span> <span class=n>j</span> <span class=p>&lt;=</span> <span class=n>nHeight</span><span class=p>;</span> <span class=n>j</span><span class=p>++)</span>  <span class=c1>// 绘制列</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// 第一个参数为笔刷，这里采用内置笔刷 SandyBrown</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// 第二个参数为方块的参数，这里采用左上角坐标以及长宽的形式给出</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// 34 表示每个雷区的大小，再加上偏移量就是我们当前雷区的起始位置，由于要空出 1px 的间隔，因此还需要加 1</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// 由此可以得到每个方块在雷区中的位置，然后利用循环绘制出来</span>
+</span></span><span class=line><span class=cl>                    <span class=n>g</span><span class=p>.</span><span class=n>FillRectangle</span><span class=p>(</span><span class=n>Brushes</span><span class=p>.</span><span class=n>SandyBrown</span><span class=p>,</span> <span class=k>new</span> <span class=n>Rectangle</span><span class=p>(</span><span class=n>nOffsetX</span> <span class=p>+</span> <span class=m>34</span> <span class=p>*</span> <span class=p>(</span><span class=n>i</span> <span class=p>-</span> <span class=m>1</span><span class=p>)</span> <span class=p>+</span> <span class=m>1</span><span class=p>,</span> <span class=n>nOffsetY</span> <span class=p>+</span> <span class=m>34</span> <span class=p>*</span> <span class=p>(</span><span class=n>j</span> <span class=p>-</span> <span class=m>1</span><span class=p>)</span> <span class=p>+</span> <span class=m>1</span><span class=p>,</span> <span class=m>32</span><span class=p>,</span> <span class=m>32</span><span class=p>));</span>   <span class=c1>// 绘制雷区方块</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>除此之外，在UpdateSize最后也需要调用PaintGame函数，如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// 自动更新窗口大小</span>
+</span></span><span class=line><span class=cl>        <span class=cs>/// &lt;summary&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>UpdateSize</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nOffsetX</span> <span class=p>=</span> <span class=k>this</span><span class=p>.</span><span class=n>Width</span> <span class=p>-</span> <span class=k>this</span><span class=p>.</span><span class=n>ClientSize</span><span class=p>.</span><span class=n>Width</span><span class=p>;</span>  <span class=c1>// 包含了窗口标题栏以及上下边框的高度</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nOffsetY</span> <span class=p>=</span> <span class=k>this</span><span class=p>.</span><span class=n>Height</span> <span class=p>-</span> <span class=k>this</span><span class=p>.</span><span class=n>ClientSize</span><span class=p>.</span><span class=n>Height</span><span class=p>;</span>    <span class=c1>// 包含了左右边框的宽度</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nAdditionY</span> <span class=p>=</span> <span class=n>MenuStrip_Main</span><span class=p>.</span><span class=n>Height</span> <span class=p>+</span> <span class=n>TableLayoutPanel_Main</span><span class=p>.</span><span class=n>Height</span><span class=p>;</span>  <span class=c1>// 包含了菜单栏以及下方显示信息栏的高度</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=p>.</span><span class=n>Width</span> <span class=p>=</span> <span class=m>12</span> <span class=p>+</span> <span class=m>34</span> <span class=p>*</span> <span class=n>nWidth</span> <span class=p>+</span> <span class=n>nOffsetX</span><span class=p>;</span>   <span class=c1>// 设置窗口高度，34 为每个雷区的高度，12 为上下总空隙（6px + 6px），再加上偏移量</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=p>.</span><span class=n>Height</span> <span class=p>=</span> <span class=m>12</span> <span class=p>+</span> <span class=m>34</span> <span class=p>*</span> <span class=n>nHeight</span> <span class=p>+</span> <span class=n>nAdditionY</span> <span class=p>+</span> <span class=n>nOffsetY</span><span class=p>;</span>    <span class=c1>// 设置窗口宽度，同理</span>
+</span></span><span class=line><span class=cl>            <span class=n>PaintGame</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>再次运行的时候，就会发现边上多余的雷区已经消失了。</p><p>接下来我们处理 Mark 以及 Audio 两个事件，我们需要定义两个变量来记录它们的数据，因为这对于我们以后的开发有很大的关系。如下图所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>namespace</span> <span class=nn>Minesweeper</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>partial</span> <span class=k>class</span> <span class=nc>Form_Main</span> <span class=p>:</span> <span class=n>Form</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>nWidth</span><span class=p>;</span>     <span class=c1>// 表示雷区的宽度</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>nHeight</span><span class=p>;</span>    <span class=c1>// 表示雷区的高度</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>nMineCnt</span><span class=p>;</span>   <span class=c1>// 表示地雷的数目</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kt>bool</span> <span class=n>bMark</span><span class=p>;</span>     <span class=c1>// 表示是否使用标记</span>
+</span></span><span class=line><span class=cl>        <span class=kt>bool</span> <span class=n>bAudio</span><span class=p>;</span>    <span class=c1>// 表示是否使用音效</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>同样我们需要在游戏开始的时候读取上次的数据，如果没有则都设置为真。我们首先看 Setting 文件：</p><figure><img src=https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2015/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B%EF%BC%88CSharp%20%E6%8F%8F%E8%BF%B0%EF%BC%89%EF%BC%9A%E7%AC%AC%E5%9B%9B%E8%8A%82%E3%80%81%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C/mineSweeper_4_14.png alt="Setting 文件配置"><figcaption><p>Setting 文件配置</p></figcaption></figure><p>同时加入以下代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>public</span> <span class=n>Form_Main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>InitializeComponent</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=c1>// 初始化游戏参数</span>
+</span></span><span class=line><span class=cl>            <span class=n>nWidth</span> <span class=p>=</span> <span class=n>Properties</span><span class=p>.</span><span class=n>Settings</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Width</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>nHeight</span> <span class=p>=</span> <span class=n>Properties</span><span class=p>.</span><span class=n>Settings</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Height</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>nMineCnt</span> <span class=p>=</span> <span class=n>Properties</span><span class=p>.</span><span class=n>Settings</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>MineCnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=c1>// 初始化</span>
+</span></span><span class=line><span class=cl>            <span class=n>bMark</span> <span class=p>=</span> <span class=n>Properties</span><span class=p>.</span><span class=n>Settings</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Mark</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>bAudio</span> <span class=p>=</span> <span class=n>Properties</span><span class=p>.</span><span class=n>Settings</span><span class=p>.</span><span class=n>Default</span><span class=p>.</span><span class=n>Audio</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>markMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bMark</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>audioMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bAudio</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=n>UpdateSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>SelectLevel</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>同时为 Mark 以及 Audio 菜单项目添加如下的事件：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>markMToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>markMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bMark</span> <span class=p>=</span> <span class=p>!</span><span class=n>bMark</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>audioMToolStripMenuItem_Click</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>audioMToolStripMenuItem</span><span class=p>.</span><span class=n>Checked</span> <span class=p>=</span> <span class=n>bAudio</span> <span class=p>=</span> <span class=p>!</span><span class=n>bAudio</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>至此，我们还剩 New Game、Setting、Rank 三个菜单选项的事件没有涉及，因为它们需用用到更多的内容，我们将会在下一节中进行讲解。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/csharp/>CSharp</a>
+<a href=/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/>游戏开发</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AB%E8%8A%82%E6%95%B4%E4%BD%93%E5%AE%8C%E5%96%84/><div class=article-details><h2 class=article-title>扫雷游戏制作过程（CSharp 描述）：第八节、整体完善</h2></div></a></article><article><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%83%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E7%BB%AD/><div class=article-details><h2 class=article-title>扫雷游戏制作过程（CSharp 描述）：第七节、内部实现（续）</h2></div></a></article><article><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E5%85%AD%E8%8A%82%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/><div class=article-details><h2 class=article-title>扫雷游戏制作过程（CSharp 描述）：第六节、内部实现</h2></div></a></article><article><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%BA%94%E8%8A%82%E8%8F%9C%E5%8D%95%E6%93%8D%E4%BD%9C%E7%BB%AD/><div class=article-details><h2 class=article-title>扫雷游戏制作过程（CSharp 描述）：第五节、菜单操作（续）</h2></div></a></article><article><a href=/p/%E6%89%AB%E9%9B%B7%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8Bcsharp-%E6%8F%8F%E8%BF%B0%E7%AC%AC%E4%B8%89%E8%8A%82%E9%9B%B7%E5%8C%BA%E7%BB%98%E5%88%B6/><div class=article-details><h2 class=article-title>扫雷游戏制作过程（CSharp 描述）：第三节、雷区绘制</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//hugo-theme-stack.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2024 Hugo Theme Stack Starter</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

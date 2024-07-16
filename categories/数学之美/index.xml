@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数学之美 on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/categories/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E/</link><description>Recent content in 数学之美 on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 06 Sep 2023 12:22:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/categories/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E/index.xml" rel="self" type="application/rss+xml"/><item><title>蒙提·霍尔问题（Monty Hall Problem）</title><link>https://ivy-end.github.io/p/%E8%92%99%E6%8F%90%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98monty-hall-problem/</link><pubDate>Wed, 06 Sep 2023 12:22:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E8%92%99%E6%8F%90%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98monty-hall-problem/</guid><description>&lt;p>&lt;a class="link" href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank" rel="noopener"
+>蒙提霍尔问题（Monty Hall Problem）&lt;/a>是一道关于博弈论的数学问题，通常也被称作&lt;strong>山羊问题&lt;/strong>或&lt;strong>三门问题&lt;/strong>。它出自一档由&lt;a class="link" href="https://en.wikipedia.org/wiki/Monty_Hall" target="_blank" rel="noopener"
+>蒙提·霍尔（Monty Hall）&lt;/a>主持的电视节目 Let&amp;rsquo;s Make a Deal，题目的描述如下。&lt;/p>
+&lt;p>&lt;em>假设你正在参加一个游戏节目，你被要求在三扇门中选择一扇：其中一扇后面有一辆车，其余两扇后面则是山羊。你选择了一道门，假设是一号门，然后知道门后面有什么的主持人，开启了另一扇后面有山羊的门，假设是三号门。他然后问你：“你想选择二号门吗？”转换你的选择对你来说是一种优势吗？&lt;/em>&lt;/p>
+&lt;figure>&lt;img src="https://blog-1307064178.cos.ap-shanghai.myqcloud.com/contents/2023/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98%EF%BC%88Monty%20Hall%20Problem%EF%BC%89/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98.png"
+alt="蒙提·霍尔问题">&lt;figcaption>
+&lt;p>蒙提·霍尔问题&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>对于这类问题最直观的解答是直接列出所有可能的情况（下图）。不失一般性地，假设 1 号门后面的奖品是“车”，2 号门后面的奖品是“羊 A”，3 号门后面的奖品是“羊 B”。&lt;/p>
+&lt;figure>&lt;img src="https://blog-1307064178.cos.ap-shanghai.myqcloud.com/contents/2023/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98%EF%BC%88Monty%20Hall%20Problem%EF%BC%89/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98%EF%BC%88%E8%A7%A3%E7%AD%94%EF%BC%89.png"
+alt="蒙提·霍尔问题（解答）">&lt;figcaption>
+&lt;p>蒙提·霍尔问题（解答）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在进行第一次选择时，参赛者共有三种可能：&lt;/p>
+&lt;ul>
+&lt;li>选择 1 号门；&lt;/li>
+&lt;li>选择 2 号门；&lt;/li>
+&lt;li>选择 3 号门。&lt;/li>
+&lt;/ul>
+&lt;p>在进行第二次选择时，参赛者可能出现的情况如下：&lt;/p>
+&lt;ul>
+&lt;li>假设第一次选择了 1 号门，此时更换后不中奖；&lt;/li>
+&lt;li>假设第一次选择了 2 号门，此时更换后中奖；&lt;/li>
+&lt;li>假设第一次选择了 3 号门，此时更换后中奖；&lt;/li>
+&lt;/ul>
+&lt;p>因此，综合两次选择的结果来看，中奖的概率由之前的$\frac{1}{3}$变为了$\frac{2}{3}$。&lt;/p>
+&lt;p>整个问题在一开始接触时会显得比较反直觉，但如果仔细分析一下倒也不显得那么困难了。下面，我们将这个问题进一步形式化，来看看推广到一般情况后的情形。&lt;/p>
+&lt;p>&lt;em>现有$N$扇门，每扇门后面对应了一辆汽车或一头山羊（共有$1$辆汽车和$N-1$头山羊）。假设选手第$i$轮选择的门编号为$c_i$，主持人公布的山羊所在的门编号为$g_i$，求选手每次更换、不更换的中奖概率。&lt;/em>&lt;/p>
+&lt;p>对于这个问题，我们首先考虑第$i$轮选择时剩余未公布结果的门数，记作$d_i$。主持人每轮公布 1 扇门的结果，我们有$d_i=N-i+1$。假设选手第$i-1$轮选择了山羊对应的门，则有$\frac{1}{d_i}$的概率在更换选择后中奖；假设选手第$i-1$轮选择了汽车对应的门，则在更换选择后不中奖。&lt;/p>
+&lt;p>假设选手第$i$轮不中奖的概率为$p_i^g$，中奖的概率为$p_i^c$，有：&lt;/p>
+&lt;p>$$p_i^c=p_{i-1}^g\cdot\frac{1}{d_i - 1},\quad\quad p_i^g=p_{i-1}^g\cdot\frac{d_i-2}{d_i - 1}+p_{i-1}^a$$&lt;/p>
+&lt;p>通过递推，即可完成对所有情况的求解，具体过程留给读者。&lt;/p>
+&lt;figure>&lt;img src="https://blog-1307064178.cos.ap-shanghai.myqcloud.com/contents/2023/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98%EF%BC%88Monty%20Hall%20Problem%EF%BC%89/%E8%92%99%E6%8F%90%C2%B7%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98%EF%BC%88%E4%BB%BF%E7%9C%9F%EF%BC%89.png"
+alt="蒙提·霍尔问题（仿真）">&lt;figcaption>
+&lt;p>蒙提·霍尔问题（仿真）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>上图给出了有 1024 扇门时，每一次改变选择后，对应的中奖概率。从结果来看，每当外界环境发生变化时，我们应该从容应对，主动拥抱和把握人生浪潮中的变化，这样才能取得更大的成就。既然是这样，那为什么会有那么多的古圣先贤告诫我们“以不变应万变”呢？实际上，上述结论过于武断，在蒙提·霍尔问题中，每次改变选择后中奖概率上升的前提是：__每次改变都排除了错误的答案。__然而，在人生的道路上我们如何立足当下去判断每一次变化的好坏呢？或许，我们可以借助康德的“判断力”；又或许，我们可以依靠实践去检验它。归根结底，不能“本本主义”的错误，要具体问题具体分析。&lt;/p>
+&lt;p>附上仿真的 MATLAB 代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-matlab" data-lang="matlab">&lt;span class="line">&lt;span class="cl">&lt;span class="n">totalChoices&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">1024&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">possCar&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">zeros&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">totalChoices&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">possGoat&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">zeros&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">totalChoices&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">possCar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">totalChoices&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">possGoat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">totalChoices&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="nb">i&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">totalChoices&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">totalDoors&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">totalChoices&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nb">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">possCar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">possGoat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">totalDoors&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">possGoat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">possGoat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">totalDoors&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">possCar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>浅谈等价无穷小量代换原理</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</link><pubDate>Sat, 01 Nov 2014 00:33:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F%E4%BB%A3%E6%8D%A2%E5%8E%9F%E7%90%86/</guid><description>&lt;p>高数教了一段时间了，对于等价无穷小量代换法求极限为什么只能在乘除中使用，而不能在加减的情况下使用的条件感到有些疑惑，于是找了一些资料，仔细的研究了这个问题，整理如下：&lt;/p>
+&lt;h2 id="等价无穷小的定义及常用的等价无穷小">等价无穷小的定义及常用的等价无穷小
+&lt;/h2>&lt;p>无穷小量是指某变化过程中极限为 $ 0 $ 的变量。而等价无穷小量是指在某变化过程中比值极限为 $ 1 $ 的两个无穷小量。&lt;/p>
+&lt;p>常用的等价无穷小有： $$ \sin{x}\sim \tan{x}\sim\arctan{x}\sim\arcsin{x}\sim \ln{\left(1+x \right )}\sim x\left(x\rightarrow 0\right ) $$ $$ 1-\cos{x}\sim \frac{x^{2}}{2},\sqrt[n]{1+x}-1\sim \frac{x}{n} \left(x\rightarrow 0\right ) $$ 等价无穷小量在求极限问题中非常重要。恰当的使用等价无穷小量代换常常使极限问题大大简化。但是有时却不能使用等价无穷小量代换。&lt;/p>
+&lt;h2 id="等价无穷小替换原理">等价无穷小替换原理
+&lt;/h2>&lt;p>&lt;strong>定理1&lt;/strong>：设 $ \displaystyle\alpha,\alpha_{1},\beta,\beta_{1} $ 是某一变化过程中的无穷小量，且 $ \alpha \sim \alpha_{1},\beta \sim \beta_{1} $ ，若 $ \lim{\frac{\alpha}{\beta}} $ 存在，则 $$ \lim{\frac{\alpha}{\beta}}=\lim{\frac{\alpha_{1}}{\beta_{1}}} $$&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{\ln{\left(1+3x\right)}}{\sin{2x}}} $$&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{\ln{\left(1+3x\right)}}{\sin{2x}}}=\lim_{x\rightarrow 0}{\frac{3x}{2x}}=\frac{3}{2} $$&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}} $$&lt;/p>
+&lt;p>&lt;strong>错误解法&lt;/strong>： $$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}}=\lim_{x\rightarrow 0}{\frac{x-x}{x^3}}=0 $$&lt;/p>
+&lt;p>&lt;strong>正确解法&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}}=\lim_{x\rightarrow 0}{\frac{\sin{x}\left(1-\cos{x}\right)}{x^{3}\cdot\cos{x}}}=\lim_{x\rightarrow 0}{\frac{1-\cos{x}}{x^{2}\cdot\cos{x}}}=\lim_{x\rightarrow 0}{\frac{1}{2\cos{x}}}=\frac{1}{2} $$&lt;/p>
+&lt;p>从上面的解法可以看出，该题分子不能直接用等价无穷小量替代来做，下面我们分析产生错误的原因：等价无穷小之间本身一般并不相等，它们之间一般相差一个较它们高阶的无穷小，由函数 $ f\left(x\right) $ 在点 $ x=0 $ 处的泰勒公式，即麦克劳林公式：$$ f\left ( x \right )=f\left ( 0 \right )+f&amp;rsquo;\left ( 0 \right )x+\frac{f&amp;rsquo;&amp;rsquo;\left ( 0 \right )}{2!}x^{2}+\cdots+\frac{f^{\left ( n \right )}\left ( 0 \right )}{n!}x^{n}+o\left ( x^{n} \right ) $$ 很容易有：$$ \tan{x}=x+\frac{x^{3}}{3}+\frac{2x^5}{15}+o\left ( x^{5} \right ) \quad \left ( x\rightarrow 0 \right ) $$ $$ \sin{x}=x+\frac{x^{3}}{3!}+\frac{x^{5}}{5!}+\frac{x^{7}}{7!}+\cdots+\frac{\left ( -1 \right )^{m-1}x^{2m-1}}{\left ( 2m-1 \right )!}+o\left ( x^{2m-1} \right ) \quad \left ( x\rightarrow 0 \right ) $$&lt;/p>
+&lt;p>由此可知， $ \sin{x} $ 与 $ \tan{x} $ 相差一个较 $ x $ 的三阶无穷小，此三阶无穷小与分母 $ x^{3} $ 相比不可忽略，因为把上述结论代入原式得 $$ \lim_{x\rightarrow 0}{\frac{\tan{x}-\sin{x}}{x^{3}}}=\lim{x\rightarrow 0}{\frac{\frac{x^{3}}{3}+\frac{x^{3}}{3!}+o\left ( x^{3} \right )}{x^{3}}}=\frac{1}{2} $$ 由此，我们可以得出：加减情况下不能随便使用等价无穷小。&lt;/p>
+&lt;p>下面我们给出一个在加减情况下使用等价无穷小的定理并加以证明。在这里我们只讨论减的情况，因为我们知道加上一个数可以看成减去这个数的负数。为方便，首先说明下面的定理及推论中的无穷小量其自变量都是 $ x $ ，其趋近过程都相同： $ x\rightarrow 0 $ ，在有关的极限中都省去了极限的趋近过程。&lt;/p>
+&lt;p>&lt;strong>定理2&lt;/strong>：设 $ \alpha,\alpha_{1},\beta,\beta_{1} $ 是某一变化过程中的无穷小量，且 $ \alpha \sim \alpha_{1},\beta \sim \beta_{1} $ ，则 $ \alpha-\beta \sim \alpha_{1}-\beta_{1} $ 的充分必要条件是 $ \lim{\frac{\alpha}{\beta}}=k\neq 1 $ 。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：&lt;/p>
+&lt;p>$ 1^{\circ} $ 充分性：$$\alpha\sim\alpha_{1},\beta\sim\beta_{1}\Rightarrow \lim{\frac{\alpha}{\alpha_{1}}}=\lim{\frac{\beta}{\beta_{1}}}=1 $$ 又 $$ \lim{\frac{\alpha}{\beta}}=k\neq 1,\lim{\frac{\alpha_{1}}{\beta_{1}}}=k\neq 1 $$ 则 $$ \lim{\frac{\alpha-\beta}{\alpha_{1}-\beta_{1}}}=\lim{\frac{\frac{\alpha}{\beta_{1}}-\frac{\beta}{\beta_{1}}}{\frac{\alpha_{1}}{\beta_{1}}-1}}=\frac{k-1}{k-1}=1 $$ 即 $$ \alpha -\beta\sim \alpha_{1} - \beta_{1} $$&lt;/p>
+&lt;p>$ 2^{\circ} $ 必要性：$$ \alpha\sim\beta,\alpha_{1}\sim\beta_{1}\Rightarrow \lim{\frac{\alpha-\beta}{\alpha_{1}-\beta_{1}}}=1 $$ 即 $$ \lim{\left(\frac{\alpha-\beta}{\alpha_{1}-\beta_{1}}-1 \right )}=0 $$ 通分得 $$ \lim{\frac{\alpha-\alpha_{1}}{\alpha_{1}-\beta_{1}}}-\lim{\frac{\beta-\beta_{1}}{\alpha_{1}-\beta_{1}}}=0 $$ 所以 $$ \lim{\frac{\frac{\alpha}{\alpha_{1}}-1}{1-\frac{\beta}{\alpha_{1}}}}-\lim{\frac{1-\frac{\beta}{\beta_{1}}}{\frac{\alpha_{1}}{\beta_{1}}-1}}=0 $$ 又 $$ \lim{\frac{\alpha}{\alpha_{1}}}=1,\lim{\frac{\beta}{\beta_{1}}}=1 $$ 所以 $$ \lim{\frac{0}{1-\frac{\beta}{\alpha_{1}}}}-\lim{\frac{0}{\frac{\alpha_{1}}{\beta_{1}}-1}}=0 $$ 所以 $$ \lim{\frac{\beta_{1}}{\alpha_{1}}}=k\neq 1\Rightarrow \lim{\frac{\alpha_{1}}{\beta_{1}}}=k\neq 1 $$ 又 $$ \lim{\frac{\alpha}{\beta}}=\lim{\frac{\alpha_{1}}{\beta_{1}}} $$ 所以 $$ \lim{\frac{\alpha}{\beta}}=k\neq 1,\lim{\frac{\alpha_{1}}{\beta_{1}}}=k\neq 1 $$ 由 $ 1^{\circ},2^{\circ} $ 得，原命题成立。证毕。&lt;/p>
+&lt;p>这样一来，就得到了差形式无穷小量等价代换的充要条件。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{1-\cos{x}+2\sin{x}}{\arcsin{2x}-\sin{x}}} $$&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$$ 1-\cos{x}\sim\frac{x^{2}}{2},-2\sin{x}\sim -2x, 2\arcsin{x}\sim 2x,\sin{x}\sim x\left ( x\rightarrow 0 \right ) $$ 所以 $$ \lim_{x\rightarrow 0}{\frac{1-\cos{x}}{-2\sin{x}}}=0\neq 1,\lim_{x\rightarrow 0}{\frac{2\arcsin{x}}{\sin{x}}}=2\neq 1 $$ 由定理 2 得 $$ \lim_{x\rightarrow 0}{\frac{1-\cos{x}+2\sin{x}}{\arcsin{2x}-\sin{x}}}=\lim_{x\rightarrow}{\frac{\frac{x^{2}}{2}+2x}{x}}=2 $$&lt;/p>
+&lt;p>&lt;strong>例4&lt;/strong>：$$ \lim_{x\rightarrow 0}{\frac{\arctan{2x}+\arcsin{5x}}{\sin{3x}}} $$&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$$ \arctan{2x}\sim 2x,\arcsin{5x}\sim 5x,\sin{3x}\sim 3x\left ( x\rightarrow 0 \right ) $$ 又 $$ \lim{\frac{\arctan{2x}}{-\arcsin{5x}}}=-\frac{2}{5}\neq 1 $$ 由定理 2 得 $$ \lim_{x\rightarrow 0}{\frac{\arctan{2x}+\arcsin{5x}}{\sin{3x}}}=\frac{2x+5x}{3x}=\frac{7}{3} $$&lt;/p>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>本文指出，在有加减的情况下不能随便运用等价无穷小代换求极限，并且指出了在有加减的情况下能够使用等价无穷小代换的充分必要条件。对于不满足条件的情况，根据给出的泰勒展开公式，可以求出。&lt;/p></description></item><item><title>关于二次曲线切线问题的研究</title><link>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</link><pubDate>Tue, 31 Dec 2013 20:46:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF%E5%88%87%E7%BA%BF%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6/</guid><description>&lt;p>很早就想整理这部分的知识了，迫于时间原因，一直拖到现在。下面就圆、椭圆、双曲线、抛物线的切点弦进行一些研究。主要涉及两个方面，一个是关于曲线上某点的切线方程，另一个是关于曲线的切点弦方程。&lt;/p>
+&lt;h2 id="一关于曲线上某点的切线方程">一、关于曲线上某点的切线方程
+&lt;/h2>&lt;h3 id="1圆">1、圆
+&lt;/h3>&lt;p>我们都知道，过圆$x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right )$上一点$P\left(x_{0},y_{0}\right)$的切线方程是$x_{0}x+y_{0}y=r^{2}$。下面我们就更为一般的情形进行探究：&lt;/p>
+&lt;p>&lt;strong>定理1.1&lt;/strong>：给定圆$C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left ( r &amp;gt; 0 \right )$，以及圆上一点$P\left(x_{0},y_{0}\right)$，则过该点的切线方程为 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：对于圆$C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}$，两边同时对$x$求导，得 $$ 2\left ( x-a \right )+2\left ( y-b \right )\cdot\frac{dy}{dx}=0 $$ 其中$\frac{dy}{dx})即为(y&amp;rsquo;$，只是导数两种不同的记号，化简整理得 $$ \frac{dy}{dx}=-\frac{x-a}{y-b} $$ 那么我们可以写出切线方程为 $$ y-y_{0}=-\frac{x_{0}-a}{y_{0}-b}\left ( x-x_{0} \right ) $$ 进一步化简得 $$ \left ( x_{0}-a \right )x+\left ( y_{0}-b \right )y-\left ( x_{0}^{2}+y_{0}^{2} \right )+ax_{0}+by_{0}=0 $$ 又$P\left(x_{0},y_{0}\right)$在圆$C$上，则$\left ( x_{0}-a \right )^{2}+\left ( y_{0}-b \right )^{2}=r^{2}$，代入上式化简得 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$ 证毕。&lt;/p>
+&lt;h3 id="2椭圆">2、椭圆
+&lt;/h3>&lt;p>有了上面的基础，我们可以猜测到椭圆上某点的切线方程。&lt;/p>
+&lt;p>&lt;strong>定理1.2&lt;/strong>：给定椭圆$C:\frac{\left ( x-m \right )^{2}}{a^{2}}+\frac{\left ( y-n \right )^{2}}{b^{2}}=1\left ( a &amp;gt; b &amp;gt; 0 \right )$，以及椭圆上一点$P\left(x_{0},y_{0}\right)$，则过该点的切线方程为 $$ \frac{\left ( x_{0}-m \right )\left ( x-m \right )}{a^{2}}+\frac{\left ( y_{0}-n \right )\left ( y-n \right )}{b^{2}}=1. $$ 证明略。&lt;/p>
+&lt;h3 id="3双曲线">3、双曲线
+&lt;/h3>&lt;p>&lt;strong>定理1.3&lt;/strong>：给定双曲线$C:\frac{\left ( x-m \right )^{2}}{a^{2}}-\frac{\left ( y-n \right )^{2}}{b^{2}}=1\left ( a &amp;gt; 0, b &amp;gt; 0 \right )$，以及双曲线上一点$P\left(x_{0},y_{0}\right)$，则过该点的切线方程为 $$ \frac{\left ( x_{0}-m \right )\left ( x-m \right )}{a^{2}}-\frac{\left ( y_{0}-n \right )\left ( y-n \right )}{b^{2}}=1 $$ 证明略。对于焦点在$y$轴上的情形，读者可以自行推导。&lt;/p>
+&lt;h3 id="4抛物线">4、抛物线
+&lt;/h3>&lt;p>&lt;strong>定理1.4&lt;/strong>：给定抛物线$C:y^{2}=2p\left ( x-a \right )\left ( p &amp;gt; 0 \right )$，以及抛物线上一点$P\left(x_{0},y_{0}\right)$，则过该点的切线方程为 $$ y_{0}y=p(x+x_{0}-2a) $$ 证明略。对于其他三种情形，读者可以自行推导。&lt;/p>
+&lt;h2 id="二关于曲线外某点的切点弦方程">二、关于曲线外某点的切点弦方程
+&lt;/h2>&lt;h3 id="1圆-1">1、圆
+&lt;/h3>&lt;p>类似的，圆$x^{2}+y^{2}=r^{2}\left ( r &amp;gt; 0 \right )$外一点$P\left(x_{0},y_{0}\right)$的切点弦方程是$x_{0}x+y_{0}y=r^{2}$。下面我们就更为一般的情形进行探究：&lt;/p>
+&lt;p>&lt;strong>定理2.1&lt;/strong>：给定圆$C:\left ( x-a \right )^{2}+\left ( y- b\right )^{2}=r^{2}\left ( r &amp;gt; 0 \right )$，以及圆外一点$P\left(x_{0},y_{0}\right)$，则该点的切点弦方程为 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：设过$P$的切线与圆$C$相交于点$A\left ( x_{1},y_{1} \right ))以及(B\left ( x_{2},y_{2} \right )$，首先过点$A$的切线同时经过点$P$，切线方程为 $$ \left ( x_{1}-a \right )\left ( x-a \right )+\left ( y_{1}-b \right )\left ( y-b \right )=r^{2} $$ 又过点$B$的切线同时也经过点$P$，切线方程为 $$ \left ( x_{2}-a \right )\left ( x-a \right )+\left ( y_{2}-b \right )\left ( y-b \right )=r^{2} $$ 综合上述两个方程，便可以得到过点$A,B$的方程，即点(P)的切点弦方程 $$ \left ( x_{0}-a \right )\left ( x-a \right )+\left ( y_{0}-b \right )\left ( y-b \right )=r^{2} $$&lt;/p>
+&lt;h3 id="2椭圆-1">2、椭圆
+&lt;/h3>&lt;p>&lt;strong>定理2.2&lt;/strong>：给定椭圆$C:\frac{\left ( x-m \right )^{2}}{a^{2}}+\frac{\left ( y-n \right )^{2}}{b^{2}}=1\left ( a &amp;gt; b &amp;gt; 0 \right )$，以及椭圆上一点$P\left(x_{0},y_{0}\right)$，则该点的切点弦方程为 $$ \frac{\left ( x_{0}-m \right )\left ( x-m \right )}{a^{2}}+\frac{\left ( y_{0}-n \right )\left ( y-n \right )}{b^{2}}=1 $$ 证明略。&lt;/p>
+&lt;h3 id="3双曲线-1">3、双曲线
+&lt;/h3>&lt;p>&lt;strong>定理2.3&lt;/strong>：给定双曲线$C:\frac{\left ( x-m \right )^{2}}{a^{2}}-\frac{\left ( y-n \right )^{2}}{b^{2}}=1\left ( a &amp;gt; 0, b &amp;gt; 0 \right )$，以及双曲线上一点$P\left(x_{0},y_{0}\right)$，则该点的切点弦方程为 $$ \frac{\left ( x_{0}-m \right )\left ( x-m \right )}{a^{2}}-\frac{\left ( y_{0}-n \right )\left ( y-n \right )}{b^{2}}=1 $$ 证明略。对于焦点在$y$轴上的情形，读者可以自行推导。&lt;/p>
+&lt;h3 id="4抛物线-1">4、抛物线
+&lt;/h3>&lt;p>&lt;strong>定理2.4&lt;/strong>：给定抛物线$C:y^{2}=2p\left ( x-a \right )\left ( p &amp;gt; 0 \right )$，以及抛物线上一点$P\left(x_{0},y_{0}\right)$，则该点的切点弦方程为 $$ y_{0}y=p(x+x_{0}-2a) $$ 证明略。对于其他三种情形，读者可以自行推导。 至此，关于二次曲线的两种切线问题已经阐述完毕。从上述过程我们可以看出，过曲线上某点的切线方程和过曲线外某点的切点弦方程的形式是完全一致的，这正是数学的魅力所在！&lt;/p></description></item><item><title>关于复数的一些补充</title><link>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</link><pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid><description>&lt;p>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。&lt;/p>
+&lt;h2 id="一复数的概念">一、复数的概念
+&lt;/h2>&lt;h3 id="11-数的概念的发展">1.1 数的概念的发展
+&lt;/h3>&lt;p>数的概念是从实践中产生和发展起来的。早在原始社会末期，由于记数的需要，人们就建立起自然熟的概念。自然数的全体构成自然数集$\mathbf{N}$。&lt;/p>
+&lt;p>随着生产和科学的发展，熟的概念也得到了发展。&lt;/p>
+&lt;p>为了表示各种具有相反意义的量以及满足记数法的要求，人们引进了零和负数，把自然数看作正整数，把正整数、零、负整数合并在一起，构成整数集$\mathbf{Z}$。&lt;/p>
+&lt;p>为了解决测量、分配中遇到的将某些量进行等分的问题，人们又引进了有理数，规定他们就是一切形如$\frac{m}{n}$的数，其中$m\in \mathbf{Z},n\in \mathbf{N}$。这样，就把整数集$\mathbf{Z}$扩大为有理数集$\mathbf{Q}$。显然，$\mathbf{Z}\subset \mathbf{Q}$。如果把整数看作分母为$1$的分数，那么有理数实际上就是分数集。&lt;/p>
+&lt;p>每一个有理数都可以表示成整数、有限小数或循环节不为$0$的循环小数；反过来，整数、有限小数或循环节不为$0$的循环小数也都是有理数。如果把整数、有限小数都看作循环节为$0$的循环小数，那么有理数集实际上就是循环小数的集合。&lt;/p>
+&lt;p>为了解决有些量与量之间的比值（例如用正方形的边长去度量它的对角线所得结果）不能用有理数表示的矛盾，人们又引入了无理数。所谓无理数，就是无限不循环小数。有理数集与无理数集合并在一起，构成实数集$\mathbf{R}$。因为有理数都可以看作循环小数（包括整数、有限小数），无理数都是无限不循环小数，所以实数集就是小数集。&lt;/p>
+&lt;p>从解方程来看，方程$x+5=3$在自然数集$\mathbf{N}$中无解，在整数集$\mathbf{Z}$中就有一个解$x=-2$；方程$3x=5$字整数集$\mathbf{Z}$中无解，在有理数集$\mathbf{Q}$中就有一个解$x=\frac{5}{3}$；方程$x^{2}=2$在有理数集$\mathbf{Q}$中无解，在实数集$\mathbf{R}$中就有两个解$x=\pm \sqrt{2}$。但是，熟的范围扩充到实数集$\mathbf{R}$以后，象$x^{2}=-1$这样的方程还是无解，因为没有一个实数的平方等于$-1$。在十六世纪，由于解方程的需要，人们开始引进一个新数$i$，叫做虚数单位，并规定：&lt;/p>
+&lt;p>它的平方等于$-1$，即&lt;/p>
+&lt;p>$$ i^{2}=-1 $$&lt;/p>
+&lt;p>实数与它进行四则运算时，所有的加、乘运算律仍然成立。&lt;/p>
+&lt;p>在这种规定下，$i$可以与实数$b$相乘，再同实数$a$相加，由于满足乘法交换律及加法交换律，从而可以把结果写成$a+bi$。人们把它们叫做复数。全体复数所成的集合，一般用字母$\mathbf{C}$来表示。&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>在这种规定下，$i$就是$-1$的一个平方根。因此，方程$x^{2}=-1$在复数集$\mathbf{C}$中就至少有一个解$x=i$。&lt;/p>
+&lt;p>十八世纪以后，复数在数学、力学和电学中得到了应用。从此对它的研究日益展开。现在复数已成为科学技术中普遍使用的一种数学工具。&lt;/p>
+&lt;h3 id="12-复数的有关概念">1.2 复数的有关概念
+&lt;/h3>&lt;p>复数$a+bi$（$a,b\in\mathbf{R}$。以后说复数$a+bi$时，都有$a,b\in\mathbf{R}$），当$b=0$时，就是实数；当$b\neq 0$时，叫做虚数，当$a=0,b\neq 0$时，叫做纯虚数；$a$与$b$分别叫做复数$a+bi$的实部与虚部。例如，$3+4i,-\frac{1}{2}-\sqrt{2}i,-0.5i$都是虚数，它们的实部分别是$3,-\frac{1}{2},0$，虚部分别是$4,-\sqrt{2},-0.5$。&lt;/p>
+&lt;p>显然，实数集$\mathbf{R}$是复数集$\mathbf{C}$的真子集，即$\mathbf{R}\subset \mathbf{C}$。&lt;/p>
+&lt;p>如果两个复数$a+bi$与$c+di$的实部与虚部分别相等，我们就说这两个复数相等，记作$a+bi=c+di$，这就是说，如果$a,b,c,d\in\mathbf{R}$，那么 $$ a+bi=c+di \Leftrightarrow a=c,b=d $$ $$ a+bi=0\Leftrightarrow a=b=0 $$&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：已知$\left ( 2x-1 \right )+i=y-\left ( 3-y \right )i$，其中$x,y\in\mathbf{R}$。求$x$与$y$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：根据复数相等的定义，得方程组$\begin{cases} 2x-1=y,\\ 1=-\left ( 3-y \right ) \end{cases}$解得$x=\frac{5}{2},y=4$。&lt;/p>
+&lt;p>从复数相等的定义，我们知道，任何一个复数$z=a+bi$，都可以由一个有顺序的实数对$\left ( a,b \right )$唯一确定。这就使我们能借用平面直角坐标系来表示复数$z=a+bi$。如图1，点$Z$的横坐标是$a$，纵坐标是$b$，复数$z=a+bi$可用点$Z\left ( a,b \right )$来表示。这个建立了直角坐标系表示复数的平面叫做复平面，$x$轴叫做实轴，$y$轴除去原点的部分叫做虚轴（因为原点表示实数$0$，原点不在虚轴上）。表示实数的点都在实轴上，表示纯虚数的点都在轴上。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-01.png"
+alt="复数的复平面表示法">&lt;figcaption>
+&lt;p>复数的复平面表示法&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>很明显，按照这种表示方法，每一个复数，有复平面内唯一的一个点和它对应；反过来，复平面内的每一个点，有唯一的一个复数和它对应。由此可知，复数集$\mathbf{C}$和复平面内所有的点所成的集合是一一对应的。这是复数的一个几何意义。&lt;/p>
+&lt;p>当两个复数实部相等，虚部互为相反数时，这两个复数叫做互为共轭复数（当虚部不等于$0$时也叫做互为共轭虚数）。复数$z$的共轭复数可以用$\overline{z}$来表示，也就是说，复数$z=a+bi$的共轭复数是$\overline{z}=a-bi$。显然，复平面内表示两个互为共轭复数的点$Z$与$\overline{Z}$关于实轴对称（图2），而实数$a$（即虚部为$0$的复数）的共轭复数仍是$a$本身。&lt;/p>
+&lt;p>两个实数可以比较大小。但是两个复数，如果不全是实数，就不能比较它们的大小。对于这个命题的证明，将稍后给出。&lt;/p>
+&lt;h3 id="13-复数的向量表示">1.3 复数的向量表示
+&lt;/h3>&lt;p>在物理学中，我们经常遇到力、速度、加速度、电场强度等，这些量，除了要考虑它们的绝对值大小以外，还要考虑它们的方向。我们把这种既有绝对值大小又有方向的量叫做向量。向量可以用有向线段来表示，线段的长度就是这个向量的绝对值（叫做这个向量的模），线段的方向（用箭头表示）就是这个向量的方向。模相等且方向相同的向量，不管它们的起点在哪里，都认为是相等的向量。在这一规定下，向量可以根据需要进行平移。模为零的向量（它的方向是任意的）叫做零向量。规定所有零向量相等。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-02.png"
+alt="复数的向量表示法">&lt;figcaption>
+&lt;p>复数的向量表示法&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>复数可以用向量来表示。如图 3，设复平面内的点$Z$表示复数$z=a+bi$，连结$OZ$，如果我们把有向线段$OZ$（方向是从点$O$指向点$Z$）看成向量，记作$\overrightarrow{OZ}$，就把复数同向量联系起来了。很明显，向量$\overrightarrow{OZ}$是由点$Z$唯一确定的；反过来，点$Z$也可由向量$\overrightarrow{OZ}$唯一确定。因此，复数集$C$与复平面内所有以原点$O$为起点的向量所成的集合也是一一对应的。为方便起见，我们常把复数$z=a+bi$说成点$Z$或者说成向量$\overrightarrow{OZ}$。此外，我们还规定，相等的向量表示同一个复数。&lt;/p>
+&lt;p>图3中的向量$\overrightarrow{OZ}$的模（即有向线段$OZ$的长度）$r$叫做复数$z=a+bi$的模（或绝对值）记作
+$\left | z \right |$或$\left | a+bi \right |$
+。如果$b=0$，那么$z=a+bi$是一个实数$a$它的模就等于
+$\left | a \right |$
+（即$a$在实数意义上的绝对值）。容易看出，&lt;/p>
+&lt;p>$\left | z \right |=\left | a+bi \right |=r=\sqrt{a^{2}+b^{2}}.$&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：求复数$z_{1}=3+4i$及$z_{2}=-\frac{1}{2}-\sqrt{2}i$的模，并且比较它们的模的大小。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：
+$\left| z_{1} \right|=\sqrt{3^{2}+4^{2}}=5,\left | z_{2} \right |=\sqrt{\left ( -\frac{1}{2} \right )^{2}+\left ( \sqrt{2} \right )^{2}}=\frac{3}{2}.$又$5 &amp;gt; \frac{3}{2}$
+，故$\left | z_{1} \right | &amp;gt; \left | z_{2} \right |$。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：设$z\in\mathbf{C}$，满足下列条件的点$Z$的集合是什么图形？
+（1）$\left | z \right |=4$；（2）$2 &amp;lt; \left | z \right | &amp;lt; 4$。&lt;/p>
+&lt;p>&lt;strong>解：&lt;/strong>&lt;/p>
+&lt;p>（1）复数$z$的模等于$4$，就是说，向量$\rightarrow{OZ}$的模（即点$Z$与原点$O$的距离）等于$4$，所以满足条件
+$\left | z \right |=4$
+的点$Z$的集合是以原点$O$为圆心，以$4$为半径的圆。&lt;/p>
+&lt;p>（2）不等式$2 &amp;lt; \left | z \right | &amp;lt; 4$可化为不等式组$\begin{cases}\left | z \right | &amp;lt; 4\\ \left | z \right | &amp;gt; 2\end{cases}$。不等式$\left | z \right | &amp;lt; 4$的解集是圆$\left | z \right | = 4$内部所有的点组成的集合，不等式$\left | z \right | &amp;gt; 2$的解集是圆$\left | z \right | = 2$外部所有的点组成的集合，这两个集合的交集，就是上述不等式组的解集，也就是满足条件$2 &amp;lt; \left | z \right | &amp;lt; 4$的点$Z$的集合。容易看出，所求的集合是以原点$O$为圆心，以$2$及$4$为半径的圆所夹的圆环，但不包括圆环的边界（图 4）。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-03.png"
+alt="圆">&lt;figcaption>
+&lt;p>圆&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="二复数的运算">二、复数的运算
+&lt;/h2>&lt;h3 id="21-复数的加法与减法">2.1 复数的加法与减法
+&lt;/h3>&lt;p>复数的加法规定按照以下的法则进行：设$z_{1}=a+bi,z_{2}=c+di$是任意两个复数，那么它们的和：$$ \left ( a+bi \right )+\left ( c+di \right )=\left ( a+c \right )+\left ( b+d \right )i $$ 很明显，两个复数的和仍然是一个复数。&lt;/p>
+&lt;p>容易验证，复数的加法满足交换律、结合律，即对任意$z_{1},z_{2},z_{3}\in\mathbf{R}$，有 $$ z_{1}+z_{2}=z_{2}+z_{1} $$ $$ \left ( z_{1}+z_{2} \right )+z_{3}=z_{1}+\left ( z_{2}+z_{3} \right ) $$ 现在我们来看复数加法的几何意义。&lt;/p>
+&lt;p>从物理学知道，要求出作用于同一点$O$、但不在同一直线上的两个力$\overrightarrow{F_{1}}$与$\overrightarrow{F_{2}}$的合力，只要用表示$\overrightarrow{F_{1}}$与$\overrightarrow{F_{2}}$的向量为相邻的两边画一个平行四边形，那么，平行四边形中，以力的作用点$O$为起点的那条对角线所表示的向量就是合力$\overrightarrow{F}$（图5-1）。这个法则通常叫做向量加法的平行四边形法则。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-04.png"
+alt="复数加法的几何意义">&lt;figcaption>
+&lt;p>复数加法的几何意义&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>复数用向量来表示，如果与这些复数对应的向量不在同一直线上，那么这些复数的加法就可以按照向量加法的平行四边形法则来进行。下面我们来证明这一事实。&lt;/p>
+&lt;p>设$\overrightarrow{OZ_{1}}$及$\overrightarrow{OZ_{2}}$分别与复数$a+bi$及$c+di$对应，且$\overrightarrow{OZ_{1}},\overrightarrow{OZ_{2}}$不在同一直线上（图5-2）。以$\overrightarrow{OZ_{1}}$及$\overrightarrow{OZ_{2}}$为两条邻边画平行四边形$OZ_{1}ZZ_{2}$，画$x$轴的垂线$PZ_{1},QZ_{2}$及$RZ$，并且画$Z_{1}S\perp RZ$，容易证明&lt;/p>
+&lt;p>$\triangle ZZ_{1}S\cong \triangle Z_{2}OQ,$&lt;/p>
+&lt;p>并且四边形$Z_{1}PRS$是矩形，因此&lt;/p>
+&lt;p>$OR=OP+PR=OP+Z_{1}S=OP+OQ=a+c$&lt;/p>
+&lt;p>$RZ=RS+SZ=PZ_{1}+QZ_{2}=b+d.$&lt;/p>
+&lt;p>于是点$Z$的坐标是$\left ( a+c,b+d \right )$，这说明设$\overrightarrow{OZ}$就是于复数$\left ( a+c \right )+\left ( b+d \right )i$对应的向量。&lt;/p>
+&lt;p>由此可知，求两个复数的和，可以先画出这两个复数对应的向量$\overrightarrow{OZ_{1}},\overrightarrow{OZ_{2}}$，如果$\overrightarrow{OZ_{1}},\overrightarrow{OZ_{2}}$不在同一直线上，再以这两个向量为两条邻边画平行四边形，那么与这个平行四边的对角线$OZ$所表示的向量$\overrightarrow{OZ}$对应的复数，就是所求两个复数的和。&lt;/p>
+&lt;p>如果$\overrightarrow{OZ_{1}},\overrightarrow{OZ_{2}}$在同一直线上，我们可以画出一个“压扁”了的平行四边形，并据此画出它的对角线来表示$\overrightarrow{OZ_{1}},\overrightarrow{OZ_{2}}$的和。&lt;/p>
+&lt;p>总之，复数的加法可以按照向量的加法法则来进行，这是复数加法的几何意义。&lt;/p>
+&lt;p>下面再来看复数的减法。&lt;/p>
+&lt;p>复数的减法规定是加法的逆运算，即把满足 $$ \left ( c+di \right )+\left ( x+yi \right )=a+bi $$ 的复数$x+yi$，叫做复数$a+bi$减去复数$c+di$的差。记作$\left ( a+bi \right )-\left ( c+di \right )$，根据复数相等的定义，有 $$ c+x=a,d+y=b $$ 由此 $$ x=a-c,y=b-d, $$ 所以 $$ x+yi=\left ( a-c \right )+\left ( b-d \right )i, $$ 即 $$ \left ( a+bi \right )-\left ( c+di \right )=\left ( a-c \right )+\left ( b-d \right )i $$ 这就是复数的减法法则。由此可见，两个复数的差是一个唯一确定的复数。&lt;/p>
+&lt;p>现设$\overrightarrow{OZ}$与复数$a+bi$对应，$\overrightarrow{OZ_{1}}$与复数$c+di$对应（图6）。以$\overrightarrow{OZ}$为一条对角线，$\overrightarrow{OZ_{1}}$为一条边画平行四边形，那么这个平行四边形的另一边，$\overrightarrow{OZ_{2}}$所表示的向量，$\overrightarrow{OZ_{2}}$就与复数$\left ( a-c \right )+\left ( b-d \right )i$对应。因为$Z_{1}Z\stackrel{;//;}{=}OZ_{2}$，所以向量$\overrightarrow{Z_{1}Z}$也与这个差对应。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-05.png"
+alt="复数减法的几何意义">&lt;figcaption>
+&lt;p>复数减法的几何意义&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>这就是说，两个复数的差$z-z_{1}$（即$\overrightarrow{OZ}-\overrightarrow{OZ_{1}}$）与连结两个向量终点并指向被减数的向量对应。这就是复数减法的几何意义。&lt;/p>
+&lt;p>由上所述，我们可以看出，复数的加（减）法与多项式的加（减）法是类似的，就是把复数的实部与实部、虚部与虚部分别相加（减），即&lt;/p>
+&lt;p>$$ \left ( a+bi \right )\pm \left ( c+di \right )=\left ( a\pm c \right )+\left ( b\pm d \right ) $$&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：计算$\left ( 5-6i \right )+\left ( -2-i \right )-\left ( 3+4i \right )$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\left ( 5-6i \right )+\left ( -2-i \right )-\left ( 3+4i \right )=\left ( 5-2-3 \right )+\left ( -6-1-4 \right )i=-11i$。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：根据复数的几何意义及向量表示，求复平面内两点间的距离公式。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-06.png"
+alt="复平面两点距离">&lt;figcaption>
+&lt;p>复平面两点距离&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>解&lt;/strong>：如图 7，设复平面内的任意两点$Z_{1},Z_{2}$分别表示复数$z_{1}=x_{1}+y_{1}i,z_{2}=x_{2}+y_{2}i$，那么$\overrightarrow{Z_{1}Z_{1}}$就是与复数$z_{2}-z_{1}$对应的向量。如果用$d$表示点$Z_{1},Z_{1}$之间的距离，那么$d$就是向量$\overrightarrow{Z_{1}Z_{2}}$的模，即复数$z_{2}-z_{1}$的模，所以 $$ d=\left | z_{2}-z_{1} \right |=\left | \left ( x_{2}+y_{2}i \right )-\left ( x_{1}+y_{1}i \right ) \right |=\left | \left ( x_{2}-x_{1} \right )+\left ( y_{2}-y_{1} \right )i \right |=\sqrt{\left ( x_{2}-x_{1} \right )^2+\left ( y_{2}-y_{1} \right )^2} $$ 这与我们之前导出的两点间的距离公式一致。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：根据复数的几何意义及向量表示，求复平面内的圆的方程。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-07.png"
+alt="复平面圆">&lt;figcaption>
+&lt;p>复平面圆&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>解：如图8，设圆心为$P$，点$P$与复数$p=a+bi$对应，圆的半径为$r$，圆上任意一点$Z$与复数$z=a+bi$对应，那么 $$ \left | z-p \right |=r $$ 这就是复平面内的圆的方程。特别地，当点$P$在原点时，圆的方程就成了 $$ \left | z \right |=r $$&lt;/p>
+&lt;p>请读者利用复数的减法法则，把圆的方程 $$ \left | z-p \right |=r $$ 化成用实数表示的一般形式 $$ \left ( x-a \right )^{2}+\left ( y-b \right )^{2}=r^{2} $$&lt;/p>
+&lt;h3 id="22-复数的乘法与除法">2.2 复数的乘法与除法
+&lt;/h3>&lt;p>复数的乘法规定按照以下的法则进行：设$z_{1}=a+bi,z_{2}=c+di$是任意两个复数，那么它们的积 $$ \left ( a+bi \right )\left ( c+di \right )=ac+bci+cdi+bdi^{2}=\left ( ac-bd \right )+\left ( bc+ad \right )i $$&lt;/p>
+&lt;p>也就是说，复数的乘法与多项式的乘法是类似的，但必须在所得的结果中把$i^{2}$换成$-1$，并且把实部和虚部分别合并。&lt;/p>
+&lt;p>很显然，两个复数的积仍然是一个复数。&lt;/p>
+&lt;p>容易验证，复数的乘法满足交换律、结合律以及乘法对加法的分配律，即对任何$z_{1},z_{2},z_{3}\in\mathbf{C}$，有 $$ z_{1}\cdot z_{2}=z_{2}\cdot z_{1} $$ $$ \left ( z_{1}\cdot z_{2} \right )\cdot z_{3}=z_{1}\cdot\left ( z_{2}\cdot z_{3} \right ) $$ $$ z_{1}\cdot \left ( z_{2}+z_{3} \right )=z_{1}\cdot z_{2}+z_{1}\cdot z_{3} $$&lt;/p>
+&lt;p>根据复数的乘法法则，对于任何复数$z=a+bi$，有 $$ \left ( a+bi \right )\left ( a-bi \right )=a^{2}+b^{2}+\left ( ab-ab \right )i=a^{2}+b^{2} $$&lt;/p>
+&lt;p>因此，两个共轭复数$z,\overline{z}$的积是一个实数，这个实数等于每一个复数的模的平方，即 $$ z\cdot \overline{z}=\left | z \right |^{2}=\left | \overline{z} \right |^{2} $$&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：计算$\left ( 1-2i \right )\left ( 3+4i \right )\left ( -2+i \right )$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\left ( 1-2i \right )\left ( 3+4i \right )\left ( -2+i \right )=\left ( 11-2i \right )\left ( -2+i \right )=-20+15i$。&lt;/p>
+&lt;p>计算复数的乘方，要用到虚数单位$i$的乘方。因为复数的长发满足交换律与结合律，所以实数集$\mathbf{R}$中正整数指数幂的运算律，在复数集$\mathbf{C}$中仍然成立，即对任何$z,z_{1},z_{2}\in\mathbf{C}$及$m,n\in\mathbf{N}$，有 $$ z^{m}\cdot z^{n}=z^{m+n} $$ $$ \left ( z^{m} \right )^{n}=z^{mn} $$ $$ \left ( z_{1}\cdot z_{2} \right )^{n}=z_{1}^{n}\cdot z_{1}^{n} $$ 另一方面，我们有 $$ i^{1}=i $$ $$ i^{2}=-1 $$ $$ i^{3}=i^{2}\cdot i=-i $$ $$ i^{4}=i^{3}\cdot i=-i\cdot i=-i^{2}=1 $$ 从而，对于任何$n\in\mathbf{N}$，我们都有 $$ i^{4n+1}=i^{4n}\cdot i=\left ( i^4 \right )^{n}\cdot i=1^{n}\cdot i=i $$ 同理可证 $$ i^{4n+2}=-1 $$ $$ i^{4n+3}=-i $$ $$ i^{4n}=1 $$ 这就是说，如果$n\in\mathbf{N}$，那么 $$ i^{4n+1}=i,i^{4n+2}=-1,i^{4n+3}=-i,i^{4n}=1 $$&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：计算$\left ( \frac{1}{2}-\frac{\sqrt{3}}{2}i \right )^{3}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $$ \begin{align*} \left ( \frac{1}{2}-\frac{\sqrt{3}}{2}i \right )^{3}&amp;amp;=\left ( \frac{1}{2} \right )^3-3\left ( \frac{1}{2} \right )^{2}\left ( \frac{\sqrt{3}}{2}i \right )+3\left ( \frac{1}{2} \right )\left ( \frac{\sqrt{3}}{2}i \right )^{2}-\left ( \frac{\sqrt{3}}{2} \right )^{3}\\ &amp;amp;=\frac{1}{8}-\frac{3\sqrt{3}}{8}i-\frac{9}{8}+\frac{3\sqrt{3}}{8}i\\ &amp;amp;=-1\end{align*} $$&lt;/p>
+&lt;p>复数的除法规定是乘法的逆运算，即把满足 $$ \left ( c+di \right )\left ( x+yi \right )=a+bi\left ( c+di\neq 0 \right ) $$ 的复数$x+yi$，叫做复数$a+bi$除以复数$c+di$的商，记作 $$ \left ( a+bi \right )\div \left ( c+di \right ) $$ 或 $$ \frac{a+bi}{c+di} $$&lt;/p>
+&lt;p>我们知道，两个共轭复数的积是一个实数，因此，两个复数相除，可以先把它们的商写成分式的形式，然后把分子与分母都乘以分母的共轭复数，并且把结果化简，即 $$ \frac{a+bi}{c+di}=\frac{\left ( a+bi \right )\left ( c-di \right )}{\left ( c+di \right )\left ( c-di \right )}=\frac{\left ( ac+bd \right )+\left ( bc-ad \right )i}{c^{2}+d^{2}}=\frac{ac+bd}{c^{2}+d^{2}}+\frac{bc-ad}{c^{2}+d^{2}}i\left ( c+di\neq 0 \right ) $$&lt;/p>
+&lt;p>因为$c+di\neq 0$，所以$c^{2}+d^{2}\neq 0$。由此可见，商$\frac{a+bi}{c+di}$是一个唯一确定的复数。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：计算$\left ( 1+2i \right )\div \left ( 3-4i \right )$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\left ( 1+2i \right )\div \left ( 3-4i \right )=\frac{1+2i}{3-4i}=\frac{\left ( 1+2i \right )\left ( 3+4i \right )}{\left ( 3-4i \right )\left ( 3+4i \right )}=\frac{-5+10i}{25}=-\frac{1}{5}+\frac{1}{2}i$。&lt;/p>
+&lt;h2 id="三复数的三角形式">三、复数的三角形式
+&lt;/h2>&lt;h3 id="31-复数的三角形式">3.1 复数的三角形式
+&lt;/h3>&lt;p>我们知道，与复数$z=a+bi$对应的向量$\overrightarrow{OZ}$（图9）的模$r$叫做这个复数的模，并且 $$ r=\sqrt{a^{2}+b^{2}} $$&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-08.png"
+alt="复数的模">&lt;figcaption>
+&lt;p>复数的模&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>以$x$轴的正半轴为始边、向量$\overrightarrow{OZ}$所在的射线（起点是$O$）为终边的角$\theta$，叫做复数$z=a+bi$的辐角。&lt;/p>
+&lt;p>不等于零的复数$z=a+bi$的辐角有无限多个值，这些值相差$2\pi$的整数倍。例如，复数$i$的辐角是$\frac{\pi}{2}+2k\pi$，其中$k$可以取任何整数。&lt;/p>
+&lt;p>适合于$0\leq \theta &amp;lt; 2\pi$的辐角$\theta$的值，叫做辐角的主值。记作$\textrm{arg} z$，即$0\leq \textrm{arg} z &amp;lt; 2\pi$。&lt;/p>
+&lt;p>每一个不等于零的复数有唯一的模与辐角的主值，并且可由它的模与辐角的主值唯一确定。因此，两个非零复数相等当且仅当它们的模与辐角的主值分别相等。&lt;/p>
+&lt;p>很明显，当$a\in\mathbf{R^{+}}$时，$$ \textrm{arg}\alpha=0 $$ $$ \textrm{arg}\left ( -\alpha \right )=\pi $$ $$ \textrm{arg}\left ( ai \right )=\frac{\pi}{2} $$ $$ \textrm{arg}\left ( -ai \right )=\frac{3\pi}{2} $$ 如果$z=0$，那么与它对应的向量$\overrightarrow{OZ}$缩成一个点（零向量），这样的向量的方向是任意的，所以复数$0$的辐角也是任意的。&lt;/p>
+&lt;p>从图 9 可以看出： $$ \begin{cases} a=r\cos{\theta}\\ b=r\sin{\theta} \end{cases} $$ 因此 $$ a+bi=r\cos{\theta}+ir\sin{\theta}=r\left ( \cos{\theta}+i\sin{\theta} \right ) $$ 其中 $$ r=\sqrt{a^{2}+b^{2}},\cos{\theta}=\frac{a}{r},\sin{\theta}=\frac{b}{r} $$&lt;/p>
+&lt;p>当与$z$对应的点$Z$不在实轴或虚轴上时，$z$的辐角$\theta$的终边所在的象限就是点$Z$所在的象限；当点$Z$在实轴或虚轴上时，辐角$\theta$的终边就是从原点$O$出发、经过点$Z$的板条坐标轴。&lt;/p>
+&lt;p>因此我们可以说，任何一个复数$z=a+bi$都可以表示成$r\left ( \cos{\theta}+i\sin{\theta} \right )$的形式。&lt;/p>
+&lt;p>$$ r\left ( \cos{\theta}+i\sin{\theta} \right ) $$ 叫做复数$a+bi$的三角形式。为了同三角形式区别开来，$a+bi$叫做复数的代数形式。&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：把复数$\sqrt{3}+i$表示成三角形式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$r=\sqrt{3+1}=2,\cos{\theta}=\frac{\sqrt{3}}{2}.$因为与$\sqrt{3}+i$对应的点在第一象限，所以$\textrm{arg}\left ( \sqrt{3}+i \right )=\frac{\pi}{6}$，于是$\sqrt{3}+i=2\left ( \cos{\frac{\pi}{6}}+i\sin{\frac{\pi}{6}} \right ).$&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：把复数$1-i$表示成三角形式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$r=\sqrt{1+1}=\sqrt{2},\cos{\theta}=\frac{1}{\sqrt{2}}=\frac{\sqrt{2}}{2}.$因为与$1-i$对应的点在第四象限，所以$\textrm{arg}\left ( 1-i \right )=\frac{7\pi}{4}$，于是$1-i=\sqrt{2}\left ( \cos{\frac{7\pi}{4}}+i\sin{\frac{7\pi}{4}} \right ).$&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：把复数$-1$表示成三角形式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$r=\sqrt{1+0}=1.$因为与$-1$对应的点在$x$轴的负半轴上，所以$\textrm{arg}\left ( -1 \right )=\pi$，于是$-1=\cos{\pi}+i\sin{\pi}.$&lt;/p>
+&lt;p>当然，把一个复数表示成三角形式时，辐角$\theta$不一定要取主值。例如，$\sqrt{2}\left [ \cos{\left ( -\frac{\pi}{4} \right )}+i\sin{\left ( -\frac{\pi}{4} \right )} \right ]$也是复数$1-i$的三角形式。&lt;/p>
+&lt;h3 id="32-复数的三角形式的运算">3.2 复数的三角形式的运算
+&lt;/h3>&lt;h4 id="321-乘法与乘方">3.2.1 乘法与乘方
+&lt;/h4>&lt;p>如果把复数$z_{1},z_{2}$分别写成三角形式 $$ z_{1}=r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right ) $$ $$ z_{2}=r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right ) $$ 故有 $$ \begin{align*} z_{1}\cdot z_{2} &amp;amp;=r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right )\cdot r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )\\ &amp;amp;=r_{1}r_{2}\left [ \left (\cos{\theta_{1}}\cos{\theta_{2}}-\sin{\theta_1}\sin{\theta_{2}} \right ) + i\left ( \sin{\theta_{1}}\cos{\theta_{2}}+\cos{\theta_{1}}\sin{\theta_{2}} \right ) \right ]\\ &amp;amp;=r_{1}r_{2}\left [ \cos{\left (\theta_{1}+\theta_{2} \right )}+i\sin{\left (\theta_{1}+\theta_{2} \right )} \right ] \end{align*} $$ 即 $$ r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right )\cdot r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )=r_{1}r_{2}\left [ \cos{\left (\theta_{1}+\theta_{2} \right )}+i\sin{\left (\theta_{1}+\theta_{2} \right )} \right ] $$ 这就是说，两个复数相乘，积的模等于各复数的模的积，积的辐角等于各复数的辐角之和。&lt;/p>
+&lt;p>据此，两个复数$z_{1},z_{2}$相乘时，可以先画出分别与$z_{1},z_{2}$对应的向量$\overrightarrow{OP_{1}},\overrightarrow{OP_{2}}$，然后把向量$\overrightarrow{OP_{1}}$按逆时针方向旋转一个角度$\theta_{2}$（如果$\theta &amp;lt; 0$，就要把$\overrightarrow{OP_{1}}$按顺时针方向旋转一个角度
+$\left | \theta_{2} \right |$
+），在把它的模变为原来的$r_{2}$倍，所得的向量$\overrightarrow{OP}$，就表示积$z_{1}\cdot z_{2}$（图 10）。这就是复数乘法的几何意义。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-09.png"
+alt="复数乘法的几何意义">&lt;figcaption>
+&lt;p>复数乘法的几何意义&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>用数学归纳法容易证明（读者自己证明），上面的结论可以推广到$n$个复数相乘的情况，就是：&lt;/p>
+&lt;p>$$ \begin{align*} z_{1}\cdot z_{2}\cdot\cdots\cdot z_{n} &amp;amp;=r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right )\cdot r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )\cdot\cdots\cdot r_{n}\left ( \cos{\theta_{n}}+i\sin{\theta_{n}} \right )\\ &amp;amp;=r_{1}r_{2}\cdots r_{n}\left [ \cos{\left ( \theta_{1}+\theta_{2}+\cdots +\theta_{n} \right )} + i\sin{\left ( \theta_{1}+\theta_{2}+\cdots +\theta_{n} \right )}\right ] \end{align*} $$&lt;/p>
+&lt;p>因此，如果 $$ r_{1}=r_{2}=\cdots=r_{n}=r,\theta_{1}=\theta_{2}=\cdots=\theta_{n}=\theta $$ 时，就有 $$ \left [ r\left ( \cos{\theta}+i\sin{\theta} \right )^n \right ]=r^{n}\left ( \cos{n\theta}+i\sin{n\theta} \right )\left ( n\in\mathbf{N} \right ) $$&lt;/p>
+&lt;p>这就是说，复数的$n\left(n\in\mathbf{N}\right)$次幂的模等于这个复数的模的$n$次幂，它的辐角等于这个复数的辐角的$n$倍。这个定理叫做棣莫佛&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>定理。&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：计算$\sqrt{2}\left ( \cos{\frac{\pi}{12}}+i\sin{\frac{\pi}{12}} \right )\cdot\sqrt{3}\left ( \cos{\frac{\pi}{6}}+i\sin{\frac{\pi}{6}} \right )$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\sqrt{2}\left ( \cos{\frac{\pi}{12}}+i\sin{\frac{\pi}{12}} \right )\cdot\sqrt{3}\left ( \cos{\frac{\pi}{6}}+i\sin{\frac{\pi}{6}} \right )\ =\sqrt{6}\left [ \cos\left ( \frac{\pi}{12}+\frac{\pi}{6} \right )+i\sin\left ( \frac{\pi}{12}+\frac{\pi}{6} \right ) \right ]\ =\sqrt{6}\left ( \cos{\frac{\pi}{4}}+i\sin{\frac{\pi}{4}} \right )\ =\sqrt{6}\left ( \frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}i \right )\ =\sqrt{3}+\sqrt{3}i$。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：计算$\left ( \sqrt{3}-i \right )^{6}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：因为$\sqrt{3}-i=2\left ( \cos{\frac{11\pi}{6}}+i\sin{\frac{11\pi}{6}} \right )$，所以$\left (\sqrt{3}-i  \right )^{6}\ =\left [2\left ( \cos{\frac{11\pi}{6}}+i\sin{\frac{11\pi}{6}} \right )  \right ]^{6}\ =2^{6}\left ( \cos{11\pi}+i\sin{11\pi} \right )\ =64\left ( \cos{\pi}+i\sin{\pi} \right )\ =64\cdot\left ( -1 \right )=-64$。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：如图11，向量$\overrightarrow{OZ}$与复数$-1+i$对应，把$\overrightarrow{OZ}$按逆时针方向旋转$120^\circ$，得到$\overrightarrow{OZ‘}$。求与向量$\overrightarrow{OZ&amp;rsquo;}$对应的复数（用代数形式表示）。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-10.png"
+alt="复数的旋转">&lt;figcaption>
+&lt;p>复数的旋转&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>解&lt;/strong>：所求的复数就是$-1+i$乘以一个复数$z_{0}$的积，这个复数$z_{0}$的模是$1$，辐角的主值是$120^\circ$。&lt;/p>
+&lt;p>所以所求的复数是$(-1+i)\cdot 1\left ( \cos{120^\circ}+i\sin{120^\circ} \right )\ =(-1+i)\left ( -\frac{1}{2}+\frac{\sqrt{3}}{2}i \right )\ =\frac{1-\sqrt{3}}{2}-\frac{1+\sqrt{3}}{2}i$&lt;/p>
+&lt;p>&lt;strong>例4&lt;/strong>：如图 12，已知平面内并列的三个相等的正方形，利用复数证明&lt;/p>
+&lt;p>$\angle 1+\angle 2+\angle 3=\frac{\pi}{2}.$&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-11.png"
+alt="例 4 图例">&lt;figcaption>
+&lt;p>例 4 图例&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>证明&lt;/strong>：如图建立坐标系（确定复平面），由于平行线的内错角相等，$\angle 1,\angle 2,\angle 3$分别等于复数$1+i,2+i,3+i$的辐角的主值，这样$\angle 1+\angle 2+\angle 3$就是积$\left ( 1+i \right )\left ( 2+i \right )\left ( 3+i \right )$的辐角，而 $$ \left ( 1+i \right )\left ( 2+i \right )\left ( 3+i \right )=10i $$ 其辐角的主值是$\frac{\pi}{2}$，并且$\angle 1,\angle 2,\angle 3$都是锐角，于是 $$ 0&amp;lt;\angle 1+\angle 2+\angle 3&amp;lt;\frac{3\pi}{2} $$ 所以 $$ \angle 1+\angle 2+\angle 3=\frac{\pi}{2} $$&lt;/p>
+&lt;h4 id="322-除法">3.2.2 除法
+&lt;/h4>&lt;p>设$z_{1}=r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right ),z_{2}=r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )$，且$z_{2}\neq 0$。因为 $$ r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )\cdot \frac{r_{1}}{r_{2}}\left [ \cos{\left (\theta_{1}-\theta_{2}  \right )}+i\sin{\left (\theta_{1}-\theta_{2}  \right )} \right ]=r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right ) $$ 所以根据复数的除法的定义，有 $$ \frac{r_{1}\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right )}{r_{2}\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )}=\frac{r_{1}}{r_{2}}\left [ \cos{\left (\theta_{1}-\theta_{2}  \right )}+i\sin{\left (\theta_{1}-\theta_{2}  \right )} \right ] $$&lt;/p>
+&lt;p>这就是说，两个复数相除，商的模等于被除数的模除以除数的模所得的商，商的辐角等于被除数的辐角减去除数的辐角所得的差。&lt;/p>
+&lt;p>&lt;strong>例5&lt;/strong>：计算$4\left ( \cos{\frac{4\pi}{3}}+i\sin{\frac{4\pi}{3}} \right )\div 2\left ( \cos{\frac{5\pi}{6}}+i\sin{\frac{5\pi}{6}} \right )$。&lt;/p>
+&lt;p>解：$4\left ( \cos{\frac{4\pi}{3}}+i\sin{\frac{4\pi}{3}} \right )\div 2\left ( \cos{\frac{5\pi}{6}}+i\sin{\frac{5\pi}{6}} \right )\ =\frac{4\left ( \cos{\frac{4\pi}{3}}+i\sin{\frac{4\pi}{3}} \right )}{2\left ( \cos{\frac{5\pi}{6}}+i\sin{\frac{5\pi}{6}} \right )}\ =2\left [ \cos{\left ( \frac{4\pi}{3}-\frac{5\pi}{6} \right )}+i\sin{\left ( \frac{4\pi}{3}-\frac{5\pi}{6} \right )} \right ]\ =2\left [ \cos{\frac{\pi}{2}}+i\sin{\frac{\pi}{2}} \right ]=2\left ( 0+i \right )=2i$。&lt;/p>
+&lt;h4 id="323-开方">3.2.3 开方
+&lt;/h4>&lt;p>设$\rho \left ( \cos{\phi}+i\sin{\phi} \right )$是复数$r\left ( \cos{\theta}+i\sin{\theta} \right )$的$n\left ( n\in\mathbf{N} \right )$次方根，那么 $$ r\left ( \cos{\theta}+i\sin{\theta} \right )=\left [ \rho \left ( \cos{\phi}+i\sin{\phi} \right ) \right ]^{n}=\rho^{n} \left ( \cos{n\phi}+i\sin{n\phi} \right ) $$&lt;/p>
+&lt;p>因为相等的复数，它们的模相等，辐角可以相差$2\pi$的整数倍，所以 $$ \begin{cases} \rho^{n}=r\\ n\phi=\theta+2k\pi\left ( k\in\mathbf{Z} \right ) \end{cases} $$ 由此可知，$$ \rho=\sqrt[n]{r},\phi=\frac{\theta+2k\pi}{n} $$ 因此$r\left ( \cos{\theta}+i\sin{\theta} \right )$的$n$次方根是 $$ \sqrt[n]{r}\left ( \cos{\frac{\theta+2k\pi}{n}} +i\sin{\frac{\theta+2k\pi}{n}}\right ) $$&lt;/p>
+&lt;p>当$k$取$0,1,\cdots,n-1$各值时，就可以得到上式的$n$个值。由于正弦、余弦函数的周期都是$2\pi$，当$k$取$n,n+1$以及其他各个整数值时，又重复出现$k$取$0,1,\cdots,n-1$时的结果。所以复数$r\left ( \cos{\theta}+i\sin{\theta} \right )$的$n$次方根&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>是 $$ \sqrt[n]{r}\left ( \cos{\frac{\theta+2k\pi}{n}} +i\sin{\frac{\theta+2k\pi}{n}}\right )\left ( k=0,1,\cdots,n-1 \right ) $$&lt;/p>
+&lt;p>这就是说，复数的$n\left ( n\in\mathbf{N} \right )$次方根是$n$个复数，它们的模都等于这个复数的模的$n$次算术根，它们的辐角分别等于这个复数的辐角与$2\pi$的$0,1,\cdots,n-1$倍的和的$n$分之一。&lt;/p>
+&lt;p>&lt;strong>例6&lt;/strong>：求$1-i$的立方根。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：因为 $$ 1-i=\sqrt{2}\left ( \cos{\frac{7\pi}{4}}+i\sin{\frac{7\pi}{4}} \right ) $$ 所以$1-i$的立方根是 $$ \sqrt[6]{2}\left ( \cos{\frac{\frac{7\pi}{4}+2k\pi}{3}}+i\sin{\frac{\frac{7\pi}{4}+2k\pi}{3}} \right )=\sqrt[6]{2}\left ( \cos{\frac{7\pi+8k\pi}{12}}+i\sin{\frac{7\pi+8k\pi}{12}} \right )\left ( k=0,1,2 \right ] $$ 即$1-i$的立方根是下面三个复数：$$ \sqrt[6]{2}\left ( \cos{\frac{7\pi}{12}}+i\sin{\frac{7\pi}{12}} \right ) $$ $$ \sqrt[6]{2}\left ( \cos{\frac{5\pi}{4}}+i\sin{\frac{5\pi}{4}} \right ) $$ $$ \sqrt[6]{2}\left ( \cos{\frac{23\pi}{12}}+i\sin{\frac{23\pi}{12}} \right ) $$&lt;/p>
+&lt;p>&lt;strong>例7&lt;/strong>：设$a\in\mathbf{R^{+}}$，求$-a$的平方根。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：因为$-a=a\left(\cos{\pi}+i\sin{\pi}\right)$，所以$-a$的平方根是 $$ \sqrt{a}\left ( \cos{\frac{\pi+2k\pi}{2}}+i\sin{\frac{\pi+2k\pi}{2}} \right )\left ( k=0,1 \right ) $$ 即$-a$的平方根是下面两个复数：$$ \sqrt{a}\left ( \cos{\frac{\pi}{2}}+i\sin{\frac{\pi}{2}} \right ),\sqrt{a}\left ( \cos{\frac{3\pi}{2}}+i\sin{\frac{3\pi}{2}} \right ) $$ 或 $$ \sqrt{a}i,-\sqrt{a}i $$&lt;/p>
+&lt;p>从例7可以看到，$a\in\mathbf{R^{+}}$时，$-a$的平方根是$\pm\sqrt{a}i$。&lt;/p>
+&lt;p>我们知道，对于实系数一元二次方程$ax^{2}+bx+c=0$，如果$b^{2}-4ac&amp;lt; 0$，那么它在实数集$\mathbf{R}$中没有根。现在我们在复数集$\mathbf{C}$中考察这种情况。经过变形，原方程可化为 $$ x^{2}+\frac{b}{a}x=-\frac{c}{a} $$ 所以 $$ x^{2}+2\cdot x\cdot \frac{b}{2a}+\left ( \frac{b}{2a} \right )^{2}=\left ( \frac{b}{2a} \right )^{2}-\frac{c}{a} $$ 进一步化简得 $$ \left ( x+\frac{b}{2a} \right )^{2}=\frac{b^{2}-4ac}{\left ( 2a \right )^2} $$ 即 $$ \left ( x+\frac{b}{2a} \right )^{2}=-\left [ \frac{-\left ( b^{2}-4ac \right )}{\left ( 2a \right )^2} \right ] $$&lt;/p>
+&lt;p>由于$\frac{-\left ( b^{2}-4ac \right )}{\left ( 2a \right )^2}\in\mathbf{R^{+}}$，根据例 7，我们得到 $$ x+\frac{b}{2a}=\frac{\pm\sqrt{\left ( b^{2}-4ac \right )}i}{2a} $$ 所以方程$ax^{2}+bx+c=0$在复数集$\mathbf{C}$中有两个根 $$ x=\frac{-b\pm\sqrt{-\left ( b^{2}-4ac \right )}i}{2a}\left ( b^{2}-4ac&amp;lt; 0 \right ) $$ 显然，它们是一对共轭复数。&lt;/p>
+&lt;p>&lt;strong>例8&lt;/strong>：在复数集$\mathbf{C}$中解方程$x^{2}-4x+5=0$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：因为$b^{2}-4ac=16-20=-4&amp;lt; 0$，所以$x=\frac{4\pm 2i}{2}=2\pm i$。&lt;/p>
+&lt;p>根据以前学过的一元二次方程的有关知识，我们知道，例8中方程左边的二次三项式$x^2-4x+5$在复数集$\mathbf{C}$中就可以通过求根的方法分解成两个一次因式的积，即 $$ x^{2}-4x+5=\left [ x-\left ( 2+i \right ) \right ]\left [ x-\left ( 2-i \right ) \right ]=\left ( x-2-i \right )\left ( x-2+i \right ) $$ 形如$a_{n}x^{n}+a_{0}=0$（$a_{0},a_{n}\in\mathbf{C}$，且$a_{n}\neq 0$）的方程叫做二项方程。任何一个二项方程都可以化成$x^{n}=b\left(b\in\mathbf{C}\right)$的形式，因此，都可以通过复数开方来求根。&lt;/p>
+&lt;p>&lt;strong>例9&lt;/strong>：在复数集$C$中解方程$x^{5}=32$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：原方程就是 $$ x^{5}=32\left ( \cos{0}+i\sin{0} \right ) $$ 所以 $$ x=\sqrt[5]{32}\left ( \cos{\frac{0+2k\pi}{5}}+i\sin{\frac{0+2k\pi}{5}} \right )\ =2\left [ \cos{\left ( k\cdot\frac{2\pi}{5} \right )}+i\sin{\left ( k\cdot\frac{2\pi}{5} \right )} \right ]\left ( k=0,1,2,3,4 \right ) $$ 就是 $$ x_{1}=2\left ( \cos{0}+i\sin{0} \right )=2 $$ $$ x_{2}=2\left ( \cos{\frac{2\pi}{5}}+i\sin{\frac{2\pi}{5}} \right ) $$ $$ x_{3}=2\left ( \cos{\frac{4\pi}{5}}+i\sin{\frac{4\pi}{5}} \right ) $$ $$ x_{4}=2\left ( \cos{\frac{6\pi}{5}}+i\sin{\frac{6\pi}{5}} \right ) $$ $$ x_{5}=2\left ( \cos{\frac{8\pi}{5}}+i\sin{\frac{8\pi}{5}} \right ) $$&lt;/p>
+&lt;p>这个方程的根的几何意义是复平面内的五个点，这些点均匀分布在以原点为圆心，以$2$为半径的圆上（圆13）。&lt;/p>
+&lt;p>一般地，方程$x^{n}=b\left(b\in\mathbf{C}\right)$的根的几何意义是复平面内的$n$个点，这些点均匀分布在以原点为圆心，以
+$\sqrt[n]{\left | b \right |}$
+为半径的圆上。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/ComplexNumber-12.png"
+alt="复数根式的几何意义">&lt;figcaption>
+&lt;p>复数根式的几何意义&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="四复数的指数形式">*四、复数的指数形式
+&lt;/h2>&lt;p>在科学技术，特别实在电工和无线电计算中，为了方便起见，还采用复数的另一种表示——复数的指数形式。&lt;/p>
+&lt;p>我们把模为$1$，辐角为$\theta$（以弧度为单位）的复数 $$ \cos{\theta}+i\sin{\theta} $$ 用记号$e^{i\theta}$来表示，即&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> $$ e^{i\theta}=\cos{\theta}+i\sin{\theta} $$ 例如， $$ e^{i\frac{\pi}{2}}=\cos{\frac{\pi}{1}+i\sin{\frac{\pi}{1}}}=i $$ $$ e^{i\frac{\pi}{3}}=\cos{\frac{\pi}{3}+i\sin{\frac{\pi}{3}}}=\frac{1}{2}+\frac{\sqrt{3}}{2}i $$ 又如，$$ \cos{\frac{5\pi}{6}}+i\sin{\frac{5\pi}{6}} $$ 可以写成 $$ e^{i\frac{5\pi}{6}} $$ $$ \frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}i=\cos{\frac{\pi}{4}}+i\sin{\frac{\pi}{4}} $$ 可以写成 $$ e^{i\frac{\theta}{4}} $$&lt;/p>
+&lt;p>引入记号$e^{i\theta}=\cos{\theta}+i\sin{\theta}$之后，任何一个复数 $$ z=r\left(\cos{\theta}+i\sin{\theta}\right) $$ 就可以表示成 $$ z=re^{i\theta} $$ 的形式。我们把这一表达式叫做复数的指数形式。&lt;/p>
+&lt;p>根据复数的指数形式的定义，我们有 $$ e^{i\theta_{1}}\cdot e^{i\theta_{2}}\ =\left ( \cos{\theta_{1}}+i\sin{\theta_{1}} \right )\left ( \cos{\theta_{2}}+i\sin{\theta_{2}} \right )\ =\cos{\left ( \theta_{1}+\theta_{2} \right )}+i\sin{\left ( \theta_{1}+\theta_{2} \right )}\ =e^{i\left ( \theta_{1}+\theta_{2} \right )} $$ 即 $$ e^{i\theta_{1}}\cdot e^{i\theta_{2}}=e^{i\left ( \theta_{1}+\theta_{2} \right )} $$&lt;/p>
+&lt;p>同样可证 $$ \left ( e^{i\theta} \right )^{n}=e^{in\theta}\left ( n\in\mathbf{N} \right ) $$ $$ \frac{e^{i\theta_1}}{e^{i\theta_{2}}}=e^{i\left ( \theta_{1}-\theta_{2} \right )} $$ 上述性质与我们过去学过的实数指数幂的性质一致，所以把复数从三角形式改写成指数形式后，可以运用实数集$\mathbf{R}$中的幂运算律（注意：乘方的指数限于自然数）来进行运算。这里我们仿照实数集$\mathbf{R}$中的说法，把$e^{i\theta}$叫做以$e$为底、$i\theta$为指数的幂。&lt;/p>
+&lt;p>对于开方运算，复数$re^{i\theta}$的$n\left(n\in\mathbf{N}\right)$次方根是 $$ \sqrt[n]{r}e^{i\frac{\theta+2k\pi}{n}}\left ( k=0,1,\cdots,n-1 \right ) $$&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：把复数$z=2i$表示成指数形式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$z=2i=2\left ( \cos{\frac{\pi}{1}}+i\sin{\frac{\pi}{2}} \right )=2e^{i\frac{\pi}{2}}$。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：把$\sqrt{2}e^{-i\frac{\pi}{4}},\sqrt{5}e^{i\frac{2\pi}{3}}$表示成三角形式及代数形式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $$ \sqrt{2}e^{-i\frac{\pi}{4}}=\sqrt{2}\left [ \cos\left ( -\frac{\pi}{4} \right )+i\sin{\frac{\pi}{4}} \right ]=1-i $$ $$ \sqrt{5}e^{i\frac{2\pi}{3}}=\sqrt{5}\left [ \cos\left ( -\frac{2\pi}{3} \right )+i\sin{\frac{2\pi}{3}} \right ]=-\frac{\sqrt{5}}{2}+\frac{\sqrt{15}}{2}i $$&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：用$e^{i\theta}$与$e^{-i\theta}$表示$\cos{\theta}$与$\sin{\theta}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：因为 $$ e^{i\theta}=\cos{\theta}+i\sin{\theta} $$ $$ e^{-i\theta}=\cos{\left ( -\theta \right )}+i\sin\left ( -\theta \right )=\cos{\theta}-i\sin{\theta} $$ 因此 $$ \cos{\theta}=\frac{e^{i\theta}+e^{-i\theta}}{2},\quad \sin{\theta}=\frac{e^{i\theta}-e^{-i\theta}}{2i} $$&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>$\mathbf{C}$是英文词组Complex numbers（复数）的第一个字母。&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>棣莫佛（Abrabam de Moivre, 1667-1754年），法国数学家。&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>采用这个符号时，一定要记住$\sqrt[n]{z}$表示$n$个复数。&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>这里的$e=2.71828\cdots$，就是自然对数的底数。这个公式叫做欧拉（Leonhard Euler，1707-1783年，瑞士数学家）公式。在“复变函数论”中可以证明这个公式。&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>扬州拾遗（一）：竞赛中的函数</title><link>https://ivy-end.github.io/p/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</link><pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%89%AC%E5%B7%9E%E6%8B%BE%E9%81%97%E4%B8%80%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</guid><description>&lt;h2 id="一函数问题基本方法">一、函数问题基本方法
+&lt;/h2>&lt;h3 id="1-数型结合法">1. 数型结合法
+&lt;/h3>&lt;p>&lt;strong>例1&lt;/strong>：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：作图像得，正根个数为 $ 1 $ 。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：求函数 $ f\left(x\right)=\sqrt{x^{4}-3x^{2}-6x+13}-\sqrt{x^{4}-x^{2}+1} $ 的最大值。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $ f\left(x\right)=\sqrt{\left(x^{2}-2\right)^{2}+\left(x-3\right)^{2}}-\sqrt{\left(x^{2}-1\right)^{2}+x^{2}} $ 即表示点 $ P\left(x,x^{2}\right) $ 到点 $ A\left(3,2\right),B\left(0,1\right) $ 的距离之差，点 $ P $ 在抛物线 $ y=x^{2} $ 上。&lt;/p>
+&lt;p>易得点 $ P $ 在直线 $ l_{AB}:x-3y+3=0 $ 上，因此得到 $ P\left(\frac{1-\sqrt{37}}{6},\frac{19-\sqrt{37}}{18}\right) $ ，故 $$ \begin{align*} f\left(x\right)_{max} &amp;amp;=\sqrt{\left[\left(\frac{1-\sqrt{37}}{6}-3\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-2\right)^{2}\right]-\left[\left(\frac{1-\sqrt{37}}{6}\right)^{2}+\left(\frac{19-\sqrt{37}}{18}-1\right)^{2}\right]} \\ &amp;amp;=\frac{2\sqrt{245+34\sqrt{37}}}{9} \end{align*}$$&lt;/p>
+&lt;h3 id="2-函数性质的应用">2. 函数性质的应用
+&lt;/h3>&lt;p>&lt;strong>例3&lt;/strong>：设 $ x,y\in\mathbf{R} $ ，且满足 $ \begin{cases} \left ( x-1 \right )^{3}+1997\left ( x-1 \right )=-1\\ \left ( y-1 \right )^{3}+1997\left ( y-1 \right )=1 \end{cases} $ ，求 $ x+y $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：考虑函数 $ f\left(s\right)=s^{3}+1997s $ ，该函数既是奇函数又是增函数。又 $ f\left(x-1\right)=-f\left(y-1\right) $ ，得 $ \left(x-1\right)+\left(y-1\right)=0 $ ，因此 $ x+y=2 $ 。&lt;/p>
+&lt;p>&lt;strong>例4&lt;/strong>：奇函数 $ f\left(x\right) $ 在定义域 $ \left(-1,1\right) $ 内是减函数，又 $ f\left(1-a\right)+f\left(1-a^{2}\right)&amp;lt;0 $ ，求 $ a $ 的取值范围。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先由函数的定义域得 $ \begin{cases} -1&amp;lt;1-a&amp;lt;1\\ -1&amp;lt;1-a^{2}&amp;lt;1 \end{cases} $ ，解得 $ 0&amp;lt; a&amp;lt; \sqrt{2} $ 。下面进行分类讨论：&lt;/p>
+&lt;p>$ 1^{\circ} \left | 1-a \right |&amp;lt; 1-a^{2}\Rightarrow 0&amp;lt; a&amp;lt; 1 $&lt;/p>
+&lt;p>$ 2^{\circ}\left | 1-a^{2} \right |&amp;lt; 1-a\Rightarrow -2&amp;lt; a&amp;lt; 0 $ （不符题意）。&lt;/p>
+&lt;p>综上所述， $ a\in\left ( 0,1 \right ) $ 。&lt;/p>
+&lt;p>&lt;strong>例5&lt;/strong>：设 $ f\left(x\right) $ 是定义在 $ \left(-\infty,+\infty\right) $ 上以 $ 2 $ 为周期的函数，对 $ k\in\mathbf{Z} $ ，用 $ I_{k} $ 表示区间 $ \left(2k-1,2k+1\right] $ ，已知当 $ x\in I_{0} $ 时， $ f\left(x\right)=x^{2} $ ，求 $ f\left(x\right) $ 在 $ I_{k} $ 上的解析式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：根据图像的平移，易得 $ f\left(x\right)=\left(x-2k\right)^{2} $ 。&lt;/p>
+&lt;p>&lt;strong>例6&lt;/strong>：解方程 $$ \left(3x-1\right)\left(\sqrt{9x^{2}-6x+5}+1\right)+\left ( 2x-3 \right )\left ( \sqrt{4x^{2}-12x+13}+1 \right )=0 $$&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先进行因式分解： $$ \left(3x-1\right)\left(\sqrt{\left ( 3x-1 \right )^{2}+4}+1\right)+\left ( 2x-3 \right )\left ( \sqrt{\left ( 2x-3 \right )^{2}+4}+1 \right )=0 $$
+考察函数 $$ f\left ( s \right )=s\left ( \sqrt{s^{2}+4}+1 \right ) $$ 它既是奇函数又是增函数。因此上述方程转化为 $$ \left ( 3x-1 \right )+\left ( 2x-3 \right )=0 $$ 解得 $ x=\frac{4}{5} $ 。&lt;/p>
+&lt;h3 id="3-配方法">3. 配方法
+&lt;/h3>&lt;p>&lt;strong>例7&lt;/strong>：求函数 $ y=x+\sqrt{2x+1} $ 的值域。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先考虑定义域得 $ D_{y}=\left [ -\frac{1}{2},+\infty \right ) $ 。又 $$ y=\left ( \sqrt{x+\frac{1}{2}}+\sqrt{\frac{1}{2}} \right )^{2}-1\geq -\frac{1}{2} $$ 因此该函数的值域为 $ R_{y}=\left [ -\frac{1}{2},+\infty \right ) $ 。&lt;/p>
+&lt;h3 id="4-换元法">4. 换元法
+&lt;/h3>&lt;p>&lt;strong>例8&lt;/strong>：求函数 $ y=\left ( \sqrt{1+x}+\sqrt{1-x}+2 \right )\left ( \sqrt{1-x^{2}}+1 \right ),x\in\left [ 0,1 \right ] $ 的值域。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：令 $ s=\sqrt{1+x}+\sqrt{1-x} $ ，则 $ s^{2}=2\left ( \sqrt{1-x^{2}}+1\right ) $ ，且 $ s\in\left [ -\sqrt{2},\sqrt{2} \right ] $ 。代入得 $ y=\frac{1}{2}\cdot \left ( s+2 \right )\cdot s^{2}=\frac{1}{2}s^{3}+s^{2} $ ，易得该函数的值域为 $ R_{y}=\left [ 2+\sqrt{2},8 \right ] $ 。&lt;/p>
+&lt;h3 id="5-关于反函数">5. 关于反函数
+&lt;/h3>&lt;p>&lt;strong>例9&lt;/strong>：若函数 $ y=f\left ( x \right ) $ 定义域、值域均为 $ \mathbf{R} $ ，且存在反函数。若 $ y=f\left ( x \right ) $ 在 $ \left(-\infty,+\infty\right) $ 上递增，求证： $ y=f^{-1}\left ( x \right ) $ 在 $ \left(-\infty,+\infty\right) $ 上递增。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：不妨设 $ x_{1}&amp;gt;x_{2} $ ，则 $ f\left ( x_{1} \right )&amp;gt;f\left ( x_{2} \right ) $ ，因此 $$ f^{-1}\left ( f\left ( x_{1} \right ) \right )-f^{-1}\left ( f\left ( x_{2} \right ) \right )=x_{1}-x_{2}&amp;gt;0 $$ 所以 $ y=f^{-1}\left ( x \right ) $ 在 $ \left(-\infty,+\infty\right) $ 上递增。证毕。&lt;/p>
+&lt;p>&lt;strong>例10&lt;/strong>：设函数 $ f\left ( x \right )=\sqrt[4]{\frac{4x+1}{3x+2}} $ ，解方程 $ f\left ( x \right )=f^{-1}\left ( x \right ) $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：即 $ \sqrt[4]{\frac{4x+1}{3x+2}}=x $ ，整理得 $$ \left ( x-1 \right )\left ( 3x^{4}+5x^{3}+5x^{2}+5x+1 \right )=0 $$ 显然 $ 3x^{4}+5x^{3}+5x^{2}+5x+1&amp;gt;0 $ ，故 $ x=1 $ 。&lt;/p>
+&lt;h2 id="二典型例题">二、典型例题
+&lt;/h2>&lt;p>&lt;strong>题1&lt;/strong>：已知不等式 $ \sin^{2}x+a\cos x+a^{2}\geq 1+\cos x $ 对一切 $ x\in\mathbf{R} $ 恒成立，求 $ a $ 的取值范围。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $ \cos^{2}x+\left ( 1-a \right )\cos x - a^{2}\leq 0 $ ，其中 $ \cos x\in\left [ -1,1 \right ] $ 。令 $$ f\left ( x \right )=\cos^{2}x+\left ( 1-a \right )\cos x - a^{2} $$ 则 $$ \begin{cases} f\left ( -1 \right )\leq 0\\ f\left ( 1 \right )\leq 0 \end{cases} \Rightarrow \begin{cases} a^{2}-a\geq 0\leq 0\\ a^{2}-a-2\geq 0\leq 0 \end{cases} \Rightarrow a\in\left ( -\infty,-2 \right ]\cup\left [ 1,+\infty \right ) $$&lt;/p>
+&lt;p>&lt;strong>题2&lt;/strong>：已知函数 $ f\left ( x \right ) $ 的定义域是 $ \left [ -\frac{1}{2},\frac{1}{2} \right ] $ ，求函数 $ g\left ( x \right )=f\left ( ax \right )+f\left ( \frac{x}{a} \right ) $ 的定义域 $ \left ( a&amp;gt; 0\right ) $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：根据函数函数 $ f\left ( x \right ) $ 的定义域很容易得到以下不等式 $ \begin{cases} -\frac{1}{2}\leq ax\leq \frac{1}{2}\\ -\frac{1}{2}\leq \frac{x}{a}\leq \frac{1}{2} \end{cases} $ 。即 $ \begin{cases} -\frac{1}{2a}\leq x\leq \frac{1}{2a}\\ -\frac{a}{2}\leq x\leq \frac{a}{2} \end{cases} $ 分类讨论得：&lt;/p>
+&lt;p>$ 1^{\circ}0&amp;lt; a\leq 1,D_{g}=\left [ -\frac{a}{2},\frac{a}{2} \right ] $&lt;/p>
+&lt;p>$ 2^{\circ}a&amp;gt; 1,D_{g}=\left [ -\frac{1}{2a},\frac{1}{2a} \right ] $&lt;/p>
+&lt;p>&lt;strong>题3&lt;/strong>：已知 $ f\left(x\right) $ 是定义在 $ \mathbf{R} $ 上的函数， $ f\left(1\right)=1 $ ，且对任意 $ x\in\mathbf{R} $ 都有 $ f\left(x+5\right)\geq f\left(x\right) + 5,f\left(x+1\right)\leq f\left(x\right)+1 $ ，且 $ g\left ( x \right )=f\left ( x \right )+1-x $ 求 $ g\left(2012\right) $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $ f\left ( x+5 \right )\leq f\left ( x+4 \right )+1\leq \cdots \leq f\left ( x \right )+5 $ ，又 $ f\left ( x \right )\geq f\left ( x \right )+5 $ ，故 $ f\left ( x \right )= f\left ( x \right )+5 $ 。运用数学归纳法，并结合 $ f\left ( 1 \right )=1 $ ，不难得到 $ f\left ( x \right )=x $ 。因此 $ g\left ( 2012 \right )=f\left ( 2012 \right )+1-2012=1 $ 。&lt;/p>
+&lt;p>&lt;strong>题4&lt;/strong>：设函数 $ f:\mathbf{N^{*}}\rightarrow \mathbf{N^{*}} $ ，且严格递增。当 $ m,n $ 互质时， $ f\left ( m\cdot n \right )=f\left ( m \right )\cdot f\left ( n \right ) $ 。若 $ f\left ( 19 \right )=19 $ ，求 $ f\left ( f\left ( 19 \right ) \right )\cdot f\left ( 98 \right ) $ 的值。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：由题意得，当 $ x\leq 19 $ 时，有 $ f\left ( x \right )=x $ 。又 $ f\left ( 17\cdot 19 \right )=f\left ( 17 \right )\cdot f\left ( 19 \right )=323 $ ，则当 $ x\leq 323 $ 时，有 $ f\left ( x \right )=x $ 。所以 $$ f\left ( f\left ( 19 \right ) \right )\cdot f\left ( 98 \right )=f\left ( 19 \right )\cdot f\left ( 98 \right )=19*98=1862 $$&lt;/p>
+&lt;p>&lt;strong>题5&lt;/strong>：设函数 $ f:\mathbf{N^{*}}\rightarrow \mathbf{N^{*}} $ ，且严格递增。 $ f\left ( f\left ( n \right ) \right )=3n $ 。求 $ f\left ( 1 \right )+f\left ( 9 \right )+f\left ( 36 \right ) $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先可以得到 $ f\left ( f\left ( 1 \right ) \right )=3 $ 。不妨假设 $ f\left ( 1 \right )=1 $ ，代入得 $ f\left ( f\left ( 1 \right ) \right )=f\left ( 1 \right )=1\neq 3 $ ，矛盾。因此易证 $ f\left ( 1 \right )=2 $ 。于是可以列出： $$ f\left ( 2 \right )=f\left ( f\left ( 1 \right ) \right )=3,f\left ( 3 \right )=f\left ( f\left ( 2 \right ) \right )=6,f\left ( 6 \right )=f\left ( f\left ( 3 \right ) \right )=9,f\left ( 9 \right )=f\left ( f\left ( 6 \right ) \right )=18 $$ 于是得到 $ f\left ( 9 \right )=18 $ 。由 $ f\left ( 3 \right )=6,f\left ( 6 \right )=9 $ 再结合题中所给条件，得 $ f\left ( 4 \right )=7 $ 。因此 $$ f\left ( 7 \right )=f\left ( f\left ( 4 \right ) \right )=12,f\left ( 12 \right )=f\left ( f\left ( 7 \right ) \right )=21,f\left ( 21 \right )=f\left ( f\left ( 12 \right ) \right )=36,f\left ( 36 \right )=f\left ( f\left ( 21 \right ) \right )=63 $$ 于是得到 $ f\left ( 36 \right )=63 $ ，将以上的结果相加得 $ f\left ( 1 \right )+f\left ( 9 \right )+f\left ( 36 \right )=2+18+63=83 $ 。&lt;/p>
+&lt;p>&lt;strong>题6&lt;/strong>：已知函数 $ f\left ( x \right )=\log_{x}{\left ( x+1 \right )},x\in\left ( 1,+\infty \right ) $ ，试比较 $ f\left ( x \right ),f\left ( x+1 \right ) $ 的大小。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>： $ \frac{f\left ( x+1 \right )}{f\left ( x \right )}=\frac{\log{\left (x+2 \right )}}{\log{\left (x+1 \right )}}\cdot \frac{\log{\left (x+1 \right )}}{\log{x}}=\frac{\log{\left ( x+2 \right )}}{\log{x}}&amp;gt; 1 $ ，所以 $ f\left ( x+1 \right )&amp;gt; f\left ( x \right ) $ 。&lt;/p>
+&lt;p>&lt;strong>题7&lt;/strong>：已知 $ 3^{a}+13^{b}=17^{a},5^{a}+7^{b}=11^{b} $ ，试判断实数 $ a,b $ 的大小关系，并证明之。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：当 $ a=1 $ 时， $ b&amp;gt; 1 $ ，得 $ b&amp;gt; a $ 。假设 $ b\leq a $ ，易得 $$ \begin{cases} 17^{a}\leq 3^{a}+13^{a}\\ 5^{b}+7^{b}\leq 11^{b} \end{cases} \Rightarrow \begin{cases}1\leq \left ( \frac{3}{17} \right )^{a}+\left ( \frac{13}{17} \right )^{a}\\ 1\geq \left ( \frac{5}{11} \right )^{b}+\left ( \frac{7}{11} \right )^{b} \end{cases} $$ 不妨令 $$ f\left ( x \right )=\left ( \frac{3}{11} \right )^{x}+\left ( \frac{13}{17} \right )^{x},g\left ( x \right )=\left ( \frac{5}{11} \right )^{x}+\left ( \frac{7}{11} \right )^{x} $$ 易得 $ f\left ( 1 \right )=\frac{16}{17}&amp;lt; g\left ( 1 \right )=\frac{12}{11} $ 。不成立。综上所述 $ b&amp;gt; a $ 。&lt;/p>
+&lt;p>&lt;strong>题8&lt;/strong>：设 $ f\left ( x \right )=x^{n}+ax^{2}+bx+c $ ， $ n $ 为自然数。已知 $ f\left ( -1 \right )=0,f\left ( 1 \right )=-6,f\left ( 2 \right )=-9,f\left ( 3 \right )=-4,f\left ( 6 \right )=119 $ ，求 $ f\left ( x \right ) $ 。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：将所给条件代入得 $ \begin{cases} \left ( -1 \right )^{n}+a-b+c=0\\ 1+a+b+c=-6\\ 2^{n}+4a+2b+c=-9\\ 3^{n}+9a+3b+c=-4\\ 6^{n}+36a+6b+c=119 \end{cases} $ 对 $ n $ 进行分类讨论：&lt;/p>
+&lt;p>$ 1^{\circ}n $ 为奇数，上述方程组可化简得 $ \begin{cases}-1+a-b+c=0\\ 1+a+b+c=-6\\ 2^{n}+4a+2b+c=-9\\ 3^{n}+9a+3b+c=-4\\ 6^{n}+36a+6b+c=119 \end{cases} $ ，解得 $ \begin{cases}n=3\\ a=-2\\ b=-4\\ c=-1 \end{cases} $ 。&lt;/p>
+&lt;p>$ 2^{\circ}n $ 为偶数，上述方程组可化简得 $ \begin{cases} 1+a-b+c=0\\ 1+a+b+c=-6\\ 2^{n}+4a+2b+c=-9\\ 3^{n}+9a+3b+c=-4\\ 6^{n}+36a+6b+c=119 \end{cases} $ ，不成立。&lt;/p>
+&lt;p>综上所述 $ f\left ( x \right )=x^{3}-2x^{2}-4x-1 $ 。&lt;/p>
+&lt;p>&lt;strong>题9&lt;/strong>：已知 $ a,b,c $ 为非零实数， $ f\left ( x \right )=\frac{ax+b}{cx+d},x\in\mathbf{R} $ ，且 $ f\left ( 19 \right )=19,f(97)=97 $ 。若当 $ x\neq -\frac{d}{c} $ 时，对于任意实数 $ x $ ，均有 $ f\left ( f\left ( x \right ) \right )=x $ ，试求出 $ f\left ( x \right ) $ 值域以外的唯一数。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：易知 $ x=19,x=97 $ 即为不动点，又为稳定点，又 $ f\left(x\right) $ 是经过反比例函数平移得到，很容易得到 $ f\left ( x \right )=\frac{58x-1843}{x-58} $ ，故所求数为 $ 58 $ 。&lt;/p>
+&lt;p>&lt;strong>题10&lt;/strong>：设有函数 $ f\left ( x \right )=\sin{\left ( x+a_{1} \right )}+\frac{1}{1\times 2}\sin{\left ( x+a_{2} \right )}+\cdots +\frac{1}{\left ( n-1 \right )\times n}\sin{\left ( x+a_{n} \right )} $ ，其中 $ a_{1},a_{2},\cdots ,a_{n} $ 为常数，证明：（1）至少有一个实数，使 $ f\left ( x_{0} \right )\neq 0 $ ；（2）如果 $ f\left ( x_{1} \right )=f\left ( x_{2} \right )=0 $ ，则 $ x_{1}-x_{2}=m\pi $ （ $ m $ 是一个整数）。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：&lt;/p>
+&lt;p>（1）令 $ x_{0}=\frac{\pi}{2}-a_{1} $ ，则 $ f\left ( x_{0} \right )\geq 1-\left ( \frac{1}{1\times 2}+\frac{1}{2\times 3}+\frac{1}{\left ( n-1 \right )\times n} \right )=1-\frac{n-1}{n}=\frac{1}{n}&amp;gt; 0 $ 。&lt;/p>
+&lt;p>（2） $$ \begin{align*} f\left ( x \right )&amp;amp;=\sin{x}\cos{a_{1}}+\cos{x}\sin{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\left ( \sin{x}\cos{a_{i}}+\cos{x}\sin{a_{i}} \right )} \\ &amp;amp;=\left ( \cos{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \cos{a_{i}}} \right )\cdot \sin{x}+\left ( \sin{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \sin{a_{i}}} \right )\cdot \cos{x}\\ &amp;amp;=A\sin{\left (x+\varphi \right ) } \\ A &amp;amp;=\sqrt{\left ( \cos{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \cos{a_{i}}} \right )^{2}+\left ( \sin{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \sin{a_{i}}} \right )^{2}}\\ \tan{\varphi } &amp;amp;=\frac{\left ( \cos{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \cos{a_{i}}} \right )}{\left ( \sin{a_{1}}+\sum_{i=2}^{n}{\frac{1}{\left ( i-1 \right )\times i}\cdot \sin{a_{i}}} \right )}\end{align*}$$ 由 $ A\sin{x+\varphi }=0 $ 得 $ x+\varphi=k\pi $ ，于是 $ x_{1}-x_{2}=\left(k_{1}-k_{2}\right)\pi=m\pi $ 。证毕。&lt;/p>
+&lt;p>&lt;strong>题11&lt;/strong>：设正实数 $ x,y $ 满足 $ xy=1 $ ，求函数 $ f\left ( x,y \right )=\frac{x+y}{\left [ x \right ]\cdot \left [ y \right ]+\left [ x \right ]+\left [ y \right ]+1} $ 的值域（这里 $ \left [ z \right ] $ 表示不超过 $ z $ 的最大整数）。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：&lt;/p>
+&lt;p>$ 1^{\circ} x=y=1,f\left ( 1,1 \right )=\frac{1}{2} $&lt;/p>
+&lt;p>$ 2^{\circ} $ 不妨设 $ x&amp;gt;1 $ ，则 $ \left [ y \right ]=0 $ ，记 $ x=m+\lambda $ ，其中 $ m=\left [ x \right ],\lambda =\left \{ x \right \} $ 。则 $$ f\left ( x,y \right )=\frac{x+\frac{1}{x}}{\left [ x \right ]+1}=\frac{x+\frac{1}{x}}{m+1}=\frac{m+\lambda +\frac{1}{m+\lambda }}{m+1} $$ 令 $ a_{m}=\frac{m+\frac{1}{m}}{m+1} $ ，则 $$ a_{m}\leq f\left ( x,y \right )&amp;lt; \frac{m+1+\frac{1}{m+1}}{m+1} $$ 又 $ a_{m+1}-a_{m}=\frac{m-2}{\left ( m-2 \right )m\left ( m+1 \right )}\Rightarrow a_{1}&amp;gt; a_{2}&amp;lt; a_{3}&amp;lt; \cdots &amp;lt; a_{m} $ 。因此 $$ \frac{5}{6}\leq f\left ( x,y \right )&amp;lt; 1 + \frac{1}{\left ( m+1 \right )^{2}}\leq \frac{5}{4} $$ 故值域为 $ R_{f}=\left [ \frac{5}{6},\frac{5}{4} \right ) $ 。&lt;/p>
+&lt;h2 id="三二次函数">三、二次函数
+&lt;/h2>&lt;p>&lt;strong>例1&lt;/strong>：已知 $ f\left ( x \right )=ax^{2}+bx $ ，满足 $ 1\leq f\left ( -1 \right )\leq 2 $ 且 $ 2\leq f\left ( 1 \right )\leq 4 $ ，求 $ f\left ( -2 \right ) $ 的取值范围。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：&lt;/p>
+&lt;p>法一：由题设得， $ \begin{cases} 1\leq a-b\leq 2 &amp;amp; \left ( \textrm{i} \right )\\ 2\leq a+b\leq 4 &amp;amp; \left ( \textrm{ii} \right ) \end{cases} $ ，由 $ 3\times \left ( \textrm{i} \right )+\left ( \textrm{ii} \right ) $ 得 $ 5\leq f\left ( -2 \right )\leq 10 $ 。&lt;/p>
+&lt;p>法二： $ \begin{cases} f\left ( -1 \right )=a-b\\ f\left ( 1 \right )=a+b \end{cases} \Rightarrow \begin{cases} a=\frac{1}{2}\cdot \left [ f\left ( 1 \right ) + f\left ( -1 \right ) \right ]\\ b=\frac{1}{2}\cdot \left [ f\left ( 1 \right ) - f\left ( -1 \right ) \right ] \end{cases} $ ，因此 $ f\left ( -2 \right )=f\left ( 1 \right )+3f\left ( -1 \right )\in\left [ 5,10 \right ] $ 。&lt;/p></description></item><item><title>浅谈鸽巢原理及其应用</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link><pubDate>Sat, 13 Jul 2013 20:27:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid><description>&lt;p>&lt;strong>鸽巢原理&lt;/strong>：如果 $k+1$ 个或更多的物体放入 $k$ 个盒子，那么至少有一个盒子包含了 $2$ 个或更多的物体。&lt;/p>
+&lt;p>有时候鸽巢原理也被称为抽屉原理，更准确地说应该叫做“狄利克雷抽屉原理”。至于狄利克雷这个名字，还有有趣的函数也是用他的名字命名的。它就是大名鼎鼎的狄利克雷函数 $$f\left(x\right)=\begin{cases}1,&amp;amp;x\in\mathbf{Q}\\ 0,&amp;amp;x\not\in\mathbf{Q}\end{cases}$$ 这个函数的有趣之处就在于它没有对应的图像。扯远了。&lt;/p>
+&lt;p>下面给出鸽巢原理的证明：假定 $k$ 个盒子中没有一个盒子包含的物体多余 $1$ 个，那么物体总数至多是 $k$，这与至少有 $k+1$ 物体矛盾。证毕。&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：在一组 $367$ 个人中一定至少有 $2$ 个人有相同的生日，这是由于只有 $366$ 个可能的生日。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：在 $27$ 个英文单词中一定至少有 $2$ 个单词以同一个字母开始，因为英文字母表中只有 $26$ 个字母。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：证明对每个整数 $n$，存在一个数是 $n$ 的倍数，且在它的是进制表示中只出现 $0$ 和 $1$。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：令 $n$ 为正整数。考虑 $n$ 个整数 $1,11,111,\cdots,11\cdots 1$（在这个数表中，最后一个整数的十进制表示中具有 $n+1$ 个 $1$）。注意到当一个整数被 $n$ 整除时存在 $n$ 个可能的余数。因为这个数表中有 $n+1$ 个整数，由鸽巢原理必有两个整数在除以 $n$ 时有相同的余数。这两个整数之差的十进制表示中只含有 $0$ 和 $1$，且它能被 $n$ 整除。&lt;/p>
+&lt;p>&lt;strong>广义鸽巢原理&lt;/strong>：如果 $N$ 个物体放入 $k$ 个盒子，那么至少有一个盒子包含了至少 $\left \lceil \frac{N}{k} \right \rceil$ 个物体。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：假定没有盒子包含了比 $\left\lceil \frac{N}{k} \right\rceil-1$ 多的物体，那么物体总数至多是 $$k\left (\left\lceil \frac{N}{k} \right \rceil -1\right) &amp;lt; k\left(\left(\frac{N}{k}+1\right)-1\right)=N$$ 这与存在有总数 $N$ 个物体矛盾。证毕。&lt;/p>
+&lt;p>&lt;strong>例4&lt;/strong>：在 $100$ 个中至少有 $\left\lceil \frac{100}{12}\right\rceil=9$ 个人生在同一个月。&lt;/p>
+&lt;p>&lt;strong>例5&lt;/strong>：为保证一个州的 $2500$ 万个电话有不同的 $10$ 位电话号码，所需地区代码的最小数是多少？（假定电话号码是 $\textrm{NXX-NXX-XXXX}$ 形式，其中前 $3$ 位是地区代码，$N$ 表示从 $2$ 到 $9$ 包含的十进制数字，$X$ 表示任何十进制数字）。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：有 $800$ 万个形如 $\textrm{NXX-NXX-XXXX}$ 的不同的电话号码。因此，由广义鸽巢原理，在 $2500$ 万个电话号码中，一定至少有 $\left\lceil\frac{25000000}{8000000}\right\rceil$ 个同样的电话号码。因而至少需要 $4$ 个地区代码来保证所有的 $10$ 位号码是不同的。&lt;/p>
+&lt;p>&lt;strong>例6&lt;/strong>：证明在不超过 $2n$ 的任意 $n+1$ 个正整数中一定存在一个正整数被另一个正整数整除。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：把 $n+1$ 个整数 $a_{1},a_{2},\cdots,a_{n}$ 中的每一个都写成 $2$ 的幂与一个奇数的乘积，换句话说，令 $a_{j}=2^{k_{j}}\cdot q_{j},j=1,2,\cdots,n+1$，其中 $k_{j}$ 是非负整数，$q_{j}$ 是奇数。整数 $q_{1},q_{2},\cdots,q_{m+1}$ 都是小于 $2n$ 的正奇数。因为只存在 $n$ 个小于 $2n$ 的正奇数，由鸽巢原理，$q_{1},q_{2},\cdots,q_{n+1}$ 中必有两个相等。于是，存在整数 $i,j$ 使得 $q_{i}=q_{j}$。令 $q_{i}=q_{j}=q$，那么 $a_{i}=2^{k_{i}}\cdot q,a_{j}=2^{k_{j}}\cdot q$。因而，若 $k_{i} &amp;lt; k_{j}$，则 $a_{i}$ 整除 $a_{j}$；反之，则 $a_{j}$ 整除 $a_{i}$。&lt;/p></description></item><item><title>浅谈数列中常系数线性齐次递推关系的求解</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</link><pubDate>Fri, 12 Jul 2013 16:03:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E6%95%B0%E5%88%97%E4%B8%AD%E5%B8%B8%E7%B3%BB%E6%95%B0%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E9%80%92%E6%8E%A8%E5%85%B3%E7%B3%BB%E7%9A%84%E6%B1%82%E8%A7%A3/</guid><description>&lt;p>翻书复习之时，看到斐波那契数列，于是将一些关于数列递推关系方面的内容整理了一下。&lt;/p>
+&lt;p>&lt;strong>定义1&lt;/strong>：一个常系数的 $k$ 阶线性齐次递推关系是形如 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的递推关系，其中 $c_{1},c_{2},\cdots,c_{k}$ 是实数，$c_{k}\neq 0$。&lt;/p>
+&lt;p>这个定义中递推关系是线性的，因为它的右边是数列前项的倍数之和。这个递推关系是齐次的，因为所出现的各项都是 $a_{j}$ 的倍数。数列各项的系数都是常数而不是依赖于 $n$ 的函数。阶为 $k$ 是因为 $a_{n}$ 由序列前面的 $k$ 项来表示。&lt;/p>
+&lt;p>&lt;strong>例1&lt;/strong>：递推关系 $p_{n}=2p_{n-1}$ 是 $1$ 阶的线性齐次递推关系。递推关系 $f_{n}=f_{n-1}+f_{n-2}$ 是 $2$ 阶的线性齐次递推关系。&lt;/p>
+&lt;p>&lt;strong>例2&lt;/strong>：递推关系 $a_{n}=a_{n-1}+a_{n-2}^{2}$ 不是线性的。递推关系 $h_{n}=2h_{n-1}+1$ 不是齐次的。递推关系 $b_{n}=nb_{n-1}$ 不是常系数的。&lt;/p>
+&lt;p>求解常系数线性齐次递推关系的基本方法是寻找形如 $a_{n}=r^{n}$ 的解，其中 $r$ 是常数。注意 $a_{n}=r^{n}$ 是递推关系 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+\cdots+c_{k}a_{n-k}$ 的解，当且仅当 $$r^{n}=c_{1}r^{n-1}+c_{2}r^{n-2}+\cdots+c_{k}r_{n-k}$$ 当等式两边除以 $r^{n-k}$ 并且从左边减去右边时，我们得到等价的方程 $$r^{k}-c_{1}r^{k-1}-c_{2}r^{k-2}-\cdots-c_{k-1}r-c_{k}=0$$ 因此，数列 $\left\{a_{n}\right\}$ 以 $a_{n}=r^{n}$ 作为解，当且仅当 $r$ 使者后一个方程的解。这个方程叫作该递推关系的特征方程。方程的解叫做该递推关系的特征根。&lt;/p>
+&lt;p>我们首先看一个 $2$ 阶常系数线性齐次递推关系的处理结果。然后，叙述相应的阶可能大于 $2$ 的一般性结果。&lt;/p>
+&lt;p>&lt;strong>定理1&lt;/strong>：设 $c_{1}$ 和 $c_{2}$ 是实数。假设 $r_{2}-c_{1}r-c_{2}=0$ 有两个不等的根 $r_{1}$ 和 $r_{2}$，那么数 $\left\{a_{n}\right\}$ 是递推关系 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}$ 的解，当且仅当 $a_{n}=\alpha_{1}\cdot r_{1}^{n}+\alpha_{2}\cdot r_{2}^{n},n=0,1,2,\cdots$，其中 $\alpha_{1}$ 和 $\alpha_{2}$ 是常数。&lt;/p>
+&lt;p>&lt;strong>例3&lt;/strong>：求斐波那契数列的通项公式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：斐波那契数列满足递推关系 $f_{n}=f_{n-1}+f_{n-2}$ 和初始条件 $f_{1}=f_{2}=1$。特征方程 $r^{2}-r-1=0$ 的两个根是 $r_{1,2}=\frac{1\pm\sqrt{5}}{2}$。因此，由定理 1 的斐波那契数列通项公式为：$$f_{n}=\alpha_{1}\cdot \left(\frac{1+\sqrt{5}}{5}\right)^{n}+\alpha_{2}\cdot \left(\frac{1-\sqrt{5}}{2}\right)^{n}$$ 其中 $\alpha_{1},\alpha_{2}$ 为常数。可由初始条件 $f_{1}=f_{2}=1$ 确定这两个常数，我们有 $$\begin{cases} f_{1}=\alpha_{1}\cdot \left ( \frac{1+\sqrt{5}}{2} \right )+\alpha &lt;em>{2}\cdot \left ( \frac{1-\sqrt{5}}{2} \right )=1 \\ f&lt;/em>{2}=\alpha_{1}\cdot \left ( \frac{1+\sqrt{5}}{2} \right )^{2}+\alpha &lt;em>{2}\cdot \left ( \frac{1-\sqrt{5}}{2} \right )^{2}=1 \end{cases}$$ 从而得到 $\alpha&lt;/em>{1}=\frac{\sqrt{5}}{5},\alpha_{2}=-\frac{\sqrt{5}}{5}$，于是斐波那契数列的通项公式为：$$f_{n}=\frac{\sqrt{5}}{5}\left(\frac{1+\sqrt{5}}{5}\right)^{n}-\frac{\sqrt{5}}{5}\left(\frac{1-\sqrt{5}}{2}\right)^{n}$$&lt;/p>
+&lt;p>当存在二重特征根的时候，定理1不再适用。如果遇到这种情况，当 $r_{0}$ 是特征方程的一个二重根时，那么 $a_{n}=nr_{0}^{n}$ 是递推关系的另一个解。&lt;/p>
+&lt;p>&lt;strong>定理2&lt;/strong>：设 $c_{1}$ 和 $c_{2}$ 是实数。假设 $r_{2}-c_{1}r-c_{2}=0$ 只有一个根 $r_{0}$。数列 $\left{a_{n}\right}$ 是递推关系 $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}$ 的解，当且仅当 $a_{n}=\alpha_{1}\cdot r_{0}^{n}+\alpha_{2}\cdot n\cdot r_{0}^{n},n=0,1,2,\cdots$，其中 $\alpha_{1}$ 和 $\alpha_{2}$ 是常数。&lt;/p>
+&lt;p>&lt;strong>例4&lt;/strong>：数列 $\left\{a_{n}\right\}$ 满足 $a_{n}=6a_{n-1}-9a_{n-2}$，且$a_{1}=6，a_{2}=27$，求数列 $\left\{a_{n}\right\}$ 的通项公式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$r^{2}-6r+9=0$ 唯一的根是 $r=3$。因此这个递推关系的解是 $$a_{n}=\alpha_{1}\cdot 3^{n}+\alpha_{2}\cdot n\cdot 3_{n}$$ 其中 $\alpha_{1},\alpha_{2}$ 是常数。使用初始条件得 $\alpha_{1}=\alpha_{2}=1$，所以 $\left\{a_{n}\right\}$ 的通项公式为 $$a_{n}=3^{n}+n\cdot 3^{n}$$&lt;/p>
+&lt;p>&lt;strong>例5&lt;/strong>：求满足 $a_{1}=5,a_{2}=15,a_{3}=47$ 的递推关系 $a_{n}=6a_{n-1}-11a_{n-2}+6a_{n-3}$ 的通项公式。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：有这个递推关系的特征方程 $r^{3}-6r^{2}+11r-6=0$ 得到三个特征根 $r_{1}=1,r_{2}=2,r_{3}=3$，于是递推关系的解的形式为：$$a_{n}=\alpha_{1}\cdot 1^{n}+\alpha_{2}\cdot 2^{n}+\alpha_{3}\cdot 3^{n}$$ 通过初始条件得到 $\alpha_{1}=1,\alpha_{2}=-1,\alpha_{3}=2$。于是通项公式为：$$a_{n}=1-2^{n}+2\cdot 3^{n}$$&lt;/p></description></item><item><title>浅谈塞瓦定理在平面几何中的应用</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link><pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid><description>&lt;p>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。&lt;/p>
+&lt;p>&lt;strong>塞瓦定理&lt;/strong>：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。&lt;/p>
+&lt;p>&lt;strong>塞瓦定理逆定理&lt;/strong>：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形）&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/Ceva-1.png"
+alt="Ceva 定理示意图" width="640">&lt;figcaption>
+&lt;p>Ceva 定理示意图&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>证明如下：&lt;/p>
+&lt;p>首先 $$\frac {BD} {DC}=\frac {S_{\triangle ABD}}{S_{\triangle ADC}}=\frac {S_{\triangle OBD}}{S_{\triangle ODC}} \Rightarrow \frac {BD} {DC}=\frac {S_{\triangle ABD}-S_{\triangle OBD}}{S_{\triangle ADC}-S_{\triangle ODC}}=\frac {S_{\triangle ABO}}{S_{\triangle CAO}}$$ 同理 $$\frac {CE} {EA}=\frac {S_{\triangle BCO}}{S_{\triangle ABO}},\frac {AF} {FB}=\frac {S_{\triangle CAO}}{S_{\triangle BCO}}$$ 因此 $$\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} = \frac{S_{\triangle ABO}}{S_{\triangle CAO}} \cdot \frac{S_{\triangle BCO}}{S_{\triangle ABO}} \cdot \frac{S_{\triangle CAO}}{S_{\triangle BCO}}=1$$ 证毕。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：在筝形 $ABCD$ 中，$AB=AD$，$BC=CD$，经 $AC$、$BD$ 的交点 $O$ 任做两条直线，分别交 $AD$ 于 $E$，交 $CD$ 于 $H$。$GF$、$EH$ 分别交 $BD$ 于 $I$，$J$。求证：$IO=OJ$。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/Ceva-2.png"
+alt="Ceva 定理例题图" width="640">&lt;figcaption>
+&lt;p>Ceva 定理例题图&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>证明如下：&lt;/p>
+&lt;p>作 $\triangle ABC$ 的关于 $AC$ 的对称图形，记 $E^{&amp;rsquo;}H^{&amp;rsquo;} \cap BB=M$ 设 $\angle GOB=\angle BOH^{&amp;rsquo;}=\alpha,\angle E^{&amp;rsquo;}OG=\angle FOH^{&amp;rsquo;}=\beta$ 则有：$$\frac{E^{&amp;rsquo;}G}{GB} \cdot \frac{BH^{&amp;rsquo;}}{H^{&amp;rsquo;}F} \cdot \frac{FM}{ME^{&amp;rsquo;}}=\frac{OE^{&amp;rsquo;}\sin \beta}{OB \sin \alpha} \cdot \frac{OB \sin \alpha}{OF \sin \beta} \cdot \frac{OF \sin \left ( \alpha + \beta \right )}{OE^{&amp;rsquo;} \sin \left ( \alpha + \beta \right )}=1$$ 由塞瓦定理得：$MB$、$E^{&amp;rsquo;}H^{&amp;rsquo;}$、$GF$ 共点，因此 $IO=OJ$。证毕。&lt;/p></description></item><item><title>浅谈线性同余及中国剩余定理</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</link><pubDate>Sat, 04 May 2013 21:31:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E7%BA%BF%E6%80%A7%E5%90%8C%E4%BD%99%E5%8F%8A%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</guid><description>&lt;p>我记得在计算机复赛前一天晚上本想看看同余方程的解法，结果第二天就考到了。明天是数学竞赛初赛，简略的复习一下线性同余及中国剩余定理，顺便记下一些笔记。&lt;/p>
+&lt;p>&lt;strong>定理1&lt;/strong>：令 $m$ 为正整数。若 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m \end{cases}$，那么 $\begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m\end{cases}$。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：因为 $\begin{cases} a \equiv b \pmod m \\ c \equiv d \pmod m\end{cases}$，所以有整数 $s$ 和 $t$ 使 $\begin{cases} b=a+sm \\ d=c+tm\end{cases}$。于是 $$ \begin{cases} b+d=(a+sm)+(c+tm)=(a+c)+m(s+t)\\ bd=(a+sm)(c+tm)=ac+m(at+cs+stm) \end{cases} \Rightarrow \begin{cases} a+c \equiv b+d \pmod m \\ ac \equiv bd \pmod m \end{cases}$$&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：由于 $\begin{cases} 7 \equiv 2 \pmod 5 \\ 11 \equiv 1 \pmod 5\end{cases}$，从定理1知 $\begin{cases} 18 = 7+11 \equiv 2+1=3 \pmod 5 \\ 77 = 7 \cdot 11 \equiv 2 \cdot 1=2 \pmod 5\end{cases}$。&lt;/p>
+&lt;p>&lt;strong>定理2&lt;/strong>：如果 $a$ 和 $m$ 为互素的整数，$m &amp;gt; 1$，则存在 $a$ 的模 $m$ 的逆。而且这个逆模 $m$ 是唯一的。（即有小于 $m$ 的唯一正整数 $\overline{a}$，如果这样的 $\overline{a}$ 存在的话。这样的 $\overline{a}$ 称为 $a$ 模 $m$ 逆，且 $a$ 的任何别的模 $m$ 逆均和 $\overline{a}$ 模 $m$ 同余。）&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：由定理 1 及 $\gcd \left ( a,m \right )=1$ 知，有整数 $s$ 和 $t$ 使 $$sa+tm=1$$ 于是 $$sa+tm \equiv 1 \pmod m$$ 由于 $tm \equiv 0 \pmod m$，所以 $$sa \equiv 1 \pmod m$$ 结论是 $s$ 为 $a$ 的模 $m$ 逆。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：求 $3$ 的模 $7$ 逆。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：由于 $\gcd \left ( 3,7 \right )=1$，定理 3 说明存在 $3$ 模 $7$ 的逆。若用欧几里得算法求 $3$ 和 $7$ 的最大公约数，算法很快结束：$$7=2 \cdot 3 + 1$$ 从这一等式看到 $$-2 \cdot 3 + 1 \cdot 7=1$$ 这说明 -2 是 3 模 7 的一个逆。（注意，模 $7$ 同余于 $-2$ 的每个整数也是 $3$ 的逆，例如 $5,-9,12$ 等。）&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：求线性同余 $3x \equiv 4 \pmod 7$ 的解。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：易知 $-2$ 是 $3$ 模 $7$ 的逆。在同余式的两边同乘以 $-2$ 得 $$-2 \cdot 3x \equiv -2 \cdot 4 \pmod 7$$ 因为 $\begin{cases} -6 \equiv 1 \pmod 7 \\ -8 \equiv 6 \pmod 7\end{cases}$，所以若 $x$ 是解，必有 $$x \equiv -8 \equiv 6 \pmod 7$$ 于是由定理 1，有 $$3x \equiv 3 \cdot 6 \equiv 18 \equiv 4 \pmod 7 $$ 这说明所有这种 $x$ 满足问题中的同余式。结论是，同余方程的解是使 $x \equiv 6 \pmod 7$ 的整数。&lt;/p>
+&lt;p>从有关线性同余系统的中国古典问题而得名的中国剩余定理，可以这样叙述：只要线性同余系统的模数两两互素，则该系统有解，而且以所有模数之乘积取模，解是唯一的。&lt;/p>
+&lt;p>&lt;strong>定理3（中国剩余定理）&lt;/strong>：令 $m_{1},m_{2},\cdots,m_{n}$ 为两两互素的正整数，则同余方程组 $$ \begin{cases} x \equiv a_{1} \pmod {m_{1}}\\ x \equiv a_{2} \pmod {m_{2}}\\ \vdots \\ x \equiv a_{1} \pmod {m_{n}} \end{cases}$$ 唯一的模 $m=m_{1}m_{2} \cdots m_{n}$ 解。（即有一个解 $x$，使 $0 \leq x \leq m$，且所有其他的解均与此解模 $m$ 同余。）&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：要建立这一定理，需要证明有一个解存在，而且是模 $m$ 唯一的。下面将给出构造这样一个解的方法以证明解的存在。&lt;/p>
+&lt;p>要构造一个适合各方程的解，首先对 $k=1,2, \cdots ,n$，令 $M_{k}=\frac{m}{m_{k}}$，即 $M_{k}$ 是除 $m_{k}$ 以外所有模数的乘积。由于 $i \neq k$ 时，$m_{i}$ 和 $m_{k}$ 没有大于 1 的公因子，所以 $\gcd \left ( m_{k},M_{k} \right )=1$。从而由定理 2 知有整数 $y_{k}$，即 $M_{k}$ 模 $m_{k}$ 的逆，使得 $$M_{k}y_{k} \equiv 1 \pmod {m_{k}}$$ 要得到适合所有方程的解，令 $$x=a_{1}M_{1}y_{1}+a_{2}M_{2}y_{2}+\cdots+a_{n}M_{n}y_{n}$$ 现要证明 $x$ 就是这样一个解。&lt;/p>
+&lt;p>首先注意，由于只要 $j \neq k$，就有 $M_{j} \equiv 0 \pmod {m_{k}}$，在 $x$ 的求和表达式中除第 $k$ 项以外的各项模 $m_{k}$ 均同余于 $0$。由于 $M_{k}y_{k} \equiv 1 \pmod {m_{k}}$，可以看出对 $k=1,2, \cdots ,n$，均有 $$x \equiv a_{n}M_{n}y_{n} \equiv a_{k} \pmod {m_{k}}$$。这就证明了 $x$ 是这 $n$ 个同余方程的公共解。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：求同余方程组 $\begin{cases} x \equiv 2 \pmod 3\\ x \equiv 3 \pmod 5\\ x \equiv 2 \pmod 7 \end{cases}$ 的解。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先令 $m=3 \cdot 5 \cdot 7=105$，$M_{1}=\frac {m} {3}=35$，$M_{2}=\frac {m} {5}=21$，$M_{3}=\frac {m} {7}=15$。可看到 $2$ 是 $M_{1}=35$ 的模 $3$ 逆，因为 $35 \equiv 2 \pmod 3$；$1$ 是 $M_{2}=21$ 的模 $5$ 逆，因为 $21 \equiv 1 \pmod 5$；$1$ 也是 $M_{3}=15$ 的模 $7$ 逆，因为 $15 \equiv -1 \pmod 4$。于是这一方程组的解是满足下列式子的那些 $x$： $$ x \equiv a_{1}M_{1}y_{1}+a_{2}M_{2}y_{2}+a_{3}M_{3}y_{3}=2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1=233 \equiv 23 \pmod {105} $$&lt;/p>
+&lt;p>可以见 $23$ 是所有解当中最小的正整数。结论是 $23$ 是最小的正整数，除以 $3$ 时余 $2$，除以 $5$ 时余 $3$，除以 $7$ 时余 $2$。&lt;/p></description></item><item><title>浅谈伴随矩阵在逆矩阵求解中的应用</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link><pubDate>Mon, 29 Apr 2013 15:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E5%9C%A8%E9%80%86%E7%9F%A9%E9%98%B5%E6%B1%82%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid><description>&lt;p>最近数学课上讲了矩阵，很久以前便对矩阵很有兴趣，但由于一些原因没有深入学习。正好趁这个机会，有思考了一下关于矩阵的内容。目前应用较广的应该是运用逆矩阵求解线性方程组，尤其对于三元一次方程组，运用逆矩阵求解会非常方便。&lt;/p>
+&lt;p>一个方形矩阵的伴随矩阵是一个类似于逆矩阵的概念。如果矩阵可逆，那么它的逆矩阵和它的伴随矩阵之间只差一个系数。然而，伴随矩阵对不可逆的矩阵也有定义，并且不需要用到除法。我们对这种情况不做深入讨论。&lt;/p>
+&lt;p>&lt;strong>引理1&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，以及两个整数 $i,j$，其中 $1\leq i,j\leq n$。去掉 $\mathbf{A}$ 的第 $i$ 行以及第 $j$ 列，得到一个 $n-1$ 阶子矩阵。记这个子矩阵的行列式为 $\mathbf{M}_{ij}$。称为余子式。&lt;/p>
+&lt;p>&lt;strong>引理2&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，代数余子式是余子式 $\mathbf{M}_{ij}$ 与 $\left ( -1 \right )^{i+j}$ 的乘积，记作 $\mathbf{C}_{ij}$。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵 $\begin{bmatrix} 1 &amp;amp; 4 &amp;amp; 7\\ 3 &amp;amp; 0 &amp;amp; 5\\ -1 &amp;amp; 9 &amp;amp; 11 \end{bmatrix} $，计算它的代数余子式 $\mathbf{C}_{23}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：首先计算余子式 $\mathbf{M}_{23}$，即原矩阵去掉第二行以及第三行所得的矩阵的行列式：$ \begin{bmatrix} 1 &amp;amp; 4 &amp;amp; \bigcirc \\ \bigcirc &amp;amp; \bigcirc &amp;amp; \bigcirc \\ -1 &amp;amp; 9 &amp;amp; \bigcirc \end{bmatrix} $，即 $ \begin{vmatrix} 1 &amp;amp; 4\\ -1 &amp;amp; 9 \end{vmatrix} = \left ( 9-\left ( -4 \right ) \right )=13 $。因此 $ \mathbf{C}_{23}=\left ( -1 \right )^{2+3}\cdot M_{23}=-13$。&lt;/p>
+&lt;p>&lt;strong>引理3&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，由代数余子式组成的新的矩阵，称为该矩阵的余子矩阵。记作 $\mathbf{C}$。&lt;/p>
+&lt;p>&lt;strong>引理4&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，定义它的转置矩阵 $\mathbf{A^{T}}$。转置矩阵 $\mathbf{A^{T}}$ 可以通过下列操作得到：把 $\mathbf{A}$ 的横行写为 $\mathbf{A^{T}}$ 的纵行，把 $\mathbf{A}$ 的纵行写为 $\mathbf{A^{T}}$ 的横行。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：$ \begin{bmatrix} 1 &amp;amp; 2\\ 3 &amp;amp; 4 \end{bmatrix}^{T}=\begin{bmatrix} 1 &amp;amp; 3\\ 2 &amp;amp; 4 \end{bmatrix} $。&lt;/p>
+&lt;p>&lt;strong>引理5&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，它的余子矩阵 $\mathbf{C}$ 的转置矩阵称为矩阵 $\mathbf{A}$ 的伴随矩阵。记作 $\mathbf{A^{*}}=\mathbf{C^{T}}$。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵 $ \mathbf{A}=\begin{bmatrix} a &amp;amp; b\\ c &amp;amp; d \end{bmatrix}$，求它的伴随矩阵 $\mathbf{A^{*}}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$ \mathbf{A^{*}}=\begin{bmatrix} \mathbf{C}_{11} &amp;amp; \mathbf{C}_{12}\\ \mathbf{C}_{21} &amp;amp; \mathbf{C}_{22} \end{bmatrix}^{T}=\begin{bmatrix} \mathbf{M}_{11} &amp;amp; -\mathbf{M}_{12}\\ -\mathbf{M}_{21} &amp;amp; \mathbf{M}_{22} \end{bmatrix}^{T}=\begin{bmatrix} d &amp;amp; -c\\ -b &amp;amp; a \end{bmatrix}^{T}=\begin{bmatrix} d &amp;amp; -b\\ -c &amp;amp; a \end{bmatrix}$。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵$ \mathbf{A}=\begin{bmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33} \end{bmatrix}$，求它的伴随矩阵 $\mathbf{A^{*}}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$$\begin{align*} \mathbf{A^{*}} &amp;amp;=\begin{bmatrix} \mathbf{C}_{11} &amp;amp; \mathbf{C}_{12} &amp;amp; \mathbf{C}_{13}\\ \mathbf{C}_{21} &amp;amp; \mathbf{C}_{22} &amp;amp; \mathbf{C}_{23}\\ \mathbf{C}_{31} &amp;amp; \mathbf{C}_{32} &amp;amp; \mathbf{C}_{33} \end{bmatrix}^{T}\\ &amp;amp;=\begin{bmatrix} \mathbf{M}_{11} &amp;amp; -\mathbf{M}_{12} &amp;amp; \mathbf{M}_{13}\\ -\mathbf{M}_{21} &amp;amp; \mathbf{M}_{22} &amp;amp; -\mathbf{M}_{23}\\ \mathbf{M}_{31} &amp;amp; -\mathbf{M}_{32} &amp;amp; \mathbf{M}_{33} \end{bmatrix}^{T} \\ &amp;amp;= \begin{bmatrix} \begin{vmatrix} a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33} \end{vmatrix} &amp;amp; \begin{vmatrix} a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32} \end{vmatrix}\\ -\begin{vmatrix} a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33} \end{vmatrix} &amp;amp; \begin{vmatrix} a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32} \end{vmatrix}\\ \begin{vmatrix} a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23} \end{vmatrix} &amp;amp; \begin{vmatrix} a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22} \end{vmatrix} \end{bmatrix}^{T}\\ &amp;amp;=\begin{bmatrix} \begin{vmatrix} a_{22} &amp;amp; a_{23}\\ a_{32} &amp;amp; a_{33} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{12} &amp;amp; a_{13}\\ a_{32} &amp;amp; a_{33}\end{vmatrix} &amp;amp; \begin{vmatrix} a_{12} &amp;amp; a_{13}\\ a_{22} &amp;amp; a_{23} \end{vmatrix}\\ -\begin{vmatrix} a_{21} &amp;amp; a_{23}\\ a_{31} &amp;amp; a_{33} \end{vmatrix} &amp;amp; \begin{vmatrix} a_{11} &amp;amp; a_{13}\\ a_{31} &amp;amp; a_{33} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{11} &amp;amp; a_{13}\\ a_{21} &amp;amp; a_{23} \end{vmatrix}\\ \begin{vmatrix} a_{21} &amp;amp; a_{22}\\ a_{31} &amp;amp; a_{32} \end{vmatrix} &amp;amp; -\begin{vmatrix} a_{11} &amp;amp; a_{12}\\ a_{31} &amp;amp; a_{32} \end{vmatrix} &amp;amp; \begin{vmatrix} a_{11} &amp;amp; a_{12}\\ a_{21} &amp;amp; a_{22} \end{vmatrix} \end{bmatrix} \end{align*} $$ 其中 $\begin{vmatrix} a_{im} &amp;amp; a_{in}\\ a_{jm} &amp;amp; a_{jn} \end{vmatrix}=a_{im}\cdot a_{jn}-a_{in}\cdot a_{jm}$。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵 $\mathbf{A}=\begin{bmatrix}-3 &amp;amp; 2 &amp;amp; -5\\ -1 &amp;amp; 0 &amp;amp; -2\\ 3 &amp;amp; -4 &amp;amp; 1 \end{bmatrix}$，求它的伴随矩阵 $\mathbf{A^{*}}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：通过计算不难得出 $\mathbf{A^{*}}=\begin{bmatrix} -8 &amp;amp; 18 &amp;amp; -4\\ -5 &amp;amp; 12 &amp;amp; -1\\ 4 &amp;amp; -6 &amp;amp; 2 \end{bmatrix}$。&lt;/p>
+&lt;p>&lt;strong>引理6&lt;/strong>：对于一个 $n$ 阶矩阵 $\mathbf{A}$，它的逆矩阵 $\mathbf{A^{-1}}$ 与伴随矩阵 $\mathbf{A^{*}}$ 满足 $ \mathbf{A^{-1}} = \frac{\mathbf{A^{*}}}{\begin{vmatrix} \mathbf{A} \end{vmatrix}} $。其中 $ \begin{vmatrix*} \mathbf{A} \end{vmatrix*} $ 为矩阵 $\mathbf{A}$ 的行列式。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵 $\mathbf{A}=\begin{bmatrix} 3 &amp;amp; 2\\ 2 &amp;amp; 1 \end{bmatrix}$，求它的逆矩阵 $\mathbf{A^{-1}}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\mathbf{A^{*}}=\begin{bmatrix} 1 &amp;amp; -2\\ -2 &amp;amp; 3 \end{bmatrix},\begin{vmatrix} \mathbf{A} \end{vmatrix}=\begin{vmatrix} 3 &amp;amp; 2\\ 2 &amp;amp; 1 \end{vmatrix}=-1,\mathbf{A^{-1}}=\frac{1}{\begin{vmatrix} \mathbf{A} \end{vmatrix}}\cdot \mathbf{A^{*}}=\begin{bmatrix} -1 &amp;amp; 2\\ 2 &amp;amp; -3 \end{bmatrix}$。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：对于矩阵 $\mathbf{A}=\begin{bmatrix} 3 &amp;amp; -1 &amp;amp; 0\\ -1 &amp;amp; 2 &amp;amp; -1\\ -1 &amp;amp; -1 &amp;amp; 1 \end{bmatrix} $，求它的逆矩阵 $\mathbf{A^{-1}}$。&lt;/p>
+&lt;p>&lt;strong>解&lt;/strong>：$\mathbf{A^{*}}=\begin{bmatrix} 1 &amp;amp; 1 &amp;amp; 1\\ 2 &amp;amp; 3 &amp;amp; 3\\ 3 &amp;amp; 4 &amp;amp; 5 \end{bmatrix},\begin{vmatrix} \mathbf{A} \end{vmatrix}=\begin{vmatrix} 3 &amp;amp; -1 &amp;amp; 0\\ -1 &amp;amp; 2 &amp;amp; -1\\ -1 &amp;amp; -1 &amp;amp; 1 \end{vmatrix}=1,\mathbf{A^{-1}}=\frac{1}{\begin{vmatrix} \mathbf{A} \end{vmatrix}}\cdot \mathbf{A^{*}}=\begin{bmatrix} 1 &amp;amp; 1 &amp;amp; 1\\ 2 &amp;amp; 3 &amp;amp; 3\\ 3 &amp;amp; 4 &amp;amp; 5\end{bmatrix}$。&lt;/p>
+&lt;p>运用伴随矩阵来求解逆矩阵会方便很多，尤其是对于高阶矩阵。且使得逆矩阵的求法有规律可循，不需要死记公式。&lt;/p></description></item><item><title>浅谈欧拉公式在富勒烯及其衍生物中的应用</title><link>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link><pubDate>Sun, 21 Apr 2013 14:12:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%B5%85%E8%B0%88%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E5%9C%A8%E5%AF%8C%E5%8B%92%E7%83%AF%E5%8F%8A%E5%85%B6%E8%A1%8D%E7%94%9F%E7%89%A9%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid><description>&lt;p>前几天在做化学竞赛初赛试题时遇到一道关于富勒烯衍生物的习题。大意是求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数。但是去问浦建芳，她把施锦元叫了上来，大师兄便给我讲了欧拉公式。当天晚上没有完全弄清楚，回家谷歌以后，现在将内容整理如下。（以 $\mathrm{C_{50}Cl_{10}}$ 为例）&lt;/p>
+&lt;h2 id="1求-mathrmc_50cl_10-中五边形以及六边形的个数">1、求 $\mathrm{C_{50}Cl_{10}}$ 中五边形以及六边形的个数
+&lt;/h2>&lt;p>这类题目可以应用欧拉公式，设 $\mathrm{C_{50}Cl_{10}}$ 中存在 $x$ 个五边形及 $y$ 个六边形。由欧拉公式可以得到结果：&lt;/p>
+&lt;p>$$ \begin{cases} 50+x+y=\frac{5x+6y}{2}+2 \\ 50\times \frac{3}{2}=\frac{5x+6y}{2} \end{cases}\Rightarrow \begin{cases}x=12 \\ y=15\end{cases} $$&lt;/p>
+&lt;h2 id="2求-mathrmc_50cl_10-中单键的个数">2、求 $\mathrm{C_{50}Cl_{10}}$ 中单键的个数
+&lt;/h2>&lt;p>对于这类题目，可以考虑这样的一个加成反应：$\mathrm{C_{50}+5Cl_{2}} \rightarrow \mathrm{C_{50}Cl_{10}}$。这样的话，我们可以首先考虑 $\mathrm{C_{50}}$，根据（1）中方法求出其中五边形以及六边形的个数。从而得到一共有 75 根碳碳键。&lt;/p>
+&lt;p>考虑到 $\mathrm{C_{50}}$ 中每个碳原子边上有两个碳碳单键一根碳碳双键，即可得到碳碳单键数目是碳碳双键数目的两倍。这样可以确定 $\mathrm{C_{50}}$ 中有 50 根碳碳单键，25 根碳碳双键。&lt;/p>
+&lt;p>接着考虑加成的过程，在上述加成反应的过程中，断开了 5 根碳碳双键，这样就新形成了 5 根碳碳单键，从而得到 $\mathrm{C_{50}Cl_{10}}$ 中共有碳碳单键 55 根。&lt;/p></description></item></channel></rss>

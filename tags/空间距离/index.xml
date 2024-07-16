@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>空间距离 on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB/</link><description>Recent content in 空间距离 on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 18 Aug 2023 11:27:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>机器学习中常用的距离度量汇总</title><link>https://ivy-end.github.io/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/</link><pubDate>Fri, 18 Aug 2023 11:27:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/</guid><description>&lt;h2 id="距离的定义">距离的定义
+&lt;/h2>&lt;p>在机器学习中，我们通过计算不同样本在特征空间中的距离来评估样本间的相似度，进而为其进行分类。根据样本特征空间的不同，我们需要选择合适的距离度量方法。一般而言，对于&lt;strong>距离度量函数&lt;/strong>$d(x,y)$，其需要满足如下性质：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>非负性&lt;/strong>：$d(x,y)\geq 0$&lt;/li>
+&lt;li>&lt;strong>同一性&lt;/strong>：$d(x,y)=0\Leftrightarrow x=y$&lt;/li>
+&lt;li>&lt;strong>对称性&lt;/strong>：$d(x,y)=d(y,x)$&lt;/li>
+&lt;li>&lt;strong>三角不等式&lt;/strong>：$d(x,y)\leq d(x,z)+d(z,y)$&lt;/li>
+&lt;/ul>
+&lt;p>根据样本特征空间的不同，我们把度量的距离分为：&lt;strong>空间距离&lt;/strong>、&lt;strong>字符距离&lt;/strong>、&lt;strong>集合距离&lt;/strong>、&lt;strong>分布距离&lt;/strong>。&lt;/p>
+&lt;h2 id="空间距离">空间距离
+&lt;/h2>&lt;h3 id="欧几里得距离euclidean-distance">欧几里得距离（Euclidean Distance）
+&lt;/h3>&lt;p>欧几里得距离用于描述欧式空间中任意两点间的直线距离，常被称作欧几里得范数，或$\mathcal{L}_2$&lt;strong>范数&lt;/strong>。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的欧几里得距离定义为：&lt;/p>
+&lt;p>$$d=\sqrt{\sum_{i=1}^{n}{\left(x_i-y_i\right)^2}}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间欧几里得距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">EuclideanDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">square&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="曼哈顿距离manhattan-distance">曼哈顿距离（Manhattan Distance）
+&lt;/h3>&lt;p>曼哈顿距离用于描述标准坐标系中任意两点间的绝对轴距之和，常被称作曼哈顿范数，或$\mathcal{L}_1$&lt;strong>范数&lt;/strong>。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的曼哈顿距离定义为：&lt;/p>
+&lt;p>$$d=\sqrt{\sum_{i=1}^{n}{\left|x_i-y_i\right|}}$$&lt;/p>
+&lt;p>下图所示红色路径为曼哈顿距离，绿色路径为欧几里得距离，蓝色路径和黄色路径为等价曼哈顿距离。曼哈顿距离的发明是为了应对早期计算图形学领域中浮点运算代价高的情况，采用曼哈顿距离代替欧几里得距离进行图形渲染。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2023/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/Manhattan-Distance.png"
+alt="曼哈顿距离（Manhattan Distance）">&lt;figcaption>
+&lt;p>曼哈顿距离（Manhattan Distance）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间曼哈顿距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">ManhattanDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="切比雪夫距离chebyschev-distance">切比雪夫距离（Chebyschev Distance）
+&lt;/h3>&lt;p>切比雪夫距离用于描述标准坐标系中任意两点间的绝对轴距最大值，常被称作切比雪夫范数，或$\mathcal{L}_\infty$&lt;strong>范数&lt;/strong>。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的切比雪夫距离定义为：&lt;/p>
+&lt;p>$$d=\max\left|x_i-y_i\right|$$&lt;/p>
+&lt;p>以下图所示位于 F6 的“王”为例，其到棋盘上任意一点的切比雪夫距离即为它需要移动的步数。需要注意的是，在国际象棋中“王”每次可以朝任意方向移动一格。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2023/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/Chebyschev-Distance.png"
+alt="切比雪夫距离（Chebyschev Distance）">&lt;figcaption>
+&lt;p>切比雪夫距离（Chebyschev Distance）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间切比雪夫距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">ChebyshevDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="闵可夫斯基距离minkowski-distance">闵可夫斯基距离（Minkowski Distance）
+&lt;/h3>&lt;p>闵可夫斯基距离并非一种新型的距离度量方式，而是一种对于多种不同距离度量的概括性表述。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的闵可夫斯基距离定义为：&lt;/p>
+&lt;p>$$d=\left(\sum_{i=1}^{n}{\left|x_i-y_i\right|^p}\right)^{1/p}$$&lt;/p>
+&lt;p>其中，$p$为闵可夫斯基距离参数。当$p=1$时，闵可夫斯基距离退化为曼哈顿距离；当$p=2$时，闵可夫斯基距离退化为欧几里得距离；当$p\rightarrow\infty$时，闵可夫斯基距离退化为切比雪夫距离，如下图所示：&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2023/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/Minkowski-Distance.png"
+alt="闵可夫斯基距离（Minkowski Distance）">&lt;figcaption>
+&lt;p>闵可夫斯基距离（Minkowski Distance）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间闵可夫斯基距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">math&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">MinkowskiDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">zipped_coordinate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">zip&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">math&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">math&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="p">)),&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="标准化欧几里得距离standardized-euclidean-distance">标准化欧几里得距离（Standardized Euclidean Distance）
+&lt;/h3>&lt;p>标准化欧几里得距离是将欧式空间中任意两点的分量都“标准化”到均值、方差一致的区间，记每个分量的均值为$\mu$，方差为$\sigma_i^2$，“标准化”结果为$X^*$：&lt;/p>
+&lt;p>$$X^*=\frac{X-\mu}{\sigma^2}$$&lt;/p>
+&lt;p>对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的标准化欧几里得距离定义为：&lt;/p>
+&lt;p>$$d=\sqrt{\sum_{i=1}^{n}{\left(\frac{x_i-y_i}{\sigma_i^2}\right)^2}}$$&lt;/p>
+&lt;p>如果将$1/\sigma^2$看做权重，则标准化欧几里得距离可以被认为是加权欧几里得距离。&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间标准化欧几里得距离的代码如下（需要注意 &lt;code>sigma ≠ 0&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">StandardizedEuclideanDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">X&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vstack&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sigma&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">X&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">axis&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ddof&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(((&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">sigma&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="马氏距离mahalanobis-distance">马氏距离（Mahalanobis Distance）
+&lt;/h3>&lt;p>马氏距离由印度统计学家&lt;a class="link" href="https://en.wikipedia.org/wiki/Prasanta_Chandra_Mahalanobis" target="_blank" rel="noopener"
+>马哈拉诺比斯（P. C. Mahalanobis）&lt;/a>提出，用于表示数据的协方差距离，它可以有效地表示两个未知样本集之间的相似度。对于$n$维空间中的任意两个样本集$\textbf{X}$和$\textbf{Y}$的马氏距离定义为：&lt;/p>
+&lt;p>$$d=\sqrt{\left(\textbf{X}-\textbf{Y}\right)^T\Sigma^{-1}\left(\textbf{X}-\textbf{Y}\right)}$$&lt;/p>
+&lt;p>其中，$\Sigma$为样本集$X$和$Y$的协方差矩阵。若协方差矩阵为单位矩阵，则马氏距离退化为欧几里得距离；若协方差矩阵为对角矩阵，则马氏距离退化为标准化欧几里得距离。&lt;/p>
+&lt;p>需要注意的是，马氏距离的计算需要确保$\Sigma$的逆矩阵存在，否则可以直接采用欧几里得距离进行计算。此外，马氏距离不受量纲的影响，它可以排除变量之间相关性的干扰，但同时也夸大了微小变化量的作用。例如，若将两个相同的样本放入两个不同的总体中，经计算的到的马氏距离也是不同的（除非它们的$\Sigma$恰巧相同）。&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个样本集间马氏距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">MahalanobisDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">X&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">vstack&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">X_T&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">X&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">T&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sigma_inverse&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">inv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cov&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">X&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">X_T&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">shape&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">X_T&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">shape&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">delta&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">X_T&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">X_T&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delta&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">sigma_inverse&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">delta&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">d&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="兰氏距离lance-and-williams-distance">兰氏距离（Lance and Williams Distance）
+&lt;/h3>&lt;p>兰氏距离又被称为堪培拉距离（Canberra Distance），可以理解为加权曼哈顿距离。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的兰氏距离定义为：&lt;/p>
+&lt;p>$$d=\sum_{i=1}^{n}{\frac{\left|x_i-y_i\right|}{\left|x_i\right|+\left|y_i\right|}}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间兰氏距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">CanberraDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="ow">and&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">d&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nb">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">d&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="余弦相似度cosine-similarity">余弦相似度（Cosine Similarity）
+&lt;/h3>&lt;p>在几何学中，通常采用余弦相似度来度量两个向量间的夹角，其取值为$[-1,1]$。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的余弦相似度定义为：&lt;/p>
+&lt;p>$$\cos{\left(\vec{x},\vec{y}\right)}=\frac{\vec{x}\cdot\vec{y}}{\left|\vec{x}\right|\cdot\left|\vec{y}\right|}=\frac{\displaystyle\sum_{i=1}^{n}{x_i\cdot y_i}}{\sqrt{\displaystyle\sum_{i=1}^{n}{x_i^2}}\cdot\sqrt{\displaystyle\sum_{i=1}^{n}{y_i^2}}}$$&lt;/p>
+&lt;p>当$\cos{\left(\vec{x},\vec{y}\right)}\rightarrow0$时，两向量完全正交；当$\cos{\left(\vec{x},\vec{y}\right)}\rightarrow1$时，两向量完全重合；当$\cos{\left(\vec{x},\vec{y}\right)}\rightarrow -1$时，两向量完全相反。在 &lt;code>Python&lt;/code> 中用于计算任意两点间余弦相似度的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">CosineDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="测地距离geodesic-distance">测地距离（Geodesic Distance）
+&lt;/h3>&lt;p>测地距离原指球体表面上两点间的最短距离，后来被推广到其它领域。在图论中，测地距离为两顶点间的最短路径；在欧式空间中，测地距离为欧几里得距离；在非欧空间中，测地距离为连接两点间的最短圆弧。如下图所示：&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2023/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/Geodesic-Distance.jpg"
+alt="测地距离（Geodesic Distance）">&lt;figcaption>
+&lt;p>测地距离（Geodesic Distance）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="布雷柯蒂斯距离bray-curtis-distance">布雷柯蒂斯距离（Bray Curtis Distance）
+&lt;/h3>&lt;p>布雷柯蒂斯距离主要用于生态学和环境科学领域，用于计算不同样本间的差异。对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的布雷柯蒂斯距离定义为：&lt;/p>
+&lt;p>$$d=\frac{\displaystyle \sum_{i=1}^{n}{\left|x_i-y_i\right|}}{\displaystyle \sum_{i=1}^{n}{x_i}+\sum_{i=1}^{n}{y_i}}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两点间布雷柯蒂斯距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import numpy as np
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def BrayCurtisDistance(x, y):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x = np.array(x)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y = np.array(y)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return np.sum(np.abs(x - y)) / (np.sum(x) + np.sum(y))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="半正矢距离haversine-distance">半正矢距离（Haversine Distance）
+&lt;/h3>&lt;p>半正矢距离用于计算任意两经纬点间的距离，对于空间中的任意两经纬点$A(\mathrm{lon}_1,\mathrm{lat}_1)$和$B(\mathrm{lon}_2,\mathrm{lat}_2)$的半正矢距离定义为：&lt;/p>
+&lt;p>$$d=2r\cdot\arcsin{\sqrt{\sin^2{\frac{\mathrm{lat}_2-\mathrm{lat}_1}{2}}+\cos{(\mathrm{lat}_1)}\cos{(\mathrm{lat}_2)}\sin^2{\frac{\mathrm{lon}_2-\mathrm{lon}_1}{2}}}}$$&lt;/p>
+&lt;p>其中，$r$为半径。在 &lt;code>Python&lt;/code> 中用于计算任意两经纬点间半正矢距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">HaversineDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lon1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lon2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat2&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">lon1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lon2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">radians&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">lon1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lon2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lat2&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">6367&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">1000&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">arcsin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sin&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">lat2&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">lat1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mf">2.0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lat1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cos&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lat2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sin&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">lon2&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">lon1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mf">2.0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="字符距离">字符距离
+&lt;/h2>&lt;h3 id="汉明距离hamming-distance">汉明距离（Hamming Distance）
+&lt;/h3>&lt;p>汉明距离由两个字符串对应位不同的数量决定，通常用于数据传输差错控制编码领域。对于长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$的汉明距离定义为：&lt;/p>
+&lt;p>$$d=\sum_{i=0}^{n}{x_i\otimes y_i}$$&lt;/p>
+&lt;p>汉明距离也可以理解为将$A$变为$B$的最小操作次数。在 &lt;code>Python&lt;/code> 中用于计算任意两个字符串间汉明距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">HammingDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x_ch&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">y_ch&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">x_ch&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y_ch&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">zip&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="莱文斯坦距离levenshtein-distance">莱文斯坦距离（Levenshtein Distance）
+&lt;/h3>&lt;p>莱文斯坦距离又被称为编辑距离（Edit Distance），用于度量两个字符串之间的差异，定义为：将字符串$A$转化为字符串$B$所需的最少单字符编辑（插入、删除或替换）次数。对于长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$，$A$的前$i$个字符和$B$的前$j$个字符的莱文斯坦距离定义为：&lt;/p>
+&lt;p>$$d(i,j) = \begin{align*} \left{\begin{matrix} \max{\left(i,j\right)}, &amp;amp; \min{\left(i,j\right)}=0 \ \min{\left[d(i-1,j),d(i,j-1), d(i,j)\right]} + I(i,j), &amp;amp; \min{\left(i,j\right)\neq 0} \end{matrix}\right. \end{align*}$$&lt;/p>
+&lt;p>其中，$I(\cdot)$为指示函数，当$x_i=y_j$时，$I(i,j)=0$；当$x_i\neq y_j$时，$I(i,j)=1$。在 &lt;code>Python&lt;/code> 中用于计算任意两个字符串间莱文斯坦距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">LevenshteinDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zeros&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">j&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">delta&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">delta&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dp&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)][&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="归一化-google-距离normalized-google-distance">归一化 Google 距离（Normalized Google Distance）
+&lt;/h3>&lt;p>归一化 Google 距离是由给定一组关键词集合的 Google 搜索引擎所返回的命中数量决定的，它是一种语义相似度量方法。对于长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$的归一化 Google 距离定义为：&lt;/p>
+&lt;p>$$d=\frac{\max{\left[\log{f(A)},\log{f(B)}\right]}-\log{f(A,B)}}{\log{M}-\min{\left[\log{f(A)}, \log{f(B)}\right]}}$$&lt;/p>
+&lt;p>其中，$M$为 Google 搜索引擎所返回的网页总数；$f(x)$和$f(y)$分别为 Google 搜索引擎返回关于字符串$A$和字符串$B$的命中数量；$f(A,B)$为 Google 搜索引擎返回关于字符串$A$和字符串$B$同时出现的命中数量。&lt;/p>
+&lt;h3 id="jaro-winkler-相似度jaro-winkler-similarity">Jaro-Winkler 相似度（&lt;strong>J&lt;/strong>aro-Winkler Sim&lt;strong>ilarity&lt;/strong>）
+&lt;/h3>&lt;p>Jaro 相似度用于评估两个字符串间的相似度，对于长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$的 Jaro 相似度定义为：&lt;/p>
+&lt;p>$$d_j=\frac{1}{3}\cdot\left(\frac{m}{|A|}+\frac{m}{|B|}+\frac{m-t}{m}\right)$$&lt;/p>
+&lt;p>其中，$m$是匹配的字符数，$t$是替换的字符数。&lt;/p>
+&lt;p>Jaro-Winkler 相似度在 Jaro 相似度的基础上引入了前缀的概念，对于长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$的 Jaro-Winkler 相似度定义为：&lt;/p>
+&lt;p>$$d_w=d_j+l\cdot p\cdot(1-d_j)$$&lt;/p>
+&lt;p>其中，$l$为字符串$A$和字符串$B$的共同前缀的字符数；$p$为缩放因子（常取$p=0.1$）。&lt;/p>
+&lt;h3 id="李距离lee-distance">李距离（Lee Distance）
+&lt;/h3>&lt;p>李距离是编码理论中用于描述字符串距离的方案，对于使用包含$q$个字母的字母表且长度为$n$的任意两个字符串$A=x_1x_2\cdots x_n$和$B=y_1y_2\cdots y_n$的李距离定义为：&lt;/p>
+&lt;p>$$d=\sum_{i=0}^{n}{\min{\left(\left|x_i-y_i\right|,q-\left|x_i-y_i\right|\right)}}$$&lt;/p>
+&lt;p>当$q=2$或$q=3$时，李距离退化为汉明距离。&lt;/p>
+&lt;h2 id="集合距离">集合距离
+&lt;/h2>&lt;h3 id="杰卡德相似系数jaccard-similarity-coefficient">杰卡德相似系数（Jaccard Similarity Coefficient）
+&lt;/h3>&lt;p>杰卡德相似系数是指两个集合$A$和$B$中相同元素在所有元素中的占比，定义为$J(A,B)$：&lt;/p>
+&lt;p>$$J(A,B)=\frac{\left|A\cap B\right|}{\left|A\cup B\right|}$$&lt;/p>
+&lt;p>杰卡德距离（Jaccard Distance）是指两个集合$A$和$B$中不同元素在所有元素中的占比，定义为$J_\delta(A,B)$：&lt;/p>
+&lt;p>$$J_\delta(A,B)=1-J(A,B)=1-\frac{\left|A\cap B\right|}{\left|A\cup B\right|}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个集合间杰卡德相似系数的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">JaccardSimilarityCoefficient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asarray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">int32&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asarray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">int32&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">bitwise_and&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">bitwise_or&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">double&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">bitwise_or&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="奥奇亚系数ochiia-coefficient">奥奇亚系数（Ochiia Coefficient）
+&lt;/h3>&lt;p>奥奇亚系数是指两个集合$A$和$B$中相同元素与两集合大小几何平均值的比值，定义为$K(A,B)$：&lt;/p>
+&lt;p>$$K(A,B)=\frac{\left|A\cap B\right|}{\sqrt{\left|A\right|\times\left|B\right|}}$$&lt;/p>
+&lt;h3 id="戴斯系数dice-coefficient">戴斯系数（Dice Coefficient）
+&lt;/h3>&lt;p>戴斯系数除了可以用来衡量两个集合间的距离，还可以用来衡量两个字符串间的距离，定义为$D(A,B)$：&lt;/p>
+&lt;p>$$D(A,B)=\frac{2\left|A\cap B\right|}{\left|A\right|+\left|B\right|}$$&lt;/p>
+&lt;h3 id="豪斯多夫距离hausdorff-distance">豪斯多夫距离（Hausdorff Distance）
+&lt;/h3>&lt;p>豪斯多夫距离用于度量两个集合$A$和$B$间的距离，定义为$H(A,B)$：&lt;/p>
+&lt;p>$$H(A,B)=\max{\left[h(A,B),h(B,A)\right]}$$&lt;/p>
+&lt;p>其中，$h(\cdot)$为双向豪斯多夫距离，定义为：&lt;/p>
+&lt;p>$$h(A,B)=\max_{a\in A}{\min_{b\in B}{\left |a-b\right|}}$$&lt;/p>
+&lt;p>其中，$h(A,B)$为从集合$A$到集合$B$的单向豪斯多夫距离，$h(B,A)$为从集合$B$到集合$A$的单向豪斯多夫距离。&lt;/p>
+&lt;h2 id="分布距离">分布距离
+&lt;/h2>&lt;h3 id="皮尔逊相关系数pearson-correlation-coefficient">皮尔逊相关系数（Pearson Correlation Coefficient）
+&lt;/h3>&lt;p>皮尔逊相关系数又被称为皮尔逊积矩相关技术（Pearson Product Moment Correlation Coefficient，PPMCC/PCC），用于度量两个变量$X$和$Y$之间的线性相关性。与上文提到的余弦相似度不同，皮尔逊相关系数不受平移变换的影响。对于$n$维空间中的任意两个分布$X$和$Y$的皮尔逊相关系数定义为：&lt;/p>
+&lt;p>$$\rho(X,Y)=\frac{\mathrm{cov}(X,Y)}{\sigma(X)\cdot\sigma(Y)}=\frac{\mathrm{E}\left[\left(X-X_\mu\right)\left(Y-Y_\mu\right)\right]}{\sigma(X)\cdot\sigma(Y)}$$&lt;/p>
+&lt;p>皮尔逊相关系数与余弦相似度的关系为：&lt;/p>
+&lt;p>$$\rho(X,Y)=\frac{\mathrm{E}\left[\left(X-X_\mu\right)\left(Y-Y_\mu\right)\right]}{\sigma(X)\cdot\sigma(Y)}=\frac{\displaystyle\sum_{i=1}^{n}{\left(X-X_\mu\right)\cdot\left(Y-Y_\mu\right)}}{\left|X-X_\mu\right|\cdot\left|Y-Y_\mu\right|}=\cos{\left(X-X_\mu,Y-Y_\mu\right)}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间皮尔逊相关系数的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">PearsonCorrelationCoefficient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x_&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mean&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y_&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">y&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">mean&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y_&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x_&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y_&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="卡方度量chi-square-measure">卡方度量（Chi-square Measure）
+&lt;/h3>&lt;p>$\mathcal{X}^2$检验通常用于检验某一观测分布是否符合典型理论分布。若观测频数与期望频数差异越小，则$\mathcal{X}^2$值越小；若观测频数与期望频数差异越大，则$\mathcal{X}^2$值越大。因此，$\mathcal{X}^2$值可以用于描述观测分布与理论分布的差异。对于$n$维空间中的任意两个分布$X$和$Y$的$\mathcal{X}^2$统计量定义为：&lt;/p>
+&lt;p>$$\mathcal{X}^2=\sum_{i=1}^{n}{\frac{\left(x_i-y_i\right)^2}{y_i}}=\sum_{i=1}^{k}{\frac{\left(x_i-n\cdot p_i\right)^2}{k\cdot p_i}}$$&lt;/p>
+&lt;p>其中，$x_i$为$X$在$i$的频数，$y_i$为$Y$在$i$的频数，$k$为总频数，$p_i$为$Y$在$i$的概率。在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间卡方度量的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">ChiSquareMeasure&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asarray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">int32&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asarray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">int32&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">square&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="交叉熵cross-entropy">交叉熵（Cross Entropy）
+&lt;/h3>&lt;p>交叉熵是香农信息论中的重要概念，用于度量两个分布之间的差异信息。对于$n$维空间中的任意两个分布$X$和$Y$的交叉熵定义为：&lt;/p>
+&lt;p>$$H(X,Y)=-\int_{p}{X(p)\cdot Y(p)\mathrm{d}p}$$&lt;/p>
+&lt;p>若基于分布$X$对分布$X$进行编码，其编码长度的期望为：&lt;/p>
+&lt;p>$$H(X)=-\int_{p}{X(p)\mathrm{d}p}$$&lt;/p>
+&lt;p>若基于分布$Y$对分布$X$进行编码，其编码长度的期望即为交叉熵$H(X,Y)$。在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间交叉熵的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">CrossEntropy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="kl-散度kullback-leibler-divergence">KL 散度（Kullback-Leibler Divergence）
+&lt;/h3>&lt;p>KL 散度又被称为相对熵（Relative Entropy）或信息散度（Information Divergence），用于度量两个分布间的差异，对于$n$维空间中的任意两个分布$X$和$Y$的 KL 散度定义为：&lt;/p>
+&lt;p>$$\mathrm{KL}(X|Y)=\int_{p}{X(p)\cdot\log{\frac{X(p)}{Y(p)}}\mathrm{d}p}$$&lt;/p>
+&lt;p>若基于分布$X$对分布$X$进行编码，其编码长度的期望为：&lt;/p>
+&lt;p>$$H(X)=-\int_{p}{X(p)\log{X(p)}\mathrm{d}p}$$&lt;/p>
+&lt;p>若基于分布$Y$对分布$X$进行编码，其编码长度的期望即为交叉熵$H(X,Y)$，其多出的编码长度为：&lt;/p>
+&lt;p>$$\mathrm{KL}(X|Y)=H(X)-H(X,Y)$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间 KL 散度的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">KullbackLeiblerDivergence&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="js-散度jensen-shannon-divergence">JS 散度（Jensen-Shannon Divergence）
+&lt;/h3>&lt;p>JS 散度是 KL 散度的变体，解决了 KL 散度非对称的问题，对于$n$维空间中的任意两个分布$X$和$Y$的 JS 散度定义为：&lt;/p>
+&lt;p>$$\mathrm{JS}(X|Y)=\frac{1}{2}\cdot\mathrm{KL}(X|\frac{X+Y}{2})+\frac{1}{2}\cdot\mathrm{KL}(Y|\frac{X+Y}{2})$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间 JS 散度的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">JensenShannonDivergence&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mf">0.5&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">)))&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">0.5&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="海林格距离hellinger-distance">海林格距离（Hellinger Distance）
+&lt;/h3>&lt;p>对于$n$维空间中的任意两个分布$X$和$Y$的海林格距离定义为：&lt;/p>
+&lt;p>$$d={\frac{1}{\sqrt{2}}\cdot\sqrt{\sum_{i=1}^{n}{\left(\sqrt{x_i}-\sqrt{y_i}\right)^2}}}$$&lt;/p>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间海林格距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">HellingerDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="α-散度α-divergence">α 散度（α Divergence）
+&lt;/h3>&lt;p>对于$n$维空间中的任意两个分布$X$和$Y$的 α 散度被定义为：&lt;/p>
+&lt;p>$$d=\frac{4}{1-\alpha^2}\cdot\left[1-\int_p{X(p)^{(1+\alpha)/2}\cdot Y(p)^{(1-\alpha)/2}}\mathrm{d}x\right]$$&lt;/p>
+&lt;p>其中，$-\infty&amp;lt;\alpha&amp;lt;+\infty$为连续参数。当$\alpha\rightarrow 1$时，α 散度退化为 KL 散度；当$\alpha\rightarrow 0$时，α 散度退化为海林格距离（仅相差常系数）。&lt;/p>
+&lt;h3 id="f-散度f-divergence">F 散度（F Divergence）
+&lt;/h3>&lt;p>对于$n$维空间中的任意两个分布$X$和$Y$的 F 散度被定义为：&lt;/p>
+&lt;p>$$\mathrm{D}(X|Y)=\int_p{Y(p)\cdot f\left[\frac{X(p)}{Y(p)}\right]\mathrm{d}p}$$&lt;/p>
+&lt;p>其中，函数$f(\cdot)$需满足：（1）$f(\cdot)$为凸函数；（2）$f(1)=0$。下表给出了$f(\cdot)$取不同值时，F 散度对应的结果。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>散度&lt;/strong>&lt;/th>
+&lt;th>$f(\cdot)$&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>卡方距离&lt;/td>
+&lt;td>$(t-1)^2$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>KL 散度&lt;/td>
+&lt;td>$x\log{x}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>逆 KL 散度&lt;/td>
+&lt;td>$-\log{x}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>海林格距离&lt;/td>
+&lt;td>$\left(\sqrt{x}-1\right)^2$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>α 散度&lt;/td>
+&lt;td>$4/(1-\alpha)^2\cdot\left(1-x^{(1+\alpha)/2}\right)$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间 F 散度（海林格距离）的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">t&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">FDivergence&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="布雷格曼散度bregman-divergence">布雷格曼散度（Bregman Divergence）
+&lt;/h3>&lt;p>对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的欧几里得距离定义为：&lt;/p>
+&lt;p>$$d(x,y)=\sqrt{\sum_{i=1}^{n}{\left(x_i-y_i\right)^2}}$$&lt;/p>
+&lt;p>将上式两侧平方后，得到：&lt;/p>
+&lt;p>$$d^2(x,y)=\sum_{i=1}^{n}{\left(x_i-y_i\right)^2}$$&lt;/p>
+&lt;p>定义$&amp;lt;x,y&amp;gt;=\sum_{i=1}^{n}{x_i\cdot y_i}$，$\left|x\right|=\sqrt{&amp;lt;x,x&amp;gt;}$，上式可改写为：&lt;/p>
+&lt;p>$$d^2(x,y)=\sum_{i=1}^{n}{\left(x_i-y_i\right)^2}=&amp;lt;x-y,x-y&amp;gt;=\left|x\right|^2-\left(\left|y\right|^2+&amp;lt;2y,x-y&amp;gt;\right)$$&lt;/p>
+&lt;p>此处的距离即为欧几里得模函数和其在$x$处切线在$y$处的点估计差。推广该概念后，对于$n$维空间中的任意两点$A(x_1,x_2,\cdots,x_n)$和$B(y_1,y_2,\cdots,y_n)$的布雷格曼散度定义为：&lt;/p>
+&lt;p>$$d(x,y)=f(x)-\left[f(y)+&amp;lt;\nabla f(x),x-y &amp;gt;\right]$$&lt;/p>
+&lt;p>表给出了$f(\cdot)$取不同值时，布雷格曼散度对应的结果。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>散度&lt;/strong>&lt;/th>
+&lt;th>$f(\cdot)$&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>平方损失&lt;/td>
+&lt;td>$x^2$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>/&lt;/td>
+&lt;td>$x\log{x}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Logistic 损失&lt;/td>
+&lt;td>$x\log{x}+(1-x)\log{(1-x)}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Itakura-Saito 距离&lt;/td>
+&lt;td>$-\log{x}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>/&lt;/td>
+&lt;td>$e^x$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>平方欧几里得距离&lt;/td>
+&lt;td>$\left|x\right|^2$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>马氏距离&lt;/td>
+&lt;td>$\mathbf{X}^TA\mathbf{X}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>KL 散度&lt;/td>
+&lt;td>$\sum_{i=1}^{n}{x_i\log{x_i}}$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="wasserstein-距离wasserstein-distance">Wasserstein 距离（Wasserstein Distance）
+&lt;/h3>&lt;p>Wasserstein 距离被称为推土机距离，用于表示两个分布的相似度。Wasserstein 距离定义为把分布$X$转变成分布$Y$所需移动的平均距离的最小值，如下图所示：&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2023/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F%E6%B1%87%E6%80%BB/Wasserstein-Distance.png"
+alt="Wasserstein 距离（Wasserstein Distance）">&lt;figcaption>
+&lt;p>Wasserstein 距离（Wasserstein Distance）&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>对于$n$维空间中的任意两个分布$X$和$Y$的 Wasserstein 距离定义为：&lt;/p>
+&lt;p>$$d=\inf_{\gamma\sim\Pi(X,Y)}{\mathrm{E}_{p,q\sim\gamma}\left|p-q\right|}$$&lt;/p>
+&lt;p>其中，$\Pi(X,Y)$为分布$X$和分布$Y$构成的联合分布的集合，$\gamma$为$\Pi(X,Y)$中任意分布，$p$和$q$是分布$\gamma$中的样本。&lt;/p>
+&lt;h3 id="巴氏距离bhattacharyya-distance">巴氏距离（Bhattacharyya Distance）
+&lt;/h3>&lt;p>巴氏系数可以用来度量两个分布的相似性，对于$n$维空间中的任意两个分布$X$和$Y$的巴氏系数定义为：&lt;/p>
+&lt;p>$$c_b=\int_{p}{\sqrt{X(p)\cdot Y(p)}\mathrm{d}p}$$&lt;/p>
+&lt;p>巴氏距离定义为：&lt;/p>
+&lt;p>$$d_b=-\ln{c_b}$$&lt;/p>
+&lt;p>需要注意的是，海林格距离$d=\sqrt{1-d_b}$。在 &lt;code>Python&lt;/code> 中用于计算任意两个分布间巴氏距离的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">BhattacharyyaCoefficient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">HellingerDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">BhattacharyyaCoefficient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">BhattacharyyaDistance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">BhattacharyyaCoefficient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="最大均值差异maximum-mean-discrepancy">最大均值差异（Maximum Mean Discrepancy）
+&lt;/h3>&lt;p>最大均值差异是迁移学习领域中最为广泛使用的一种损失函数，它度量了再生希尔伯特空间中两个不同分布间的距离。通过在样本空间寻找连续函数$f:X\rightarrow R$随机投影后，分别求这两个分布在$f$上函数值的均值，并通过做差得到均值差异（Mean Discrepancy）。最大化均值差异即为寻找一个$f$使得均值差异最大。对于$n$维空间中的任意两个分布$X$和$Y$的最大均值差异定义为：&lt;/p>
+&lt;p>$$d=\sup_{|f|_\mathrm{H} \leq 1}{\mathrm{E}_p[f(X)]-\mathrm{E}_q[f(Y)]}$$&lt;/p>
+&lt;h3 id="点间互信息pointwise-mutual-information">点间互信息（Pointwise Mutual Information）
+&lt;/h3>&lt;p>点间互信息用来衡量两个分布的相关性，对于$n$维空间中的任意两个分布$X$和$Y$的点间互信息定义为：&lt;/p>
+&lt;p>$$d=\log{\frac{p(X,Y)}{p(X)\cdot p(Y)}}=\log{\frac{p(X|Y)}{p(X)}}=\log{\frac{p(Y|X)}{p(Y)}}$$&lt;/p>
+&lt;p>若$X$和$Y$不相关，则$P(X,Y)=P(X)\cdot P(Y)$。&lt;/p></description></item></channel></rss>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数模混合集成电路 on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/</link><description>Recent content in 数模混合集成电路 on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/%E6%95%B0%E6%A8%A1%E6%B7%B7%E5%90%88%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Verilog 转 Spice 网表</title><link>https://ivy-end.github.io/p/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><guid>https://ivy-end.github.io/p/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description>&lt;p>&lt;code>v2lvs&lt;/code> 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 &lt;code>v2lvs&lt;/code> 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tcl" data-lang="tcl">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">v21vs&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">64&lt;/span> &lt;span class="o">-&lt;/span>sn &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-v&lt;/span> ..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>&lt;span class="mi">0&lt;/span>UTPUT&lt;span class="o">/&lt;/span>TOP_TSCam.pg.v&lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-v&lt;/span> .&lt;span class="o">/&lt;/span>Pixel.pg.v &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>PDK&lt;span class="o">/&lt;/span>SMIC&lt;span class="o">/&lt;/span>SMIC55LL&lt;span class="o">/&lt;/span>SPDK55LL_ULP_09121825_OA_CDS_V1.16_2&lt;span class="o">/&lt;/span>smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2&lt;span class="o">/&lt;/span>Calibre&lt;span class="o">/&lt;/span>LVS&lt;span class="o">/&lt;/span>empty_subckt.sp &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>STD_CELL&lt;span class="o">/&lt;/span>SMIC-55&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2.0b&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2p0b&lt;span class="o">/&lt;/span>cdl&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2p0.cdl &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>STD CELL&lt;span class="o">/&lt;/span>SMIC-55&lt;span class="o">/&lt;/span>I0&lt;span class="o">/&lt;/span>SP55NLLD2RP OV3 VOp7&lt;span class="o">/&lt;/span>&lt;span class="mi">1&lt;/span>vs&lt;span class="o">/&lt;/span>SP55NLLD2RP_OV3_VOp7.sp &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s.&lt;/span>&lt;span class="o">/&lt;/span>SPAD.cdl &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-o&lt;/span> TOP_TSCam.cdl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>关于 &lt;code>v2lvs&lt;/code> 更详细的指令介绍如下所示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">-a &amp;lt;c1&amp;gt;&lt;span class="o">[&lt;/span>&amp;lt;c2&amp;gt;&lt;span class="o">]&lt;/span> : Change array delimiters from the default &lt;span class="s2">&amp;#34;[]&amp;#34;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : c1 replaces left side &lt;span class="s1">&amp;#39;[&amp;#39;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : c2 optionally replaces right side &lt;span class="s1">&amp;#39;]&amp;#39;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-addpin &amp;lt;pin&amp;gt; : Add &amp;lt;pin&amp;gt; to the signature of any Verilog module that does not have it.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Connect &amp;lt;pin&amp;gt; to port &amp;lt;pin&amp;gt; in all instances that &lt;span class="k">do&lt;/span> not already have a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> connection specified.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Spice libraries parsed with -lsr and -lsp will not have pins added
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -addpin is not compatitble with -i.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-b : Preserve backslash character in escaped identifiers.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-cb : Prefer CALDRCLVSEVE&lt;span class="o">(&lt;/span>Calibre CB&lt;span class="o">)&lt;/span> license during license search.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-c &amp;lt;c1&amp;gt;&amp;lt;c2&amp;gt; : Change illegal spice characters c1 to c2.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-cfg &amp;lt;filename&amp;gt; : Config file &lt;span class="k">for&lt;/span> passing IP blocks related information. This will
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bring a custom spice file in to the Verilog and call a top level
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> subckt from the Verilog.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-e : Generate empty .SUBCKT statements &lt;span class="o">(&lt;/span>no instances are translated&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -e is useful &lt;span class="k">for&lt;/span> generating &lt;span class="s2">&amp;#34;black box&amp;#34;&lt;/span> subcircuits from library files
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-h&lt;span class="o">[&lt;/span>elp&lt;span class="o">]&lt;/span> : Help. Prints this message.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-i : Make calls using pins in order &lt;span class="o">(&lt;/span>traditional spice&lt;span class="o">)&lt;/span> not with &lt;span class="nv">$PINS&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> For non-Calibre use only, avoid using -i option &lt;span class="k">for&lt;/span> LVS.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-ictrace : Prefer ICTRACE license during license search.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-incvdir : Add INCLUDE path &lt;span class="k">for&lt;/span> files &lt;span class="sb">`&lt;/span>include&lt;span class="err">&amp;#39;&lt;/span>ed from verilog files.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-l &amp;lt;filename&amp;gt; : Defines the Verilog library file name &lt;span class="o">(&lt;/span>the library is not translated&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> The library file is parsed &lt;span class="k">for&lt;/span> interface pin configurations&lt;span class="o">(&lt;/span>see -s&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-lsp &amp;lt;filename&amp;gt; : Spice library file name, pin mode. The Spice file is parsed &lt;span class="k">for&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> interface configurations. Pins with pin &lt;span class="k">select&lt;/span> &lt;span class="o">([])&lt;/span> annotation are
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> kept as individual pins using escaped identifiers. See also -lsr and -l.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-lsr &amp;lt;filename&amp;gt; : Spice library file name, range mode. The Spice file is parsed &lt;span class="k">for&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> interface configurations. Pins with pin &lt;span class="k">select&lt;/span> &lt;span class="o">([])&lt;/span> annotation are
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> assembled into Verilog ranges. See also -lsp and -l.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-n : Causes unconnected pins to get numbered connections starting at 1000.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-o &amp;lt;filename&amp;gt; : Defines the file &lt;span class="k">for&lt;/span> the resulting Spice-like netlist to be used in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> the LVS &lt;span class="o">(&lt;/span>layout versus schematic&lt;span class="o">)&lt;/span> application. This result will
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> include a translation of the Verilog netlist.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s &amp;lt;filename&amp;gt; : Causes the string .INCLUDE &lt;span class="s2">&amp;#34;filename&amp;#34;&lt;/span> to be put at the beginning of
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> the generated spice file &lt;span class="o">(&lt;/span>-o&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -s does not cause v2lvs to &lt;span class="nb">read&lt;/span> the SPICE file &lt;span class="o">(&lt;/span>see -lsr and -lsp&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s0 &amp;lt;string&amp;gt; : Default global ground is changed to &amp;lt;string&amp;gt;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s1 &amp;lt;string&amp;gt; : Default global power is changed to &amp;lt;string&amp;gt;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sk : &lt;span class="s2">&amp;#34;supply0&amp;#34;&lt;/span> and &lt;span class="s2">&amp;#34;supply1&amp;#34;&lt;/span> nets are not connected to default power/ground.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sl : &lt;span class="s2">&amp;#34;supply0&amp;#34;&lt;/span> and &lt;span class="s2">&amp;#34;supply1&amp;#34;&lt;/span> nets are not connected to globals.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sn : Default power and ground nets are not connected to globals.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-so &amp;lt;filename&amp;gt; : Filename provides instance or module specific power/ground overrides.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-t &amp;lt;svdb_dir&amp;gt; : Causes an Calibre/XRC &lt;span class="nb">source&lt;/span> template file to be written to an svdb database.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-p &amp;lt;string&amp;gt; : Defines a prefix to be used &lt;span class="k">for&lt;/span> primitive gate instantiations.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-u &amp;lt;string&amp;gt; : Defines a prefix &lt;span class="k">for&lt;/span> the naming of unnamed pins in module instantiations.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v &amp;lt;filename&amp;gt; : Defines the Verilog design netlist file name.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-werror : Treat Warnings as Errors &lt;span class="o">(&lt;/span>-w &amp;lt;n&amp;gt; applies&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-w &amp;lt;n&amp;gt; : Defines a warning messaged level 0-4. &lt;span class="m">2&lt;/span> is the default.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0&lt;/span> - no warnings.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">1&lt;/span> - level &lt;span class="m">0&lt;/span> + warn skipped modules and multiple declarations of modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">2&lt;/span> - level &lt;span class="m">1&lt;/span> warnings + calls to undeclared modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">3&lt;/span> - level &lt;span class="m">2&lt;/span> warnings + called port array width mismatches.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + unsupported compiler directives.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">4&lt;/span> - level &lt;span class="m">3&lt;/span> warnings + all ignored constructs.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">(&lt;/span>i.e. delays, charges etc&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-log &amp;lt;filename&amp;gt; : Defines the log file which contains the error and warning messages.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-undef_mod : This switch tells v2lvs not to &lt;span class="k">do&lt;/span> special handling &lt;span class="k">for&lt;/span> undefined modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-version : Show v2lvs version.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-- &amp;lt;a0&amp;gt; &amp;lt;a1&amp;gt; ... : Pass arguments to the TCL script as an &lt;span class="nv">$argv&lt;/span> list, access by &lt;span class="s2">&amp;#34;[lindex &lt;/span>&lt;span class="nv">$argv&lt;/span>&lt;span class="s2"> &lt;/span>&lt;span class="nv">$n&lt;/span>&lt;span class="s2">]&amp;#34;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Only one &lt;span class="s2">&amp;#34;--&amp;#34;&lt;/span> switch is allowed.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Take care to properly escape special shell characters.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>戊戌志（2018 年度总结）</title><link>https://ivy-end.github.io/p/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link><pubDate>Mon, 31 Dec 2018 11:25:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%88%8A%E6%88%8C%E5%BF%972018-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid><description>&lt;p>树枝在风儿的吹奏下，飘出了一串美妙的音符；雪花在大地的构思下，描绘了一幅绝佳的画作。临窗眺望的我不觉看得出神，恍惚间，一年来的点点滴滴仿佛就在眼前。&lt;/p>
+&lt;p>这一年，我找寻到了那个相识、相知、相爱、相守的人。不论是静谧的校园漫步、沉浸的电影欣赏、醉人的美味品鉴；还是热闹的厨房烹饪、愉快的景点探索、完美的手工配合……处处都留下了我们的欢声笑语。你的出现，让我领略了爱与被爱的美好，也让我的生命变得完整。&lt;/p>
+&lt;p>这一年，我经历了从本科到研究生的转变。这可以说是一个较大的转折，也让我产生了很多思考。&lt;/p>
+&lt;p>春，我开始了本科毕业论文的撰写。跟随着现在的研究生导师，做的校外毕设。虽说着实学到了不少，也接触到了实验室的相关内容，但感觉较之原本轻松的毕业论文，平添了几分繁琐。临近毕业，大家都对所谓的头衔、获奖失去了兴趣，为了避免评为优秀毕设后冗长的优秀毕设论文，纷纷将分数控制在了 89，既保住了学分，又落得了清闲。细想来，这才是看透荣誉后该有的状态吧。&lt;/p>
+&lt;p>夏，我结束了本科阶段最有价值的经历之一——助理导师。在此过程中，我逐渐学会了更多与人相处的方式与技巧，更不断地磨练自己的口头表达和书面表达能力。在此过程中，也对“背锅”有了更深刻的理解与认识。或许，那些只知埋头苦干，熬夜背锅的人，并不会得到他们所想要的；取而代之，是更多的埋头苦干，与更多的熬夜背锅。这，也许只是在象牙塔中管中规豹。但却让我明白应当早日抛弃学生身份，开始更多的以社会人的角度思考问题。毕竟，我们终将成为社会的一份子，或者说，我们早已是社会的一份子。认识到这一点，这一切似乎也就更容易令人接受了。如若拒不接受，继续以读书的理由来逃避它，最终必将无路可退，或守着读书人的身份自欺欺人式的了此残生，或被社会予以打击后被迫的融入其中。&lt;/p>
+&lt;p>秋，我开始了研究生的生活。总的来说，研究方向应该是数模混合集成电路设计。刚入学时，跟随着河海大学的老师进行真随机数生成器的电路仿真。从一开始的一窍不通，到后来的融会贯通，前前后后忙了一两个月，终于熟悉了 Cadence，摸清了电路的原理，也得到了仿真的结果。与此同时，还完成了第一篇全英文的学术论文，正焦急地等待着录用的结果。紧接着，便开始了下一阶段的研究工作，主要是关于 THz 雷达方向的内容。目前仅仅是开展了一个单元模块的仿真设计工作，预计元月底进行流片验证。&lt;/p>
+&lt;p>冬，我开始了对研究生的思考。这主要包含两个问题，首先什么是研究生，其次读完研究生后干什么。&lt;/p>
+&lt;p>研究生，表面上看和本科生没有太大的区别，无非是接触到了所谓的科研，领到了部分的工资。乍一看，既能学到知识，又能收获金钱，简直是求之不得的美事。实际上，研究生是不受劳动法保护的廉价劳动力。试想，在公司工作月薪 5k~10k 的优秀本科生，不仅能够得到专业的工程训练，得到高薪的报酬，还能维护自己的合法权益。而同等学力的研究生，却只能拿着 1k 不到的补助，没日没夜的干着苦力，还不能有任何抱怨，加班说加就加，工资说减就减，戏说之下，又与“奴隶”何异。唯一能让人欣慰的，或许是那张毕业证书和学位证书吧。想到这层，或许方能明白，为何研究生将自己的导师称作“老板”，而非“老师”。失之毫厘，谬以千里。却偏有人每天 8:30 来到实验室，奋战到 22:30 才回宿舍洗洗睡觉，日复一日，老师非常高兴，将其作为模范人物进行宣传，号召大家向其学习，争取早日毕业。埋头苦干，只会让老师觉得你是个很好地劳动力，却不能保证你学到更多的知识；而好吃懒做，也会让老师觉得你不过是个不求上进之徒，因而虚度了光阴。或许，应该找寻一个平衡点，在学到知识的同时，也不能沦为为学阀卖命的廉价劳动力。&lt;/p>
+&lt;p>很多人说，读完研后当然是继续读博，然后博士后，接着当大学老师，努力搞科研。不得不承认，这是一条不错的道路。但细细想来，却并不如外人所想的那么光鲜亮丽。首先，是难以有成就感，不论是高校、研究所，大部分研究都算不上先进，只能说是为了拿一些经费。其次，是压力过大，大部分的底层的高校教师、研究所研究人员，几乎全年无休，随叫随到；看似摆脱了读博时导师的压迫，且多年媳妇熬成婆，却没曾想被大老板压迫的无处藏生；此外，每天还需顶着来自各方面的压力，拿着微乎其微的报酬，艰苦的推进着科研。最后，学阀制度的存在，一定程度上使得所谓的学术净土变得不那么的纯碎，更像是魏晋时期的九品中正。与其如此，不如跳将出来，以更广大的视角去探索生命的意义。&lt;/p>
+&lt;p>或许，那就是“养天地正气，法古今完人”吧。记得刚进校园时，这句话便给我留下了深刻的印象。再加之书院学科交叉、文理互补的理念，使我培养了些许文学的气息。正如孔老夫子所言：“文胜质则史，质胜文则野，文质彬彬，然后君子。”相较于现在较为单调的工科环境，以往饱含人文关怀的自由环境则更令我向往。我们不应被眼下枯燥乏味的工作束缚了手脚，更应看到美好的诗和远方。&lt;/p>
+&lt;p>掩卷遐思，不知东方之既白。&lt;/p></description></item></channel></rss>

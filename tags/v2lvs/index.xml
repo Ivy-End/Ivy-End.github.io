@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>V2lvs on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/v2lvs/</link><description>Recent content in V2lvs on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Jun 2022 17:37:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/v2lvs/index.xml" rel="self" type="application/rss+xml"/><item><title>Verilog 转 Spice 网表</title><link>https://ivy-end.github.io/p/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</link><pubDate>Mon, 27 Jun 2022 17:37:00 +0800</pubDate><guid>https://ivy-end.github.io/p/verilog-%E8%BD%AC-spice-%E7%BD%91%E8%A1%A8/</guid><description>&lt;p>&lt;code>v2lvs&lt;/code> 主要用于将 Verilog 网表转成 Spice 网表，一个典型的 &lt;code>v2lvs&lt;/code> 例子如下所示。其中，第 2 ~ 3 行为 Verilog 代码输入，第 4 ~ 7 行为 Spice 网表输入，第 8 行为 Spice 网表输出。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tcl" data-lang="tcl">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">v21vs&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">64&lt;/span> &lt;span class="o">-&lt;/span>sn &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-v&lt;/span> ..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>..&lt;span class="o">/&lt;/span>&lt;span class="mi">0&lt;/span>UTPUT&lt;span class="o">/&lt;/span>TOP_TSCam.pg.v&lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-v&lt;/span> .&lt;span class="o">/&lt;/span>Pixel.pg.v &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>PDK&lt;span class="o">/&lt;/span>SMIC&lt;span class="o">/&lt;/span>SMIC55LL&lt;span class="o">/&lt;/span>SPDK55LL_ULP_09121825_OA_CDS_V1.16_2&lt;span class="o">/&lt;/span>smic5511_ulp_09121825_1P8M_6Ic_2TMc_ALPA1_oa_cds_v1.16_2&lt;span class="o">/&lt;/span>Calibre&lt;span class="o">/&lt;/span>LVS&lt;span class="o">/&lt;/span>empty_subckt.sp &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>STD_CELL&lt;span class="o">/&lt;/span>SMIC-55&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2.0b&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2p0b&lt;span class="o">/&lt;/span>cdl&lt;span class="o">/&lt;/span>SCC55NLL_HD_LVT_V2p0.cdl &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s&lt;/span> &lt;span class="o">/&lt;/span>TOOLS&lt;span class="o">/&lt;/span>STD CELL&lt;span class="o">/&lt;/span>SMIC-55&lt;span class="o">/&lt;/span>I0&lt;span class="o">/&lt;/span>SP55NLLD2RP OV3 VOp7&lt;span class="o">/&lt;/span>&lt;span class="mi">1&lt;/span>vs&lt;span class="o">/&lt;/span>SP55NLLD2RP_OV3_VOp7.sp &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-s.&lt;/span>&lt;span class="o">/&lt;/span>SPAD.cdl &lt;span class="err">\&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">-o&lt;/span> TOP_TSCam.cdl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>关于 &lt;code>v2lvs&lt;/code> 更详细的指令介绍如下所示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">-a &amp;lt;c1&amp;gt;&lt;span class="o">[&lt;/span>&amp;lt;c2&amp;gt;&lt;span class="o">]&lt;/span> : Change array delimiters from the default &lt;span class="s2">&amp;#34;[]&amp;#34;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : c1 replaces left side &lt;span class="s1">&amp;#39;[&amp;#39;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : c2 optionally replaces right side &lt;span class="s1">&amp;#39;]&amp;#39;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-addpin &amp;lt;pin&amp;gt; : Add &amp;lt;pin&amp;gt; to the signature of any Verilog module that does not have it.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Connect &amp;lt;pin&amp;gt; to port &amp;lt;pin&amp;gt; in all instances that &lt;span class="k">do&lt;/span> not already have a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> connection specified.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Spice libraries parsed with -lsr and -lsp will not have pins added
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -addpin is not compatitble with -i.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-b : Preserve backslash character in escaped identifiers.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-cb : Prefer CALDRCLVSEVE&lt;span class="o">(&lt;/span>Calibre CB&lt;span class="o">)&lt;/span> license during license search.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-c &amp;lt;c1&amp;gt;&amp;lt;c2&amp;gt; : Change illegal spice characters c1 to c2.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-cfg &amp;lt;filename&amp;gt; : Config file &lt;span class="k">for&lt;/span> passing IP blocks related information. This will
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bring a custom spice file in to the Verilog and call a top level
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> subckt from the Verilog.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-e : Generate empty .SUBCKT statements &lt;span class="o">(&lt;/span>no instances are translated&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -e is useful &lt;span class="k">for&lt;/span> generating &lt;span class="s2">&amp;#34;black box&amp;#34;&lt;/span> subcircuits from library files
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-h&lt;span class="o">[&lt;/span>elp&lt;span class="o">]&lt;/span> : Help. Prints this message.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-i : Make calls using pins in order &lt;span class="o">(&lt;/span>traditional spice&lt;span class="o">)&lt;/span> not with &lt;span class="nv">$PINS&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> For non-Calibre use only, avoid using -i option &lt;span class="k">for&lt;/span> LVS.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-ictrace : Prefer ICTRACE license during license search.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-incvdir : Add INCLUDE path &lt;span class="k">for&lt;/span> files &lt;span class="sb">`&lt;/span>include&lt;span class="err">&amp;#39;&lt;/span>ed from verilog files.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-l &amp;lt;filename&amp;gt; : Defines the Verilog library file name &lt;span class="o">(&lt;/span>the library is not translated&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> The library file is parsed &lt;span class="k">for&lt;/span> interface pin configurations&lt;span class="o">(&lt;/span>see -s&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-lsp &amp;lt;filename&amp;gt; : Spice library file name, pin mode. The Spice file is parsed &lt;span class="k">for&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> interface configurations. Pins with pin &lt;span class="k">select&lt;/span> &lt;span class="o">([])&lt;/span> annotation are
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> kept as individual pins using escaped identifiers. See also -lsr and -l.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-lsr &amp;lt;filename&amp;gt; : Spice library file name, range mode. The Spice file is parsed &lt;span class="k">for&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> interface configurations. Pins with pin &lt;span class="k">select&lt;/span> &lt;span class="o">([])&lt;/span> annotation are
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> assembled into Verilog ranges. See also -lsp and -l.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-n : Causes unconnected pins to get numbered connections starting at 1000.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-o &amp;lt;filename&amp;gt; : Defines the file &lt;span class="k">for&lt;/span> the resulting Spice-like netlist to be used in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> the LVS &lt;span class="o">(&lt;/span>layout versus schematic&lt;span class="o">)&lt;/span> application. This result will
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> include a translation of the Verilog netlist.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s &amp;lt;filename&amp;gt; : Causes the string .INCLUDE &lt;span class="s2">&amp;#34;filename&amp;#34;&lt;/span> to be put at the beginning of
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> the generated spice file &lt;span class="o">(&lt;/span>-o&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -s does not cause v2lvs to &lt;span class="nb">read&lt;/span> the SPICE file &lt;span class="o">(&lt;/span>see -lsr and -lsp&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s0 &amp;lt;string&amp;gt; : Default global ground is changed to &amp;lt;string&amp;gt;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-s1 &amp;lt;string&amp;gt; : Default global power is changed to &amp;lt;string&amp;gt;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sk : &lt;span class="s2">&amp;#34;supply0&amp;#34;&lt;/span> and &lt;span class="s2">&amp;#34;supply1&amp;#34;&lt;/span> nets are not connected to default power/ground.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sl : &lt;span class="s2">&amp;#34;supply0&amp;#34;&lt;/span> and &lt;span class="s2">&amp;#34;supply1&amp;#34;&lt;/span> nets are not connected to globals.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-sn : Default power and ground nets are not connected to globals.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-so &amp;lt;filename&amp;gt; : Filename provides instance or module specific power/ground overrides.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-t &amp;lt;svdb_dir&amp;gt; : Causes an Calibre/XRC &lt;span class="nb">source&lt;/span> template file to be written to an svdb database.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-p &amp;lt;string&amp;gt; : Defines a prefix to be used &lt;span class="k">for&lt;/span> primitive gate instantiations.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-u &amp;lt;string&amp;gt; : Defines a prefix &lt;span class="k">for&lt;/span> the naming of unnamed pins in module instantiations.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v &amp;lt;filename&amp;gt; : Defines the Verilog design netlist file name.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-werror : Treat Warnings as Errors &lt;span class="o">(&lt;/span>-w &amp;lt;n&amp;gt; applies&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-w &amp;lt;n&amp;gt; : Defines a warning messaged level 0-4. &lt;span class="m">2&lt;/span> is the default.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0&lt;/span> - no warnings.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">1&lt;/span> - level &lt;span class="m">0&lt;/span> + warn skipped modules and multiple declarations of modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">2&lt;/span> - level &lt;span class="m">1&lt;/span> warnings + calls to undeclared modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">3&lt;/span> - level &lt;span class="m">2&lt;/span> warnings + called port array width mismatches.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> + unsupported compiler directives.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">4&lt;/span> - level &lt;span class="m">3&lt;/span> warnings + all ignored constructs.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">(&lt;/span>i.e. delays, charges etc&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-log &amp;lt;filename&amp;gt; : Defines the log file which contains the error and warning messages.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-undef_mod : This switch tells v2lvs not to &lt;span class="k">do&lt;/span> special handling &lt;span class="k">for&lt;/span> undefined modules.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-version : Show v2lvs version.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-- &amp;lt;a0&amp;gt; &amp;lt;a1&amp;gt; ... : Pass arguments to the TCL script as an &lt;span class="nv">$argv&lt;/span> list, access by &lt;span class="s2">&amp;#34;[lindex &lt;/span>&lt;span class="nv">$argv&lt;/span>&lt;span class="s2"> &lt;/span>&lt;span class="nv">$n&lt;/span>&lt;span class="s2">]&amp;#34;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Only one &lt;span class="s2">&amp;#34;--&amp;#34;&lt;/span> switch is allowed.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Take care to properly escape special shell characters.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

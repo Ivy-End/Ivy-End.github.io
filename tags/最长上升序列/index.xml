@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>最长上升序列 on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%BA%8F%E5%88%97/</link><description>Recent content in 最长上升序列 on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2013 16:32:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%BA%8F%E5%88%97/index.xml" rel="self" type="application/rss+xml"/><item><title>Dilworth 定理 - NOIP1999T1</title><link>https://ivy-end.github.io/p/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</link><pubDate>Thu, 22 Aug 2013 16:32:00 +0800</pubDate><guid>https://ivy-end.github.io/p/dilworth-%E5%AE%9A%E7%90%86-noip1999t1/</guid><description>&lt;p>题目是经典的导弹拦截。第一问很有信心的写下了最长非增序列。第二问就懵了。后来看了题解，有一个“Dilworth 定理”，现在将定理的表述和证明整理如下：&lt;/p>
+&lt;p>这是一个关于偏序集的定理。偏序集即偏序集合。&lt;/p>
+&lt;p>&lt;strong>偏序的概念&lt;/strong>：设$\textbf{A}$是一个非空集合。$P$是$\textbf{A}$上的一个关系，若关系$P$是自反的、反对称的、传递的，则称$P$是集合$\textbf{A}$上的偏序关系。&lt;/p>
+&lt;p>即$P$满足下列条件：&lt;/p>
+&lt;ol>
+&lt;li>$\forall a\in\textbf{A},\left ( a,a \right )\in P$；&lt;/li>
+&lt;li>若$\left ( a,b \right )\in P,\left ( b,a \right )\in P$，则$a=b$；&lt;/li>
+&lt;li>若$\left ( a,b \right )\in P,\left ( b,c \right )\in P$，则$\left ( a,c \right )\in P$。
+我们用$a\leq b$表示$\left ( a,b \right )\in P$。&lt;/li>
+&lt;/ol>
+&lt;p>注：“$\leq$”只是符号，不代表不等关系。&lt;/p>
+&lt;p>例如，$\left ( \textbf{A},\leq \right )$是一个偏序集，我们定义$A=\left \{ 1,2,3 \right \}$，偏序$\leq$在$\textbf{A}$上表现为大于等于关系，则有：$\leq =\left \{ \left \langle 3,3 \right \rangle,\left \langle 3,2 \right \rangle,\left \langle 3,1 \right \rangle\left \langle 2,2 \right \rangle,\left \langle 2,1 \right \rangle,\left \langle 1,1 \right \rangle \right \}$。&lt;/p>
+&lt;p>我们再来通过下面几个例子进一步了解偏序集：&lt;/p>
+&lt;ol>
+&lt;li>实数集上的小于等于关系是一个偏序关系。&lt;/li>
+&lt;li>设$\textbf{S}$是集合，$P\left(\textbf{A}\right)$是$\textbf{S}$的所有子集构成的集合，定义$P\left(\textbf{A}\right)$中两个元素$\textbf{A}\leq \textbf{B}$当且仅当$\textbf{A}$是$\textbf{B}$的子集，则$P\left(\textbf{A}\right)$在这个关系下成为偏序集。&lt;/li>
+&lt;li>设$\textbf{N}$是正整数集，定义$m\leq n$当且仅当$m$能整除$n$，不难验证这是一个偏序关系。&lt;/li>
+&lt;/ol>
+&lt;p>在偏序集中，有一个非常著名的定理，叫做“Dilworth 定理”。在介绍这个定理之前，我们需要介绍几个术语：&lt;/p>
+&lt;p>令$\left ( \textbf{A},\leq \right )$是一个偏序集，对于集合中的两个元素$a,b$，如果有$a\leq b$或者$b\leq a$，则称$a$和$b$是可比的，否则$a$和$b$不可比。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：$\left ( \textbf{A},\leq \right )$是偏序集，其中$\textbf{A}=\left \{ 1,2,3,4,5 \right \}$，其中$\leq$是整除关系，那么对任意的$x\in P$都有$1\leq x$,所以$1$和$1,2,3,4,5$都是可比的，但是$2$不能整除$3$，且$3$不能整除$2$，所以$2$和$3$是不可比的。&lt;/p>
+&lt;p>在X中，对于元素$a$，如果任意元素$b$，由$b\leq a$得出$b=a$，则称$a$为极小元。&lt;/p>
+&lt;p>一个反链$\textbf{A}$是$\textbf{X}$的一个子集，它的任意两个元素都不能进行比较。
+一个链$\textbf{C}$是$\textbf{X}$的一个子集，它的任意两个元素都可比。&lt;/p>
+&lt;p>&lt;strong>定理1&lt;/strong>：令$\left ( \textbf{A},\leq \right )$是一个有限偏序集，并令$r$是其最大链的大小。则$\textbf{X}$可以被划分成$r$个但不能再少的反链。&lt;/p>
+&lt;p>&lt;strong>定理2（Dilworth 定理）&lt;/strong>：令$\left ( \textbf{A},\leq \right )$是一个有限偏序集，并令$m$是反链的最大的大小。则$\textbf{X}$可以被划分成$m$个但不能再少的链。&lt;/p>
+&lt;p>&lt;strong>证明&lt;/strong>：这里只对定理1进行证明，定理2的证明留给读者自行证明。
+设$p$为最少反链个数；&lt;/p>
+&lt;ol>
+&lt;li>先证明$\textbf{X}$不能划分成小于$r$个反链。由于$r$是最大链$\textbf{C}$的大小，$\textbf{C}$中任两个元素都可比，因此$\textbf{C}$中任两个元素都不能属于同一反链。所以$p\geq r$。&lt;/li>
+&lt;li>设$\mathbf{X_{1}}=\mathbf{X}$，$\mathbf{A_{1}}$是$\mathbf{X_{1}}$中的极小元的集合。从$\mathbf{X_{1}}$中删除$\mathbf{A_{1}}$得到$\mathbf{X_{2}}$。注意到对于$\mathbf{X_{2}}$中任意元素$a_{2}$，必存在$\mathbf{X_{1}}$中的元素$a_{2}$，使得$a_{1}\leq a_{1}$。令$\mathbf{A_{2}}$是$\mathbf{X_{2}}$中极小元的集合，从$\mathbf{X_{2}}$中删除$\mathbf{A_{2}}$得到$\mathbf{X_{3}}$……最终，会有一个$\mathbf{X_{k}}$非空而$\mathbf{X_{k+1}}$为空。于是$\mathbf{A_{1}},\mathbf{A_{2}},\cdots ,\mathbf{A_{k}}$就是$\mathbf{x}$的反链的划分，同时存在链$a_{1}\leq a_{2}\leq\cdots\leq a_{k}$，其中$a_{i}$在$\mathbf{A_{i}}$内。由于$r$是最长链大小，因此$r\geq k$。由于$\mathbf{x}$被划分成了$k$个反链，因此$r=k\geq p$。因此$r=p$，得证。&lt;/li>
+&lt;/ol>
+&lt;p>那么这道题目就化简为求一遍最长非增序列和最长上升序列，DP 即可。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;vector&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">MAX&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">128&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">MAX&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">MAX&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">ans1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ans2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cin&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">nTmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cin&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="n">nTmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pVec&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">push_back&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nTmp&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pVec&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pVec&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">ans2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">pVec&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">ans1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">ans1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">ans2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">ans2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">f2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">ans1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">ans2&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

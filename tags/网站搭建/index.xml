@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网站搭建 on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link><description>Recent content in 网站搭建 on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 15:30:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://ivy-end.github.io/p/hello-world/</link><pubDate>Mon, 31 Dec 2012 15:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/hello-world/</guid><description>&lt;p>网站终于好了，在 2012 年的最后一天写下第一篇文章。&lt;/p>
+&lt;p>搭建网站的想法很早就有了，由于一些事情耽搁了，主要是经济来源问题。由于前段时间在宿舍中卖泡面赚了些钱，所以才搭起了这个网站。搭建这个网站也不容易，从申请域名，设置 A 记录，配置 DNS 服务器，域名解析到空间的选择等，可以说又是一次历练吧。现在的网站还非常简陋，以后会慢慢完善。&lt;/p>
+&lt;p>有人问我，什么不用 QQ 空间。我想还是因为这里比较自由吧。主要还是写一些关于生活的文章，包括一些杂感、竞赛，抑或其他。&lt;/p>
+&lt;p>关于 Ivy - End，前者是我的母校，后者是我的 QQ 昵称。但现在有了更多的意义。将来也是。&lt;/p>
+&lt;p>附上一段代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34;Hello World&amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

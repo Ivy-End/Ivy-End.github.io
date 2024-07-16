@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VMware on Hugo Theme Stack Starter</title><link>https://ivy-end.github.io/tags/vmware/</link><description>Recent content in VMware on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 03 Apr 2021 11:00:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/vmware/index.xml" rel="self" type="application/rss+xml"/><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><guid>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description>&lt;p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。&lt;/p>
+&lt;p>本文所用到的软件资源，可&lt;a class="link" href="https://pan.baidu.com/s/1r1MUKzXm5IWtbqpPRi1BBA" target="_blank" rel="noopener"
+>单击此处&lt;/a>下载，提取码为：njup。&lt;/p>
+&lt;h2 id="安装-vmware-workstation">安装 VMware Workstation
+&lt;/h2>&lt;h3 id="安装-microsoft-vc-redistributable">安装 Microsoft VC Redistributable
+&lt;/h3>&lt;p>双击运行 &lt;code>VC_redist.x64.exe&lt;/code> 文件，开始安装 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_01.png"
+alt="安装 Microsoft VC Redistributable">&lt;figcaption>
+&lt;p>安装 Microsoft VC Redistributable&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“我同意许可条款和条件”后，单击“安装”。稍等片刻后，即可完成 Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019 的安装。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_02.png"
+alt="安装 Microsoft VC Redistributable">&lt;figcaption>
+&lt;p>安装 Microsoft VC Redistributable&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="正式安装-vmware-workstation">正式安装 VMware Workstation
+&lt;/h3>&lt;p>双击运行 &lt;code>VMware-workstation-full-16.1.1-17801498.exe&lt;/code> 文件，开始安装 Vmware Workstation。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_03.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_04.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“我接受许可协议中的条款”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_05.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>配置“安装位置”，并勾选“增强型键盘驱动程序”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_06.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“下一步”，此处可根据自己的需求配置。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_07.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“下一步”，此处可根据自己的需求配置。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_08.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻后，即可完成 Vmware Workstation 的安装。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_09.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“许可证”，输入网络上找到的许可证后，单击“输入”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_10.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“完成”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_11.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>安装程序提示重新启动操作系统，单击“是”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_12.png"
+alt="正式安装 VMware Workstation">&lt;figcaption>
+&lt;p>正式安装 VMware Workstation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>至此，我们已经完成了 VMware WorkStation Pro 16 的安装。&lt;/p>
+&lt;h2 id="安装-centos-79">安装 CentOS 7.9
+&lt;/h2>&lt;h3 id="配置-vmware-workstation-虚拟机环境">配置 VMware WorkStation 虚拟机环境
+&lt;/h3>&lt;p>打开 VMware WorkStation Pro 16，单击“创建新的虚拟机”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_13.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“自定义（高级）”，并单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_14.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>保持默认设置，并单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_15.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“稍后安装操作系统”，并单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_16.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在“客户机操作系统”栏中勾选“Linux”，并在“版本”栏中选择“CentOS 8 64位”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_17.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入“虚拟机名称”，并设置虚拟机存储“位置”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_18.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>根据系统配置，设置“处理器数量”及“每个处理器的内核数量”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_19.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>根据系统配置，设置“该虚拟机的内存”，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_20.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_21.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_22.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_23.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_24.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>将“最大磁盘大小”调整为“128 GB&amp;quot;，以确保 Cadence IC617 能正常使用。其余选项保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_25.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保持默认配置即可，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_26.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处为虚拟机设置的摘要页面，单击“完成”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_27.png"
+alt="配置 VMware WorkStation 虚拟机环境">&lt;figcaption>
+&lt;p>配置 VMware WorkStation 虚拟机环境&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="正式安装centos-79">正式安装CentOS 7.9
+&lt;/h3>&lt;p>此时，我们已经成功创建了名为“IC Design”的虚拟机环境，单击“编辑虚拟机设置”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_28.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在“硬件”选项卡中单击“CD/DVD (SATA)”，在右侧勾选“使用ISO映像文件”，并单击“浏览”打开 CentOS 7.9 安装文件 &lt;code>CentOS-7-x86_64-Everything-2009.iso&lt;/code>，最后单击“确定”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_29.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“开启此虚拟机”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_30.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>首先单击左下角的“×”以关闭黄色提示框，此时屏幕中央出现三个选项，分别为：&lt;/p>
+&lt;ul>
+&lt;li>Install CentOS 7&lt;/li>
+&lt;li>Test this media &amp;amp; install CentOS 7&lt;/li>
+&lt;li>Troubleshooting&lt;/li>
+&lt;/ul>
+&lt;p>我们单击屏幕中央以进入虚拟机操作模式（按 Ctrl + Alt 可退出虚拟机操作模式），选中第一项，并按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_31.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，即可看到 CentOS 7.9 的安装界面。保持默认设置，单击“Continue”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_32.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“DATE &amp;amp; TIME”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_33.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在“Region”和“City”下拉框中分别选择“Asia”和“Shanghai”，并将时间调整为系统时间，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_34.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“SOFTWARE SELECTION”，在左侧“Base Environment”中选中“Server with GUI”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_35.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“INSTALLATION DESTINATION”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_36.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“NETWORK &amp;amp; HOST NAME”，将“Ethernet”调整为“ON”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_37.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Begin Installation”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_38.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“ROOT PASSWORD”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_39.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在“Root Password”和“Confirm”中输入密码“icdesign”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_40.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“USER CREATION”，在“Full name”、“User name”、“Password”和“Confirm password”中均输入“icdesign”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_41.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，即可完成CentOS 7.9的安装，单击“Reboot”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_42.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，单击“LICENSE INFORMATION”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_43.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“I accept the license agreement.”，单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_44.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Finish Configuration”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_45.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“icdesign”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_46.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入密码，单击“Sign In”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_47.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Next”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_48.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Next”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_49.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Next”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_50.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Skip”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_51.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Starting Using CentOS Linux”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_52.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>关闭弹出的“Getting Started”窗口。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_53.png"
+alt="正式安装CentOS 7.9">&lt;figcaption>
+&lt;p>正式安装CentOS 7.9&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="安装cadence-ic617">安装Cadence IC617
+&lt;/h2>&lt;h3 id="配置-yum-源">配置 yum 源
+&lt;/h3>&lt;p>在桌面空白处右键，选择“Open Terminal”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_54.png"
+alt="配置 yum 源">&lt;figcaption>
+&lt;p>配置 yum 源&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在终端输入&lt;code>su&lt;/code>，按下回车键（每次输入完命令后均需要按下回车键）。&lt;/p>
+&lt;p>输入&lt;code>icdesign&lt;/code>，按下回车键。&lt;/p>
+&lt;p>在终端输入 &lt;code>cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup&lt;/code> 备份现有 yum 源。&lt;/p>
+&lt;p>在终端输入 &lt;code>wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo&lt;/code> 下载阿里云的 yum 源。&lt;/p>
+&lt;p>在终端输入 &lt;code>yum clean all&lt;/code>，清空 yum 缓存。&lt;/p>
+&lt;p>在终端输入 &lt;code>yum makecache&lt;/code>，重建 yum 缓存。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>icdesign@localhost ~&lt;span class="o">]&lt;/span>$ su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--2021-04-04 09:10:17-- http://mirrors.aliyun.com/repo/Centos-7.repo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Resolving mirrors.aliyun.com &lt;span class="o">(&lt;/span>mirrors.aliyun.com&lt;span class="o">)&lt;/span>... 61.160.204.243, 61.160.228.242, 58.222.29.238, ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Connecting to mirrors.aliyun.com &lt;span class="o">(&lt;/span>mirrors.aliyun.com&lt;span class="o">)&lt;/span>&lt;span class="p">|&lt;/span>61.160.204.243&lt;span class="p">|&lt;/span>:80... connected.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HTTP request sent, awaiting response... &lt;span class="m">200&lt;/span> OK
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Length: &lt;span class="m">2523&lt;/span> &lt;span class="o">(&lt;/span>2.5K&lt;span class="o">)&lt;/span> &lt;span class="o">[&lt;/span>application/octet-stream&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Saving to: ‘/etc/yum.repos.d/CentOS-Base.repo’
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">100%&lt;span class="o">[======================================&lt;/span>&amp;gt;&lt;span class="o">]&lt;/span> 2,523 --.-K/s in 0s
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2021-04-04 09:10:17 &lt;span class="o">(&lt;/span>&lt;span class="m">394&lt;/span> MB/s&lt;span class="o">)&lt;/span> - ‘/etc/yum.repos.d/CentOS-Base.repo’ saved &lt;span class="o">[&lt;/span>2523/2523&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># yum clean all&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loaded plugins: fastestmirror, langpacks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Cleaning repos: base extras updates
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Cleaning up list of fastest mirrors
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># yum makecache&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loaded plugins: fastestmirror, langpacks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Determining fastest mirrors
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * base: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * extras: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * updates: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">base &lt;span class="p">|&lt;/span> 3.6 kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">extras &lt;span class="p">|&lt;/span> 2.9 kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">updates &lt;span class="p">|&lt;/span> 2.9 kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>1/10&lt;span class="o">)&lt;/span>: base/7/x86_64/group_gz &lt;span class="p">|&lt;/span> &lt;span class="m">153&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>2/10&lt;span class="o">)&lt;/span>: base/7/x86_64/filelists_db &lt;span class="p">|&lt;/span> 7.2 MB 00:02
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>3/10&lt;span class="o">)&lt;/span>: base/7/x86_64/primary_db &lt;span class="p">|&lt;/span> 6.1 MB 00:02
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>4/10&lt;span class="o">)&lt;/span>: extras/7/x86_64/filelists_db &lt;span class="p">|&lt;/span> &lt;span class="m">228&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>5/10&lt;span class="o">)&lt;/span>: base/7/x86_64/other_db &lt;span class="p">|&lt;/span> 2.6 MB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>6/10&lt;span class="o">)&lt;/span>: extras/7/x86_64/primary_db &lt;span class="p">|&lt;/span> &lt;span class="m">230&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>7/10&lt;span class="o">)&lt;/span>: extras/7/x86_64/other_db &lt;span class="p">|&lt;/span> &lt;span class="m">137&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>8/10&lt;span class="o">)&lt;/span>: updates/7/x86_64/filelists_db &lt;span class="p">|&lt;/span> 3.9 MB 00:01
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>9/10&lt;span class="o">)&lt;/span>: updates/7/x86_64/primary_db &lt;span class="p">|&lt;/span> 6.5 MB 00:01
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>10/10&lt;span class="o">)&lt;/span>: updates/7/x86_64/other_db &lt;span class="p">|&lt;/span> &lt;span class="m">517&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Metadata Cache Created
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装支持库">安装支持库
+&lt;/h3>&lt;p>在终端输入，&lt;code>yum install -y ksh&lt;/code>，当看到“Complete!”时表示安装完成，如果看到“Nothing to do”则表示已安装了该支持库，无需再次安装。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># yum install -y ksh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loaded plugins: fastestmirror, langpacks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loading mirror speeds from cached hostfile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * base: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * extras: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * updates: mirrors.aliyun.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Resolving Dependencies
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--&amp;gt; Running transaction check
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---&amp;gt; Package ksh.x86_64 0:20120801-142.el7 will be installed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">--&amp;gt; Finished Dependency Resolution
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Dependencies &lt;span class="nv">Resolved&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">================================================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Package Arch Version Repository &lt;span class="nv">Size&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">================================================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Installing:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ksh x86_64 20120801-142.el7 base &lt;span class="m">884&lt;/span> k
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Transaction &lt;span class="nv">Summary&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">================================================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Install &lt;span class="m">1&lt;/span> Package
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Total download size: &lt;span class="m">884&lt;/span> k
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Installed size: 3.1 M
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Downloading packages:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">warning: /var/cache/yum/x86_64/7/base/packages/ksh-20120801-142.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Public key &lt;span class="k">for&lt;/span> ksh-20120801-142.el7.x86_64.rpm is not installed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ksh-20120801-142.el7.x86_64.rpm &lt;span class="p">|&lt;/span> &lt;span class="m">884&lt;/span> kB 00:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Retrieving key from http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Importing GPG key 0xF4A80EB5:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Userid : &lt;span class="s2">&amp;#34;CentOS-7 Key (CentOS 7 Official Signing Key) &amp;lt;security@centos.org&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Fingerprint: &lt;span class="m">6341&lt;/span> ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> From : http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Running transaction check
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Running transaction &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Transaction &lt;span class="nb">test&lt;/span> succeeded
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Running transaction
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Installing : ksh-20120801-142.el7.x86_64 1/1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Verifying : ksh-20120801-142.el7.x86_64 1/1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Installed:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ksh.x86_64 0:20120801-142.el7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Complete!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在终端输入，&lt;code>yum install -y libXext.so.6&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXtst.so.6&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXt.so.6&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libGLU.so.1 --setopt=protected_multilib=false&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libelf.so.1&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXrender.so.1&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXp.so.6&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXrandr.so.2&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y *xorg*&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libXp&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y ld-linux.so.2&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y openmotif&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y libstdc++.so.5&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y xterm&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y gcc gcc-c++ ksh csh libXp *xorg-X11-fonts* compat-libstdc++-33.i686&lt;/code>，此处&lt;code>*xorg-X11-fonts*&lt;/code>会提示No package available，可忽略。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y alliance-libs alliance glibc-2.12-1.107.el6.i686 glibc-devel.i686 glibc&lt;/code>，此处&lt;code>alliance-libs&lt;/code>、&lt;code>alliance&lt;/code>、&lt;code>glibc-2.12-1.107.el6.i686&lt;/code>会提示No package available，可忽略。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y compat-readline5-5.2-17.1.el6.i686&lt;/code>，此处会提示No package available，可忽略。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y xterm-253-1&lt;/code>，此处会提示No package available，可忽略。&lt;/p>
+&lt;p>在终端输入，&lt;code>yum install -y mesa-libGLU&lt;/code>。&lt;/p>
+&lt;h3 id="配置软链接">配置软链接
+&lt;/h3>&lt;p>在终端输入，&lt;code>ln -s /usr/bin/awk /bin/awk&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>ln -s /usr/lib/libstdc++-3-libc6.2-2-2.10.0.so /usr/lib/libstdc++-libc6.1-1.so.2&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>ln -s /bin/gunzip /bin/uncompress&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>cd /lib64&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>ln -s libreadline.so.6 libreadline.so.5&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>cd /usr/lib64&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>ln -s libhistory.so.6 libhistory.so.5&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>chmod 755 /usr/tmp&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># ln -s /usr/bin/awk /bin/awk&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ln: failed to create symbolic link ‘/bin/awk’: File exists
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># ln -s /usr/lib/libstdc++-3-libc6.2-2-2.10.0.so /usr/lib/libstdc++-libc6.1-1.so.2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># ln -s /bin/gunzip /bin/uncompress&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ln: failed to create symbolic link ‘/bin/uncompress’: File exists
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># cd /lib64/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost lib64&lt;span class="o">]&lt;/span>&lt;span class="c1"># ln -s libreadline.so.6 libreadline.so.5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost lib64&lt;span class="o">]&lt;/span>&lt;span class="c1"># cd /usr/lib64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost lib64&lt;span class="o">]&lt;/span>&lt;span class="c1"># ln -s libhistory.so.6 libhistory.so.5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@localhost lib64&lt;span class="o">]&lt;/span>&lt;span class="c1"># chmod 755 /usr/tmp&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置回环地址">配置回环地址
+&lt;/h3>&lt;p>在终端输入，&lt;code>hostnamectl set-hostname ICDesign&lt;/code>。&lt;/p>
+&lt;p>在终端输入，&lt;code>vim /etc/hosts&lt;/code>，在打开的文件中按下 &lt;code>i&lt;/code>，并在最后一行添加 &lt;code>127.0.0.1 ICDesign&lt;/code>，按下 &lt;code>ESC&lt;/code> 后，输入 &lt;code>:x&lt;/code> 保存。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">::1 localhost localhost.localdomain localhost6 localhost6.localdomain6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">127.0.0.1 ICDesign
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在终端输入，&lt;code>yum update&lt;/code>，中途会提示 &lt;code>Is this ok [y/d/N]:&lt;/code>，输入 &lt;code>y&lt;/code> 后，按下回车。&lt;/p>
+&lt;p>在终端输入，&lt;code>reboot&lt;/code>，重启虚拟机。&lt;/p>
+&lt;h3 id="配置共享文件夹">配置共享文件夹
+&lt;/h3>&lt;p>关闭虚拟机，单击“编辑虚拟机配置”，在“选项”选项卡内，选择“共享文件夹”项，勾选“总是启用”，单击“添加”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_55.png"
+alt="配置共享文件夹">&lt;figcaption>
+&lt;p>配置共享文件夹&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_56.png"
+alt="配置共享文件夹">&lt;figcaption>
+&lt;p>配置共享文件夹&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>根据系统情况，设置“主机路径”，并将“名称”设置为“Shared&amp;quot;，单击“下一步”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_57.png"
+alt="配置共享文件夹">&lt;figcaption>
+&lt;p>配置共享文件夹&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此处保留默认设置，单击“完成”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_58.png"
+alt="配置共享文件夹">&lt;figcaption>
+&lt;p>配置共享文件夹&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“确认”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_59.png"
+alt="配置共享文件夹">&lt;figcaption>
+&lt;p>配置共享文件夹&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="安装-installscape">安装 InstallScape
+&lt;/h3>&lt;p>接着，将压缩包内 &lt;code>Cadence/IScape04.23-s010lnx86.t.Z&lt;/code> 文件复制到刚刚建立的共享文件夹目录下。&lt;/p>
+&lt;p>开启虚拟机后打开终端，并进入 &lt;code>root&lt;/code> 账户，输入 &lt;code>vmware-hgfsclient&lt;/code>，返回 &lt;code>Shared&lt;/code> 即为我们刚刚建立的共享文件夹名称。&lt;/p>
+&lt;p>在终端输入 &lt;code>vmhgfs-fuse .host:/Shared /mnt/hgfs&lt;/code>，手动挂载共享文件夹。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>icdesign@icdesign ~&lt;span class="o">]&lt;/span>$ su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@icdesign icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># vmware-hgfsclient&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Shared
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@icdesign icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># vmhgfs-fuse .host:/Shared /mnt/hgfs&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在终端输入 &lt;code>mkdir -p /TOOLS/Cadence/InstallScape&lt;/code> 和 &lt;code>mkdir -p /TOOLS/Mentor/Calibre2015&lt;/code> 建立安装目录。&lt;/p>
+&lt;p>在终端输入 &lt;code>cp /mnt/hgfs/IScape04.23-s010lnx86.t.Z /TOOLS/Cadence/InstallScape&lt;/code> 将 InstallScape 安装包拷贝至 &lt;code>/TOOLS/Cadence/InstallScape&lt;/code> 文件夹内。&lt;/p>
+&lt;p>在终端输入 &lt;code>cd /TOOLS/Cadence/InstallScape&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>zcat IScape04.23-s010lnx86.t.Z | tar -xvf-&lt;/code>，解压 &lt;code>IScape04.23-s010lnx86.t.Z&lt;/code> 文件。&lt;/p>
+&lt;p>在终端输入 &lt;code>rm IScape04.23-s010lnx86.t.Z&lt;/code>，删除压缩包。&lt;/p>
+&lt;p>在终端输入 &lt;code>sh ./iscape/bin/iscape.sh&lt;/code>，打开 InstallScape 软件，并单击“Preferences”菜单栏中的“InstallScape”项。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_60.png"
+alt="安装 InstallScape">&lt;figcaption>
+&lt;p>安装 InstallScape&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>切换到“Directories”选项卡，将“Default Install Directory”和“Default Download Directory”均设置为“/TOOLS/Cadence”，单击“OK”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_61.png"
+alt="安装 InstallScape">&lt;figcaption>
+&lt;p>安装 InstallScape&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="安装-ic617">安装 IC617
+&lt;/h3>&lt;p>将 &lt;code>Cadence/IC06.17.700_Base.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>切换到“Local directory/Media Install”，单击“Browser”，选择 &lt;code>/mnt/hgfs/IC06.17.700_Base&lt;/code>，单击“Continue”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_62.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“1 results for ALL”列表中的项目，单击“Next”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_63.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Start”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_64.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，将会弹出多个对话框，直到弹出下面的对话框时，输入 &lt;code>y&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_65.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>y&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_66.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>2&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_67.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_68.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>n&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_69.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_70.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Cancel”&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_71.png"
+alt="安装 IC617">&lt;figcaption>
+&lt;p>安装 IC617&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="安装-mmsim151">安装 MMSIM151
+&lt;/h3>&lt;p>将 &lt;code>Cadence/MMSIM15.10.284_Hotfix.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>单击“Browser”，选择 &lt;code>/mnt/hgfs/MMSIM15.10.284_Hotfix&lt;/code>，单击“Continue”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_72.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>勾选“1 results for ALL”列表中的项目，单击“Next”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_73.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“Start”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_74.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，在弹出的对话框中按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_75.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>y&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_76.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>/TOOLS/Cadence/IC617/oa_v22.50.036&lt;/code>，按下回车键。&lt;/p>
+&lt;p>单击“Done”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_77.png"
+alt="安装 MMSIM151">&lt;figcaption>
+&lt;p>安装 MMSIM151&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>关闭 InstallScape。&lt;/p>
+&lt;p>在终端输入 &lt;code>rm IScape04.23-s010lnx86.t.Z&lt;/code>，删除 InstallScap 压缩包，在弹出的提示后输入 &lt;code>y&lt;/code> 并按下回车键。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@icdesign InstallScape&lt;span class="o">]&lt;/span>&lt;span class="c1"># rm IScape04.23-s010lnx86.t.Z &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rm: remove regular file ‘IScape04.23-s010lnx86.t.Z’? y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装-calibre">安装 Calibre
+&lt;/h3>&lt;p>将 &lt;code>Cadence/aoi_cal_2015.2_36.27_mib.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>在终端输入 &lt;code>cd /TOOLS/Mentor/Calibre2015&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>cp /mnt/hgfs/aoi_cal_2015.2_36.27_mib.exe ./&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>chmod 777 aoi_cal_2015.2_36.27_mib.exe&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>./aoi_cal_2015.2_36.27_mib.exe&lt;/code>。&lt;/p>
+&lt;p>输入 &lt;code>D&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_78.png"
+alt="安装 Calibre">&lt;figcaption>
+&lt;p>安装 Calibre&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>输入 &lt;code>yes&lt;/code>，按下回车键。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_79.png"
+alt="安装 Calibre">&lt;figcaption>
+&lt;p>安装 Calibre&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>稍等片刻，提示安装完成。&lt;/p>
+&lt;p>在终端输入 &lt;code>rm aoi_cal_2015.2_36.27_mib.exe&lt;/code>，在弹出的提示后输入 &lt;code>y&lt;/code> 并按下回车键。&lt;/p>
+&lt;h3 id="安装补丁">安装补丁
+&lt;/h3>&lt;p>将 &lt;code>Cadence/Patch.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>在终端输入 &lt;code>cd /mnt/hgfs/Patch/Cadence/&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>./cadence_patch.sh /TOOLS/Cadence/IC617&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>./cadence_patch.sh /TOOLS/Cadence/MMSIM151&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>cd /TOOLS/Mentor/Calibre2015&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>cp /mnt/hgfs/Patch/Calibre/patch_calibre ./&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>cp /mnt/hgfs/Patch/Calibre/sfk ./&lt;/code>。&lt;/p>
+&lt;p>在终端输入 &lt;code>./patch_calibre aoi_cal_2015.2_36.27&lt;/code>，此处会有个别 Error，可以直接忽略。&lt;/p>
+&lt;p>在终端输入 &lt;code>rm .patch_calibre sfk&lt;/code>，在弹出的提示后输入 &lt;code>y&lt;/code> 并按下回车键。&lt;/p>
+&lt;h3 id="配置-license">配置 License
+&lt;/h3>&lt;p>将 &lt;code>Cadence/License.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>在本地计算机上双击 &lt;code>Cadence/License/Cadence/licgen.bat&lt;/code>，生成 &lt;code>license.dat&lt;/code>。&lt;/p>
+&lt;p>右击 &lt;code>license.dat&lt;/code>，选择“打开方式”，选择“记事本”，单击“确定”。打开后，将前四行删去后保存。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_80.png"
+alt="配置 License">&lt;figcaption>
+&lt;p>配置 License&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>在虚拟机终端中输入 &lt;code>ifconfig&lt;/code>，找到连接网络的 MAC 地址，此处为 &lt;code>ether 00:0c:29:06:6e:62&lt;/code>，由此得到 HOSTID 为 &lt;code>000c29066e62&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>root@icdesign icdesign&lt;span class="o">]&lt;/span>&lt;span class="c1"># ifconfig&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ens33: &lt;span class="nv">flags&lt;/span>&lt;span class="o">=&lt;/span>4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt; mtu &lt;span class="m">1500&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet 192.168.222.128 netmask 255.255.255.0 broadcast 192.168.222.255
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet6 fe80::5bdf:abf2:2e32:18c0 prefixlen &lt;span class="m">64&lt;/span> scopeid 0x20&amp;lt;link&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ether 00:0c:29:06:6e:62 txqueuelen &lt;span class="m">1000&lt;/span> &lt;span class="o">(&lt;/span>Ethernet&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX packets &lt;span class="m">48&lt;/span> bytes &lt;span class="m">7413&lt;/span> &lt;span class="o">(&lt;/span>7.2 KiB&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> frame &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX packets &lt;span class="m">50&lt;/span> bytes &lt;span class="m">7010&lt;/span> &lt;span class="o">(&lt;/span>6.8 KiB&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> carrier &lt;span class="m">0&lt;/span> collisions &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lo: &lt;span class="nv">flags&lt;/span>&lt;span class="o">=&lt;/span>73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt; mtu &lt;span class="m">65536&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet 127.0.0.1 netmask 255.0.0.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet6 ::1 prefixlen &lt;span class="m">128&lt;/span> scopeid 0x10&amp;lt;host&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> loop txqueuelen &lt;span class="m">1000&lt;/span> &lt;span class="o">(&lt;/span>Local Loopback&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX packets &lt;span class="m">48&lt;/span> bytes &lt;span class="m">4080&lt;/span> &lt;span class="o">(&lt;/span>3.9 KiB&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> frame &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX packets &lt;span class="m">48&lt;/span> bytes &lt;span class="m">4080&lt;/span> &lt;span class="o">(&lt;/span>3.9 KiB&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> carrier &lt;span class="m">0&lt;/span> collisions &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">virbr0: &lt;span class="nv">flags&lt;/span>&lt;span class="o">=&lt;/span>4099&amp;lt;UP,BROADCAST,MULTICAST&amp;gt; mtu &lt;span class="m">1500&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> inet 192.168.122.1 netmask 255.255.255.0 broadcast 192.168.122.255
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ether 52:54:00:53:dc:60 txqueuelen &lt;span class="m">1000&lt;/span> &lt;span class="o">(&lt;/span>Ethernet&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX packets &lt;span class="m">0&lt;/span> bytes &lt;span class="m">0&lt;/span> &lt;span class="o">(&lt;/span>0.0 B&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> frame &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX packets &lt;span class="m">0&lt;/span> bytes &lt;span class="m">0&lt;/span> &lt;span class="o">(&lt;/span>0.0 B&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TX errors &lt;span class="m">0&lt;/span> dropped &lt;span class="m">0&lt;/span> overruns &lt;span class="m">0&lt;/span> carrier &lt;span class="m">0&lt;/span> collisions &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在本地计算机上用记事本打开 &lt;code>Cadence/License/Calibre/licgen.bat&lt;/code>，将 &lt;code>HOSTID&lt;/code> 改为 &lt;code>000c29066e62&lt;/code>，保存并关闭。&lt;/p>
+&lt;p>双击运行 &lt;code>Cadence/License/Calibre/licgen.bat&lt;/code>，生成 &lt;code>license.dat&lt;/code>。&lt;/p>
+&lt;p>在虚拟机终端中输入 &lt;code>cp /mnt/hgfs/License/Cadence/license.dat /TOOLS/Cadence/IC617/share/license/license.dat&lt;/code>。&lt;/p>
+&lt;p>在终端中输 入&lt;code>cp /mnt/hgfs/License/Calibre/license.dat /TOOLS/Mentor/Calibre2015/license.dat&lt;/code>。&lt;/p>
+&lt;h3 id="配置运行脚本">配置运行脚本
+&lt;/h3>&lt;p>将 &lt;code>Cadence/Scripts.7z&lt;/code> 解压到共享文件夹。&lt;/p>
+&lt;p>在终端中输入 &lt;code>cp /mnt/hgfs/Scripts/.bashrc /home/icdesign/&lt;/code>，在弹出的提示后输入 &lt;code>y&lt;/code> 并按下回车键。&lt;/p>
+&lt;p>在终端中输入 &lt;code>cp /mnt/hgfs/Scripts/.cdsinit /home/icdesign/&lt;/code>。&lt;/p>
+&lt;p>在终端中输入 &lt;code>cd /home/icdesign/&lt;/code>。&lt;/p>
+&lt;p>在终端中输入 &lt;code>vim .bashrc&lt;/code>，按下 &lt;code>i&lt;/code> 进入修改模式，找到下列内容并修改，并在最后一行添加 &lt;code>csh&lt;/code>，修改完毕后按下 &lt;code>ESC&lt;/code>，输入 &lt;code>:x&lt;/code> 后保存并退出。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">CADHOME&lt;/span>&lt;span class="o">=&lt;/span>/TOOLS/Cadence
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">CDS_LIC_FILE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$CADHOME&lt;/span>/share/license/license.dat
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># . $SOCV_KIT_HOME/env.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MGC_HOME&lt;/span>&lt;span class="o">=&lt;/span>/TOOLS/Mentor
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MGC_CALIBRE_SCHEMATIC_SERVER&lt;/span>&lt;span class="o">=&lt;/span>ICDesign
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MGC_CALIBRE_LAYOUT_SERVER&lt;/span>&lt;span class="o">=&lt;/span>ICDesign
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在终端中输入 &lt;code>reboot&lt;/code>，重启虚拟机。&lt;/p>
+&lt;h2 id="配置-pdk">配置 PDK
+&lt;/h2>&lt;p>略。&lt;/p>
+&lt;h2 id="启动-virtuoso">启动 Virtuoso
+&lt;/h2>&lt;p>首先确定好自己所需使用的工艺库，本虚拟机中有 XMC FL 65nm、SMIC 55nm 和 SMIC 0.18μm 三个工艺库。&lt;/p>
+&lt;h3 id="xmc-fl-65nm-工艺库">XMC FL 65nm 工艺库
+&lt;/h3>&lt;h3 id="smic-55nm-工艺库">SMIC 55nm 工艺库
+&lt;/h3>&lt;h3 id="smic-018μm-工艺库">SMIC 0.18μm 工艺库
+&lt;/h3>&lt;h2 id="疑难解答">疑难解答
+&lt;/h2>&lt;h3 id="迁移虚拟机">迁移虚拟机
+&lt;/h3>&lt;p>将虚拟机的压缩包 &lt;code>IC Design.7z&lt;/code> 解压到本地计算机 &lt;code>C:\Users\用户名\Documents\Virtual Machines\&lt;/code> 目录下。&lt;/p>
+&lt;p>打开 &lt;code>VMware Workstation Pro 16&lt;/code>。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_81.png"
+alt="迁移虚拟机">&lt;figcaption>
+&lt;p>迁移虚拟机&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>单击“文件”菜单，选择“打开”，找到 &lt;code>C:\Users\用户名\Documents\Virtual Machines\IC Design\IC Design.vmx&lt;/code> 文件，单击“打开”。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_82.png"
+alt="迁移虚拟机">&lt;figcaption>
+&lt;p>迁移虚拟机&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>此时可以看到，虚拟机“IC Design”已经打开，单击“开启此虚拟机”，即可打开该虚拟机。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2021/VMware%20%E7%8E%AF%E5%A2%83%E4%B8%8B%20CentOS%207.9%20%E5%AE%89%E8%A3%85%20Cadence%20IC617/virtualMachineGuide_83.png"
+alt="迁移虚拟机">&lt;figcaption>
+&lt;p>迁移虚拟机&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="共享文件夹无法挂载">共享文件夹无法挂载
+&lt;/h3>&lt;h3 id="自动挂载共享文件夹">自动挂载共享文件夹
+&lt;/h3></description></item></channel></rss>
