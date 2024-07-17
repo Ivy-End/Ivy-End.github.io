@@ -1091,7 +1091,23 @@ alt="凤凰街·冬至夜（图片来源网络）">&lt;figcaption>
 &lt;p>希望你一直热爱算法！&lt;/p>
 &lt;/blockquote>
 &lt;p>从思想上来看，我并没有辜负他的期望，我目前的研究内容甚至还能和算法扯上关系；但在行动上，我却早已不如当年那样对绝大部分算法了如指掌，运指如风了。诚然，我在集成电路方面有所涉猎，但却一直没有分享太多相关的内容。究其根源，还是“懒”字当头，怠于下笔。我想，徐汀荣教授的本意应当不是让我长年累月的投身算法竞赛，应当是找寻到生命中所热爱的事业，并为之奋斗和努力。&lt;/p>
-&lt;p>当今社会，自媒体、短视频大行其道，早已没有了个人博客的生存空间。人们更倾向于观看短视频，刷微信公众号，去碎片化的获取知识；而不是上网冲浪，博客交游。但我认为，个人博客依旧有其存在的必要性。它能够给博主提供一方天地，去记录自己的所见、所思、所想。本着这样的想法，趁腾讯云打折之际，我迁移并部署了这一博客，希望能够让它重焕生机，成为我学业和生活的记录者与见证者。&lt;/p></description></item><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><guid>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description>&lt;p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。&lt;/p>
+&lt;p>当今社会，自媒体、短视频大行其道，早已没有了个人博客的生存空间。人们更倾向于观看短视频，刷微信公众号，去碎片化的获取知识；而不是上网冲浪，博客交游。但我认为，个人博客依旧有其存在的必要性。它能够给博主提供一方天地，去记录自己的所见、所思、所想。本着这样的想法，趁腾讯云打折之际，我迁移并部署了这一博客，希望能够让它重焕生机，成为我学业和生活的记录者与见证者。&lt;/p></description></item><item><title>关于</title><link>https://ivy-end.github.io/%E5%85%B3%E4%BA%8E/</link><pubDate>Sat, 28 Aug 2021 19:20:00 +0800</pubDate><guid>https://ivy-end.github.io/%E5%85%B3%E4%BA%8E/</guid><description>&lt;h2 id="关于我">关于我
+&lt;/h2>&lt;p>我是 Kai Wang，1995 年出生于江苏苏州，自 2012 年起开始建站，平时喜欢文学、历史、哲学。具体而言，当下热衷于诗词创作、希腊史和认识论等方面的内容。&lt;/p>
+&lt;h2 id="关于友链">关于友链
+&lt;/h2>&lt;p>欢迎各位网友秉承&lt;strong>爱国&lt;/strong>、&lt;strong>敬业&lt;/strong>、&lt;strong>诚信&lt;/strong>、&lt;strong>友善&lt;/strong>的原则，在评论区按下述格式留言，申请交换友链。&lt;/p>
+&lt;ul>
+&lt;li>名称：退思轩&lt;/li>
+&lt;li>网址：https://www.kwang.life&lt;/li>
+&lt;li>图标：https://kwang.life/images/others/site-favicon.png&lt;/li>
+&lt;li>描述：进思尽忠，退思补过&lt;/li>
+&lt;/ul>
+&lt;h2 id="关于本站">关于本站
+&lt;/h2>&lt;ul>
+&lt;li>2012 年 12 月 30 日：基于 WordPress 的第一个博客上线，域名为 &lt;code>ivy-end.com&lt;/code>&lt;/li>
+&lt;li>2021 年 08 月 20 日：域名更换为 &lt;code>kwang.ink&lt;/code>&lt;/li>
+&lt;li>2021 年 09 月 01 日：博客服务更换为 Hugo&lt;/li>
+&lt;li>2022 年 05 月 06 日：域名更换为 &lt;code>kwang.life&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>VMware 环境下 CentOS 7.9 安装 Cadence IC617</title><link>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</link><pubDate>Sat, 03 Apr 2021 11:00:00 +0800</pubDate><guid>https://ivy-end.github.io/p/vmware-%E7%8E%AF%E5%A2%83%E4%B8%8B-centos-7.9-%E5%AE%89%E8%A3%85-cadence-ic617/</guid><description>&lt;p>本文主要讲解如何在 VMware Worksataion 环境下基于 CentOS 7.9 安装 Cadence IC617。&lt;/p>
 &lt;p>本文所用到的软件资源，可&lt;a class="link" href="https://pan.baidu.com/s/1r1MUKzXm5IWtbqpPRi1BBA" target="_blank" rel="noopener"
 >单击此处&lt;/a>下载，提取码为：njup。&lt;/p>
 &lt;h2 id="安装-vmware-workstation">安装 VMware Workstation
