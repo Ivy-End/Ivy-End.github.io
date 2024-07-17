@@ -29,7 +29,7 @@
 &lt;a href="http://aiifabbf.github.io" title="Canon &amp;amp; Baroque" class="friend-link" target="_blank" rel="friend">
 &lt;div class="friend-link-div">
 &lt;div class="friend-link-avatar">
-&lt;img src=http://aiifabbf.github.io/favicon.ico class="friend-avatar" loading="lazy" alt="Avatar">
+&lt;img src=../images/unknown.png class="friend-avatar" loading="lazy" alt="Avatar">
 &lt;/div>
 &lt;div class="friend-link-info">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
@@ -41,7 +41,7 @@
 &lt;a href="https://xuhongxu.com" title="旭旭" class="friend-link" target="_blank" rel="friend">
 &lt;div class="friend-link-div">
 &lt;div class="friend-link-avatar">
-&lt;img src=https://xuhongxu.com/favicon.ico class="friend-avatar" loading="lazy" alt="Avatar">
+&lt;img src=../images/unknown.png class="friend-avatar" loading="lazy" alt="Avatar">
 &lt;/div>
 &lt;div class="friend-link-info">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
