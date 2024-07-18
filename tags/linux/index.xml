@@ -1133,7 +1133,7 @@ alt="迁移虚拟机">&lt;figcaption>
 &lt;/figure>
 &lt;h3 id="共享文件夹无法挂载">共享文件夹无法挂载
 &lt;/h3>&lt;h3 id="自动挂载共享文件夹">自动挂载共享文件夹
-&lt;/h3></description></item><item><title>Linux 迁移记（一）</title><link>https://ivy-end.github.io/p/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</link><pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate><guid>https://ivy-end.github.io/p/linux-%E8%BF%81%E7%A7%BB%E8%AE%B0%E4%B8%80/</guid><description>&lt;p>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：&lt;/p>
+&lt;/h3></description></item><item><title>Linux 迁移记（一）</title><link>https://ivy-end.github.io/p/linux-migration-part-1/</link><pubDate>Mon, 18 Feb 2013 20:35:00 +0800</pubDate><guid>https://ivy-end.github.io/p/linux-migration-part-1/</guid><description>&lt;img src="https://ivy-end.github.io/p/linux-migration-part-1/images/cover.png" alt="Featured image of post Linux 迁移记（一）" />&lt;p>由于各种各样的原因，之前很多次向 Linux 迁移的计划未能实现。主要是因为有些程序只能在 Windows 上运行，比如我们最常用的 QQ。此次迁移的主要原因和以往大致相同：&lt;/p>
 &lt;ul>
 &lt;li>Windows 系列的系统臃肿而且不实用，很多东西华而不实。&lt;/li>
 &lt;li>Windows 系列的系统及其程序属于商业行为，为了追求自由、共享和开源。&lt;/li>
