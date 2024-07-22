@@ -23900,7 +23900,7 @@ alt="多源最短路径">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>至此，单源最短路的算法基本复习结束。细究这三种算法，个人觉得 SPFA 的编程复杂度较低。而 Dijkstra Algorithm 也挺实用的。不过在一般情况下我比较倾向于 SPFA。&lt;/p></description></item><item><title>算法专题：单源最短路径 – Bellman-Ford Algorithm</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</link><pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-bellman-ford-algorithm/</guid><description>&lt;p>&lt;a class="link" href="https://ivy-end.github.io/2013/11/%e7%ae%97%e6%b3%95%e4%b8%93%e9%a2%98%e5%8d%95%e6%ba%90%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84-dijkstra-algorithm/" >上一篇文章&lt;/a>介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。&lt;/p>
+&lt;/div>&lt;p>至此，单源最短路的算法基本复习结束。细究这三种算法，个人觉得 SPFA 的编程复杂度较低。而 Dijkstra Algorithm 也挺实用的。不过在一般情况下我比较倾向于 SPFA。&lt;/p></description></item><item><title>算法专题：单源最短路径 – Bellman-Ford Algorithm</title><link>https://ivy-end.github.io/p/bellman-ford-algorithm-single-source-shortest-path/</link><pubDate>Sun, 03 Nov 2013 10:13:00 +0800</pubDate><guid>https://ivy-end.github.io/p/bellman-ford-algorithm-single-source-shortest-path/</guid><description>&lt;img src="https://ivy-end.github.io/p/bellman-ford-algorithm-single-source-shortest-path/images/cover.jpg" alt="Featured image of post 算法专题：单源最短路径 – Bellman-Ford Algorithm" />&lt;p>&lt;a class="link" href="https://ivy-end.github.io/2013/11/%e7%ae%97%e6%b3%95%e4%b8%93%e9%a2%98%e5%8d%95%e6%ba%90%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84-dijkstra-algorithm/" >上一篇文章&lt;/a>介绍了一下 Dijkstra Algorithm，但是它仅局限于处理非负权值的图。若图中出现负边，Dijkstra Algorithm 就会出现错误。这时候就需要使用其他的算法来求解单源最短路径。&lt;/p>
 &lt;p>Ballman-Ford 是一个非常实用的算法，它是由美国数学家 Richard Ballman 和 Lester Ford 发明的。Ballman-Ford 算法的基本流程如下：&lt;/p>
 &lt;p>初始化 $ pDist\left [  \right ] $ 数组。
 检查每一条边，如果源点到该条边的起点有通路，则更新原点到该条边的终点的最短路径。循环 $ V $ 次即可得到结果。
@@ -24071,7 +24071,7 @@ alt="Bellman-Ford 算法">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>算法专题：单源最短路径 – Dijkstra Algorithm</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</link><pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra-algorithm/</guid><description>&lt;p>这个星期开始复习最短路的一些算法。&lt;/p>
+&lt;/div></description></item><item><title>算法专题：单源最短路径 – Dijkstra Algorithm</title><link>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</link><pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate><guid>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.png" alt="Featured image of post 算法专题：单源最短路径 – Dijkstra Algorithm" />&lt;p>这个星期开始复习最短路的一些算法。&lt;/p>
 &lt;p>单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。&lt;/p>
 &lt;p>首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%EF%BC%9A%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%20%E2%80%93%20Dijkstra%20Algorithm/SSSP.png"
@@ -24216,7 +24216,7 @@ alt="Dijkstra 算法">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>算法专题：最小生成树 – Kruskal Algoritm</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</link><pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-kruskal-algoritm/</guid><description>&lt;p>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下：&lt;/p>
+&lt;/div></description></item><item><title>算法专题：最小生成树 – Kruskal Algoritm</title><link>https://ivy-end.github.io/p/kruskal-algorithm-minimum-spanning-tree/</link><pubDate>Sun, 20 Oct 2013 21:33:00 +0800</pubDate><guid>https://ivy-end.github.io/p/kruskal-algorithm-minimum-spanning-tree/</guid><description>&lt;img src="https://ivy-end.github.io/p/kruskal-algorithm-minimum-spanning-tree/images/cover.jpg" alt="Featured image of post 算法专题：最小生成树 – Kruskal Algoritm" />&lt;p>今天来介绍一下最小生成树的另外一种算法：Kruskal Algorithm。这个算法是基于贪心实现的，算法的大体过程如下：&lt;/p>
 &lt;ul>
 &lt;li>取权值最小的边，如果加入这条边以后，不会出现环，那么就加入这条边。&lt;/li>
 &lt;li>重复上述操作，直至加入了 $ N-1 $ 条边。&lt;/li>
@@ -24453,7 +24453,7 @@ alt="Kruskal 算法">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>至此，最小生成树的算法基本复习完毕。&lt;/p>
-&lt;p>分析两种算法，Prim Algorithm的复杂度是 $ O\left(V^{2}\right) $ ，适用于稠密图；而Kruskal Algorithm的复杂度是 $ O\left(E\log{E}\right) $ ，适用于疏密图。各有所长，需要根据不同的情况选择不同的算法。&lt;/p></description></item><item><title>算法专题：最小生成树 – Prim Algoritm</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</link><pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91-prim-algoritm/</guid><description>&lt;p>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。&lt;/p>
+&lt;p>分析两种算法，Prim Algorithm的复杂度是 $ O\left(V^{2}\right) $ ，适用于稠密图；而Kruskal Algorithm的复杂度是 $ O\left(E\log{E}\right) $ ，适用于疏密图。各有所长，需要根据不同的情况选择不同的算法。&lt;/p></description></item><item><title>算法专题：最小生成树 – Prim Algoritm</title><link>https://ivy-end.github.io/p/prim-algorithm-minimum-spanning-tree/</link><pubDate>Sat, 19 Oct 2013 21:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/prim-algorithm-minimum-spanning-tree/</guid><description>&lt;img src="https://ivy-end.github.io/p/prim-algorithm-minimum-spanning-tree/images/cover.jpg" alt="Featured image of post 算法专题：最小生成树 – Prim Algoritm" />&lt;p>最近开始准备 NOIP 复赛，发现很多算法已经不会了。只能一个个的捡起来，慢慢复习，顺便做点笔记。&lt;/p>
 &lt;p>最小生成树（Minimum Spanning Trees），简称 MST。是图论中一个非常重要的概念。解决这个问题有两种算法，今天暂且先来讨论一下 Prim Algorithm。不做特别说明，讨论的都是无向图。&lt;/p>
 &lt;p>首先介绍一下最小生成树的概念，我们知道，图可以这样定义 $ G=\left(V,E\right) $ ，其中 $ G $ 表示图， $ V $ 表示顶点集合， $ E $ 表示边集合。最小生成树是这样一棵树，它满足 $$ w\left ( T \right )=\min {\left \{ \sum_{\left ( u,v \right )\in T}w\left ( u,v \right ) \right \}} $$ 通俗地讲，就是使得图 $ G $ 连通时，所选取的边的长度的和最小。&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%EF%BC%9A%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%20%E2%80%93%20Prim%20Algoritm/MST.jpg"
@@ -24626,7 +24626,7 @@ alt="Prim 算法">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>杂记（20130930）</title><link>https://ivy-end.github.io/p/%E6%9D%82%E8%AE%B020130930/</link><pubDate>Mon, 30 Sep 2013 21:01:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E6%9D%82%E8%AE%B020130930/</guid><description>&lt;p>随便写写，记录一下最近发生的事情。&lt;/p>
+&lt;/div></description></item><item><title>杂记（20130930）</title><link>https://ivy-end.github.io/p/miscellaneous-notes-20130930/</link><pubDate>Mon, 30 Sep 2013 21:01:00 +0800</pubDate><guid>https://ivy-end.github.io/p/miscellaneous-notes-20130930/</guid><description>&lt;img src="https://ivy-end.github.io/p/miscellaneous-notes-20130930/images/cover.jpg" alt="Featured image of post 杂记（20130930）" />&lt;p>随便写写，记录一下最近发生的事情。&lt;/p>
 &lt;p>高中最后一次运动会居然是在停课中度过的。不过比起化学组去省选的那些人还算幸运的，至少也参与了一点，虽然成绩只有一个引体向上。&lt;/p>
 &lt;p>29号晚自习，我在机房给高二的上课，讲解初赛的选择题。真正感觉到了「后生可畏」的感觉。本来想冲个省队的，但是我们的国赛在明年7月份，那时候我们已经毕业了，所以不能代表江苏省参赛。信息学竞赛就这点不好，各门竞赛大多高三才到炉火纯青的地步，却不给省队资格。虽然我们全国各地的高三选手联名向CCF抗议，但还是无疾而终。挺可惜的，但至少可以拿个省一回来，给竞赛画上圆满的句号。&lt;/p>
 &lt;p>我们开发团队的一个初三的学生，把我之前的一篇日志&lt;a class="link" href="https://ivy-end.github.io/2013/09/%e4%b8%ad%e7%a7%8b%e6%9c%9b%e6%9c%88%e6%84%9f%e6%80%80/" >《中秋望月感怀》&lt;/a>当做语文作业的作文交了上去，受宠若惊。&lt;/p>
@@ -24641,7 +24641,7 @@ alt="Prim 算法">&lt;figcaption>
 &lt;blockquote>
 &lt;p>是的，我可以的！&lt;/p>
 &lt;/blockquote>
-&lt;p>是的，我可以的！&lt;/p></description></item><item><title>中秋望月感怀（2013）</title><link>https://ivy-end.github.io/p/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</link><pubDate>Thu, 19 Sep 2013 20:03:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E4%B8%AD%E7%A7%8B%E6%9C%9B%E6%9C%88%E6%84%9F%E6%80%802013/</guid><description>&lt;p>在我的印象中，从来没有过真正意义上的赏月。小时候虽然每年都会如约赏月，但那时候年纪尚小，即使望月，也不会有什么特别的感触。&lt;/p>
+&lt;p>是的，我可以的！&lt;/p></description></item><item><title>中秋望月感怀（2013）</title><link>https://ivy-end.github.io/p/mid-autumn-moon-2013/</link><pubDate>Thu, 19 Sep 2013 20:03:00 +0800</pubDate><guid>https://ivy-end.github.io/p/mid-autumn-moon-2013/</guid><description>&lt;img src="https://ivy-end.github.io/p/mid-autumn-moon-2013/images/cover.jpg" alt="Featured image of post 中秋望月感怀（2013）" />&lt;p>在我的印象中，从来没有过真正意义上的赏月。小时候虽然每年都会如约赏月，但那时候年纪尚小，即使望月，也不会有什么特别的感触。&lt;/p>
 &lt;p>自从高二受了周红娟老师的耳濡目染，再者，加上《唐诗之旅》的熏陶，开始对明月产生了一种别样的情怀。自此以后，每当看到明月，想到的不再时冷冰冰的月球，而是嫦娥玉兔，吴刚伐树。有时候甚至会像李白一样「举杯邀明月，对影成三人」。&lt;/p>
 &lt;p>前几天住宿的时候，便已经感到了中秋的到来。熄灯后，一束月光打在床上，真如太白所记「床前明月光，疑是地上霜」。&lt;/p>
 &lt;p>今天晚上看新闻，提到瘦西湖是最佳赏月之地，不禁想起徐凝的一句诗「天下三分明月夜，二分无赖是扬州」。好在身处农乡，不像城市中有高大的建筑物遮挡视线，也不用担心刺眼的霓虹灯会干扰赏月的心情。四下只有明亮的月光，别有一番意境。望着皎洁的月亮，一时思绪纷飞。&lt;/p>
@@ -24660,7 +24660,7 @@ alt="Prim 算法">&lt;figcaption>
 &lt;blockquote>
 &lt;p>说出来被嘲笑的梦想，才有去实现的必要。&lt;/p>
 &lt;/blockquote>
-&lt;p>月色，还是那样的澄澈明净……&lt;/p></description></item><item><title>关于复数的一些补充</title><link>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</link><pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E5%85%B3%E4%BA%8E%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85/</guid><description>&lt;p>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。&lt;/p>
+&lt;p>月色，还是那样的澄澈明净……&lt;/p></description></item><item><title>关于复数的一些补充</title><link>https://ivy-end.github.io/p/additional-notes-on-complex-numbers/</link><pubDate>Fri, 30 Aug 2013 20:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/additional-notes-on-complex-numbers/</guid><description>&lt;img src="https://ivy-end.github.io/p/additional-notes-on-complex-numbers/images/cover.png" alt="Featured image of post 关于复数的一些补充" />&lt;p>新版高中教材对复数内容进行了极大的删减，使得我们对于复数的认知还停留在最原始的阶段。殊不知，复数的应用非常广泛。现参考《高中数学·甲种本》以及搜集的一些资料，包括做过的例题，整理一下关于复数的内容。&lt;/p>
 &lt;h2 id="一复数的概念">一、复数的概念
 &lt;/h2>&lt;h3 id="11-数的概念的发展">1.1 数的概念的发展
 &lt;/h3>&lt;p>数的概念是从实践中产生和发展起来的。早在原始社会末期，由于记数的需要，人们就建立起自然熟的概念。自然数的全体构成自然数集$\mathbf{N}$。&lt;/p>
@@ -24905,7 +24905,7 @@ alt="复数根式的几何意义">&lt;figcaption>
 &lt;p>这里的$e=2.71828\cdots$，就是自然对数的底数。这个公式叫做欧拉（Leonhard Euler，1707-1783年，瑞士数学家）公式。在“复变函数论”中可以证明这个公式。&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>线段树 – 有改动求解区间最值 – 忠诚 2</title><link>https://ivy-end.github.io/p/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</link><pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%9C%89%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A-2/</guid><description>&lt;p>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章&lt;a class="link" href="https://ivy-end.github.io/2013/08/%e7%ba%bf%e6%ae%b5%e6%a0%91-%e6%97%a0%e6%94%b9%e5%8a%a8%e6%b1%82%e8%a7%a3%e5%8c%ba%e9%97%b4%e6%9c%80%e5%80%bc-%e5%bf%a0%e8%af%9a/" >线段树 – 无改动求解区间最值 – 忠诚&lt;/a>简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。&lt;/p>
+&lt;/div></description></item><item><title>线段树 – 有改动求解区间最值 – 忠诚 2</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</link><pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.jpg" alt="Featured image of post 线段树 – 有改动求解区间最值 – 忠诚 2" />&lt;p>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章&lt;a class="link" href="https://ivy-end.github.io/2013/08/%e7%ba%bf%e6%ae%b5%e6%a0%91-%e6%97%a0%e6%94%b9%e5%8a%a8%e6%b1%82%e8%a7%a3%e5%8c%ba%e9%97%b4%e6%9c%80%e5%80%bc-%e5%bf%a0%e8%af%9a/" >线段树 – 无改动求解区间最值 – 忠诚&lt;/a>简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。&lt;/p>
 &lt;p>首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -25169,7 +25169,7 @@ alt="复数根式的几何意义">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>线段树 – 无改动求解区间最值 – 忠诚</title><link>https://ivy-end.github.io/p/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</link><pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC-%E5%BF%A0%E8%AF%9A/</guid><description>&lt;p>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。&lt;/p>
+&lt;/div></description></item><item><title>线段树 – 无改动求解区间最值 – 忠诚</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</link><pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.jpg" alt="Featured image of post 线段树 – 无改动求解区间最值 – 忠诚" />&lt;p>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。&lt;/p>
 &lt;p>线段树可以直观的表示为下面这张图：&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91%20%E2%80%93%20%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC%20%E2%80%93%20%E5%BF%A0%E8%AF%9A/%E7%BA%BF%E6%AE%B5%E6%A0%91.jpg"
 alt="线段树示意图">&lt;figcaption>
@@ -25468,7 +25468,7 @@ alt="线段树示意图">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>0/1 背包 - NOIP2005P3</title><link>https://ivy-end.github.io/p/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</link><pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate><guid>https://ivy-end.github.io/p/0/1-%E8%83%8C%E5%8C%85-noip2005p3/</guid><description>&lt;p>题目是经典的采药问题。也是最基础的 0/1 背包问题。&lt;/p>
+&lt;/div></description></item><item><title>0/1 背包 - NOIP2005P3</title><link>https://ivy-end.github.io/p/zero-one-knapsack-noip2005p3/</link><pubDate>Fri, 23 Aug 2013 09:03:00 +0800</pubDate><guid>https://ivy-end.github.io/p/zero-one-knapsack-noip2005p3/</guid><description>&lt;img src="https://ivy-end.github.io/p/zero-one-knapsack-noip2005p3/images/cover.jpg" alt="Featured image of post 0/1 背包 - NOIP2005P3" />&lt;p>题目是经典的采药问题。也是最基础的 0/1 背包问题。&lt;/p>
 &lt;p>我们约定有$N$件物品和一个容量为$C$的背包。第$i$件物品的重量是$w\left [ i \right ]$，价值是$v\left [ i \right ]$。这样，我们所需要求解将哪些物品装入背包可使价值总和最大。&lt;/p>
 &lt;h2 id="二维数组表示">二维数组表示
 &lt;/h2>&lt;p>&lt;strong>定义状态&lt;/strong>：$f\left [ i \right ]\left [ c \right ]$表示前$i$件物品恰放入一个容量为$c$的背包可以获得的最大价值。&lt;/p>
