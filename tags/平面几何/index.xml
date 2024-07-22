@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>平面几何 on 退思轩</title><link>https://ivy-end.github.io/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/</link><description>Recent content in 平面几何 on 退思轩</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 01 Jun 2013 19:43:00 +0800</lastBuildDate><atom:link href="https://ivy-end.github.io/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/index.xml" rel="self" type="application/rss+xml"/><item><title>浅谈塞瓦定理在平面几何中的应用</title><link>https://ivy-end.github.io/p/application-of-ceva-theorem-in-plane-geometry/</link><pubDate>Sat, 01 Jun 2013 19:43:00 +0800</pubDate><guid>https://ivy-end.github.io/p/application-of-ceva-theorem-in-plane-geometry/</guid><description>&lt;img src="https://ivy-end.github.io/p/application-of-ceva-theorem-in-plane-geometry/images/cover.jpg" alt="Featured image of post 浅谈塞瓦定理在平面几何中的应用" />&lt;p>前几天在数学组听课的时候，做平面几何的题目，遇到了塞瓦定理。当时赵诚宇给我讲了一遍，现在再把它整理一下。&lt;/p>
+&lt;p>&lt;strong>塞瓦定理&lt;/strong>：在 $\triangle ABC$ 中，若线段 $AD$、$BE$、$CF$ 通过同一点 $O$，则 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$。&lt;/p>
+&lt;p>&lt;strong>塞瓦定理逆定理&lt;/strong>：在 $\triangle ABC$ 中，若点 $D$、$E$、$F$ 分别在边 $AD$、$BE$、$CF$ 上，且满足 $\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} =1$，则线段 $AD$、$BE$、$CF$ 共点或彼此平行。（我们在此只研究共点的情形）&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/Ceva-1.png"
+alt="Ceva 定理示意图" width="640">&lt;figcaption>
+&lt;p>Ceva 定理示意图&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>证明如下：&lt;/p>
+&lt;p>首先 $$\frac {BD} {DC}=\frac {S_{\triangle ABD}}{S_{\triangle ADC}}=\frac {S_{\triangle OBD}}{S_{\triangle ODC}} \Rightarrow \frac {BD} {DC}=\frac {S_{\triangle ABD}-S_{\triangle OBD}}{S_{\triangle ADC}-S_{\triangle ODC}}=\frac {S_{\triangle ABO}}{S_{\triangle CAO}}$$ 同理 $$\frac {CE} {EA}=\frac {S_{\triangle BCO}}{S_{\triangle ABO}},\frac {AF} {FB}=\frac {S_{\triangle CAO}}{S_{\triangle BCO}}$$ 因此 $$\frac {BD} {DC} \cdot \frac {CE} {EA} \cdot \frac {AF} {FB} = \frac{S_{\triangle ABO}}{S_{\triangle CAO}} \cdot \frac{S_{\triangle BCO}}{S_{\triangle ABO}} \cdot \frac{S_{\triangle CAO}}{S_{\triangle BCO}}=1$$ 证毕。&lt;/p>
+&lt;p>&lt;strong>例&lt;/strong>：在筝形 $ABCD$ 中，$AB=AD$，$BC=CD$，经 $AC$、$BD$ 的交点 $O$ 任做两条直线，分别交 $AD$ 于 $E$，交 $CD$ 于 $H$。$GF$、$EH$ 分别交 $BD$ 于 $I$，$J$。求证：$IO=OJ$。&lt;/p>
+&lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E6%B5%85%E8%B0%88%E5%A1%9E%E7%93%A6%E5%AE%9A%E7%90%86%E5%9C%A8%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/Ceva-2.png"
+alt="Ceva 定理例题图" width="640">&lt;figcaption>
+&lt;p>Ceva 定理例题图&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>证明如下：&lt;/p>
+&lt;p>作 $\triangle ABC$ 的关于 $AC$ 的对称图形，记 $E^{&amp;rsquo;}H^{&amp;rsquo;} \cap BB=M$ 设 $\angle GOB=\angle BOH^{&amp;rsquo;}=\alpha,\angle E^{&amp;rsquo;}OG=\angle FOH^{&amp;rsquo;}=\beta$ 则有：$$\frac{E^{&amp;rsquo;}G}{GB} \cdot \frac{BH^{&amp;rsquo;}}{H^{&amp;rsquo;}F} \cdot \frac{FM}{ME^{&amp;rsquo;}}=\frac{OE^{&amp;rsquo;}\sin \beta}{OB \sin \alpha} \cdot \frac{OB \sin \alpha}{OF \sin \beta} \cdot \frac{OF \sin \left ( \alpha + \beta \right )}{OE^{&amp;rsquo;} \sin \left ( \alpha + \beta \right )}=1$$ 由塞瓦定理得：$MB$、$E^{&amp;rsquo;}H^{&amp;rsquo;}$、$GF$ 共点，因此 $IO=OJ$。证毕。&lt;/p></description></item></channel></rss>

@@ -290,7 +290,7 @@ alt="复数根式的几何意义">&lt;figcaption>
 &lt;p>这里的$e=2.71828\cdots$，就是自然对数的底数。这个公式叫做欧拉（Leonhard Euler，1707-1783年，瑞士数学家）公式。在“复变函数论”中可以证明这个公式。&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>扬州拾遗（一）：竞赛中的函数</title><link>https://ivy-end.github.io/p/recollections-of-yangzhou-1-functions-in-math-competitions/</link><pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate><guid>https://ivy-end.github.io/p/recollections-of-yangzhou-1-functions-in-math-competitions/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.png" alt="Featured image of post 扬州拾遗（一）：竞赛中的函数" />&lt;h2 id="一函数问题基本方法">一、函数问题基本方法
+&lt;/div></description></item><item><title>扬州拾遗（一）：竞赛中的函数</title><link>https://ivy-end.github.io/p/recollections-of-yangzhou-1-functions-in-math-competitions/</link><pubDate>Thu, 25 Jul 2013 20:01:00 +0800</pubDate><guid>https://ivy-end.github.io/p/recollections-of-yangzhou-1-functions-in-math-competitions/</guid><description>&lt;img src="https://ivy-end.github.io/p/recollections-of-yangzhou-1-functions-in-math-competitions/images/cover.png" alt="Featured image of post 扬州拾遗（一）：竞赛中的函数" />&lt;h2 id="一函数问题基本方法">一、函数问题基本方法
 &lt;/h2>&lt;h3 id="1-数型结合法">1. 数型结合法
 &lt;/h3>&lt;p>&lt;strong>例1&lt;/strong>：求方程 $ \left | x-1\right |=\frac{1}{x} $ 的正根的个数。&lt;/p>
 &lt;p>&lt;strong>解&lt;/strong>：作图像得，正根个数为 $ 1 $ 。&lt;/p>
