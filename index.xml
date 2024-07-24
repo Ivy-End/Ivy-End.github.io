@@ -23307,7 +23307,7 @@ alt="强连通分量">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>欧拉回路我至今也没有在做题目的时候用到过，不知道是不是这类题目比较少见。&lt;/p></description></item><item><title>算法专题：拓扑排序</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link><pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid><description>&lt;p>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题：&lt;/p>
+&lt;/div>&lt;p>欧拉回路我至今也没有在做题目的时候用到过，不知道是不是这类题目比较少见。&lt;/p></description></item><item><title>算法专题：拓扑排序</title><link>https://ivy-end.github.io/p/topological-sorting-algorithm/</link><pubDate>Sun, 03 Nov 2013 19:17:00 +0800</pubDate><guid>https://ivy-end.github.io/p/topological-sorting-algorithm/</guid><description>&lt;img src="https://ivy-end.github.io/p/topological-sorting-algorithm/images/cover.png" alt="Featured image of post 算法专题：拓扑排序" />&lt;p>拓扑排序（Topological Sorting）是图论中一个比较重要的概念。它主要用来解决下面这类问题：&lt;/p>
 &lt;p>给定一个 AOV 网（Activity On Vertex Network）， $ A\rightarrow B $ 表示活动 $ A $ 必须在活动 $ B $ 之前完成。请给出一个合理的活动顺序。&lt;/p>
 &lt;p>当然，AOV 网中不可能出现环，因为出现了环就无法拓扑排序。因此可以用拓扑排序来判断图中是否存在环。&lt;/p>
 &lt;p>关于拓扑排序，我们来看一下下面这张图片：&lt;/p>
@@ -23588,7 +23588,7 @@ alt="Toplogical Sorting">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>相较这两种算法，我更倾向于用队列来实现，毕竟这种方法符合求解拓扑排序的一般思路。至于这两种算法的复杂度，在这里就不再分析了。&lt;/p></description></item><item><title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</link><pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-floyd-warshall-algorithm/</guid><description>&lt;p>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念：&lt;/p>
+&lt;/div>&lt;p>相较这两种算法，我更倾向于用队列来实现，毕竟这种方法符合求解拓扑排序的一般思路。至于这两种算法的复杂度，在这里就不再分析了。&lt;/p></description></item><item><title>算法专题：多源最短路径 - Floyd-Warshall Algorithm</title><link>https://ivy-end.github.io/p/floyd-warshall-algorithm-all-pairs-shortest-paths/</link><pubDate>Sun, 03 Nov 2013 16:30:00 +0800</pubDate><guid>https://ivy-end.github.io/p/floyd-warshall-algorithm-all-pairs-shortest-paths/</guid><description>&lt;img src="https://ivy-end.github.io/p/floyd-warshall-algorithm-all-pairs-shortest-paths/images/cover.jpg" alt="Featured image of post 算法专题：多源最短路径 - Floyd-Warshall Algorithm" />&lt;p>这次我们来讨论一下关于多源最短路径 APSP（All-Pairs Shortest Paths）。即求出给定的图 $ G=\left ( V,E \right ) $ 中任意两对顶点 $ V_{i},V_{j} $ 之间的最短路径。我们根据下面这幅图来理解一下这个概念：&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%EF%BC%9A%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%20-%20Floyd-Warshall%20Algorithm/APSP.png"
 alt="多源最短路径">&lt;figcaption>
 &lt;p>多源最短路径&lt;/p>
@@ -23758,7 +23758,7 @@ alt="多源最短路径">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>算法专题：单源最短路径 - SPFA</title><link>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</link><pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate><guid>https://ivy-end.github.io/p/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-spfa/</guid><description>&lt;p>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。&lt;/p>
+&lt;/div></description></item><item><title>算法专题：单源最短路径 - SPFA</title><link>https://ivy-end.github.io/p/spfa-single-source-shortest-path/</link><pubDate>Sun, 03 Nov 2013 15:50:00 +0800</pubDate><guid>https://ivy-end.github.io/p/spfa-single-source-shortest-path/</guid><description>&lt;img src="https://ivy-end.github.io/p/spfa-single-source-shortest-path/images/cover.jpg" alt="Featured image of post 算法专题：单源最短路径 - SPFA" />&lt;p>SPFA 是 Shortest Path Fast Algorithm 的缩写，它是之前介绍的 Bellman-Ford Algorithm 的一种队列实现，减少了不必要的冗余计算。&lt;/p>
 &lt;p>算法的基本步骤如下：&lt;/p>
 &lt;ol>
 &lt;li>初始化队列和标记数组，将源点入队。&lt;/li>
@@ -24087,7 +24087,7 @@ alt="Bellman-Ford 算法">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>算法专题：单源最短路径 – Dijkstra Algorithm</title><link>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</link><pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate><guid>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.png" alt="Featured image of post 算法专题：单源最短路径 – Dijkstra Algorithm" />&lt;p>这个星期开始复习最短路的一些算法。&lt;/p>
+&lt;/div></description></item><item><title>算法专题：单源最短路径 – Dijkstra Algorithm</title><link>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</link><pubDate>Sun, 03 Nov 2013 09:22:00 +0800</pubDate><guid>https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/</guid><description>&lt;img src="https://ivy-end.github.io/p/dijkstra-algorithm-single-source-shortest-path/images/cover.jpg" alt="Featured image of post 算法专题：单源最短路径 – Dijkstra Algorithm" />&lt;p>这个星期开始复习最短路的一些算法。&lt;/p>
 &lt;p>单源最短路径（Single Source Shortest Paths），简称 SSSP。这是图论中非常重要的一类算法。解决这一问题有多种算法，今天先来介绍一下 Dijkstra Algorithm。&lt;/p>
 &lt;p>首先介绍一下单源最短路径的概念，通俗的讲，就是给定一个源点 $ s $ （即起点），求这个源点到其他各个顶点的最短路径。最短路径，通俗的来讲，我们称使得顶点 $ V_{i} $ 到顶点 $ V_{j} $ 所经过的路径的权值之和最小的一条路径，称为从顶点 $ V_{i} $ 到顶点 $ V_{j} $ 的最短路径。&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98%EF%BC%9A%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%20%E2%80%93%20Dijkstra%20Algorithm/SSSP.png"
@@ -24921,7 +24921,7 @@ alt="复数根式的几何意义">&lt;figcaption>
 &lt;p>这里的$e=2.71828\cdots$，就是自然对数的底数。这个公式叫做欧拉（Leonhard Euler，1707-1783年，瑞士数学家）公式。在“复变函数论”中可以证明这个公式。&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>线段树 – 有改动求解区间最值 – 忠诚 2</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</link><pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.jpg" alt="Featured image of post 线段树 – 有改动求解区间最值 – 忠诚 2" />&lt;p>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章&lt;a class="link" href="https://ivy-end.github.io/2013/08/%e7%ba%bf%e6%ae%b5%e6%a0%91-%e6%97%a0%e6%94%b9%e5%8a%a8%e6%b1%82%e8%a7%a3%e5%8c%ba%e9%97%b4%e6%9c%80%e5%80%bc-%e5%bf%a0%e8%af%9a/" >线段树 – 无改动求解区间最值 – 忠诚&lt;/a>简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。&lt;/p>
+&lt;/div></description></item><item><title>线段树 – 有改动求解区间最值 – 忠诚 2</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</link><pubDate>Tue, 27 Aug 2013 21:16:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/</guid><description>&lt;img src="https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty-2/images/cover.png" alt="Featured image of post 线段树 – 有改动求解区间最值 – 忠诚 2" />&lt;p>忠诚 2 是忠诚的一个提升版本。我们在之前的一篇文章&lt;a class="link" href="https://ivy-end.github.io/2013/08/%e7%ba%bf%e6%ae%b5%e6%a0%91-%e6%97%a0%e6%94%b9%e5%8a%a8%e6%b1%82%e8%a7%a3%e5%8c%ba%e9%97%b4%e6%9c%80%e5%80%bc-%e5%bf%a0%e8%af%9a/" >线段树 – 无改动求解区间最值 – 忠诚&lt;/a>简单的谈了一下关于无改动求解区间最值的问题。现在我们来研究一下有改动求解区间最值。&lt;/p>
 &lt;p>首先，我们考虑改动某个值以后，对整棵树重新进行维护。但是很快我们发现，这样的复杂度太大。因为每次只更改一个值，所以只涉及到一条路径，因此我们考虑在递归修改数值的时候，可以标记一下经过的结点，修改完成以后，只对标记过的结点进行维护。这样我们的代码就出来了：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -25185,7 +25185,7 @@ alt="复数根式的几何意义">&lt;figcaption>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>线段树 – 无改动求解区间最值 – 忠诚</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</link><pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</guid><description>&lt;img src="https://ivy-end.github.io/images/cover.jpg" alt="Featured image of post 线段树 – 无改动求解区间最值 – 忠诚" />&lt;p>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。&lt;/p>
+&lt;/div></description></item><item><title>线段树 – 无改动求解区间最值 – 忠诚</title><link>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</link><pubDate>Tue, 27 Aug 2013 21:06:00 +0800</pubDate><guid>https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/</guid><description>&lt;img src="https://ivy-end.github.io/p/segment-tree-range-min-query-loyalty/images/cover.png" alt="Featured image of post 线段树 – 无改动求解区间最值 – 忠诚" />&lt;p>昨天研究了一下线段树，发现原来线段树有这么多实现方式。当然，对于非递归自底向上线段树，俗称 ZKW 线段树还是不太理解。而且我的实现方式还是用的指针，所以效率不是特别高。首先记录一下自己对于线段树的理解吧。我们用忠诚这道题目来做例子。&lt;/p>
 &lt;p>线段树可以直观的表示为下面这张图：&lt;/p>
 &lt;figure>&lt;img src="https://cos.ap-shanghai.myqcloud.com/blog-1307064178/contents/2013/%E7%BA%BF%E6%AE%B5%E6%A0%91%20%E2%80%93%20%E6%97%A0%E6%94%B9%E5%8A%A8%E6%B1%82%E8%A7%A3%E5%8C%BA%E9%97%B4%E6%9C%80%E5%80%BC%20%E2%80%93%20%E5%BF%A0%E8%AF%9A/%E7%BA%BF%E6%AE%B5%E6%A0%91.jpg"
 alt="线段树示意图">&lt;figcaption>
